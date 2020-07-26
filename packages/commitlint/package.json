@@ -1,0 +1,12 @@
+{
+  "name": "@mine/commitlint-config",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.js",
+  "dependencies": {
+    "@commitlint/config-conventional": "^9.1.2"
+  },
+  "peerDependencies": {
+    "@commitlint/cli": "^9.1.1"
+  }
+}

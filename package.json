@@ -6,12 +6,21 @@
     "packages/*"
   ],
   "scripts": {
+    "lint:commit": "commitlint --from `git rev-list --max-parents=0 HEAD` --to HEAD",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
-    "verify": "npm-run-all prettier"
+    "verify": "npm-run-all prettier lint:commit"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "devDependencies": {
+    "@commitlint/cli": "^9.1.2",
+    "@mine/commitlint-config": "^0.0.0",
     "@mine/prettier-config": "^0.0.0",
+    "husky": "^4.2.5",
     "lerna": "^3.22.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.1.1"
