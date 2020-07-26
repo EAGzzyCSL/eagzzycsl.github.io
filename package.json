@@ -7,9 +7,11 @@
   ],
   "scripts": {
     "lint:commit": "commitlint --from `git rev-list --max-parents=0 HEAD` --to HEAD",
+    "lint:style": "stylelint './packages/**/*.scss' --syntax scss",
+    "lint:style-fix": "npm run lint:style -- --fix",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
-    "verify": "npm-run-all prettier lint:commit"
+    "verify": "npm-run-all prettier lint:style lint:commit"
   },
   "husky": {
     "hooks": {
@@ -20,9 +22,11 @@
     "@commitlint/cli": "^9.1.2",
     "@mine/commitlint-config": "^0.0.0",
     "@mine/prettier-config": "^0.0.0",
+    "@mine/stylelint-config": "^0.0.0",
     "husky": "^4.2.5",
     "lerna": "^3.22.1",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.1.1"
+    "prettier": "^2.1.1",
+    "stylelint": "^13.6.1"
   }
 }
