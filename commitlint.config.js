@@ -10,6 +10,7 @@ module.exports = {
         'launcher',
         'ack',
         'launcher',
+        'lcstt',
       ],
     ],
     'scope-empty': [2, 'never'],
