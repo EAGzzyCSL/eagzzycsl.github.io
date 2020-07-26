@@ -1,0 +1,19 @@
+{
+  "name": "@mine/webpack-node",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.js",
+  "bin": {
+    "webpack-node": "bin.js"
+  },
+  "dependencies": {
+    "memfs": "^3.2.0",
+    "null-loader": "^4.0.0",
+    "ts-loader": "^8.0.3",
+    "tsconfig-paths-webpack-plugin": "^3.3.0",
+    "webpack": "^4.44.1"
+  },
+  "peerDependencies": {
+    "typescript": "^4.0.2"
+  }
+}
