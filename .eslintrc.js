@@ -19,7 +19,11 @@ module.exports = {
           },
         },
         {
-          files: ['packages/**/*.test.tsx', 'packages/**/*.test.ts'],
+          files: [
+            'packages/**/*.test.js',
+            'packages/**/*.test.ts',
+            'packages/**/*.test.tsx',
+          ],
           extends: ['@mine/eslint-config/jest'],
           rules: {
             'import/no-extraneous-dependencies': [
