@@ -8,5 +8,6 @@ export default {
   title: 'launcher',
   router: {
     '/': 'Launcher.tsx',
+    '/404': 'NotFound.tsx',
   },
 } as Manifest
