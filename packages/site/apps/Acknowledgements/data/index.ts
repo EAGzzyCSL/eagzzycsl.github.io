@@ -1,4 +1,5 @@
 import iconHeartsV2 from '@/apps/Acknowledgements/icon.png'
+import iconPinCodeKeyboard from '@/apps/Calculator/icon.png'
 import imageWallpaper from '@/apps/Launcher/assets/wallpaper.svg'
 import iconRocket from '@/apps/Launcher/icon.png'
 import imageClassroom from '@/apps/LittleCousinSpeakTheTruth/assets/about-header.png'
@@ -45,6 +46,12 @@ export default {
       image: iconChristmasBoyV1,
       url: 'https://icons8.cn/icons/set/christmas-boy--v1',
       brief: 'Christmas Boy icon 来自 icons8.cn',
+    },
+    {
+      title: 'PIN 代码键盘 icon',
+      image: iconPinCodeKeyboard,
+      url: 'https://icons8.cn/icons/set/pincode-keyboard',
+      brief: 'PIN 代码键盘 icon 来自 icons8.cn',
     },
   ],
   images: [

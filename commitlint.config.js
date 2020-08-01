@@ -11,6 +11,7 @@ module.exports = {
         'ack',
         'launcher',
         'lcstt',
+        'calc',
       ],
     ],
     'scope-empty': [2, 'never'],

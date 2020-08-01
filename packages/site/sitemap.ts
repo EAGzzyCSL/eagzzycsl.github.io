@@ -5,6 +5,7 @@
  *
  */
 import Acknowledgements from '@/apps/Acknowledgements/manifest'
+import Calculator from '@/apps/Calculator/manifest'
 import Launcher from '@/apps/Launcher/manifest'
 import LittleCousinSpeakTheTruth from '@/apps/LittleCousinSpeakTheTruth/manifest'
 
@@ -15,6 +16,7 @@ const appMap = {
   Launcher,
   Acknowledgements,
   LittleCousinSpeakTheTruth,
+  Calculator,
 }
 
 const apps: AppDescribe[] = Object.entries(appMap).map(([key, app]) => ({
