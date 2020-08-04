@@ -4143,6 +4143,11 @@ cliui@^6.0.0:
     strip-ansi "^6.0.0"
     wrap-ansi "^6.2.0"
 
+cloc@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.npm.taobao.org/cloc/download/cloc-2.6.0.tgz#e55d62d87bf2ca302dcfb61625688d59d33ad318"
+  integrity sha1-5V1i2HvyyjAtz7YWJWiNWdM60xg=
+
 clone-deep@^4.0.1:
   version "4.0.1"
   resolved "https://registry.npm.taobao.org/clone-deep/download/clone-deep-4.0.1.tgz#c19fd9bdbbf85942b4fd979c84dcf7d5f07c2387"

@@ -6,6 +6,7 @@
     "packages/*"
   ],
   "scripts": {
+    "cloc": "cloc --vcs git",
     "lint:commit": "commitlint --from `git rev-list --max-parents=0 HEAD` --to HEAD",
     "lint:es": "eslint --ext .js,.ts,.tsx ./",
     "lint:es-fix": "npm run lint:es -- --fix",
@@ -38,6 +39,7 @@
     "@mine/stylelint-config": "^0.0.0",
     "@types/jest": "^26.0.10",
     "babel-jest": "^26.3.0",
+    "cloc": "^2.6.0",
     "eslint": "^7.7.0",
     "husky": "^4.2.5",
     "identity-obj-proxy": "^3.0.0",
