@@ -1,0 +1,15 @@
+@import './DisplayCard.scss';
+
+.basic-display-card {
+  display: flex;
+  flex-direction: column;
+  width: $display-card-width;
+  margin: $display-card-margin;
+
+  .top {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

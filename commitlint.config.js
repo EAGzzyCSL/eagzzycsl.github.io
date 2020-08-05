@@ -8,6 +8,7 @@ module.exports = {
       [
         'infra',
         'launcher',
+        'ack',
       ],
     ],
     'scope-empty': [2, 'never'],

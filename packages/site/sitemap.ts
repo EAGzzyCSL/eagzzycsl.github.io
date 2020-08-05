@@ -4,12 +4,16 @@
  * FIXME: 这里引入的名称需要与所在的文件夹严格对应
  *
  */
+import Acknowledgements from '@/apps/Acknowledgements/manifest'
 import Launcher from '@/apps/Launcher/manifest'
 
 import { AppDescribe } from './type'
 import { camel2kebab } from './utils/string'
 
-const appMap = { Launcher }
+const appMap = {
+  Launcher,
+  Acknowledgements,
+}
 
 const apps: AppDescribe[] = Object.entries(appMap).map(([key, app]) => ({
   ...app,
