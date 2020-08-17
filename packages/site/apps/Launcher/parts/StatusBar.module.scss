@@ -1,0 +1,20 @@
+@import '@/styles/index.scss';
+
+.status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 28px;
+  padding: 8px;
+  font-size: 14px;
+  color: white;
+
+  .left-sentence {
+    display: flex;
+    align-items: center;
+
+    .sentence {
+      margin-left: 4px;
+    }
+  }
+}

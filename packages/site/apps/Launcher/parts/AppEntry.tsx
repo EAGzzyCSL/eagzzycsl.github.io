@@ -1,3 +1,5 @@
+import Paper from '@material-ui/core/Paper'
+import Typography from '@material-ui/core/Typography'
 import { useRouter } from 'next/router'
 import React from 'react'
 
@@ -18,11 +20,18 @@ const AppEntry = ({ app }: AppEntryInterface): JSX.Element => {
   }
 
   return (
-    <div onClick={handleNav}>
-      <div className={styles.appEntry}>
-        <img className={styles.icon} src={app.icon} />
-        <span className={styles.title}>{app.title}</span>
-      </div>
+    <div className={styles.appEntry} onClick={handleNav}>
+      <Paper className={styles.iconWrapper} elevation={3}>
+        <img className={styles.iconImg} src={app.icon} />
+      </Paper>
+      <Typography
+        className={styles.title}
+        component='h1'
+        variant='subtitle2'
+        align='center'
+      >
+        {app.title}
+      </Typography>
     </div>
   )
 }

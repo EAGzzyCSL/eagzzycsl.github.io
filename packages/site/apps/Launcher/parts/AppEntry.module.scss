@@ -1,17 +1,46 @@
+$entry-size: 118px;
+$entry-size-small: 88px;
+
+$entry-margin: 12px;
+
 $icon-size: 88px;
+$icon-size-small: 60px;
 
 .app-entry {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 12px;
+  justify-content: space-between;
+  width: $entry-size;
+  height: $entry-size;
+  margin: $entry-margin;
 
-  .icon {
+  @media screen and (orientation: portrait) {
+    width: $entry-size-small;
+    height: $entry-size-small;
+    margin: $entry-margin;
+  }
+
+  .icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: $icon-size;
     height: $icon-size;
+    background-color: white;
+    border-radius: 100%;
+
+    @media screen and (orientation: portrait) {
+      width: $icon-size-small;
+      height: $icon-size-small;
+    }
+
+    .icon-img {
+      width: 50%;
+    }
   }
 
   .title {
-    margin-top: 4px;
+    color: white;
   }
 }

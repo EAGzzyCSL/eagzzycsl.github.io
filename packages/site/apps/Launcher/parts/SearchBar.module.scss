@@ -1,0 +1,39 @@
+$search-bar-height: 60px;
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  height: $search-bar-height;
+  padding: 10px;
+  background-color: white;
+
+  @media screen and (orientation: portrait) {
+    width: 80%;
+  }
+
+  .start-icon,
+  .end-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .input-area {
+    flex: 1 0 0;
+    padding: 0 10px;
+
+    .input {
+      width: 100%;
+      font-size: 18px;
+      text-align: center;
+      border: none;
+      outline: none;
+    }
+  }
+
+  .icon-img {
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -1,4 +1,5 @@
 import iconHeartsV2 from '@/apps/Acknowledgements/icon.png'
+import imageWallpaper from '@/apps/Launcher/assets/wallpaper.svg'
 import iconRocket from '@/apps/Launcher/icon.png'
 
 import projectMaterialUi from './images/material-ui.svg'
@@ -38,7 +39,15 @@ export default {
       brief: '桃心 icon 来自 icons8.cn',
     },
   ],
-  images: [],
+  images: [
+    {
+      title: '桌面壁纸',
+      image: imageWallpaper,
+      url:
+        'https://besthqwallpapers.com/abstract/colorful-strips-art-lines-design-material-abstract-material-25834',
+      brief: '桌面壁纸来自 besthqwallpapers.com，为减小体积转制为svg',
+    },
+  ],
   projects: [
     {
       title: 'NEXT',
