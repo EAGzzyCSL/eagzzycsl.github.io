@@ -13,9 +13,12 @@
     "lint:style-fix": "npm run lint:style -- --fix",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
+    "site:dev": "yarn workspace @mine/site run dev",
+    "site:domain": "yarn workspace @mine/site run export:domain",
+    "site:local": "yarn workspace @mine/site run export:local && du -sh ./local-export",
     "test": "jest",
     "test:ci": "jest --coverage",
-    "verify": "npm-run-all prettier lint:style lint:es test lint:commit"
+    "verify": "npm-run-all prettier lint:style lint:es test lint:commit && yarn workspace @mine/site run ts:check"
   },
   "husky": {
     "hooks": {

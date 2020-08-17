@@ -1,5 +1,37 @@
 {
   "name": "@mine/site",
   "version": "0.0.0",
-  "private": true
+  "private": true,
+  "scripts": {
+    "build": "npm run clear && npm run route && next build",
+    "clear": "rm -rf public/static && rm -rf .next",
+    "dev": "next dev",
+    "export:domain": "cross-env DEPLOY_ENV=local npm run build && next export -o ../../domain-export/",
+    "export:local": "cross-env DEPLOY_ENV=local npm run build && next export -o ../../local-export/",
+    "route": "webpack-node route.ts tsconfig.route.json ",
+    "start": "next start",
+    "ts:check": "tsc --noEmit"
+  },
+  "browserslist": {
+    "production": [
+      "last 1 chrome version"
+    ],
+    "development": [
+      "last 1 chrome version"
+    ]
+  },
+  "dependencies": {
+    "next": "^9.5.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@mine/webpack-node": "^0.0.0",
+    "@types/react": "^16.9.48",
+    "cross-env": "^7.0.2",
+    "file-loader": "^6.0.0",
+    "sass": "^1.26.10",
+    "typescript": "^4.0.2",
+    "webpack": "^4.44.1"
+  }
 }

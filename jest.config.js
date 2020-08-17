@@ -7,7 +7,11 @@ module.exports = {
 
   coverageDirectory: 'coverage',
 
-  coveragePathIgnorePatterns: ['/node_modules/'],
+  coveragePathIgnorePatterns: [
+    '/node_modules/',
+    'packages/site/.next',
+    'packages/site/pages',
+  ],
 
   coverageReporters: ['text', 'text-summary'],
 

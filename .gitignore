@@ -10,3 +10,8 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
+# next.js
+.next/
+/packages/site/public/static
+/local-export
+/domain-export
