@@ -25,11 +25,15 @@
     "@material-ui/icons": "^4.9.1",
     "@material-ui/system": "^4.9.14",
     "classnames": "^2.2.6",
+    "dayjs": "^1.8.34",
+    "mobx": "^5.15.6",
+    "mobx-react-lite": "2.0.7",
     "next": "^9.5.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.10.5",
     "@mine/webpack-node": "^0.0.0",
     "@types/classnames": "^2.2.10",
     "@types/react": "^16.9.48",

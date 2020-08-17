@@ -14,7 +14,10 @@ module.exports = {
       ],
       plugins: [
         '@babel/plugin-transform-react-jsx',
-        '@babel/plugin-proposal-class-properties',
+        // 配置mobx的装饰器支持
+        // 参考：https://mobx.js.org/best/decorators.html
+        ['@babel/plugin-proposal-class-properties', { loose: true }],
+        ['@babel/plugin-proposal-decorators', { legacy: true }],
       ],
     },
   },
