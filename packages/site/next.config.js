@@ -9,6 +9,8 @@ const isLocal = process.env.DEPLOY_ENV === 'local'
 
 const baseUrl = isLocal ? '/eagzzycsl.github.io' : ''
 
+const markdownLoader = require.resolve('@mine/markdown-loader')
+
 module.exports = {
   // 配置本地部署路径
   assetPrefix: baseUrl,
@@ -43,6 +45,11 @@ module.exports = {
         outputPath: '../public/static',
         publicPath: `${baseUrl}/static`,
       },
+    })
+    // 支持import markdown
+    config.module.rules.push({
+      test: /\.md$/,
+      use: markdownLoader,
     })
     // 优化mobx体积
     // 参考：https://mobx.js.org/README.html#browser-support

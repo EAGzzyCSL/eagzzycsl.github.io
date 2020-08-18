@@ -1,4 +1,5 @@
 import iconHeartsV2 from '@/apps/Acknowledgements/icon.png'
+import iconQuillPen from '@/apps/Blog/icon.png'
 import iconPinCodeKeyboard from '@/apps/Calculator/icon.png'
 import imageWallpaper from '@/apps/Launcher/assets/wallpaper.svg'
 import iconRocket from '@/apps/Launcher/icon.png'
@@ -53,6 +54,12 @@ export default {
       url: 'https://icons8.cn/icons/set/pincode-keyboard',
       brief: 'PIN 代码键盘 icon 来自 icons8.cn',
     },
+    {
+      title: '羽毛笔 icon',
+      image: iconQuillPen,
+      url: 'https://icons8.cn/icons/set/quill-pen',
+      brief: '羽毛笔 icon 来自 icons8.cn',
+    },
   ],
   images: [
     {
@@ -81,6 +88,16 @@ export default {
       image: projectMaterialUi,
       url: 'https://material-ui.com/',
       brief: '基于 React 与 Material Design 的 UI 库',
+    },
+    {
+      title: 'highlight.js',
+      url: 'https://highlightjs.org/',
+      brief: '用于web的代码高亮库',
+    },
+    {
+      title: 'markdownlint',
+      url: 'https://github.com/DavidAnson/markdownlint',
+      brief: '适用于 Markdown 文件的 lint 工具',
     },
   ],
 } as DisplayData

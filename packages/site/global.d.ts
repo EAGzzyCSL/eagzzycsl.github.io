@@ -11,3 +11,36 @@ declare module '*.jpeg'
 declare module '*.svg'
 
 declare module '*.mp3'
+
+declare module '*.md' {
+  type title = string
+  const createdAt: string
+  const updatedAt: string
+  const tags: string[]
+  const content: string
+  const introduction: string
+
+  interface TocItem {
+    title: string
+    level: number
+  }
+
+  interface NestedTocItem extends TocItem {
+    sub: NestedTocItem[]
+  }
+
+  type toc = {
+    list: TocItem[]
+    nested: NestedTocItem[]
+  }
+
+  export default {
+    title,
+    createdAt,
+    updatedAt,
+    tags,
+    introduction,
+    toc,
+    content,
+  }
+}

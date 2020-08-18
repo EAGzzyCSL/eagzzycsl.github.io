@@ -12,6 +12,7 @@ module.exports = {
         'launcher',
         'lcstt',
         'calc',
+        'blog',
       ],
     ],
     'scope-empty': [2, 'never'],

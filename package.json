@@ -10,6 +10,7 @@
     "lint:commit": "commitlint --from `git rev-list --max-parents=0 HEAD` --to HEAD",
     "lint:es": "eslint --ext .js,.ts,.tsx ./",
     "lint:es-fix": "npm run lint:es -- --fix",
+    "lint:md": "markdownlint '**/*.md' --ignore-path .gitignore",
     "lint:style": "stylelint './packages/**/*.scss' --syntax scss",
     "lint:style-fix": "npm run lint:style -- --fix",
     "prettier": "prettier --check .",
@@ -19,7 +20,7 @@
     "site:local": "yarn workspace @mine/site run export:local && du -sh ./local-export",
     "test": "jest",
     "test:ci": "jest --coverage",
-    "verify": "npm-run-all prettier lint:style lint:es test lint:commit && yarn workspace @mine/site run ts:check"
+    "verify": "npm-run-all prettier lint:md lint:style lint:es test lint:commit && yarn workspace @mine/site run ts:check"
   },
   "husky": {
     "hooks": {
@@ -46,6 +47,8 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.4.2",
     "lerna": "^3.22.1",
+    "markdownlint": "^0.20.4",
+    "markdownlint-cli": "^0.23.2",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.1.1",
     "stylelint": "^13.6.1",

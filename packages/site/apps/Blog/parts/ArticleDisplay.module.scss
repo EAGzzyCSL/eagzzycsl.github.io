@@ -1,0 +1,64 @@
+@import '@/styles/index.scss';
+
+.article-display {
+  display: block;
+
+  .heading {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0.5em 0;
+
+    .anchor-symbol {
+      position: absolute;
+      top: 0;
+      left: -1.5em;
+      display: flex;
+      align-items: center;
+      align-self: stretch;
+      height: 100%;
+      font-size: 20px;
+      text-decoration: none;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity ease-in-out 0.2s;
+    }
+
+    &:hover {
+      .anchor-symbol {
+        opacity: 1;
+      }
+    }
+  }
+
+  .paragraph {
+    margin: 1em 0;
+    line-height: 2;
+  }
+
+  .table-container {
+    margin: 2em 0;
+  }
+
+  .list {
+    padding-left: 20px;
+    margin: 1em 0;
+
+    .list {
+      margin: 0;
+    }
+  }
+
+  .link {
+    margin: 0 0.2rem;
+    // TODO: visited color
+  }
+
+  .emphasis {
+    font-weight: $font-weight-medium;
+  }
+
+  .strong {
+    font-weight: $font-weight-bold;
+  }
+}

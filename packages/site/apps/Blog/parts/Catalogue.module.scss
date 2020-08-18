@@ -1,0 +1,32 @@
+.catalogue {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-bottom: 48px;
+  overflow-y: auto;
+
+  .title {
+    flex: none;
+  }
+
+  .content {
+    flex: 0 1 auto;
+    overflow-y: auto;
+
+    .list {
+      list-style: none;
+      padding-inline-start: 10px;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      .list-item {
+        margin: 4px 0;
+        .link {
+          &:hover {
+            text-decoration: none;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}

@@ -9,3 +9,9 @@ export const camel2kebab = (str: string): string =>
     .split(/(?=[A-Z])/)
     .join('-')
     .toLowerCase()
+
+export const snake2camel = (str: string): string =>
+  str.replace(/(_[a-z])/g, k => k[1].toUpperCase())
+
+export const kebab2camel = (str: string): string =>
+  str.replace(/(-[a-z])/g, k => k[1].toUpperCase())

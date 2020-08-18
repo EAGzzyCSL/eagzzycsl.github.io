@@ -23,7 +23,7 @@ const BasicDisplayCard = ({
     <Card className={styles.basicDisplayCard}>
       <CardActionArea className={styles.top}>
         <Typography
-          variant='h2'
+          variant='h3'
           color='textPrimary'
           component='span'
           align='center'

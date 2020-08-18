@@ -20,3 +20,6 @@ body {
 * {
   box-sizing: border-box;
 }
+
+// 导入highlight的css样式，对于全局样式next只允许在app中导入
+@import '~highlight.js/styles/a11y-light.css';

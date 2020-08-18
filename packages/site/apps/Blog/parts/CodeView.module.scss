@@ -1,0 +1,22 @@
+$code-bg: #f4f4f4;
+$code-border: #dadada;
+.code-view {
+  margin: 1em 0;
+  font-family: monospace;
+
+  .code {
+    padding: 1em;
+    font-family: monospace;
+    background-color: $code-bg;
+    border-radius: 6px;
+  }
+}
+
+.inline-code-view {
+  padding: 3px 5px;
+  // 使用!important是为了覆盖Typography设定
+  margin: 0 0.5em !important;
+  font-family: monospace !important;
+  background-color: $code-bg;
+  border: solid 1px $code-border;
+}

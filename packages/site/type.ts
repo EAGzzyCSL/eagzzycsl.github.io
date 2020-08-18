@@ -7,6 +7,15 @@ export interface Manifest {
   router: Record<string, string>
 }
 
+export interface StaticPath<P> {
+  params: P
+}
+
+export interface StaticPathsResponse<P> {
+  paths: StaticPath<P>[]
+  fallback: boolean
+}
+
 export interface AppDescribe {
   appId: string
   root: string

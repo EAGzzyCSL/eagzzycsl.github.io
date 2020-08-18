@@ -5,6 +5,7 @@
  *
  */
 import Acknowledgements from '@/apps/Acknowledgements/manifest'
+import Blog from '@/apps/Blog/manifest'
 import Calculator from '@/apps/Calculator/manifest'
 import Launcher from '@/apps/Launcher/manifest'
 import LittleCousinSpeakTheTruth from '@/apps/LittleCousinSpeakTheTruth/manifest'
@@ -15,6 +16,7 @@ import { camel2kebab } from './utils/string'
 const appMap = {
   Launcher,
   Acknowledgements,
+  Blog,
   LittleCousinSpeakTheTruth,
   Calculator,
 }
