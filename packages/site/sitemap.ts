@@ -4,6 +4,7 @@
  * FIXME: 这里引入的名称需要与所在的文件夹严格对应
  *
  */
+import About from '@/apps/About/manifest'
 import Acknowledgements from '@/apps/Acknowledgements/manifest'
 import Blog from '@/apps/Blog/manifest'
 import Calculator from '@/apps/Calculator/manifest'
@@ -17,6 +18,7 @@ const appMap = {
   Launcher,
   Acknowledgements,
   Blog,
+  About,
   LittleCousinSpeakTheTruth,
   Calculator,
 }

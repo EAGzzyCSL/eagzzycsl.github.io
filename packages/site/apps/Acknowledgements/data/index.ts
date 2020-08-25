@@ -1,3 +1,4 @@
+import glassesV4 from '@/apps/About/icon.png'
 import iconHeartsV2 from '@/apps/Acknowledgements/icon.png'
 import iconQuillPen from '@/apps/Blog/icon.png'
 import iconPinCodeKeyboard from '@/apps/Calculator/icon.png'
@@ -59,6 +60,12 @@ export default {
       image: iconQuillPen,
       url: 'https://icons8.cn/icons/set/quill-pen',
       brief: '羽毛笔 icon 来自 icons8.cn',
+    },
+    {
+      title: 'Glasses icon',
+      image: glassesV4,
+      url: 'https://icons8.cn/icons/set/glasses--v4',
+      brief: 'Glasses icon 来自 icons8.cn',
     },
   ],
   images: [

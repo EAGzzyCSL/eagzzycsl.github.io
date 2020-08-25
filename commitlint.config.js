@@ -13,6 +13,7 @@ module.exports = {
         'lcstt',
         'calc',
         'blog',
+        'about',
       ],
     ],
     'scope-empty': [2, 'never'],
