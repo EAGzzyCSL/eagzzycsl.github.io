@@ -1,0 +1,81 @@
+.painter {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  .main {
+    display: flex;
+    flex: 1 0 0;
+    overflow: hidden;
+
+    .display-panel {
+      display: flex;
+      flex: 3 0 0;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      .canvas-board {
+        width: 90%;
+        height: 80%;
+
+        .canvas {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .operating-panel {
+      display: flex;
+      flex: 1 0 0;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .control-board {
+        display: flex;
+        align-items: center;
+
+        .input-area {
+          display: flex;
+          flex-direction: column;
+
+          .input {
+            margin-top: 16px;
+            margin-right: 24px;
+          }
+        }
+      }
+
+      .quick-demo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 32px;
+
+        .demo-button {
+          margin: 0 16px;
+        }
+      }
+    }
+
+    @media screen and (orientation: landscape) {
+      padding: 0 32px;
+    }
+
+    @media screen and (orientation: portrait) {
+      flex-direction: column;
+      padding: 0 16px;
+
+      .display-panel {
+        flex: 1 0 0;
+      }
+
+      .operating-panel {
+        flex: 1 0 0;
+      }
+    }
+  }
+}

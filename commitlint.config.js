@@ -14,6 +14,7 @@ module.exports = {
         'calc',
         'blog',
         'about',
+        'painter',
       ],
     ],
     'scope-empty': [2, 'never'],

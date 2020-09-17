@@ -6,6 +6,7 @@ import imageWallpaper from '@/apps/Launcher/assets/wallpaper.svg'
 import iconRocket from '@/apps/Launcher/icon.png'
 import imageClassroom from '@/apps/LittleCousinSpeakTheTruth/assets/about-header.png'
 import iconChristmasBoyV1 from '@/apps/LittleCousinSpeakTheTruth/icon.png'
+import borderColor from '@/apps/Painter/icon.png'
 
 import projectMaterialUi from './images/material-ui.svg'
 import projectNext from './images/next.svg'
@@ -66,6 +67,12 @@ export default {
       image: glassesV4,
       url: 'https://icons8.cn/icons/set/glasses--v4',
       brief: 'Glasses icon 来自 icons8.cn',
+    },
+    {
+      title: '边框颜色 icon',
+      image: borderColor,
+      url: 'https://icons8.cn/icons/set/border-color',
+      brief: '边框颜色 icon 来自 icons8.cn',
     },
   ],
   images: [

@@ -10,6 +10,7 @@ import Blog from '@/apps/Blog/manifest'
 import Calculator from '@/apps/Calculator/manifest'
 import Launcher from '@/apps/Launcher/manifest'
 import LittleCousinSpeakTheTruth from '@/apps/LittleCousinSpeakTheTruth/manifest'
+import Painter from '@/apps/Painter/manifest'
 
 import { AppDescribe } from './type'
 import { camel2kebab } from './utils/string'
@@ -21,6 +22,7 @@ const appMap = {
   About,
   LittleCousinSpeakTheTruth,
   Calculator,
+  Painter,
 }
 
 const apps: AppDescribe[] = Object.entries(appMap).map(([key, app]) => ({
