@@ -26,7 +26,7 @@
     "@material-ui/lab": "^4.0.0-alpha.56",
     "@material-ui/system": "^4.9.14",
     "classnames": "^2.2.6",
-    "dayjs": "^1.8.34",
+    "dayjs": "^1.9.1",
     "disqus-react": "^1.0.8",
     "highlight.js": "^10.1.2",
     "mobx": "^5.15.6",
