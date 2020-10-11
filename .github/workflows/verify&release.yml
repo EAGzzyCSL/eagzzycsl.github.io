@@ -1,0 +1,26 @@
+on:
+  push:
+    branches:
+      - dev
+jobs:
+  verify-then-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Install
+        run: npm run setup
+
+      - name: Verify
+        run: npm run verify
+
+      - name: Build
+        run: npm run site:domain && echo '' > domain-export/.nojekyll
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: domain-export
