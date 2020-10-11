@@ -6624,10 +6624,10 @@ he@1.1.1:
   resolved "https://registry.npm.taobao.org/he/download/he-1.1.1.tgz#93410fd21b009735151f8868c2f271f3427e23fd"
   integrity sha1-k0EP0hsAlzUVH4howvJx80J+I/0=
 
-highlight.js@^10.1.2:
-  version "10.1.2"
-  resolved "https://registry.npm.taobao.org/highlight.js/download/highlight.js-10.1.2.tgz#c20db951ba1c22c055010648dfffd7b2a968e00c"
-  integrity sha1-wg25UbocIsBVAQZI3//Xsqlo4Aw=
+highlight.js@^10.2.1:
+  version "10.2.1"
+  resolved "https://registry.npm.taobao.org/highlight.js/download/highlight.js-10.2.1.tgz#09784fe2e95612abbefd510948945d4fe6fa9668"
+  integrity sha1-CXhP4ulWEqu+/VEJSJRdT+b6lmg=
 
 hmac-drbg@^1.0.0:
   version "1.0.1"
