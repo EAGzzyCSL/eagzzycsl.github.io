@@ -8095,10 +8095,10 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.npm.taobao.org/lines-and-columns/download/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
   integrity sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
 
-linkify-it@^2.0.0:
-  version "2.2.0"
-  resolved "https://registry.npm.taobao.org/linkify-it/download/linkify-it-2.2.0.tgz#e3b54697e78bf915c70a38acd78fd09e0058b1cf"
-  integrity sha1-47VGl+eL+RXHCjis14/QngBYsc8=
+linkify-it@^3.0.1:
+  version "3.0.2"
+  resolved "https://registry.npm.taobao.org/linkify-it/download/linkify-it-3.0.2.tgz#f55eeb8bc1d3ae754049e124ab3bb56d97797fb8"
+  integrity sha1-9V7ri8HTrnVASeEkqzu1bZd5f7g=
   dependencies:
     uc.micro "^1.0.1"
 
@@ -8408,14 +8408,14 @@ markdown-escapes@^1.0.0:
   resolved "https://registry.npm.taobao.org/markdown-escapes/download/markdown-escapes-1.0.4.tgz#c95415ef451499d7602b91095f3c8e8975f78535"
   integrity sha1-yVQV70UUmddgK5EJXzyOiXX3hTU=
 
-markdown-it@10.0.0:
-  version "10.0.0"
-  resolved "https://registry.npm.taobao.org/markdown-it/download/markdown-it-10.0.0.tgz#abfc64f141b1722d663402044e43927f1f50a8dc"
-  integrity sha1-q/xk8UGxci1mNAIETkOSfx9QqNw=
+markdown-it@11.0.0:
+  version "11.0.0"
+  resolved "https://registry.npm.taobao.org/markdown-it/download/markdown-it-11.0.0.tgz?cache=0&sync_timestamp=1600069707190&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmarkdown-it%2Fdownload%2Fmarkdown-it-11.0.0.tgz#dbfc30363e43d756ebc52c38586b91b90046b876"
+  integrity sha1-2/wwNj5D11brxSw4WGuRuQBGuHY=
   dependencies:
     argparse "^1.0.7"
     entities "~2.0.0"
-    linkify-it "^2.0.0"
+    linkify-it "^3.0.1"
     mdurl "^1.0.1"
     uc.micro "^1.0.5"
 
@@ -8449,10 +8449,10 @@ markdown-toc@^1.2.0:
     repeat-string "^1.6.1"
     strip-color "^0.1.0"
 
-markdownlint-cli@^0.23.2:
-  version "0.23.2"
-  resolved "https://registry.npm.taobao.org/markdownlint-cli/download/markdownlint-cli-0.23.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmarkdownlint-cli%2Fdownload%2Fmarkdownlint-cli-0.23.2.tgz#43f0a96e2699542b74fb5e6188c025e4934357fc"
-  integrity sha1-Q/CpbiaZVCt0+15hiMAl5JNDV/w=
+markdownlint-cli@^0.24.0:
+  version "0.24.0"
+  resolved "https://registry.npm.taobao.org/markdownlint-cli/download/markdownlint-cli-0.24.0.tgz#d1c1d43cd53b87aaec93035b3234eef7097139a8"
+  integrity sha1-0cHUPNU7h6rskwNbMjTu9wlxOag=
   dependencies:
     commander "~2.9.0"
     deep-extend "~0.5.1"
@@ -8463,23 +8463,23 @@ markdownlint-cli@^0.23.2:
     jsonc-parser "~2.2.0"
     lodash.differencewith "~4.5.0"
     lodash.flatten "~4.4.0"
-    markdownlint "~0.20.4"
-    markdownlint-rule-helpers "~0.11.0"
+    markdownlint "~0.21.0"
+    markdownlint-rule-helpers "~0.12.0"
     minimatch "~3.0.4"
     minimist "~1.2.5"
     rc "~1.2.7"
 
-markdownlint-rule-helpers@~0.11.0:
-  version "0.11.0"
-  resolved "https://registry.npm.taobao.org/markdownlint-rule-helpers/download/markdownlint-rule-helpers-0.11.0.tgz#faaaae4337771c7d88ca38ef6265afb4fbe0fb3f"
-  integrity sha1-+qquQzd3HH2IyjjvYmWvtPvg+z8=
+markdownlint-rule-helpers@~0.12.0:
+  version "0.12.0"
+  resolved "https://registry.npm.taobao.org/markdownlint-rule-helpers/download/markdownlint-rule-helpers-0.12.0.tgz#c41d9b990c50911572e8eb2fba3e6975a5514b7e"
+  integrity sha1-xB2bmQxQkRVy6Osvuj5pdaVRS34=
 
-markdownlint@^0.20.4, markdownlint@~0.20.4:
-  version "0.20.4"
-  resolved "https://registry.npm.taobao.org/markdownlint/download/markdownlint-0.20.4.tgz#3b34681494cdad174e14a27182b5cdefaa537823"
-  integrity sha1-OzRoFJTNrRdOFKJxgrXN76pTeCM=
+markdownlint@^0.21.0, markdownlint@~0.21.0:
+  version "0.21.0"
+  resolved "https://registry.npm.taobao.org/markdownlint/download/markdownlint-0.21.0.tgz#411a6937315c7562042e478cd91f52194ff88da4"
+  integrity sha1-QRppNzFcdWIELkeM2R9SGU/4jaQ=
   dependencies:
-    markdown-it "10.0.0"
+    markdown-it "11.0.0"
 
 math-random@^1.0.1:
   version "1.0.4"
