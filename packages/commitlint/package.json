@@ -4,7 +4,7 @@
   "private": true,
   "main": "index.js",
   "dependencies": {
-    "@commitlint/config-conventional": "^9.1.2"
+    "@commitlint/config-conventional": "^11.0.0"
   },
   "peerDependencies": {
     "@commitlint/cli": "^9.1.1"
