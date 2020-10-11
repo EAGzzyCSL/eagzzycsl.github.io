@@ -6,7 +6,7 @@
     "build": "npm run clear && npm run route && next build",
     "clear": "rm -rf public/static && rm -rf .next",
     "dev": "next dev",
-    "export:domain": "cross-env DEPLOY_ENV=local npm run build && next export -o ../../domain-export/",
+    "export:domain": "cross-env DEPLOY_ENV=domain npm run build && next export -o ../../domain-export/",
     "export:local": "cross-env DEPLOY_ENV=local npm run build && next export -o ../../local-export/",
     "route": "webpack-node route.ts tsconfig.route.json ",
     "start": "next start",
