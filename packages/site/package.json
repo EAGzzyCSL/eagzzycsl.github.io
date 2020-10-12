@@ -29,15 +29,14 @@
     "dayjs": "^1.9.1",
     "disqus-react": "^1.0.8",
     "highlight.js": "^10.2.1",
-    "mobx": "^5.15.6",
-    "mobx-react-lite": "2.0.7",
+    "mobx": "^6.0.1",
+    "mobx-react-lite": "3.0.0",
     "next": "^9.5.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-markdown": "^4.3.1"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-decorators": "^7.10.5",
     "@mine/markdown-loader": "^0.0.0",
     "@mine/webpack-node": "^0.0.0",
     "@types/classnames": "^2.2.10",
@@ -47,7 +46,6 @@
     "cross-env": "^7.0.2",
     "file-loader": "^6.1.0",
     "react-test-renderer": "^16.13.1",
-    "resolve": "^1.17.0",
     "sass": "^1.27.0",
     "typescript": "^4.0.2",
     "webpack": "^4.44.1"

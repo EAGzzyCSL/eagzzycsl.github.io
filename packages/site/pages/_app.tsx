@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import React from 'react'
-import 'mobx-react-lite/batchingForReactDom'
 import './app.scss'
 
 const MyApp = ({

@@ -2,8 +2,6 @@
  * next会把pages下面所有js都编译，包括test.js，很蠢，好心人给出了两个方法
  * https://github.com/vercel/next.js/issues/3728
  */
-// eslint-disable-next-line import/no-extraneous-dependencies
-const resolve = require('resolve')
 
 const isLocal = process.env.DEPLOY_ENV === 'local'
 
@@ -51,10 +49,6 @@ module.exports = {
       test: /\.md$/,
       use: markdownLoader,
     })
-    // 优化mobx体积
-    // 参考：https://mobx.js.org/README.html#browser-support
-    // eslint-disable-next-line no-param-reassign
-    config.resolve.alias.mobx = resolve.sync(`mobx/lib/mobx.es6.js`)
     return config
   },
 }

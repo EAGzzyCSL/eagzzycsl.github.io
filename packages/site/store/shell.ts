@@ -1,14 +1,16 @@
-import { observable, action } from 'mobx'
+import { makeAutoObservable } from 'mobx'
 
 export default class ShellStore {
-  @observable isScreenLocked = true
+  isScreenLocked = true
 
-  @action
+  constructor() {
+    makeAutoObservable(this)
+  }
+
   unlockScreen(): void {
     this.isScreenLocked = false
   }
 
-  @action
   lockScreen(): void {
     this.isScreenLocked = true
   }
