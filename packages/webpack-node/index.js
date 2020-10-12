@@ -20,7 +20,7 @@ const compileToJs = async (entryPath, tsConfigPath) => {
             {
               test: /\.ts$/,
               use: {
-                loader: 'ts-loader',
+                loader: require.resolve('ts-loader'),
                 /**
                  * 这里有一个关于noEmit的surprisingly feature/bug
                  * 按道理如果noEmit为true，则会因为tsc没有输出而发生TypeScript emitted no output错误
@@ -48,7 +48,7 @@ const compileToJs = async (entryPath, tsConfigPath) => {
             },
             // 使用null-loader将不支持的文件一律编译为空模块
             {
-              use: 'null-loader',
+              use: require.resolve('null-loader'),
             },
           ],
         },
