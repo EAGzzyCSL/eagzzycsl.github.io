@@ -16,9 +16,11 @@
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "setup": "yarn install --frozen-lockfile && lerna bootstrap",
+    "site:build": "yarn workspace @mine/site run build",
     "site:dev": "yarn workspace @mine/site run dev",
     "site:domain": "yarn workspace @mine/site run export:domain",
     "site:local": "yarn workspace @mine/site run export:local && du -sh ./local-export",
+    "site:serve": "yarn workspace @mine/site run serve",
     "test": "jest",
     "test:ci": "jest --coverage",
     "verify": "npm-run-all prettier lint:md lint:style lint:es test lint:commit && yarn workspace @mine/site run ts:check"
