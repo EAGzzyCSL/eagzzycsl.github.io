@@ -12262,10 +12262,10 @@ stylelint-config-prettier@^8.0.2:
   resolved "https://registry.npm.taobao.org/stylelint-config-prettier/download/stylelint-config-prettier-8.0.2.tgz?cache=0&sync_timestamp=1592608785034&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fstylelint-config-prettier%2Fdownload%2Fstylelint-config-prettier-8.0.2.tgz#da9de33da4c56893cbe7e26df239a7374045e14e"
   integrity sha1-2p3jPaTFaJPL5+Jt8jmnN0BF4U4=
 
-stylelint-config-recess-order@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.npm.taobao.org/stylelint-config-recess-order/download/stylelint-config-recess-order-2.1.0.tgz#84bfe5df9c73b2a7744d2d55e70dcec786e1d89c"
-  integrity sha1-hL/l35xzsqd0TS1V5w3Ox4bh2Jw=
+stylelint-config-recess-order@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.npm.taobao.org/stylelint-config-recess-order/download/stylelint-config-recess-order-2.2.0.tgz#19f1fe7c05c4626cb4ebb70f7e07b5c929b1eaed"
+  integrity sha1-GfH+fAXEYmy067cPfge1ySmx6u0=
   dependencies:
     stylelint-order "4.1.x"
 
