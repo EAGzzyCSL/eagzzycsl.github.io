@@ -34,7 +34,7 @@
     "next": "^9.5.2",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "react-markdown": "^4.3.1"
+    "react-markdown": "^5.0.0"
   },
   "devDependencies": {
     "@mine/markdown-loader": "^0.0.0",
