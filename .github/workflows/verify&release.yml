@@ -24,3 +24,4 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
           FOLDER: domain-export
+          SINGLE_COMMIT: true
