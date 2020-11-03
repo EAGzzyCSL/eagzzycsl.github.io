@@ -5113,12 +5113,12 @@ css-loader@3.5.3:
     schema-utils "^2.6.6"
     semver "^6.3.0"
 
-css-tree@1.0.0-alpha.38:
-  version "1.0.0-alpha.38"
-  resolved "https://registry.npm.taobao.org/css-tree/download/css-tree-1.0.0-alpha.38.tgz#a75431f4162da84dbdb3c4804e79ad784aa7593c"
-  integrity sha1-p1Qx9BYtqE29s8SATnmteEqnWTw=
+css-tree@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npm.taobao.org/css-tree/download/css-tree-1.0.0.tgz?cache=0&sync_timestamp=1603806524819&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcss-tree%2Fdownload%2Fcss-tree-1.0.0.tgz#21993fa270d742642a90409a2c0cb3ac0298adf6"
+  integrity sha1-IZk/onDXQmQqkECaLAyzrAKYrfY=
   dependencies:
-    mdn-data "2.0.6"
+    mdn-data "2.0.12"
     source-map "^0.6.1"
 
 css-vendor@^2.0.8:
@@ -9024,10 +9024,10 @@ mdast-util-to-string@^1.0.0:
   resolved "https://registry.npm.taobao.org/mdast-util-to-string/download/mdast-util-to-string-1.1.0.tgz#27055500103f51637bd07d01da01eb1967a43527"
   integrity sha1-JwVVABA/UWN70H0B2gHrGWekNSc=
 
-mdn-data@2.0.6:
-  version "2.0.6"
-  resolved "https://registry.npm.taobao.org/mdn-data/download/mdn-data-2.0.6.tgz#852dc60fcaa5daa2e8cf6c9189c440ed3e042978"
-  integrity sha1-hS3GD8ql2qLoz2yRicRA7T4EKXg=
+mdn-data@2.0.12:
+  version "2.0.12"
+  resolved "https://registry.npm.taobao.org/mdn-data/download/mdn-data-2.0.12.tgz?cache=0&sync_timestamp=1602987511227&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmdn-data%2Fdownload%2Fmdn-data-2.0.12.tgz#bbb658d08b38f574bbb88f7b83703defdcc46844"
+  integrity sha1-u7ZY0Is49XS7uI97g3A979zEaEQ=
 
 mdurl@^1.0.1:
   version "1.0.1"
@@ -12294,12 +12294,12 @@ stylelint-config-standard@^20.0.0:
   dependencies:
     stylelint-config-recommended "^3.0.0"
 
-stylelint-csstree-validator@^1.8.0:
-  version "1.8.0"
-  resolved "https://registry.npm.taobao.org/stylelint-csstree-validator/download/stylelint-csstree-validator-1.8.0.tgz#f8e0179ba115b82249344b16f737968dc21cd408"
-  integrity sha1-+OAXm6EVuCJJNEsW9zeWjcIc1Ag=
+stylelint-csstree-validator@^1.9.0:
+  version "1.9.0"
+  resolved "https://registry.npm.taobao.org/stylelint-csstree-validator/download/stylelint-csstree-validator-1.9.0.tgz#9f7971d87bf525f54e20434329fa5e27ee4e9491"
+  integrity sha1-n3lx2Hv1JfVOIENDKfpeJ+5OlJE=
   dependencies:
-    css-tree "1.0.0-alpha.38"
+    css-tree "^1.0.0"
 
 stylelint-order@4.1.x:
   version "4.1.0"
