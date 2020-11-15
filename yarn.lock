@@ -2983,10 +2983,12 @@
   dependencies:
     "@types/node" "*"
 
-"@types/highlight.js@^9.12.4":
-  version "9.12.4"
-  resolved "https://registry.npm.taobao.org/@types/highlight.js/download/@types/highlight.js-9.12.4.tgz#8c3496bd1b50cc04aeefd691140aa571d4dbfa34"
-  integrity sha1-jDSWvRtQzASu79aRFAqlcdTb+jQ=
+"@types/highlight.js@^10.1.0":
+  version "10.1.0"
+  resolved "https://registry.npm.taobao.org/@types/highlight.js/download/@types/highlight.js-10.1.0.tgz#89bb0c202997d7a90a07bd2ec1f7d00c56bb90b4"
+  integrity sha1-ibsMICmX16kKB70uwffQDFa7kLQ=
+  dependencies:
+    highlight.js "*"
 
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0", "@types/istanbul-lib-coverage@^2.0.1":
   version "2.0.3"
@@ -7064,10 +7066,10 @@ he@1.1.1:
   resolved "https://registry.npm.taobao.org/he/download/he-1.1.1.tgz#93410fd21b009735151f8868c2f271f3427e23fd"
   integrity sha1-k0EP0hsAlzUVH4howvJx80J+I/0=
 
-highlight.js@^10.3.0:
-  version "10.3.0"
-  resolved "https://registry.npm.taobao.org/highlight.js/download/highlight.js-10.3.0.tgz#126609b0074c7c532c141b0283f62cbe1a20de8a"
-  integrity sha1-EmYJsAdMfFMsFBsCg/Ysvhog3oo=
+highlight.js@*, highlight.js@^10.3.2:
+  version "10.3.2"
+  resolved "https://registry.npm.taobao.org/highlight.js/download/highlight.js-10.3.2.tgz#135fd3619a00c3cbb8b4cd6dbc78d56bfcbc46f1"
+  integrity sha1-E1/TYZoAw8u4tM1tvHjVa/y8RvE=
 
 hmac-drbg@^1.0.0:
   version "1.0.1"
