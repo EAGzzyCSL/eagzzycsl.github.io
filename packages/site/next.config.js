@@ -29,7 +29,7 @@ module.exports = {
               .filter(___ => ___.loader.includes('/css-loader/'))
               .forEach(___ => {
                 // eslint-disable-next-line no-param-reassign
-                ___.options.localsConvention = 'camelCaseOnly'
+                ___.options.modules.exportLocalsConvention = 'camelCaseOnly'
               }),
           ),
       )
