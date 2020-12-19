@@ -9,6 +9,8 @@ module.exports = {
     'eslint-config-prettier',
   ],
   rules: {
+    'no-shadow': 'off',
+    'no-use-before-define': 'off',
     // 要求声明函数返回值，但允许一些特例
     '@typescript-eslint/explicit-function-return-type': [
       'error',

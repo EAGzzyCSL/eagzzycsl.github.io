@@ -5,6 +5,9 @@ module.exports = {
     {
       files: ['packages/**/*.tsx', 'packages/**/*.ts'],
       extends: ['@mine/eslint-config/typescript'],
+      parserOptions: {
+        project: './tsconfig.json',
+      },
       overrides: [
         {
           files: ['packages/**/*.tsx'],
