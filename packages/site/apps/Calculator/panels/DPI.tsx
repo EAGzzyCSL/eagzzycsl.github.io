@@ -111,18 +111,16 @@ const ExpressionSymbol = ({
 }: {
   content: string
   sup?: boolean
-}): JSX.Element => {
-  return (
-    <Typography
-      component={sup ? 'sup' : 'span'}
-      variant='inherit'
-      color='secondary'
-      className={styles.symbol}
-    >
-      {content}
-    </Typography>
-  )
-}
+}): JSX.Element => (
+  <Typography
+    component={sup ? 'sup' : 'span'}
+    variant='inherit'
+    color='secondary'
+    className={styles.symbol}
+  >
+    {content}
+  </Typography>
+)
 
 ExpressionSymbol.defaultProps = {
   sup: false,
@@ -162,21 +160,19 @@ const Expression = ({
   const createFormulaField = (
     indexInFormula: number,
     readOnly?: boolean,
-  ): JSX.Element => {
-    return (
-      <DPITextField
-        readOnly={readOnly}
-        label={DPIFormulaDescription[indexInFormula].label}
-        value={formulaInput[DPIFormulaDescription[indexInFormula].field]}
-        onChange={value => {
-          handleDPITextFieldChange(
-            DPIFormulaDescription[indexInFormula].field,
-            value,
-          )
-        }}
-      />
-    )
-  }
+  ): JSX.Element => (
+    <DPITextField
+      readOnly={readOnly}
+      label={DPIFormulaDescription[indexInFormula].label}
+      value={formulaInput[DPIFormulaDescription[indexInFormula].field]}
+      onChange={value => {
+        handleDPITextFieldChange(
+          DPIFormulaDescription[indexInFormula].field,
+          value,
+        )
+      }}
+    />
+  )
 
   const evaluateButtonDisabled = DPIFormulaDescription.slice(0, 3)
     .map(item => formulaInput[item.field])

@@ -168,12 +168,10 @@ Blog.defaultProps = {
 
 export default Blog
 
-export const getStaticProps = (): GetStaticPropsResult<BlogProps> => {
-  return {
-    props: {
-      posts: dataOfPosts,
-    },
-  }
-}
+export const getStaticProps = (): GetStaticPropsResult<BlogProps> => ({
+  props: {
+    posts: dataOfPosts,
+  },
+})
 
 // TODO: 真正实现数据的独立fetch

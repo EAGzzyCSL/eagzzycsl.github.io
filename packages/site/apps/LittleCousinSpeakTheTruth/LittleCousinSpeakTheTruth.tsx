@@ -39,62 +39,58 @@ interface LeftContentProps {
   onTapBack: () => void
 }
 
-const LeftContent = ({ onTapBack }: LeftContentProps): JSX.Element => {
-  return (
-    <div className={styles.contentAbout}>
-      <AppBar position='static'>
-        <Toolbar>
-          <IconButton edge='start' color='inherit' onClick={onTapBack}>
-            <ArrowBackRoundedIcon />
-          </IconButton>
-          <Typography component='h1' variant='h6'>
-            他说破了事实
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      <div className={styles.about}>
-        <AboutCard />
-      </div>
+const LeftContent = ({ onTapBack }: LeftContentProps): JSX.Element => (
+  <div className={styles.contentAbout}>
+    <AppBar position='static'>
+      <Toolbar>
+        <IconButton edge='start' color='inherit' onClick={onTapBack}>
+          <ArrowBackRoundedIcon />
+        </IconButton>
+        <Typography component='h1' variant='h6'>
+          他说破了事实
+        </Typography>
+      </Toolbar>
+    </AppBar>
+    <div className={styles.about}>
+      <AboutCard />
     </div>
-  )
-}
+  </div>
+)
 
 interface RightContentProps {
   onTapBack: () => void
 }
 
-const RightContent = ({ onTapBack }: RightContentProps): JSX.Element => {
-  return (
-    <div className={styles.contentReference}>
-      <AppBar position='static'>
-        <Toolbar>
-          <div className={styles.navBack}>
-            <IconButton edge='start' color='inherit' onClick={onTapBack}>
-              <ArrowBackRoundedIcon />
-            </IconButton>
-          </div>
-          <Typography component='h1' variant='h6'>
-            参考
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      <div className={styles.reference}>
-        <ReferenceStatement
-          title='插图来源'
-          content='Illustration from Icons8'
-          linkTitle='Icons8'
-          href='https://icons8.com/'
-        />
-        <ReferenceStatement
-          title='微信语音处理'
-          content='silk v3编码转换'
-          linkTitle='V2EX'
-          href='https://www.v2ex.com/t/171735'
-        />
-      </div>
+const RightContent = ({ onTapBack }: RightContentProps): JSX.Element => (
+  <div className={styles.contentReference}>
+    <AppBar position='static'>
+      <Toolbar>
+        <div className={styles.navBack}>
+          <IconButton edge='start' color='inherit' onClick={onTapBack}>
+            <ArrowBackRoundedIcon />
+          </IconButton>
+        </div>
+        <Typography component='h1' variant='h6'>
+          参考
+        </Typography>
+      </Toolbar>
+    </AppBar>
+    <div className={styles.reference}>
+      <ReferenceStatement
+        title='插图来源'
+        content='Illustration from Icons8'
+        linkTitle='Icons8'
+        href='https://icons8.com/'
+      />
+      <ReferenceStatement
+        title='微信语音处理'
+        content='silk v3编码转换'
+        linkTitle='V2EX'
+        href='https://www.v2ex.com/t/171735'
+      />
     </div>
-  )
-}
+  </div>
+)
 
 interface CenterContentProps {
   chats: Chats
@@ -242,10 +238,6 @@ LittleCousinSpeakTheTruth.defaultProps = {
 }
 export default LittleCousinSpeakTheTruth
 
-export const getStaticProps = (): GetStaticPropsResult<
-  LittleCousinSpeakTheTruthProps
-> => {
-  return {
-    props: {},
-  }
-}
+export const getStaticProps = (): GetStaticPropsResult<LittleCousinSpeakTheTruthProps> => ({
+  props: {},
+})

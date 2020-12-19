@@ -43,8 +43,6 @@ const Launcher = (): JSX.Element => {
 
 export default observer(Launcher)
 
-export const getStaticProps = (): GetStaticPropsResult<unknown> => {
-  return {
-    props: {},
-  }
-}
+export const getStaticProps = (): GetStaticPropsResult<unknown> => ({
+  props: {},
+})

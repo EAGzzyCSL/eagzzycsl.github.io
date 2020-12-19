@@ -139,6 +139,4 @@ export function getStaticPaths(): StaticPathsResponse<PostProps> {
 
 export const getStaticProps = (
   options: StaticPath<PostProps>,
-): GetStaticPropsResult<PostProps> => {
-  return { props: options.params }
-}
+): GetStaticPropsResult<PostProps> => ({ props: options.params })

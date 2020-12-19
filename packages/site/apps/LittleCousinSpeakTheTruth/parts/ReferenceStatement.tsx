@@ -20,28 +20,26 @@ const ReferenceStatement = ({
   content,
   linkTitle,
   href,
-}: ReferenceStatementProps): JSX.Element => {
-  return (
-    <section className={styles.referenceStatement}>
-      <Card>
-        <CardActionArea>
-          <CardContent>
-            <Typography gutterBottom variant='h5' component='h2'>
-              {title}
-            </Typography>
-            <Typography variant='body2' color='textSecondary' component='p'>
-              {content}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-        <CardActions>
-          <Button size='small' color='primary' href={href} target='_blank'>
-            {linkTitle}
-          </Button>
-        </CardActions>
-      </Card>
-    </section>
-  )
-}
+}: ReferenceStatementProps): JSX.Element => (
+  <section className={styles.referenceStatement}>
+    <Card>
+      <CardActionArea>
+        <CardContent>
+          <Typography gutterBottom variant='h5' component='h2'>
+            {title}
+          </Typography>
+          <Typography variant='body2' color='textSecondary' component='p'>
+            {content}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+        <Button size='small' color='primary' href={href} target='_blank'>
+          {linkTitle}
+        </Button>
+      </CardActions>
+    </Card>
+  </section>
+)
 
 export default ReferenceStatement

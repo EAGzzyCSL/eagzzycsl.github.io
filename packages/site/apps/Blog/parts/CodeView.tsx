@@ -33,16 +33,14 @@ export const InlineCodeView = ({
   children,
 }: {
   children: string
-}): JSX.Element => {
-  return (
-    <Typography
-      component='code'
-      color='secondary'
-      className={styles.inlineCodeView}
-    >
-      {children}
-    </Typography>
-  )
-}
+}): JSX.Element => (
+  <Typography
+    component='code'
+    color='secondary'
+    className={styles.inlineCodeView}
+  >
+    {children}
+  </Typography>
+)
 
 export default CodeView

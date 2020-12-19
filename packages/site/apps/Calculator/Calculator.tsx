@@ -104,9 +104,9 @@ const Calculator = (): JSX.Element => {
                 indicatorColor='primary'
                 textColor='primary'
               >
-                {panels.map(item => {
-                  return <Tab label={item.title} key={item.id} />
-                })}
+                {panels.map(item => (
+                  <Tab label={item.title} key={item.id} />
+                ))}
               </Tabs>
             </div>
           </Toolbar>
@@ -122,8 +122,6 @@ const Calculator = (): JSX.Element => {
 
 export default Calculator
 
-export const getStaticProps = (): GetStaticPropsResult<unknown> => {
-  return {
-    props: {},
-  }
-}
+export const getStaticProps = (): GetStaticPropsResult<unknown> => ({
+  props: {},
+})

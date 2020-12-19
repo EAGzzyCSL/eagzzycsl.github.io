@@ -19,45 +19,39 @@ interface RendererProps {
   children: ReactNode
 }
 
-const RootRenderer = ({ children }: RendererProps): JSX.Element => {
-  return (
-    <Typography component='section' variant='body1'>
-      {children}
-    </Typography>
-  )
-}
+const RootRenderer = ({ children }: RendererProps): JSX.Element => (
+  <Typography component='section' variant='body1'>
+    {children}
+  </Typography>
+)
 
-const ParagraphRenderer = ({ children }: RendererProps): JSX.Element => {
-  return (
-    <Typography className={styles.paragraph} component='p'>
-      {children}
-    </Typography>
-  )
-}
+const ParagraphRenderer = ({ children }: RendererProps): JSX.Element => (
+  <Typography className={styles.paragraph} component='p'>
+    {children}
+  </Typography>
+)
 
-const TableRenderer = ({ children }: RendererProps): JSX.Element => {
-  return (
-    <TableContainer className={styles.tableContainer}>
-      <Table>{children}</Table>
-    </TableContainer>
-  )
-}
+const TableRenderer = ({ children }: RendererProps): JSX.Element => (
+  <TableContainer className={styles.tableContainer}>
+    <Table>{children}</Table>
+  </TableContainer>
+)
 
-const TableHeadRenderer = ({ children }: RendererProps): JSX.Element => {
-  return <TableHead>{children}</TableHead>
-}
+const TableHeadRenderer = ({ children }: RendererProps): JSX.Element => (
+  <TableHead>{children}</TableHead>
+)
 
-const TableBodyRenderer = ({ children }: RendererProps): JSX.Element => {
-  return <TableBody>{children}</TableBody>
-}
+const TableBodyRenderer = ({ children }: RendererProps): JSX.Element => (
+  <TableBody>{children}</TableBody>
+)
 
-const TableRowRenderer = ({ children }: RendererProps): JSX.Element => {
-  return <TableRow>{children}</TableRow>
-}
+const TableRowRenderer = ({ children }: RendererProps): JSX.Element => (
+  <TableRow>{children}</TableRow>
+)
 
-const TableCellRenderer = ({ children }: RendererProps): JSX.Element => {
-  return <TableCell align='center'>{children}</TableCell>
-}
+const TableCellRenderer = ({ children }: RendererProps): JSX.Element => (
+  <TableCell align='center'>{children}</TableCell>
+)
 
 const ListRenderer = ({
   children,
@@ -65,17 +59,15 @@ const ListRenderer = ({
 }: {
   children: ReactNode
   ordered: number
-}): JSX.Element => {
-  return (
-    <Typography className={styles.list} component={ordered ? 'ol' : 'ul'}>
-      {children}
-    </Typography>
-  )
-}
+}): JSX.Element => (
+  <Typography className={styles.list} component={ordered ? 'ol' : 'ul'}>
+    {children}
+  </Typography>
+)
 
-const ListItemRenderer = ({ children }: RendererProps): JSX.Element => {
-  return <Typography component='li'>{children}</Typography>
-}
+const ListItemRenderer = ({ children }: RendererProps): JSX.Element => (
+  <Typography component='li'>{children}</Typography>
+)
 
 const ImageRenderer = ({
   alt,
@@ -83,28 +75,26 @@ const ImageRenderer = ({
 }: {
   alt: string
   src: string
-}): JSX.Element => {
-  return <ImageView src={src} alt={alt} />
-}
+}): JSX.Element => <ImageView src={src} alt={alt} />
 
 interface CodeRenderProps {
   value: string
   language: string
 }
 
-const CodeRenderer = ({ value, language }: CodeRenderProps): JSX.Element => {
-  return <CodeView code={value} language={language} />
-}
+const CodeRenderer = ({ value, language }: CodeRenderProps): JSX.Element => (
+  <CodeView code={value} language={language} />
+)
 
 const InlineCodeRender = ({
   value,
-}: Pick<CodeRenderProps, 'value'>): JSX.Element => {
-  return <InlineCodeView>{value}</InlineCodeView>
-}
+}: Pick<CodeRenderProps, 'value'>): JSX.Element => (
+  <InlineCodeView>{value}</InlineCodeView>
+)
 
-const BlockquoteRenderer = ({ children }: RendererProps): JSX.Element => {
-  return <QuoteView>{children}</QuoteView>
-}
+const BlockquoteRenderer = ({ children }: RendererProps): JSX.Element => (
+  <QuoteView>{children}</QuoteView>
+)
 
 const LinkRenderer = ({
   href,
@@ -112,36 +102,30 @@ const LinkRenderer = ({
 }: {
   href: string
   children: ReactNode
-}): JSX.Element => {
-  return (
-    <Link
-      className={styles.link}
-      href={href}
-      variant='inherit'
-      rel='noreferrer'
-      target='_blank'
-      color='secondary'
-    >
-      {children}
-    </Link>
-  )
-}
+}): JSX.Element => (
+  <Link
+    className={styles.link}
+    href={href}
+    variant='inherit'
+    rel='noreferrer'
+    target='_blank'
+    color='secondary'
+  >
+    {children}
+  </Link>
+)
 
-const EmphasisRenderer = ({ children }: RendererProps): JSX.Element => {
-  return (
-    <Typography component='em' color='secondary' className={styles.emphasis}>
-      {children}
-    </Typography>
-  )
-}
+const EmphasisRenderer = ({ children }: RendererProps): JSX.Element => (
+  <Typography component='em' color='secondary' className={styles.emphasis}>
+    {children}
+  </Typography>
+)
 
-const StrongRenderer = ({ children }: RendererProps): JSX.Element => {
-  return (
-    <Typography component='strong' color='secondary' className={styles.strong}>
-      {children}
-    </Typography>
-  )
-}
+const StrongRenderer = ({ children }: RendererProps): JSX.Element => (
+  <Typography component='strong' color='secondary' className={styles.strong}>
+    {children}
+  </Typography>
+)
 
 const renderers = {
   root: RootRenderer,
@@ -241,16 +225,14 @@ const createRenderer = (): ReactMarkdownProps['renderers'] => {
   }
 }
 
-const ArticleDisplay = ({ markdown }: { markdown: string }): JSX.Element => {
-  return (
-    <article className={styles.articleDisplay}>
-      <ReactMarkdown
-        escapeHtml={false}
-        source={markdown}
-        renderers={createRenderer()}
-      />
-    </article>
-  )
-}
+const ArticleDisplay = ({ markdown }: { markdown: string }): JSX.Element => (
+  <article className={styles.articleDisplay}>
+    <ReactMarkdown
+      escapeHtml={false}
+      source={markdown}
+      renderers={createRenderer()}
+    />
+  </article>
+)
 
 export default ArticleDisplay

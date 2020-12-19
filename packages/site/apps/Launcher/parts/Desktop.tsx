@@ -6,9 +6,8 @@ import AppEntry from './AppEntry'
 import styles from './Desktop.module.scss'
 import SearchBar from './SearchBar'
 
-export const jointGoogleSearchUrl = (keyword: string): string => {
-  return `https://www.google.com/search?q=${encodeURIComponent(keyword)}`
-}
+export const jointGoogleSearchUrl = (keyword: string): string =>
+  `https://www.google.com/search?q=${encodeURIComponent(keyword)}`
 interface DesktopInterface {
   apps: AppDescribe[]
 }

@@ -195,8 +195,6 @@ const Painter = (): JSX.Element => {
 }
 export default Painter
 
-export const getStaticProps = (): GetStaticPropsResult<unknown> => {
-  return {
-    props: {},
-  }
-}
+export const getStaticProps = (): GetStaticPropsResult<unknown> => ({
+  props: {},
+})

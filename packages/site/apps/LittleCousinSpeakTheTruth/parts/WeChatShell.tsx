@@ -8,18 +8,16 @@ import styles from './WeChatShell.module.scss'
 
 import { Chats } from '../type'
 
-const Footer = (): JSX.Element => {
-  return (
-    <div className={styles.footer}>
-      <MicIcon fontSize='large' />
+const Footer = (): JSX.Element => (
+  <div className={styles.footer}>
+    <MicIcon fontSize='large' />
 
-      <input className={styles.inputField} />
-      <InsertEmoticonRoundedIcon fontSize='large' />
-      <div className={styles.iconSplit} />
-      <AddCircleOutlineRoundedIcon fontSize='large' />
-    </div>
-  )
-}
+    <input className={styles.inputField} />
+    <InsertEmoticonRoundedIcon fontSize='large' />
+    <div className={styles.iconSplit} />
+    <AddCircleOutlineRoundedIcon fontSize='large' />
+  </div>
+)
 
 interface WeChatShellProps {
   chats: Chats

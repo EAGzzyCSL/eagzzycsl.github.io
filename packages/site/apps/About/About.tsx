@@ -42,85 +42,81 @@ const ContactButton = ({
   icon: React.ReactNode
   title: string
   url: string
-}): JSX.Element => {
-  return (
-    <Button
-      size='small'
-      color='secondary'
-      className={styles.contactButton}
-      startIcon={icon}
-      onClick={() => {
-        window.open(url)
-      }}
-    >
-      {title}
-    </Button>
-  )
-}
+}): JSX.Element => (
+  <Button
+    size='small'
+    color='secondary'
+    className={styles.contactButton}
+    startIcon={icon}
+    onClick={() => {
+      window.open(url)
+    }}
+  >
+    {title}
+  </Button>
+)
 interface AboutProps {
   info?: Info
 }
 
-const About = ({ info = dataOfInfo }: AboutProps): JSX.Element => {
-  return (
-    <AppPage title='关于' theme={theme}>
-      <section className={styles.about}>
-        <SimpleAppBar title='关于' inverse />
-        <div className={styles.main}>
-          <Box className={styles.basicInfoPanel}>
-            <Paper className={styles.avatarWrapper} elevation={3}>
-              <img className={styles.avatar} src={avatarPng} />
-            </Paper>
+const About = ({ info = dataOfInfo }: AboutProps): JSX.Element => (
+  <AppPage title='关于' theme={theme}>
+    <section className={styles.about}>
+      <SimpleAppBar title='关于' inverse />
+      <div className={styles.main}>
+        <Box className={styles.basicInfoPanel}>
+          <Paper className={styles.avatarWrapper} elevation={3}>
+            <img className={styles.avatar} src={avatarPng} />
+          </Paper>
 
-            <div className={styles.labelAndContacts}>
-              <Typography color='primary' component='h1' variant='h4'>
-                程序员
-                <Typography
-                  component='span'
-                  variant='inherit'
-                  color='textSecondary'
-                >
-                  {' '}
-                  /{' '}
-                </Typography>
-                前端
+          <div className={styles.labelAndContacts}>
+            <Typography color='primary' component='h1' variant='h4'>
+              程序员
+              <Typography
+                component='span'
+                variant='inherit'
+                color='textSecondary'
+              >
+                {' '}
+                /{' '}
               </Typography>
-              <div className={styles.contacts}>
-                <ContactButton
-                  title='GitHub'
-                  icon={<GitHubIcon />}
-                  url={info.github}
-                />
-                <ContactButton
-                  title='Telegram'
-                  icon={<TelegramIcon />}
-                  url={info.telegram}
-                />
-              </div>
+              前端
+            </Typography>
+            <div className={styles.contacts}>
+              <ContactButton
+                title='GitHub'
+                icon={<GitHubIcon />}
+                url={info.github}
+              />
+              <ContactButton
+                title='Telegram'
+                icon={<TelegramIcon />}
+                url={info.telegram}
+              />
             </div>
-          </Box>
-          <Box className={styles.faqPanel}>
-            {info.faq.map(({ q, a }) => (
-              <Accordion key={q}>
-                <AccordionSummary expandIcon={<ExpandMoreRoundedIcon />}>
-                  <Typography>{q}</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography color='textSecondary'>{a}</Typography>
-                </AccordionDetails>
-              </Accordion>
-            ))}
-            {/* TODO: 添加评论功能 */}
-          </Box>
-        </div>
-        <footer className={styles.footer}>
-          <Typography color='textSecondary'>EAGzzyCSL@2020</Typography>
-        </footer>
-        <Discussion title='关于' sidesMargin />
-      </section>
-    </AppPage>
-  )
-}
+          </div>
+        </Box>
+        <Box className={styles.faqPanel}>
+          {info.faq.map(({ q, a }) => (
+            <Accordion key={q}>
+              <AccordionSummary expandIcon={<ExpandMoreRoundedIcon />}>
+                <Typography>{q}</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography color='textSecondary'>{a}</Typography>
+              </AccordionDetails>
+            </Accordion>
+          ))}
+          {/* TODO: 添加评论功能 */}
+        </Box>
+      </div>
+      <footer className={styles.footer}>
+        <Typography color='textSecondary'>EAGzzyCSL@2020</Typography>
+      </footer>
+      <Discussion title='关于' sidesMargin />
+    </section>
+  </AppPage>
+)
 
 export default About
 
@@ -128,10 +124,8 @@ About.defaultProps = {
   info: dataOfInfo,
 }
 
-export const getStaticProps = (): GetStaticPropsResult<AboutProps> => {
-  return {
-    props: {
-      info: dataOfInfo,
-    },
-  }
-}
+export const getStaticProps = (): GetStaticPropsResult<AboutProps> => ({
+  props: {
+    info: dataOfInfo,
+  },
+})

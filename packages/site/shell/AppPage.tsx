@@ -28,16 +28,14 @@ const AppPage = ({
   title,
   children,
   theme = defaultTheme,
-}: AppPageProps): JSX.Element => {
-  return (
-    <main className={styles.appPage}>
-      <Head>
-        <title>芹也·{title}</title>
-      </Head>
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
-    </main>
-  )
-}
+}: AppPageProps): JSX.Element => (
+  <main className={styles.appPage}>
+    <Head>
+      <title>芹也·{title}</title>
+    </Head>
+    <ThemeProvider theme={theme}>{children}</ThemeProvider>
+  </main>
+)
 
 AppPage.defaultProps = {
   theme: defaultTheme,

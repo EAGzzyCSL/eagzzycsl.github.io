@@ -17,18 +17,16 @@ const Content = ({
 }: {
   title: string
   brief: string
-}): JSX.Element => {
-  return (
-    <CardContent>
-      <Typography gutterBottom variant='h5' component='h2'>
-        {title}
-      </Typography>
-      <Typography variant='body2' color='textSecondary' component='p'>
-        {brief}
-      </Typography>
-    </CardContent>
-  )
-}
+}): JSX.Element => (
+  <CardContent>
+    <Typography gutterBottom variant='h5' component='h2'>
+      {title}
+    </Typography>
+    <Typography variant='body2' color='textSecondary' component='p'>
+      {brief}
+    </Typography>
+  </CardContent>
+)
 
 const Action = ({ url }: { url: string }): JSX.Element => {
   const handleVisit = (): void => {
@@ -43,16 +41,14 @@ const Action = ({ url }: { url: string }): JSX.Element => {
   )
 }
 
-const Media = ({ image }: { image: string }): JSX.Element => {
-  return (
-    <div
-      className={styles.media}
-      style={{
-        backgroundImage: `url(${image})`,
-      }}
-    />
-  )
-}
+const Media = ({ image }: { image: string }): JSX.Element => (
+  <div
+    className={styles.media}
+    style={{
+      backgroundImage: `url(${image})`,
+    }}
+  />
+)
 
 interface PictorialCardProps {
   data: PictorialDisplayItem
@@ -64,34 +60,32 @@ const PictorialCard = ({
   data: { image, title, brief, url },
   landscape,
   fill,
-}: PictorialCardProps): JSX.Element => {
-  return (
-    <Card
-      className={cx(styles.displayCard, {
-        [styles.landscape]: landscape,
-        [styles.fill]: fill,
-      })}
-    >
-      {landscape ? (
-        <>
-          <div className={styles.left}>
-            <Content title={title} brief={brief} />
-            <Action url={url} />
-          </div>
-          <Media image={image} />
-        </>
-      ) : (
-        <>
-          <CardActionArea className={styles.top}>
-            <Media image={image} />
-            <Content title={title} brief={brief} />
-          </CardActionArea>
+}: PictorialCardProps): JSX.Element => (
+  <Card
+    className={cx(styles.displayCard, {
+      [styles.landscape]: landscape,
+      [styles.fill]: fill,
+    })}
+  >
+    {landscape ? (
+      <>
+        <div className={styles.left}>
+          <Content title={title} brief={brief} />
           <Action url={url} />
-        </>
-      )}
-    </Card>
-  )
-}
+        </div>
+        <Media image={image} />
+      </>
+    ) : (
+      <>
+        <CardActionArea className={styles.top}>
+          <Media image={image} />
+          <Content title={title} brief={brief} />
+        </CardActionArea>
+        <Action url={url} />
+      </>
+    )}
+  </Card>
+)
 
 PictorialCard.defaultProps = {
   landscape: false,
