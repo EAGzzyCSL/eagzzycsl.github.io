@@ -1,0 +1,33 @@
+.nine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  .nine-container {
+    display: grid;
+  }
+
+  @media screen and (orientation: landscape) {
+    $block-size: 20vh;
+    .nine-container {
+      display: grid;
+      grid-template-rows: $block-size $block-size $block-size;
+      grid-template-columns: $block-size $block-size $block-size;
+      width: 3 * $block-size;
+      height: 3 * $block-size;
+    }
+  }
+
+  @media screen and (orientation: portrait) {
+    $block-size: 10vh;
+    .nine-container {
+      display: grid;
+      grid-template-rows: $block-size $block-size $block-size;
+      grid-template-columns: $block-size $block-size $block-size;
+      width: 3 * $block-size;
+      height: 3 * $block-size;
+    }
+  }
+}

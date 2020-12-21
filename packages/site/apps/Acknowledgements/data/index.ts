@@ -7,7 +7,10 @@ import iconRocket from '@/apps/Launcher/icon.png'
 import imageClassroom from '@/apps/LittleCousinSpeakTheTruth/assets/about-header.png'
 import iconChristmasBoyV1 from '@/apps/LittleCousinSpeakTheTruth/icon.png'
 import borderColor from '@/apps/Painter/icon.png'
+import iconSnowmanV2 from '@/apps/WinterNine/icon.png'
 
+// icon prefix 可以用style类别了
+// TODO: 换那个笔画网站
 import projectMaterialUi from './images/material-ui.svg'
 import projectNext from './images/next.svg'
 
@@ -74,6 +77,12 @@ export default {
       url: 'https://icons8.cn/icons/set/border-color',
       brief: '边框颜色 icon 来自 icons8.cn',
     },
+    {
+      title: '雪人 icon',
+      image: iconSnowmanV2,
+      url: 'https://img.icons8.com/cotton/50/000000/snowman--v2.png',
+      brief: '雪人 icon 来自 icons8.cn',
+    },
   ],
   images: [
     {
@@ -112,6 +121,11 @@ export default {
       title: 'markdownlint',
       url: 'https://github.com/DavidAnson/markdownlint',
       brief: '适用于 Markdown 文件的 lint 工具',
+    },
+    {
+      title: '国字标准字体笔顺学习网',
+      url: 'https://stroke-order.learningweb.moe.edu.tw/',
+      brief: '台湾省教育部门维护的汉字笔顺教学资源',
     },
   ],
 } as DisplayData

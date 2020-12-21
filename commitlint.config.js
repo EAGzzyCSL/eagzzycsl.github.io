@@ -15,6 +15,7 @@ module.exports = {
         'blog',
         'about',
         'painter',
+        'nine'
       ],
     ],
     'scope-empty': [2, 'never'],
