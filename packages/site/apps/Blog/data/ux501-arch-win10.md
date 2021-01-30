@@ -1,7 +1,7 @@
 ---
 title: ux501 之 Arch 与 Win10 双系统安装记
 createdAt: 2016-12-20
-updatedAt: 2016-12-20
+updatedAt: 2021-01-30
 tags: OS, Linux, Windows, Arch
 introduction: 笔记本是华硕的ux501，自带 Win10 系统，自己又装了 Arch 作双系统。这里记录了安装时的操作以供将来快速查看。
 ---
@@ -145,7 +145,7 @@ FONT=ter-v32b
 ### 安装
 
 ```shell
-# pacstrap -i /mnt base base-devel btrfs-progs
+# pacstrap /mnt base linux linux-firmware base-devel btrfs-progs
 ```
 
 其中`base-devel` 是日后使用 `aur` 的必须，`btrfs-progs` 是使用 btrfs 的必须。
@@ -198,10 +198,16 @@ echo LANG=en_US.UTF-8 > /etc/locale.conf
 ### 设置主机名
 
 ```shell
-# echo my-hostname > /etc/hostname
+# echo YOUR-HOST-NAME > /etc/hostname
 ```
 
-编辑`hosts`添加`127.0.1.1 my-hostname.localdomain my-hostname`
+编辑`hosts`添加如下内容。
+
+```properties
+127.0.0.1       localhost
+::1             localhost
+127.0.1.1       YOUR-HOST-NAME.localdomain        YOUR-HOST-NAME
+```
 
 ### 网络配置
 
@@ -410,18 +416,18 @@ yaourt 的使用依赖 sudo
 
 archlinuxcn 是由非官方维护的镜像源，但提供了很多实用的软件，尤其针对中国地区。
 
-编辑`/etc/pacman.conf`加入 archLinuxcn。
+编辑`/etc/pacman.conf`加入 archlinuxcn。
 
 ```ini
-[archLinuxcn]
+[archlinuxcn]
 SigLevel = Optional TrustedOnly
-Server = https://mirrors.tuna.tsinghua.edu.cn/archLinuxcn/$arch
-Server = http://repo.archLinuxcn.org/$arch
+Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
+Server = https://repo.archlinuxcn.org/$arch
 ```
 
-更多镜像可以[这里](https://github.com/archLinuxcn/mirrorlist-repo)找到。
+更多镜像可以[这里](https://github.com/archlinuxcn/mirrorlist-repo)找到。
 
-安装`archlinuxcn-keyring`。安装时遇到了一个问题，在[bbs](https://bbs.archLinuxcn.org/viewtopic.php?id=4129)中看到了[解决方案](https://www.archLinuxcn.org/gnupg-2-1-and-the-pacman-keyring/)。
+安装`archlinuxcn-keyring`。安装时遇到了一个问题，在[bbs](https://bbs.archlinuxcn.org/viewtopic.php?id=4129)中看到了[解决方案](https://www.archlinuxcn.org/gnupg-2-1-and-the-pacman-keyring/)。
 
 安装`yaourt`，之后就可以方便获取来自 aur 的包了。
 
