@@ -1,16 +1,14 @@
 import glassesV4 from '@/apps/About/icon.png'
-import iconHeartsV2 from '@/apps/Acknowledgements/icon.png'
-import iconQuillPen from '@/apps/Blog/icon.png'
-import iconPinCodeKeyboard from '@/apps/Calculator/icon.png'
+import iconOfAcknowledgements from '@/apps/Acknowledgements/icon.png'
+import iconOfBlog from '@/apps/Blog/icon.png'
+import iconOfCalculator from '@/apps/Calculator/icon.png'
 import imageWallpaper from '@/apps/Launcher/assets/wallpaper.svg'
-import iconRocket from '@/apps/Launcher/icon.png'
+import iconOfLauncher from '@/apps/Launcher/icon.png'
 import imageClassroom from '@/apps/LittleCousinSpeakTheTruth/assets/about-header.png'
-import iconChristmasBoyV1 from '@/apps/LittleCousinSpeakTheTruth/icon.png'
+import iconOfLittleCousinSpeakTheTruth from '@/apps/LittleCousinSpeakTheTruth/icon.png'
 import borderColor from '@/apps/Painter/icon.png'
-import iconSnowmanV2 from '@/apps/WinterNine/icon.png'
+import iconOfWinterNine from '@/apps/WinterNine/icon.png'
 
-// icon prefix 可以用style类别了
-// TODO: 换那个笔画网站
 import projectMaterialUi from './images/material-ui.svg'
 import projectNext from './images/next.svg'
 
@@ -33,57 +31,27 @@ export interface DisplayData {
   projects: DisplayItem[]
 }
 
-export default {
-  icons: [
-    {
-      title: '火箭 icon',
-      image: iconRocket,
-      url: 'https://icons8.cn/icons/set/rocket',
-      brief: '火箭 icon 来自 icons8.cn',
-    },
-    {
-      title: '桃心 icon',
-      image: iconHeartsV2,
-      url: 'https://icons8.cn/icons/set/hearts--v2',
-      brief: '桃心 icon 来自 icons8.cn',
-    },
-    {
-      title: 'Christmas Boy icon',
-      image: iconChristmasBoyV1,
-      url: 'https://icons8.cn/icons/set/christmas-boy--v1',
-      brief: 'Christmas Boy icon 来自 icons8.cn',
-    },
-    {
-      title: 'PIN 代码键盘 icon',
-      image: iconPinCodeKeyboard,
-      url: 'https://icons8.cn/icons/set/pincode-keyboard',
-      brief: 'PIN 代码键盘 icon 来自 icons8.cn',
-    },
-    {
-      title: '羽毛笔 icon',
-      image: iconQuillPen,
-      url: 'https://icons8.cn/icons/set/quill-pen',
-      brief: '羽毛笔 icon 来自 icons8.cn',
-    },
-    {
-      title: 'Glasses icon',
-      image: glassesV4,
-      url: 'https://icons8.cn/icons/set/glasses--v4',
-      brief: 'Glasses icon 来自 icons8.cn',
-    },
-    {
-      title: '边框颜色 icon',
-      image: borderColor,
-      url: 'https://icons8.cn/icons/set/border-color',
-      brief: '边框颜色 icon 来自 icons8.cn',
-    },
-    {
-      title: '雪人 icon',
-      image: iconSnowmanV2,
-      url: 'https://img.icons8.com/cotton/50/000000/snowman--v2.png',
-      brief: '雪人 icon 来自 icons8.cn',
-    },
+const icon8Icons = [
+  [iconOfLauncher, 'https://icons8.cn/icons/set/rocket'],
+  [iconOfAcknowledgements, 'https://icons8.cn/icons/set/hearts--v2'],
+  [
+    iconOfLittleCousinSpeakTheTruth,
+    'https://icons8.cn/icons/set/christmas-boy--v1',
   ],
+  [iconOfCalculator, 'https://icons8.cn/icons/set/pincode-keyboard'],
+  [iconOfBlog, 'https://icons8.cn/icons/set/quill-pen'],
+  [glassesV4, 'https://icons8.cn/icons/set/glasses--v4'],
+  [borderColor, 'https://icons8.cn/icons/set/border-color'],
+  [iconOfWinterNine, 'https://icons8.com/icon/67935/雪人'],
+].map(([image, url = null]) => ({
+  title: 'from icon8',
+  image,
+  // next 的props限制：`undefined` cannot be serialized as JSON
+  url,
+}))
+
+export default {
+  icons: [...icon8Icons],
   images: [
     {
       title: '桌面壁纸',

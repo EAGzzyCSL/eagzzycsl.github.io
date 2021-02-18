@@ -12,6 +12,7 @@ import SimpleAppBar from '@/shell/SimpleAppBar'
 import styles from './Acknowledgements.module.scss'
 import dataOfResources, { DisplayData, PictorialDisplayItem } from './data'
 import BasicDisplayCard from './parts/BasicDisplayCard'
+import IconDisplayCard from './parts/IconDisplayCard'
 import PictorialDisplayCard from './parts/PictorialDisplayCard'
 
 const theme = createMuiTheme({
@@ -89,7 +90,7 @@ const Acknowledgements = ({
         <Block title='icon'>
           {resources.icons.map((item, index) => (
             // eslint-disable-next-line react/no-array-index-key
-            <PictorialDisplayCard key={index} data={item} landscape />
+            <IconDisplayCard key={index} data={item} />
           ))}
         </Block>
         <Block title='图片'>
