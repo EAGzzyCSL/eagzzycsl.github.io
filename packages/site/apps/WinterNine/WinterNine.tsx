@@ -37,7 +37,9 @@ const WinterNine = (): JSX.Element => {
         <SimpleAppBar title='管城春满' inverse />
         <Nine dayIndex={dayIndex} />
         <Typography gutterBottom variant='h5' color='secondary'>
-          {numberToChar(nineOrder)}九第{numberToChar(dayOrder)}天
+          {dayIndex > 81
+            ? '出九'
+            : `${numberToChar(nineOrder)}九第${numberToChar(dayOrder)}天`}
         </Typography>
       </section>
     </AppPage>
