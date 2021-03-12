@@ -10841,10 +10841,10 @@ react-is@16.13.1, react-is@^16.12.0, react-is@^16.7.0, react-is@^16.8.1, react-i
   resolved "https://registry.npm.taobao.org/react-is/download/react-is-17.0.1.tgz?cache=0&sync_timestamp=1608327781676&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-is%2Fdownload%2Freact-is-17.0.1.tgz#5b3531bd76a645a4c9fb6e693ed36419e3301339"
   integrity sha1-WzUxvXamRaTJ+25pPtNkGeMwEzk=
 
-react-markdown@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.npm.taobao.org/react-markdown/download/react-markdown-5.0.0.tgz#939553f0054929119fa8092ab3a6c8a3003c71fd"
-  integrity sha1-k5VT8AVJKRGfqAkqs6bIowA8cf0=
+react-markdown@^5.0.3:
+  version "5.0.3"
+  resolved "https://registry.npm.taobao.org/react-markdown/download/react-markdown-5.0.3.tgz#41040ea7a9324b564b328fb81dd6c04f2a5373ac"
+  integrity sha1-QQQOp6kyS1ZLMo+4HdbATypTc6w=
   dependencies:
     "@types/mdast" "^3.0.3"
     "@types/unist" "^2.0.3"
