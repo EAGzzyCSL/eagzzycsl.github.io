@@ -5,7 +5,9 @@ $code-border: #dadada;
   font-family: monospace;
 
   .code {
+    display: block;
     padding: 1em;
+    overflow: scroll;
     font-family: monospace;
     background-color: $code-bg;
     border-radius: 6px;

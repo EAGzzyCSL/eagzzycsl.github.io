@@ -1,7 +1,6 @@
 import hljs from 'highlight.js/lib/core'
 import bash from 'highlight.js/lib/languages/bash'
 import c from 'highlight.js/lib/languages/c'
-import cLike from 'highlight.js/lib/languages/c-like'
 import csharp from 'highlight.js/lib/languages/csharp'
 import css from 'highlight.js/lib/languages/css'
 import diff from 'highlight.js/lib/languages/diff'
@@ -24,13 +23,6 @@ import stylus from 'highlight.js/lib/languages/stylus'
 import typescript from 'highlight.js/lib/languages/typescript'
 import xml from 'highlight.js/lib/languages/xml'
 import yaml from 'highlight.js/lib/languages/yaml'
-
-/**
- * c-like需要在c语言之前被定义，否则会遇到下面问题：
- *
- * Cannot read property 'rawDefinition' of undefined
- */
-hljs.registerLanguage('c-like', cLike)
 
 const languages = {
   bash,

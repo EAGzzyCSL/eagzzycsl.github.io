@@ -14,7 +14,9 @@ export interface CodeViewProps {
 
 const CodeView = ({ code, language }: CodeViewProps): JSX.Element => {
   const hlResult = language
-    ? hljs.highlight(language, code)
+    ? hljs.highlight(code, {
+        language,
+      })
     : hljs.highlightAuto(code)
   return (
     <pre className={styles.codeView}>
