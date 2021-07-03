@@ -8,16 +8,16 @@ import './highlightConfig'
 import styles from './CodeView.module.scss'
 
 export interface CodeViewProps {
-  code: string
+  children: string
   language: string
 }
 
-const CodeView = ({ code, language }: CodeViewProps): JSX.Element => {
+const CodeView = ({ children, language }: CodeViewProps): JSX.Element => {
   const hlResult = language
-    ? hljs.highlight(code, {
+    ? hljs.highlight(children, {
         language,
       })
-    : hljs.highlightAuto(code)
+    : hljs.highlightAuto(children)
   return (
     <pre className={styles.codeView}>
       <code

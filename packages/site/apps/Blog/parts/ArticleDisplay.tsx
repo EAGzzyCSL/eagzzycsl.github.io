@@ -8,7 +8,11 @@ import TableHead from '@material-ui/core/TableHead'
 import TableRow from '@material-ui/core/TableRow'
 import LinkRoundedIcon from '@material-ui/icons/LinkRounded'
 import React, { ReactNode } from 'react'
-import ReactMarkdown, { ReactMarkdownProps } from 'react-markdown'
+import ReactMarkdown from 'react-markdown'
+import { Components, NormalComponent } from 'react-markdown/src/ast-to-react'
+import rehypeRaw from 'rehype-raw'
+import rehypeSanitize from 'rehype-sanitize'
+import remarkGfm from 'remark-gfm'
 
 import styles from './ArticleDisplay.module.scss'
 import CodeView, { InlineCodeView } from './CodeView'
@@ -16,14 +20,11 @@ import ImageView from './ImageView'
 import QuoteView from './QuoteView'
 
 interface RendererProps {
+  // 规则本身有bug
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-prop-types.md
+  // eslint-disable-next-line react/no-unused-prop-types
   children: ReactNode
 }
-
-const RootRenderer = ({ children }: RendererProps): JSX.Element => (
-  <Typography component='section' variant='body1'>
-    {children}
-  </Typography>
-)
 
 const ParagraphRenderer = ({ children }: RendererProps): JSX.Element => (
   <Typography className={styles.paragraph} component='p'>
@@ -56,8 +57,7 @@ const TableCellRenderer = ({ children }: RendererProps): JSX.Element => (
 const ListRenderer = ({
   children,
   ordered,
-}: {
-  children: ReactNode
+}: RendererProps & {
   ordered: number
 }): JSX.Element => (
   <Typography className={styles.list} component={ordered ? 'ol' : 'ul'}>
@@ -72,36 +72,37 @@ const ListItemRenderer = ({ children }: RendererProps): JSX.Element => (
 const ImageRenderer = ({
   alt,
   src,
-}: {
+}: RendererProps & {
   alt: string
   src: string
 }): JSX.Element => <ImageView src={src} alt={alt} />
 
 interface CodeRenderProps {
-  value: string
-  language: string
+  children: ReactNode
+  className: string
+  inline: boolean
 }
 
-const CodeRenderer = ({ value, language }: CodeRenderProps): JSX.Element => (
-  <CodeView code={value} language={language} />
-)
-
-const InlineCodeRender = ({
-  value,
-}: Pick<CodeRenderProps, 'value'>): JSX.Element => (
-  <InlineCodeView>{value}</InlineCodeView>
-)
+const CodeRenderer = ({
+  children,
+  inline,
+  className,
+}: CodeRenderProps): JSX.Element =>
+  inline ? (
+    <InlineCodeView>{String(children)}</InlineCodeView>
+  ) : (
+    <CodeView language={className}>{String(children)}</CodeView>
+  )
 
 const BlockquoteRenderer = ({ children }: RendererProps): JSX.Element => (
   <QuoteView>{children}</QuoteView>
 )
 
 const LinkRenderer = ({
-  href,
   children,
-}: {
+  href,
+}: RendererProps & {
   href: string
-  children: ReactNode
 }): JSX.Element => (
   <Link
     className={styles.link}
@@ -127,30 +128,33 @@ const StrongRenderer = ({ children }: RendererProps): JSX.Element => (
   </Typography>
 )
 
-const renderers = {
-  root: RootRenderer,
+/**
+ * 类型参考：https://github.com/remarkjs/react-markdown#appendix-b-components
+ */
+const renderers: Components = {
   // 段落
-  paragraph: ParagraphRenderer,
+  p: ParagraphRenderer,
   // 表格
   table: TableRenderer,
-  tableHead: TableHeadRenderer,
-  tableBody: TableBodyRenderer,
-  tableRow: TableRowRenderer,
-  tableCell: TableCellRenderer,
+  thead: TableHeadRenderer,
+  tbody: TableBodyRenderer,
+  tr: TableRowRenderer,
+  th: TableCellRenderer,
+  td: TableCellRenderer,
   // 列表
-  list: ListRenderer,
-  listItem: ListItemRenderer,
+  ol: (ListRenderer as unknown) as NormalComponent,
+  ul: (ListRenderer as unknown) as NormalComponent,
+  li: ListItemRenderer,
   // 图片
-  image: ImageRenderer,
+  img: (ImageRenderer as unknown) as NormalComponent,
   // 代码
-  code: CodeRenderer,
-  inlineCode: InlineCodeRender,
+  code: (CodeRenderer as unknown) as NormalComponent,
   // 引用
   blockquote: BlockquoteRenderer,
   // 链接
-  link: LinkRenderer,
+  a: (LinkRenderer as unknown) as NormalComponent,
   // 强调
-  emphasis: EmphasisRenderer,
+  em: EmphasisRenderer,
   strong: StrongRenderer,
 }
 
@@ -180,7 +184,7 @@ interface HeadingType {
   children: ReactNode
 }
 
-const createRenderer = (): ReactMarkdownProps['renderers'] => {
+const createRenderer = (): Components => {
   /**
    * 利用渲染顺序为heading生成1.2.3格式的id用以避免重复
    * 为了简化处理，假定标题层级关系一定正确（没有诸如一级标题下直接出现三级标题的情况）
@@ -204,7 +208,7 @@ const createRenderer = (): ReactMarkdownProps['renderers'] => {
 
     // 获取标题中的文本，假定标题中只有纯文本，不存在em、strong、del等情况
     // 复杂模式可参考：https://github.com/rexxars/react-markdown/issues/69
-    const headingText = (children as JSX.Element[])[0].props.value
+    const headingText = String(children)
 
     return (
       <Typography
@@ -221,17 +225,24 @@ const createRenderer = (): ReactMarkdownProps['renderers'] => {
   }
   return {
     ...renderers,
-    heading: HeadingRenderer,
+    h1: HeadingRenderer,
+    h2: HeadingRenderer,
+    h3: HeadingRenderer,
+    h4: HeadingRenderer,
+    h5: HeadingRenderer,
+    h6: HeadingRenderer,
   }
 }
 
 const ArticleDisplay = ({ markdown }: { markdown: string }): JSX.Element => (
   <article className={styles.articleDisplay}>
     <ReactMarkdown
-      escapeHtml={false}
-      source={markdown}
-      renderers={createRenderer()}
-    />
+      remarkPlugins={[remarkGfm]}
+      rehypePlugins={[rehypeRaw, rehypeSanitize]}
+      components={createRenderer()}
+    >
+      {markdown}
+    </ReactMarkdown>
   </article>
 )
 
