@@ -45,7 +45,7 @@
     "@types/classnames": "^2.3.1",
     "@types/react": "^17.0.13",
     "@types/react-test-renderer": "^17.0.1",
-    "cross-env": "^7.0.2",
+    "cross-env": "^7.0.3",
     "file-loader": "^6.2.0",
     "react-test-renderer": "^17.0.2",
     "sass": "^1.35.1",
