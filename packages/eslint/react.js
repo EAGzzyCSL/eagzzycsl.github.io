@@ -27,7 +27,6 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'eslint-config-prettier',
-    'eslint-config-prettier/react',
     'plugin:css-modules/recommended',
   ],
   rules: {

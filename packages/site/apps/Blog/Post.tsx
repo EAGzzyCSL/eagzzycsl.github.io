@@ -38,10 +38,9 @@ const Post = ({ postId: postIdFromProps }: PostProps): JSX.Element => {
   // TODO: blog的404页面
 
   // eslint-disable-next-line import/namespace
-  const PostContent: Article = ((postsData as unknown) as Record<
-    string,
-    Article
-  >)[kebab2camel(postId)]
+  const PostContent: Article = (
+    postsData as unknown as Record<string, Article>
+  )[kebab2camel(postId)]
 
   const outdatedDays = dayjs().diff(dayjs(PostContent.updatedAt), 'day')
 

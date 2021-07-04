@@ -41,10 +41,8 @@ const History = ({
 
   const [snackBarVisible, setSnackBarVisible] = useState(false)
 
-  const [
-    recentRemovedItem,
-    setRecentRemovedItem,
-  ] = useState<HistoryItem | null>(null)
+  const [recentRemovedItem, setRecentRemovedItem] =
+    useState<HistoryItem | null>(null)
 
   const handleCloseSnackBar = (): void => {
     setSnackBarVisible(false)

@@ -238,6 +238,7 @@ LittleCousinSpeakTheTruth.defaultProps = {
 }
 export default LittleCousinSpeakTheTruth
 
-export const getStaticProps = (): GetStaticPropsResult<LittleCousinSpeakTheTruthProps> => ({
-  props: {},
-})
+export const getStaticProps =
+  (): GetStaticPropsResult<LittleCousinSpeakTheTruthProps> => ({
+    props: {},
+  })

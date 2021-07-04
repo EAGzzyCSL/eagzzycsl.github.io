@@ -56,8 +56,7 @@ export default {
     {
       title: '桌面壁纸',
       image: imageWallpaper,
-      url:
-        'https://besthqwallpapers.com/abstract/colorful-strips-art-lines-design-material-abstract-material-25834',
+      url: 'https://besthqwallpapers.com/abstract/colorful-strips-art-lines-design-material-abstract-material-25834',
       brief: '桌面壁纸来自 besthqwallpapers.com，为减小体积转制为svg',
     },
     {

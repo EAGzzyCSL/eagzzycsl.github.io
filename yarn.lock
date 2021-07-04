@@ -5186,10 +5186,10 @@ eslint-config-airbnb@^18.2.0:
     object.assign "^4.1.0"
     object.entries "^1.1.2"
 
-eslint-config-prettier@^7.1.0:
-  version "7.1.0"
-  resolved "https://registry.npm.taobao.org/eslint-config-prettier/download/eslint-config-prettier-7.1.0.tgz?cache=0&sync_timestamp=1608336396089&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Feslint-config-prettier%2Fdownload%2Feslint-config-prettier-7.1.0.tgz#5402eb559aa94b894effd6bddfa0b1ca051c858f"
-  integrity sha1-VALrVZqpS4lO/9a936CxygUchY8=
+eslint-config-prettier@^8.3.0:
+  version "8.3.0"
+  resolved "https://registry.nlark.com/eslint-config-prettier/download/eslint-config-prettier-8.3.0.tgz?cache=0&sync_timestamp=1619270475218&other_urls=https%3A%2F%2Fregistry.nlark.com%2Feslint-config-prettier%2Fdownload%2Feslint-config-prettier-8.3.0.tgz#f7471b20b6fe8a9a9254cc684454202886a2dd7a"
+  integrity sha1-90cbILb+ipqSVMxoRFQgKIai3Xo=
 
 eslint-import-resolver-node@^0.3.3:
   version "0.3.4"
@@ -9657,10 +9657,10 @@ prettier-plugin-packagejson@^2.2.5:
   dependencies:
     sort-package-json "1.44.0"
 
-prettier@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.npm.taobao.org/prettier/download/prettier-2.2.1.tgz?cache=0&sync_timestamp=1606523097359&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fprettier%2Fdownload%2Fprettier-2.2.1.tgz#795a1a78dd52f073da0cd42b21f9c91381923ff5"
-  integrity sha1-eVoaeN1S8HPaDNQrIfnJE4GSP/U=
+prettier@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.nlark.com/prettier/download/prettier-2.3.2.tgz#ef280a05ec253712e486233db5c6f23441e7342d"
+  integrity sha1-7ygKBewlNxLkhiM9tcbyNEHnNC0=
 
 pretty-format@^26.0.0, pretty-format@^26.6.2:
   version "26.6.2"

@@ -5,7 +5,6 @@ module.exports = {
     './import.js',
     'plugin:@typescript-eslint/recommended',
     'plugin:eslint-plugin-import/typescript',
-    'eslint-config-prettier/@typescript-eslint',
     'eslint-config-prettier',
   ],
   rules: {

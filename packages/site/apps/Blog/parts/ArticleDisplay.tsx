@@ -142,17 +142,17 @@ const renderers: Components = {
   th: TableCellRenderer,
   td: TableCellRenderer,
   // 列表
-  ol: (ListRenderer as unknown) as NormalComponent,
-  ul: (ListRenderer as unknown) as NormalComponent,
+  ol: ListRenderer as unknown as NormalComponent,
+  ul: ListRenderer as unknown as NormalComponent,
   li: ListItemRenderer,
   // 图片
-  img: (ImageRenderer as unknown) as NormalComponent,
+  img: ImageRenderer as unknown as NormalComponent,
   // 代码
-  code: (CodeRenderer as unknown) as NormalComponent,
+  code: CodeRenderer as unknown as NormalComponent,
   // 引用
   blockquote: BlockquoteRenderer,
   // 链接
-  a: (LinkRenderer as unknown) as NormalComponent,
+  a: LinkRenderer as unknown as NormalComponent,
   // 强调
   em: EmphasisRenderer,
   strong: StrongRenderer,

@@ -122,8 +122,9 @@ Acknowledgements.defaultProps = {
 
 export default Acknowledgements
 
-export const getStaticProps = (): GetStaticPropsResult<AcknowledgementsProps> => ({
-  props: {
-    resources: dataOfResources,
-  },
-})
+export const getStaticProps =
+  (): GetStaticPropsResult<AcknowledgementsProps> => ({
+    props: {
+      resources: dataOfResources,
+    },
+  })
