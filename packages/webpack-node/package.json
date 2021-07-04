@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "memfs": "^3.2.2",
-    "null-loader": "^4.0.0",
+    "null-loader": "^4.0.1",
     "ts-loader": "^9.2.3",
     "tsconfig-paths-webpack-plugin": "^3.5.1",
     "webpack": "^5.42.0"
