@@ -15,6 +15,16 @@ module.exports = {
   basePath: baseUrl,
   // 导出路径添加index.html避免刷新后404问题
   trailingSlash: true,
+  // TODO: 开启next对eslint的集成
+  // https://nextjs.org/docs/basic-features/eslint
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  // TODO: 启用next的Image组件
+  // https://nextjs.org/docs/basic-features/image-optimization
+  images: {
+    disableStaticImages: true,
+  },
   // 魔改 webpackConfig
   webpack: config => {
     // 支持 css modules 驼峰化
