@@ -204,12 +204,16 @@ test('解析层级关系混乱的heading', () => {
       {
         title: 'aaa',
         level: 1,
+
         sub: [
           {
             title: 'ccc',
             level: 2,
+            // 现有算法会存在数组空位（empty）导致jes不通过
+            // https://jestjs.io/docs/expect#tomatchobjectobject
+            // eslint-disable-next-line no-sparse-arrays
             sub: [
-              undefined,
+              ,
               {
                 title: 'ddd',
                 level: 3,
