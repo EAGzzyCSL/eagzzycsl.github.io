@@ -27,11 +27,11 @@
     "verify": "npm-run-all prettier lint:md lint:style lint:es test lint:commit && yarn workspace @mine/site run ts:check"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.0",
+    "@babel/core": "^7.14.6",
     "@babel/plugin-proposal-class-properties": "^7.14.5",
     "@babel/plugin-transform-react-jsx": "^7.14.5",
-    "@babel/preset-env": "^7.12.0",
-    "@babel/preset-typescript": "^7.12.0",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-typescript": "^7.14.5",
     "@commitlint/cli": "^12.1.4",
     "@mine/commitlint-config": "^0.0.0",
     "@mine/eslint-config": "^0.0.0",
