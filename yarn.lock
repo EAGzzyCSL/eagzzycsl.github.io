@@ -4658,10 +4658,10 @@ dateformat@^3.0.0:
   resolved "https://registry.npm.taobao.org/dateformat/download/dateformat-3.0.3.tgz#a6e37499a4d9a9cf85ef5872044d62901c9889ae"
   integrity sha1-puN0maTZqc+F71hyBE1ikByYia4=
 
-dayjs@^1.9.1:
-  version "1.9.1"
-  resolved "https://registry.npm.taobao.org/dayjs/download/dayjs-1.9.1.tgz#201a755f7db5103ed6de63ba93a984141c754541"
-  integrity sha1-IBp1X321ED7W3mO6k6mEFBx1RUE=
+dayjs@^1.10.5:
+  version "1.10.5"
+  resolved "https://registry.nlark.com/dayjs/download/dayjs-1.10.5.tgz#5600df4548fc2453b3f163ebb2abbe965ccfb986"
+  integrity sha1-VgDfRUj8JFOz8WPrsqu+llzPuYY=
 
 debug@2, debug@^2.6.9:
   version "2.6.9"
