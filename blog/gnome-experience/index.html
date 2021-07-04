@@ -1,0 +1,949 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width"/><title>芹也·GNOME 使用经验</title><meta name="next-head-count" content="3"/><link rel="preload" href="/_next/static/css/89f40ebae058f48d9b72.css" as="style"/><link rel="stylesheet" href="/_next/static/css/89f40ebae058f48d9b72.css" data-n-g=""/><link rel="preload" href="/_next/static/css/15f23e83c0cad82c0dc6.css" as="style"/><link rel="stylesheet" href="/_next/static/css/15f23e83c0cad82c0dc6.css" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-03be4340d9a6ca83cb96.js"></script><script src="/_next/static/chunks/webpack-6aa24242c38afc8913a0.js" defer=""></script><script src="/_next/static/chunks/framework-70121595b794f070d676.js" defer=""></script><script src="/_next/static/chunks/main-ce759eb6eb83bba4ec29.js" defer=""></script><script src="/_next/static/chunks/pages/_app-a1be5b5099b8b75b3f63.js" defer=""></script><script src="/_next/static/chunks/563-78e4102b6438f8266cc5.js" defer=""></script><script src="/_next/static/chunks/905-53b2b25706908467013e.js" defer=""></script><script src="/_next/static/chunks/238-4cdb369e9bc6dc567da3.js" defer=""></script><script src="/_next/static/chunks/461-fb12d25b189fb76286d9.js" defer=""></script><script src="/_next/static/chunks/12-541f52c64fc2358a79e8.js" defer=""></script><script src="/_next/static/chunks/752-bd794f8113a6012af58e.js" defer=""></script><script src="/_next/static/chunks/422-ad5854fe656a7e1af2e9.js" defer=""></script><script src="/_next/static/chunks/658-a9810647095d8b6b043d.js" defer=""></script><script src="/_next/static/chunks/pages/blog/%5BpostId%5D-fd6aa821e5fdd4168a1e.js" defer=""></script><script src="/_next/static/l6ldH-mv2uM7upTEu-70A/_buildManifest.js" defer=""></script><script src="/_next/static/l6ldH-mv2uM7upTEu-70A/_ssgManifest.js" defer=""></script><style id="jss-server-side">.MuiTypography-root {
+  margin: 0;
+}
+.MuiTypography-body2 {
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+}
+.MuiTypography-body1 {
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+}
+.MuiTypography-caption {
+  font-size: 0.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.66;
+  letter-spacing: 0.03333em;
+}
+.MuiTypography-button {
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+}
+.MuiTypography-h1 {
+  font-size: 6rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1.167;
+  letter-spacing: -0.01562em;
+}
+.MuiTypography-h2 {
+  font-size: 3.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.00833em;
+}
+.MuiTypography-h3 {
+  font-size: 3rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.167;
+  letter-spacing: 0em;
+}
+.MuiTypography-h4 {
+  font-size: 2.125rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.235;
+  letter-spacing: 0.00735em;
+}
+.MuiTypography-h5 {
+  font-size: 1.5rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.334;
+  letter-spacing: 0em;
+}
+.MuiTypography-h6 {
+  font-size: 1.25rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
+}
+.MuiTypography-subtitle1 {
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0.00938em;
+}
+.MuiTypography-subtitle2 {
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.57;
+  letter-spacing: 0.00714em;
+}
+.MuiTypography-overline {
+  font-size: 0.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 2.66;
+  letter-spacing: 0.08333em;
+  text-transform: uppercase;
+}
+.MuiTypography-srOnly {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+.MuiTypography-alignLeft {
+  text-align: left;
+}
+.MuiTypography-alignCenter {
+  text-align: center;
+}
+.MuiTypography-alignRight {
+  text-align: right;
+}
+.MuiTypography-alignJustify {
+  text-align: justify;
+}
+.MuiTypography-noWrap {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.MuiTypography-gutterBottom {
+  margin-bottom: 0.35em;
+}
+.MuiTypography-paragraph {
+  margin-bottom: 16px;
+}
+.MuiTypography-colorInherit {
+  color: inherit;
+}
+.MuiTypography-colorPrimary {
+  color: #ff5722;
+}
+.MuiTypography-colorSecondary {
+  color: #00897b;
+}
+.MuiTypography-colorTextPrimary {
+  color: rgba(0, 0, 0, 0.87);
+}
+.MuiTypography-colorTextSecondary {
+  color: rgba(0, 0, 0, 0.54);
+}
+.MuiTypography-colorError {
+  color: #f44336;
+}
+.MuiTypography-displayInline {
+  display: inline;
+}
+.MuiTypography-displayBlock {
+  display: block;
+}
+.MuiSvgIcon-root {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 1.5rem;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  flex-shrink: 0;
+  user-select: none;
+}
+.MuiSvgIcon-colorPrimary {
+  color: #ff5722;
+}
+.MuiSvgIcon-colorSecondary {
+  color: #00897b;
+}
+.MuiSvgIcon-colorAction {
+  color: rgba(0, 0, 0, 0.54);
+}
+.MuiSvgIcon-colorError {
+  color: #f44336;
+}
+.MuiSvgIcon-colorDisabled {
+  color: rgba(0, 0, 0, 0.26);
+}
+.MuiSvgIcon-fontSizeInherit {
+  font-size: inherit;
+}
+.MuiSvgIcon-fontSizeSmall {
+  font-size: 1.25rem;
+}
+.MuiSvgIcon-fontSizeLarge {
+  font-size: 2.1875rem;
+}
+.MuiPaper-root {
+  color: rgba(0, 0, 0, 0.87);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  background-color: #fff;
+}
+.MuiPaper-rounded {
+  border-radius: 4px;
+}
+.MuiPaper-outlined {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-elevation0 {
+  box-shadow: none;
+}
+.MuiPaper-elevation1 {
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation2 {
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation3 {
+  box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation4 {
+  box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation5 {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation6 {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation7 {
+  box-shadow: 0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation8 {
+  box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation9 {
+  box-shadow: 0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation10 {
+  box-shadow: 0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation11 {
+  box-shadow: 0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation12 {
+  box-shadow: 0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation13 {
+  box-shadow: 0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation14 {
+  box-shadow: 0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation15 {
+  box-shadow: 0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation16 {
+  box-shadow: 0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation17 {
+  box-shadow: 0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation18 {
+  box-shadow: 0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation19 {
+  box-shadow: 0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation20 {
+  box-shadow: 0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation21 {
+  box-shadow: 0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation22 {
+  box-shadow: 0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation23 {
+  box-shadow: 0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation24 {
+  box-shadow: 0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12);
+}
+.MuiButtonBase-root {
+  color: inherit;
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  display: inline-flex;
+  outline: 0;
+  padding: 0;
+  position: relative;
+  align-items: center;
+  user-select: none;
+  border-radius: 0;
+  vertical-align: middle;
+  -moz-appearance: none;
+  justify-content: center;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.MuiButtonBase-root::-moz-focus-inner {
+  border-style: none;
+}
+.MuiButtonBase-root.Mui-disabled {
+  cursor: default;
+  pointer-events: none;
+}
+@media print {
+  .MuiButtonBase-root {
+    color-adjust: exact;
+  }
+}
+  .MuiIconButton-root {
+    flex: 0 0 auto;
+    color: rgba(0, 0, 0, 0.54);
+    padding: 12px;
+    overflow: visible;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-radius: 50%;
+  }
+  .MuiIconButton-root:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+  .MuiIconButton-root.Mui-disabled {
+    color: rgba(0, 0, 0, 0.26);
+    background-color: transparent;
+  }
+@media (hover: none) {
+  .MuiIconButton-root:hover {
+    background-color: transparent;
+  }
+}
+  .MuiIconButton-edgeStart {
+    margin-left: -12px;
+  }
+  .MuiIconButton-sizeSmall.MuiIconButton-edgeStart {
+    margin-left: -3px;
+  }
+  .MuiIconButton-edgeEnd {
+    margin-right: -12px;
+  }
+  .MuiIconButton-sizeSmall.MuiIconButton-edgeEnd {
+    margin-right: -3px;
+  }
+  .MuiIconButton-colorInherit {
+    color: inherit;
+  }
+  .MuiIconButton-colorPrimary {
+    color: #ff5722;
+  }
+  .MuiIconButton-colorPrimary:hover {
+    background-color: rgba(255, 87, 34, 0.04);
+  }
+@media (hover: none) {
+  .MuiIconButton-colorPrimary:hover {
+    background-color: transparent;
+  }
+}
+  .MuiIconButton-colorSecondary {
+    color: #00897b;
+  }
+  .MuiIconButton-colorSecondary:hover {
+    background-color: rgba(0, 137, 123, 0.04);
+  }
+@media (hover: none) {
+  .MuiIconButton-colorSecondary:hover {
+    background-color: transparent;
+  }
+}
+  .MuiIconButton-sizeSmall {
+    padding: 3px;
+    font-size: 1.125rem;
+  }
+  .MuiIconButton-label {
+    width: 100%;
+    display: flex;
+    align-items: inherit;
+    justify-content: inherit;
+  }
+  .MuiAppBar-root {
+    width: 100%;
+    display: flex;
+    z-index: 1100;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+  .MuiAppBar-positionFixed {
+    top: 0;
+    left: auto;
+    right: 0;
+    position: fixed;
+  }
+@media print {
+  .MuiAppBar-positionFixed {
+    position: absolute;
+  }
+}
+  .MuiAppBar-positionAbsolute {
+    top: 0;
+    left: auto;
+    right: 0;
+    position: absolute;
+  }
+  .MuiAppBar-positionSticky {
+    top: 0;
+    left: auto;
+    right: 0;
+    position: sticky;
+  }
+  .MuiAppBar-positionStatic {
+    position: static;
+  }
+  .MuiAppBar-positionRelative {
+    position: relative;
+  }
+  .MuiAppBar-colorDefault {
+    color: rgba(0, 0, 0, 0.87);
+    background-color: #f5f5f5;
+  }
+  .MuiAppBar-colorPrimary {
+    color: #fff;
+    background-color: #ff5722;
+  }
+  .MuiAppBar-colorSecondary {
+    color: #fff;
+    background-color: #00897b;
+  }
+  .MuiAppBar-colorInherit {
+    color: inherit;
+  }
+  .MuiAppBar-colorTransparent {
+    color: inherit;
+    background-color: transparent;
+  }
+  .MuiToolbar-root {
+    display: flex;
+    position: relative;
+    align-items: center;
+  }
+  .MuiToolbar-gutters {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+@media (min-width:600px) {
+  .MuiToolbar-gutters {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+  .MuiToolbar-regular {
+    min-height: 56px;
+  }
+@media (min-width:0px) and (orientation: landscape) {
+  .MuiToolbar-regular {
+    min-height: 48px;
+  }
+}
+@media (min-width:600px) {
+  .MuiToolbar-regular {
+    min-height: 64px;
+  }
+}
+  .MuiToolbar-dense {
+    min-height: 48px;
+  }
+  .MuiLink-underlineNone {
+    text-decoration: none;
+  }
+  .MuiLink-underlineHover {
+    text-decoration: none;
+  }
+  .MuiLink-underlineHover:hover {
+    text-decoration: underline;
+  }
+  .MuiLink-underlineAlways {
+    text-decoration: underline;
+  }
+  .MuiLink-button {
+    border: 0;
+    cursor: pointer;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    position: relative;
+    user-select: none;
+    border-radius: 0;
+    vertical-align: middle;
+    -moz-appearance: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .MuiLink-button::-moz-focus-inner {
+    border-style: none;
+  }
+  .MuiLink-button.Mui-focusVisible {
+    outline: auto;
+  }
+  .MuiSvgIcon-root {
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    font-size: 1.5rem;
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    flex-shrink: 0;
+    user-select: none;
+  }
+  .MuiSvgIcon-colorPrimary {
+    color: #ff5722;
+  }
+  .MuiSvgIcon-colorSecondary {
+    color: #00897b;
+  }
+  .MuiSvgIcon-colorAction {
+    color: rgba(0, 0, 0, 0.54);
+  }
+  .MuiSvgIcon-colorError {
+    color: #f44336;
+  }
+  .MuiSvgIcon-colorDisabled {
+    color: rgba(0, 0, 0, 0.26);
+  }
+  .MuiSvgIcon-fontSizeInherit {
+    font-size: inherit;
+  }
+  .MuiSvgIcon-fontSizeSmall {
+    font-size: 1.25rem;
+  }
+  .MuiSvgIcon-fontSizeLarge {
+    font-size: 2.1875rem;
+  }
+  .MuiTypography-root {
+    margin: 0;
+  }
+  .MuiTypography-body2 {
+    font-size: 0.875rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.43;
+    letter-spacing: 0.01071em;
+  }
+  .MuiTypography-body1 {
+    font-size: 1rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+  }
+  .MuiTypography-caption {
+    font-size: 0.75rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.66;
+    letter-spacing: 0.03333em;
+  }
+  .MuiTypography-button {
+    font-size: 0.875rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+  }
+  .MuiTypography-h1 {
+    font-size: 6rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 300;
+    line-height: 1.167;
+    letter-spacing: -0.01562em;
+  }
+  .MuiTypography-h2 {
+    font-size: 3.75rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: -0.00833em;
+  }
+  .MuiTypography-h3 {
+    font-size: 3rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.167;
+    letter-spacing: 0em;
+  }
+  .MuiTypography-h4 {
+    font-size: 2.125rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.235;
+    letter-spacing: 0.00735em;
+  }
+  .MuiTypography-h5 {
+    font-size: 1.5rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.334;
+    letter-spacing: 0em;
+  }
+  .MuiTypography-h6 {
+    font-size: 1.25rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.0075em;
+  }
+  .MuiTypography-subtitle1 {
+    font-size: 1rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.75;
+    letter-spacing: 0.00938em;
+  }
+  .MuiTypography-subtitle2 {
+    font-size: 0.875rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    line-height: 1.57;
+    letter-spacing: 0.00714em;
+  }
+  .MuiTypography-overline {
+    font-size: 0.75rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 2.66;
+    letter-spacing: 0.08333em;
+    text-transform: uppercase;
+  }
+  .MuiTypography-srOnly {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+  }
+  .MuiTypography-alignLeft {
+    text-align: left;
+  }
+  .MuiTypography-alignCenter {
+    text-align: center;
+  }
+  .MuiTypography-alignRight {
+    text-align: right;
+  }
+  .MuiTypography-alignJustify {
+    text-align: justify;
+  }
+  .MuiTypography-noWrap {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .MuiTypography-gutterBottom {
+    margin-bottom: 0.35em;
+  }
+  .MuiTypography-paragraph {
+    margin-bottom: 16px;
+  }
+  .MuiTypography-colorInherit {
+    color: inherit;
+  }
+  .MuiTypography-colorPrimary {
+    color: #ff5722;
+  }
+  .MuiTypography-colorSecondary {
+    color: #00897b;
+  }
+  .MuiTypography-colorTextPrimary {
+    color: rgba(0, 0, 0, 0.87);
+  }
+  .MuiTypography-colorTextSecondary {
+    color: rgba(0, 0, 0, 0.54);
+  }
+  .MuiTypography-colorError {
+    color: #f44336;
+  }
+  .MuiTypography-displayInline {
+    display: inline;
+  }
+  .MuiTypography-displayBlock {
+    display: block;
+  }
+  .MuiDrawer-docked {
+    flex: 0 0 auto;
+  }
+  .MuiDrawer-paper {
+    top: 0;
+    flex: 1 0 auto;
+    height: 100%;
+    display: flex;
+    outline: 0;
+    z-index: 1200;
+    position: fixed;
+    overflow-y: auto;
+    flex-direction: column;
+    -webkit-overflow-scrolling: touch;
+  }
+  .MuiDrawer-paperAnchorLeft {
+    left: 0;
+    right: auto;
+  }
+  .MuiDrawer-paperAnchorRight {
+    left: auto;
+    right: 0;
+  }
+  .MuiDrawer-paperAnchorTop {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    height: auto;
+    max-height: 100%;
+  }
+  .MuiDrawer-paperAnchorBottom {
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    max-height: 100%;
+  }
+  .MuiDrawer-paperAnchorDockedLeft {
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  .MuiDrawer-paperAnchorDockedTop {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  .MuiDrawer-paperAnchorDockedRight {
+    border-left: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  .MuiDrawer-paperAnchorDockedBottom {
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  .MuiAlert-root {
+    display: flex;
+    padding: 6px 16px;
+    font-size: 0.875rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.43;
+    border-radius: 4px;
+    letter-spacing: 0.01071em;
+    background-color: transparent;
+  }
+  .MuiAlert-standardSuccess {
+    color: rgb(30, 70, 32);
+    background-color: rgb(237, 247, 237);
+  }
+  .MuiAlert-standardSuccess .MuiAlert-icon {
+    color: #4caf50;
+  }
+  .MuiAlert-standardInfo {
+    color: rgb(13, 60, 97);
+    background-color: rgb(232, 244, 253);
+  }
+  .MuiAlert-standardInfo .MuiAlert-icon {
+    color: #2196f3;
+  }
+  .MuiAlert-standardWarning {
+    color: rgb(102, 60, 0);
+    background-color: rgb(255, 244, 229);
+  }
+  .MuiAlert-standardWarning .MuiAlert-icon {
+    color: #ff9800;
+  }
+  .MuiAlert-standardError {
+    color: rgb(97, 26, 21);
+    background-color: rgb(253, 236, 234);
+  }
+  .MuiAlert-standardError .MuiAlert-icon {
+    color: #f44336;
+  }
+  .MuiAlert-outlinedSuccess {
+    color: rgb(30, 70, 32);
+    border: 1px solid #4caf50;
+  }
+  .MuiAlert-outlinedSuccess .MuiAlert-icon {
+    color: #4caf50;
+  }
+  .MuiAlert-outlinedInfo {
+    color: rgb(13, 60, 97);
+    border: 1px solid #2196f3;
+  }
+  .MuiAlert-outlinedInfo .MuiAlert-icon {
+    color: #2196f3;
+  }
+  .MuiAlert-outlinedWarning {
+    color: rgb(102, 60, 0);
+    border: 1px solid #ff9800;
+  }
+  .MuiAlert-outlinedWarning .MuiAlert-icon {
+    color: #ff9800;
+  }
+  .MuiAlert-outlinedError {
+    color: rgb(97, 26, 21);
+    border: 1px solid #f44336;
+  }
+  .MuiAlert-outlinedError .MuiAlert-icon {
+    color: #f44336;
+  }
+  .MuiAlert-filledSuccess {
+    color: #fff;
+    font-weight: 500;
+    background-color: #4caf50;
+  }
+  .MuiAlert-filledInfo {
+    color: #fff;
+    font-weight: 500;
+    background-color: #2196f3;
+  }
+  .MuiAlert-filledWarning {
+    color: #fff;
+    font-weight: 500;
+    background-color: #ff9800;
+  }
+  .MuiAlert-filledError {
+    color: #fff;
+    font-weight: 500;
+    background-color: #f44336;
+  }
+  .MuiAlert-icon {
+    display: flex;
+    opacity: 0.9;
+    padding: 7px 0;
+    font-size: 22px;
+    margin-right: 12px;
+  }
+  .MuiAlert-message {
+    padding: 8px 0;
+  }
+  .MuiAlert-action {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: -8px;
+    padding-left: 16px;
+  }</style></head><body><div id="__next"><main class="AppPage_app-page__1BR-L"><main class="Post_post__3Tvro"><header class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorTransparent MuiPaper-elevation4"><div class="MuiToolbar-root MuiToolbar-regular Post_toolbar__2mO1V MuiToolbar-gutters"><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary" tabindex="0" type="button"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42a.9959.9959 0 00-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></span></button><h1 class="MuiTypography-root Post_blog-name__r7eHh MuiTypography-h6 MuiTypography-colorPrimary">GNOME 使用经验</h1><button class="MuiButtonBase-root MuiIconButton-root Post_menu-button-landscape__B2kk- MuiIconButton-colorPrimary" tabindex="0" type="button"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zM3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1z"></path></svg></span></button><button class="MuiButtonBase-root MuiIconButton-root Post_menu-button-portrait__3_Cqp MuiIconButton-colorPrimary" tabindex="0" type="button"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zM3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1z"></path></svg></span></button></div></header><div class="Post_main__DVEvK"><div class="Post_left-side__1EXUf"><div class="BlogTags_blog-tags__NfGLa"><span class="MuiTypography-root BlogTags_tag__1GPok MuiTypography-subtitle2 MuiTypography-colorSecondary">#<!-- -->gnome</span><span class="MuiTypography-root BlogTags_tag__1GPok MuiTypography-subtitle2 MuiTypography-colorSecondary">#<!-- -->Linux</span></div><div class="MuiPaper-root MuiAlert-root MuiAlert-filledWarning Post_outdated-alert__1HvNV MuiPaper-elevation0" role="alert"><div class="MuiAlert-icon"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5.99L19.53 19H4.47L12 5.99M12 2L1 21h22L12 2zm1 14h-2v2h2v-2zm0-6h-2v4h2v-4z"></path></svg></div><div class="MuiAlert-message">本文最后更新于<!-- -->1700<!-- -->天前，其中所描述的信息可能已发生改变，请谨慎参考。</div></div><p class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextSecondary MuiTypography-gutterBottom">GNOME 是 Linux 世界中一套较为主流的图形界面，但依然有很多小问题需要 hack。这里记录了一些我个人使用 GNOME 中遇到的问题与解决方案。</p><article class="ArticleDisplay_article-display__PH3kw"><h1 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h3 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="1|wayland 相关" href="#1|wayland 相关"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>wayland 相关</h1>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">GNOME3.22 后默认使用 wayland 作为显示协议，这带来了一些兼容性等的问题。</p>
+<h2 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h4 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="1.1|fcitx 无法使用" href="#1.1|fcitx 无法使用"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>fcitx 无法使用</h2>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">fcitx 无法使用的原因在于 wayland 无法读取<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">~/.xprofile</code>中的环境变量，github 的 issue 中有对应的解决方案<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://github.com/fcitx/fcitx/issues/230" rel="noreferrer" target="_blank">解决方案</a>，只需要设置全局的环境变量即可。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">编辑<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">/etc/environment</code>，添加如下内容</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-keyword">export</span> <span class="hljs-variable constant_">GTK_IM_MODULE</span>=fcitx
+<span class="hljs-keyword">export</span> <span class="hljs-variable constant_">QT_IM_MODULE</span>=fcitx
+<span class="hljs-keyword">export</span> <span class="hljs-variable constant_">XMODIFIERS</span>=<span class="hljs-meta">@im</span>=fcitx
+</code></pre></pre>
+<h2 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h4 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="1.2|guake 快捷键 F12 无效" href="#1.2|guake 快捷键 F12 无效"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>guake 快捷键 F12 无效</h2>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">流行的拉幕式终端 guake 切换显示的默认快捷键是 F12，但是在 wayland 下 F12 有时有效有时无效。观察发现当前运行的是桌面，或 gedit，nautils 等 GNOME 的程序时，F12 会失效，而在 firefox 等程序下 F12 可以正常切换 guake。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">猜测和 GNOME 程序是原生的使用 wayland 协议有关。最终解决该问题的方法为在 GNOME 快捷键设置里面添加执行<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">guake</code>自定义的快捷键<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">F12</code>，这样可以在各种程序下都可以使用 F12 切换 guake。</p>
+<h1 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h3 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="2|无法开启 WIFI 热点" href="#2|无法开启 WIFI 热点"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>无法开启 WIFI 热点</h1>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">GNOME 的网络设置是可以开启 WIFI 热点的，入口在<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">All Settings -&gt; Network -&gt; Wi-Fi -&gt;Use as Hotspot</code>。但点击发现并没有响应，上网找到了对应的<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://forum.antergos.com/topic/2258/solved-can-t-create-a-hotspot/" rel="noreferrer" target="_blank">解决方案</a>。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">首先确保已安装<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">dnsmasq</code>和<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">modemanager</code>。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">启动<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">ModemManager</code>服务。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb">$ sudo systemctl <span class="hljs-built_in">start</span> ModemManager.service
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">如果不希望每次开热点前都手动开启该服务的话可以设置该服务开机启动。</p>
+<h1 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h3 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3|龟速的 eog" href="#3|龟速的 eog"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>龟速的 eog</h1>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">eog（eye of Gnome）是 GNOME 自带的图片浏览器，界面简洁美观，和 GNOME 搭配很合适，只是速度敢恭维。可以使用<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">viewnior</code>替代。</p>
+<h1 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h3 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="4|修改默认的 Pictures、Recordings 目录位置" href="#4|修改默认的 Pictures、Recordings 目录位置"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>修改默认的 Pictures、Recordings 目录位置</h1>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">GNOME 会默认建立<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">Picture</code>、<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">Recordings</code>、<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">Public</code>、<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">Downloads</code>等系统文件夹，但诸如<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">Recordings</code>这样的目录几乎不会用到，有些没有必要，因此想把它们统一收入<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">Gnome</code>目录下。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">这一类目录被称为<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">xdg_user_dir</code>，wiki 上有更详细的介绍<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://wiki.archlinux.org/index.php/XDG_user_directories" rel="noreferrer" target="_blank">介绍</a>。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">ask ubuntu 上提供了一种<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="http://askubuntu.com/questions/18103/how-can-i-change-the-default-location-of-content-directories-eg-pictures-templ" rel="noreferrer" target="_blank">解决方案</a>。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">编辑<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">~/.config/user-dirs.dirs</code>文件，修改其中类似<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">XDG_TEMPLATES_DIR=&quot;$HOME/Templates&quot;</code>的条目。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">比如修改为<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">XDG_TEMPLATES_DIR=&quot;$HOME/Gnome/Templates&quot;</code>表示把 <code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">Templates</code> 目录设置为<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">～/Gnome/Templates</code>。</p>
+<h1 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h3 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="5|关闭截图声音" href="#5|关闭截图声音"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>关闭截图声音</h1>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">GNOME 自带的截图工具截图完成后会有咔嚓一声，但并没有对应的设置项。Stack Exchange 上提供了一种<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="http://unix.stackexchange.com/questions/93368/how-can-i-disable-the-shutter-sound-of-gnome-screenshot" rel="noreferrer" target="_blank">方法</a>。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-meta">$ </span><span class="language-bash"><span class="hljs-built_in">cd</span> /usr/share/sounds/freedesktop/stereo</span>
+<span class="hljs-meta">$ </span><span class="language-bash">sudo mv camera-shutter.oga damn-camera-shutter.oga</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">注销或重启之后即可生效。</p>
+<h1 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h3 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="6|pdf 阅读器中文显示不正常" href="#6|pdf 阅读器中文显示不正常"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>pdf 阅读器中文显示不正常</h1>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">安装<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">poppler-data</code>即可。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># pacman -S poppler-data</span>
+</code></pre></pre>
+<h1 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h3 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="7|GNOME Software 后开机自动下载更新" href="#7|GNOME Software 后开机自动下载更新"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>GNOME Software 后开机自动下载更新</h1>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">GNOME Software 是 GNOME 的应用商店，目前有些鸡肋，但有一个使用的功能是能够在 app 列表中增加文件夹。它另一个功能是会自动下载软件的更新，但同样未提供图形化的关闭选项。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">参考 Ask Ubuntu 提供的<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="http://askubuntu.com/questions/773874/disable-gnome-softwares-notification-bubble-notify-osd-for-available-updates" rel="noreferrer" target="_blank">方法</a>可以关闭这一功能。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-meta">$ </span><span class="language-bash">gsettings <span class="hljs-built_in">set</span> org.gnome.software download-updates <span class="hljs-literal">false</span></span>
+</code></pre></pre>
+<h1 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h3 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="8|我使用的 Gnome 扩展" href="#8|我使用的 Gnome 扩展"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>我使用的 Gnome 扩展</h1>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">GNOME Extension 是由第三方开发的扩展程序，可以实现状态栏显示天气，CPU 温度等功能。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">这里收集了我使用的 GNOME 扩展列表。</p>
+<ul class="MuiTypography-root ArticleDisplay_list__lFPbW MuiTypography-body1">
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://extensions.gnome.org/extension/1007/window-is-ready-notification-remover/" rel="noreferrer" target="_blank">&#x27;Window Is Ready&#x27; Notification Remover</a>：功能恰如其名。</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://extensions.gnome.org/extension/970/appmenu-regular-icons/" rel="noreferrer" target="_blank">AppMenu Regular Icons</a>：能够让程序在状态栏上显示的图标为图标包的图标。</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://extensions.gnome.org/extension/517/caffeine/" rel="noreferrer" target="_blank">Caffeine</a>：阻止电脑进入休眠状态。</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://extensions.gnome.org/extension/1082/cpufreq/" rel="noreferrer" target="_blank">cpufreq</a>：在状态栏查看和调节 cpu 的频率。</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://extensions.gnome.org/extension/115/favorites-menu/" rel="noreferrer" target="_blank">Favorites Menu</a>：可以在状态栏上显示一个下拉菜单用于放置常用程序。</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://extensions.gnome.org/extension/841/freon/" rel="noreferrer" target="_blank">Freon</a>：监测硬件的温度。</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://extensions.gnome.org/extension/261/kimpanel/" rel="noreferrer" target="_blank">Input Method Panel</a>：替代 fcitx 候选词面板，使其和系统的主题一致。</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://extensions.gnome.org/extension/723/pixel-saver/" rel="noreferrer" target="_blank">Pixel Saver</a>：当窗口最大化时隐藏窗口的标题栏。</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://extensions.gnome.org/extension/1085/simple-net-speed/" rel="noreferrer" target="_blank">Simple net speed</a>：实时网速监测。</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://extensions.gnome.org/extension/750/openweather/" rel="noreferrer" target="_blank">OpenWeather</a>：显示天气。</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://extensions.gnome.org/extension/985/optirun/" rel="noreferrer" target="_blank">Optirun</a>：提供右键以<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">optirun</code>运行的选项，需要正确配置双显卡。</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://extensions.gnome.org/extension/977/recent-items/" rel="noreferrer" target="_blank">Recent(Item)s</a>：在状态栏上下拉菜单中快速访问最近件。</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://extensions.gnome.org/extension/905/refresh-wifi-connections/" rel="noreferrer" target="_blank">Refresh Wifi Connections</a>：刷新当前可用 WIFI 列表。</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://extensions.gnome.org/extension/7/removable-drive-menu/" rel="noreferrer" target="_blank">Removable Drive Menu</a>：当弹出 USB 设备时提示 USB 设备已经卸载或正在忙请勿拔出。</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://extensions.gnome.org/extension/1034/services-systemd/" rel="noreferrer" target="_blank">Services Systemd</a>：状态栏查看与控制 systemd services 状态。</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://extensions.gnome.org/extension/355/status-area-horizontal-spacing/" rel="noreferrer" target="_blank">Status Area Horizontal Spacing</a>：调整扩状态栏上图标间的水平间距，在有多个扩展的情况下很实用。</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://extensions.gnome.org/extension/1064/system-monitor/" rel="noreferrer" target="_blank">System Monitor</a>：在状态栏上显示当前 CPU 内存等使用情况。</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://extensions.gnome.org/extension/1031/topicons/" rel="noreferrer" target="_blank">TopIcons Plus</a>：在状态栏显示 Skype，Telegram 等原本会在左下角显示的图标。</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://extensions.gnome.org/extension/19/user-themes/" rel="noreferrer" target="_blank">User Themes</a>：从用户目录加载主题。</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://extensions.gnome.org/extension/302/windowoverlay-icons/" rel="noreferrer" target="_blank">WindowOverlay Icons</a>：窗口预览时在窗口上显示程序的图标。</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://extensions.gnome.org/extension/21/workspace-indicator/" rel="noreferrer" target="_blank">Workspace Indicator</a>：指示当前处于哪个虚拟桌面。</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://extensions.gnome.org/extension/15/alternatetab/" rel="noreferrer" target="_blank">AlternateTab</a>：alt+tab 时按 window 区分窗口而非 按 application。</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://extensions.gnome.org/extension/1217/appfolders-manager/" rel="noreferrer" target="_blank">Appfolders Management extension</a>：在 APP 列表中添加文件夹。</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://extensions.gnome.org/extension/1160/dash-to-panel/" rel="noreferrer" target="_blank">Dash to Panel</a>：让 GNOME 的状态栏 像 windows 一样。</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://extensions.gnome.org/extension/1011/dynamic-panel-transparency/" rel="noreferrer" target="_blank">Dynamic Panel Transparency</a>：透明化 GNOME 的状态栏。</p>
+</li>
+</ul></article><div class="Discussion_discussion__-bcgx"><div id="disqus_thread"></div></div></div><div class="Post_right-side__-FHvn"><section class="MuiTypography-root Catalogue_catalogue__2jQgx MuiTypography-subtitle2 MuiTypography-colorTextSecondary"><h1 class="MuiTypography-root Catalogue_title__1fDn0 MuiTypography-h6 MuiTypography-colorPrimary">目录</h1><div class="Catalogue_content__2XfM3"><ol class="Catalogue_list__3EB0p"><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#1|wayland 相关">wayland 相关</a><ol class="Catalogue_list__3EB0p"><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#1.1|fcitx 无法使用">fcitx 无法使用</a><ol class="Catalogue_list__3EB0p"></ol></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#1.2|guake 快捷键 F12 无效">guake 快捷键 F12 无效</a><ol class="Catalogue_list__3EB0p"></ol></li></ol></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#2|无法开启 WIFI 热点">无法开启 WIFI 热点</a><ol class="Catalogue_list__3EB0p"></ol></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3|龟速的 eog">龟速的 eog</a><ol class="Catalogue_list__3EB0p"></ol></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#4|修改默认的 Pictures、Recordings 目录位置">修改默认的 Pictures、Recordings 目录位置</a><ol class="Catalogue_list__3EB0p"></ol></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#5|关闭截图声音">关闭截图声音</a><ol class="Catalogue_list__3EB0p"></ol></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#6|pdf 阅读器中文显示不正常">pdf 阅读器中文显示不正常</a><ol class="Catalogue_list__3EB0p"></ol></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#7|GNOME Software 后开机自动下载更新">GNOME Software 后开机自动下载更新</a><ol class="Catalogue_list__3EB0p"></ol></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#8|我使用的 Gnome 扩展">我使用的 Gnome 扩展</a><ol class="Catalogue_list__3EB0p"></ol></li></ol></div></section></div></div></main></main></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"postId":"gnome-experience"},"__N_SSG":true},"page":"/blog/[postId]","query":{"postId":"gnome-experience"},"buildId":"l6ldH-mv2uM7upTEu-70A","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>

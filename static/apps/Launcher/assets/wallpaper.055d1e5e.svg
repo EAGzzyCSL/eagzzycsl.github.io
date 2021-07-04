@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 2880 1800" xmlns="http://www.w3.org/2000/svg">
+  <!-- 使用filter实现阴影在会造成浏览器标签切换卡顿，原因未知，所以改用渐变模拟阴影 -->
+  <defs>
+    <!-- 三种层级的阴影 -->
+    <linearGradient id="grad-left">
+      <stop offset="0%" style="stop-color: rgb(0, 0, 0); stop-opacity: 0;" />
+      <stop
+        offset="100%"
+        style="stop-color: rgb(0, 0, 0); stop-opacity: 0.8;"
+      />
+    </linearGradient>
+    <linearGradient id="grad-right">
+      <stop offset="0%" style="stop-color: rgb(0, 0, 0); stop-opacity: 0.8;" />
+      <stop offset="100%" style="stop-color: rgb(0, 0, 0); stop-opacity: 0;" />
+    </linearGradient>
+    <!-- 超出边界裁切 -->
+    <clipPath id="clip">
+      <use href="#boundary" />
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip)">
+    <!-- 最底层 -->
+    <rect
+      id="boundary"
+      width="100%"
+      height="100%"
+      fill="rgb(69, 161, 181)"
+    ></rect>
+    <!-- 底部的撇 -->
+    <g
+      transform="matrix(0.731353, 0.681999, -0.681999, 0.731353, 909.500488, -1881.313354)"
+    >
+      <!-- 阴影 -->
+      <rect
+        x="1294.079"
+        y="750.292"
+        width="100"
+        height="2670.84"
+        fill="url(#grad-left)"
+      ></rect>
+      <rect
+        x="1344.079"
+        y="750.292"
+        width="474.529"
+        height="2670.84"
+        fill="rgb(253, 215, 105)"
+      ></rect>
+    </g>
+    <!-- 中层的两捺 -->
+    <g>
+      <!-- 中层的两捺之一 -->
+      <g
+        transform="matrix(0.681999, -0.731353, 0.731353, 0.681999, -583.94458, -515.442627)"
+      >
+        <rect
+          x="870.803"
+          y="886.881"
+          width="100"
+          height="3313.562"
+          fill="url(#grad-right)"
+        ></rect>
+        <rect
+          x="220.803"
+          y="886.881"
+          width="704.611"
+          height="3313.565"
+          fill="rgb(254, 104, 105)"
+        ></rect>
+      </g>
+      <!-- 中层的两捺之二 -->
+      <g
+        transform="matrix(0.681999, -0.731353, 0.731353, 0.681999, -1298.94165, 95.67244)"
+      >
+        <rect
+          x="250.128"
+          y="813.867"
+          width="100"
+          height="3040.771"
+          fill="url(#grad-left)"
+        ></rect>
+        <rect
+          x="1090.128"
+          y="813.867"
+          width="90"
+          height="3040.771"
+          fill="url(#grad-right)"
+        ></rect>
+        <rect
+          x="270.128"
+          y="813.867"
+          width="862.015"
+          height="3040.771"
+          fill="rgb(94, 171, 248)"
+        ></rect>
+      </g>
+    </g>
+    <!-- 上层的三撇 -->
+    <g>
+      <!-- 上层的三撇之一 -->
+      <g
+        transform="matrix(0.731353, 0.681999, -0.681999, 0.731353, 1737.972656, -1637.325439)"
+      >
+        <!-- 阴影 -->
+        <rect
+          x="850.456"
+          y="565.849"
+          width="40"
+          height="3427.134"
+          fill="url(#grad-left)"
+        ></rect>
+        <rect
+          x="1600.456"
+          y="565.849"
+          width="100"
+          height="3427.134"
+          fill="url(#grad-right)"
+        ></rect>
+        <rect
+          x="890.456"
+          y="565.849"
+          width="786.82"
+          height="3427.134"
+          fill="rgb(253, 215, 105)"
+        ></rect>
+      </g>
+      <!-- 上层的三撇之二 -->
+      <g
+        transform="matrix(0.731353, 0.681999, -0.681999, 0.731353, 1885.403442, -745.817688)"
+      >
+        <!-- 阴影 -->
+        <rect
+          x="213.329"
+          y="471.46"
+          width="60"
+          height="2855.455"
+          fill="url(#grad-left)"
+        ></rect>
+        <rect
+          x="238.329"
+          y="471.46"
+          width="210.591"
+          height="2855.455"
+          fill="rgb(254, 104, 105)"
+        ></rect>
+      </g>
+      <!-- 上层的三撇之三 -->
+      <g
+        transform="matrix(0.731353, 0.681999, -0.681999, 0.731353, 2065.268555, -786.809875)"
+      >
+        <rect
+          x="203.225"
+          y="488.745"
+          width="60"
+          height="2960.142"
+          fill="url(#grad-left)"
+        ></rect>
+        <rect
+          x="348.225"
+          y="488.745"
+          width="100"
+          height="2960.142"
+          fill="url(#grad-right)"
+        ></rect>
+        <rect
+          x="228.225"
+          y="488.745"
+          width="201.663"
+          height="2960.142"
+          fill="rgb(94, 171, 248)"
+        ></rect>
+      </g>
+    </g>
+  </g>
+</svg>

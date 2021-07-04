@@ -1,0 +1,1190 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width"/><title>芹也·ux501 之 Arch 与 Win10 双系统安装记</title><meta name="next-head-count" content="3"/><link rel="preload" href="/_next/static/css/89f40ebae058f48d9b72.css" as="style"/><link rel="stylesheet" href="/_next/static/css/89f40ebae058f48d9b72.css" data-n-g=""/><link rel="preload" href="/_next/static/css/15f23e83c0cad82c0dc6.css" as="style"/><link rel="stylesheet" href="/_next/static/css/15f23e83c0cad82c0dc6.css" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-03be4340d9a6ca83cb96.js"></script><script src="/_next/static/chunks/webpack-6aa24242c38afc8913a0.js" defer=""></script><script src="/_next/static/chunks/framework-70121595b794f070d676.js" defer=""></script><script src="/_next/static/chunks/main-ce759eb6eb83bba4ec29.js" defer=""></script><script src="/_next/static/chunks/pages/_app-a1be5b5099b8b75b3f63.js" defer=""></script><script src="/_next/static/chunks/563-78e4102b6438f8266cc5.js" defer=""></script><script src="/_next/static/chunks/905-53b2b25706908467013e.js" defer=""></script><script src="/_next/static/chunks/238-4cdb369e9bc6dc567da3.js" defer=""></script><script src="/_next/static/chunks/461-fb12d25b189fb76286d9.js" defer=""></script><script src="/_next/static/chunks/12-541f52c64fc2358a79e8.js" defer=""></script><script src="/_next/static/chunks/752-bd794f8113a6012af58e.js" defer=""></script><script src="/_next/static/chunks/422-ad5854fe656a7e1af2e9.js" defer=""></script><script src="/_next/static/chunks/658-a9810647095d8b6b043d.js" defer=""></script><script src="/_next/static/chunks/pages/blog/%5BpostId%5D-fd6aa821e5fdd4168a1e.js" defer=""></script><script src="/_next/static/l6ldH-mv2uM7upTEu-70A/_buildManifest.js" defer=""></script><script src="/_next/static/l6ldH-mv2uM7upTEu-70A/_ssgManifest.js" defer=""></script><style id="jss-server-side">.MuiTypography-root {
+  margin: 0;
+}
+.MuiTypography-body2 {
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+}
+.MuiTypography-body1 {
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+}
+.MuiTypography-caption {
+  font-size: 0.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.66;
+  letter-spacing: 0.03333em;
+}
+.MuiTypography-button {
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+}
+.MuiTypography-h1 {
+  font-size: 6rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1.167;
+  letter-spacing: -0.01562em;
+}
+.MuiTypography-h2 {
+  font-size: 3.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.00833em;
+}
+.MuiTypography-h3 {
+  font-size: 3rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.167;
+  letter-spacing: 0em;
+}
+.MuiTypography-h4 {
+  font-size: 2.125rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.235;
+  letter-spacing: 0.00735em;
+}
+.MuiTypography-h5 {
+  font-size: 1.5rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.334;
+  letter-spacing: 0em;
+}
+.MuiTypography-h6 {
+  font-size: 1.25rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
+}
+.MuiTypography-subtitle1 {
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0.00938em;
+}
+.MuiTypography-subtitle2 {
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.57;
+  letter-spacing: 0.00714em;
+}
+.MuiTypography-overline {
+  font-size: 0.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 2.66;
+  letter-spacing: 0.08333em;
+  text-transform: uppercase;
+}
+.MuiTypography-srOnly {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+.MuiTypography-alignLeft {
+  text-align: left;
+}
+.MuiTypography-alignCenter {
+  text-align: center;
+}
+.MuiTypography-alignRight {
+  text-align: right;
+}
+.MuiTypography-alignJustify {
+  text-align: justify;
+}
+.MuiTypography-noWrap {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.MuiTypography-gutterBottom {
+  margin-bottom: 0.35em;
+}
+.MuiTypography-paragraph {
+  margin-bottom: 16px;
+}
+.MuiTypography-colorInherit {
+  color: inherit;
+}
+.MuiTypography-colorPrimary {
+  color: #ff5722;
+}
+.MuiTypography-colorSecondary {
+  color: #00897b;
+}
+.MuiTypography-colorTextPrimary {
+  color: rgba(0, 0, 0, 0.87);
+}
+.MuiTypography-colorTextSecondary {
+  color: rgba(0, 0, 0, 0.54);
+}
+.MuiTypography-colorError {
+  color: #f44336;
+}
+.MuiTypography-displayInline {
+  display: inline;
+}
+.MuiTypography-displayBlock {
+  display: block;
+}
+.MuiSvgIcon-root {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 1.5rem;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  flex-shrink: 0;
+  user-select: none;
+}
+.MuiSvgIcon-colorPrimary {
+  color: #ff5722;
+}
+.MuiSvgIcon-colorSecondary {
+  color: #00897b;
+}
+.MuiSvgIcon-colorAction {
+  color: rgba(0, 0, 0, 0.54);
+}
+.MuiSvgIcon-colorError {
+  color: #f44336;
+}
+.MuiSvgIcon-colorDisabled {
+  color: rgba(0, 0, 0, 0.26);
+}
+.MuiSvgIcon-fontSizeInherit {
+  font-size: inherit;
+}
+.MuiSvgIcon-fontSizeSmall {
+  font-size: 1.25rem;
+}
+.MuiSvgIcon-fontSizeLarge {
+  font-size: 2.1875rem;
+}
+.MuiPaper-root {
+  color: rgba(0, 0, 0, 0.87);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  background-color: #fff;
+}
+.MuiPaper-rounded {
+  border-radius: 4px;
+}
+.MuiPaper-outlined {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-elevation0 {
+  box-shadow: none;
+}
+.MuiPaper-elevation1 {
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation2 {
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation3 {
+  box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation4 {
+  box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation5 {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation6 {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation7 {
+  box-shadow: 0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation8 {
+  box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation9 {
+  box-shadow: 0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation10 {
+  box-shadow: 0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation11 {
+  box-shadow: 0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation12 {
+  box-shadow: 0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation13 {
+  box-shadow: 0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation14 {
+  box-shadow: 0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation15 {
+  box-shadow: 0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation16 {
+  box-shadow: 0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation17 {
+  box-shadow: 0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation18 {
+  box-shadow: 0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation19 {
+  box-shadow: 0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation20 {
+  box-shadow: 0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation21 {
+  box-shadow: 0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation22 {
+  box-shadow: 0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation23 {
+  box-shadow: 0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation24 {
+  box-shadow: 0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12);
+}
+.MuiButtonBase-root {
+  color: inherit;
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  display: inline-flex;
+  outline: 0;
+  padding: 0;
+  position: relative;
+  align-items: center;
+  user-select: none;
+  border-radius: 0;
+  vertical-align: middle;
+  -moz-appearance: none;
+  justify-content: center;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.MuiButtonBase-root::-moz-focus-inner {
+  border-style: none;
+}
+.MuiButtonBase-root.Mui-disabled {
+  cursor: default;
+  pointer-events: none;
+}
+@media print {
+  .MuiButtonBase-root {
+    color-adjust: exact;
+  }
+}
+  .MuiIconButton-root {
+    flex: 0 0 auto;
+    color: rgba(0, 0, 0, 0.54);
+    padding: 12px;
+    overflow: visible;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-radius: 50%;
+  }
+  .MuiIconButton-root:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+  .MuiIconButton-root.Mui-disabled {
+    color: rgba(0, 0, 0, 0.26);
+    background-color: transparent;
+  }
+@media (hover: none) {
+  .MuiIconButton-root:hover {
+    background-color: transparent;
+  }
+}
+  .MuiIconButton-edgeStart {
+    margin-left: -12px;
+  }
+  .MuiIconButton-sizeSmall.MuiIconButton-edgeStart {
+    margin-left: -3px;
+  }
+  .MuiIconButton-edgeEnd {
+    margin-right: -12px;
+  }
+  .MuiIconButton-sizeSmall.MuiIconButton-edgeEnd {
+    margin-right: -3px;
+  }
+  .MuiIconButton-colorInherit {
+    color: inherit;
+  }
+  .MuiIconButton-colorPrimary {
+    color: #ff5722;
+  }
+  .MuiIconButton-colorPrimary:hover {
+    background-color: rgba(255, 87, 34, 0.04);
+  }
+@media (hover: none) {
+  .MuiIconButton-colorPrimary:hover {
+    background-color: transparent;
+  }
+}
+  .MuiIconButton-colorSecondary {
+    color: #00897b;
+  }
+  .MuiIconButton-colorSecondary:hover {
+    background-color: rgba(0, 137, 123, 0.04);
+  }
+@media (hover: none) {
+  .MuiIconButton-colorSecondary:hover {
+    background-color: transparent;
+  }
+}
+  .MuiIconButton-sizeSmall {
+    padding: 3px;
+    font-size: 1.125rem;
+  }
+  .MuiIconButton-label {
+    width: 100%;
+    display: flex;
+    align-items: inherit;
+    justify-content: inherit;
+  }
+  .MuiAppBar-root {
+    width: 100%;
+    display: flex;
+    z-index: 1100;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+  .MuiAppBar-positionFixed {
+    top: 0;
+    left: auto;
+    right: 0;
+    position: fixed;
+  }
+@media print {
+  .MuiAppBar-positionFixed {
+    position: absolute;
+  }
+}
+  .MuiAppBar-positionAbsolute {
+    top: 0;
+    left: auto;
+    right: 0;
+    position: absolute;
+  }
+  .MuiAppBar-positionSticky {
+    top: 0;
+    left: auto;
+    right: 0;
+    position: sticky;
+  }
+  .MuiAppBar-positionStatic {
+    position: static;
+  }
+  .MuiAppBar-positionRelative {
+    position: relative;
+  }
+  .MuiAppBar-colorDefault {
+    color: rgba(0, 0, 0, 0.87);
+    background-color: #f5f5f5;
+  }
+  .MuiAppBar-colorPrimary {
+    color: #fff;
+    background-color: #ff5722;
+  }
+  .MuiAppBar-colorSecondary {
+    color: #fff;
+    background-color: #00897b;
+  }
+  .MuiAppBar-colorInherit {
+    color: inherit;
+  }
+  .MuiAppBar-colorTransparent {
+    color: inherit;
+    background-color: transparent;
+  }
+  .MuiToolbar-root {
+    display: flex;
+    position: relative;
+    align-items: center;
+  }
+  .MuiToolbar-gutters {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+@media (min-width:600px) {
+  .MuiToolbar-gutters {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+  .MuiToolbar-regular {
+    min-height: 56px;
+  }
+@media (min-width:0px) and (orientation: landscape) {
+  .MuiToolbar-regular {
+    min-height: 48px;
+  }
+}
+@media (min-width:600px) {
+  .MuiToolbar-regular {
+    min-height: 64px;
+  }
+}
+  .MuiToolbar-dense {
+    min-height: 48px;
+  }
+  .MuiLink-underlineNone {
+    text-decoration: none;
+  }
+  .MuiLink-underlineHover {
+    text-decoration: none;
+  }
+  .MuiLink-underlineHover:hover {
+    text-decoration: underline;
+  }
+  .MuiLink-underlineAlways {
+    text-decoration: underline;
+  }
+  .MuiLink-button {
+    border: 0;
+    cursor: pointer;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    position: relative;
+    user-select: none;
+    border-radius: 0;
+    vertical-align: middle;
+    -moz-appearance: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .MuiLink-button::-moz-focus-inner {
+    border-style: none;
+  }
+  .MuiLink-button.Mui-focusVisible {
+    outline: auto;
+  }
+  .MuiTable-root {
+    width: 100%;
+    display: table;
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+  .MuiTable-root caption {
+    color: rgba(0, 0, 0, 0.54);
+    padding: 16px;
+    font-size: 0.875rem;
+    text-align: left;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.43;
+    caption-side: bottom;
+    letter-spacing: 0.01071em;
+  }
+  .MuiTable-stickyHeader {
+    border-collapse: separate;
+  }
+  .MuiTableBody-root {
+    display: table-row-group;
+  }
+  .MuiTableCell-root {
+    display: table-cell;
+    padding: 16px;
+    font-size: 0.875rem;
+    text-align: left;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.43;
+    border-bottom: 1px solid
+    rgba(224, 224, 224, 1);
+    letter-spacing: 0.01071em;
+    vertical-align: inherit;
+  }
+  .MuiTableCell-head {
+    color: rgba(0, 0, 0, 0.87);
+    font-weight: 500;
+    line-height: 1.5rem;
+  }
+  .MuiTableCell-body {
+    color: rgba(0, 0, 0, 0.87);
+  }
+  .MuiTableCell-footer {
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 0.75rem;
+    line-height: 1.3125rem;
+  }
+  .MuiTableCell-sizeSmall {
+    padding: 6px 24px 6px 16px;
+  }
+  .MuiTableCell-sizeSmall:last-child {
+    padding-right: 16px;
+  }
+  .MuiTableCell-sizeSmall.MuiTableCell-paddingCheckbox {
+    width: 24px;
+    padding: 0 12px 0 16px;
+  }
+  .MuiTableCell-sizeSmall.MuiTableCell-paddingCheckbox:last-child {
+    padding-left: 12px;
+    padding-right: 16px;
+  }
+  .MuiTableCell-sizeSmall.MuiTableCell-paddingCheckbox > * {
+    padding: 0;
+  }
+  .MuiTableCell-paddingCheckbox {
+    width: 48px;
+    padding: 0 0 0 4px;
+  }
+  .MuiTableCell-paddingCheckbox:last-child {
+    padding-left: 0;
+    padding-right: 4px;
+  }
+  .MuiTableCell-paddingNone {
+    padding: 0;
+  }
+  .MuiTableCell-paddingNone:last-child {
+    padding: 0;
+  }
+  .MuiTableCell-alignLeft {
+    text-align: left;
+  }
+  .MuiTableCell-alignCenter {
+    text-align: center;
+  }
+  .MuiTableCell-alignRight {
+    text-align: right;
+    flex-direction: row-reverse;
+  }
+  .MuiTableCell-alignJustify {
+    text-align: justify;
+  }
+  .MuiTableCell-stickyHeader {
+    top: 0;
+    left: 0;
+    z-index: 2;
+    position: sticky;
+    background-color: #fafafa;
+  }
+  .MuiTableContainer-root {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .MuiTableHead-root {
+    display: table-header-group;
+  }
+  .MuiTableRow-root {
+    color: inherit;
+    display: table-row;
+    outline: 0;
+    vertical-align: middle;
+  }
+  .MuiTableRow-root.MuiTableRow-hover:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+  .MuiTableRow-root.Mui-selected, .MuiTableRow-root.Mui-selected:hover {
+    background-color: rgba(0, 137, 123, 0.08);
+  }
+  .MuiTypography-root {
+    margin: 0;
+  }
+  .MuiTypography-body2 {
+    font-size: 0.875rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.43;
+    letter-spacing: 0.01071em;
+  }
+  .MuiTypography-body1 {
+    font-size: 1rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+  }
+  .MuiTypography-caption {
+    font-size: 0.75rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.66;
+    letter-spacing: 0.03333em;
+  }
+  .MuiTypography-button {
+    font-size: 0.875rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+  }
+  .MuiTypography-h1 {
+    font-size: 6rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 300;
+    line-height: 1.167;
+    letter-spacing: -0.01562em;
+  }
+  .MuiTypography-h2 {
+    font-size: 3.75rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: -0.00833em;
+  }
+  .MuiTypography-h3 {
+    font-size: 3rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.167;
+    letter-spacing: 0em;
+  }
+  .MuiTypography-h4 {
+    font-size: 2.125rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.235;
+    letter-spacing: 0.00735em;
+  }
+  .MuiTypography-h5 {
+    font-size: 1.5rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.334;
+    letter-spacing: 0em;
+  }
+  .MuiTypography-h6 {
+    font-size: 1.25rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.0075em;
+  }
+  .MuiTypography-subtitle1 {
+    font-size: 1rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.75;
+    letter-spacing: 0.00938em;
+  }
+  .MuiTypography-subtitle2 {
+    font-size: 0.875rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    line-height: 1.57;
+    letter-spacing: 0.00714em;
+  }
+  .MuiTypography-overline {
+    font-size: 0.75rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 2.66;
+    letter-spacing: 0.08333em;
+    text-transform: uppercase;
+  }
+  .MuiTypography-srOnly {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+  }
+  .MuiTypography-alignLeft {
+    text-align: left;
+  }
+  .MuiTypography-alignCenter {
+    text-align: center;
+  }
+  .MuiTypography-alignRight {
+    text-align: right;
+  }
+  .MuiTypography-alignJustify {
+    text-align: justify;
+  }
+  .MuiTypography-noWrap {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .MuiTypography-gutterBottom {
+    margin-bottom: 0.35em;
+  }
+  .MuiTypography-paragraph {
+    margin-bottom: 16px;
+  }
+  .MuiTypography-colorInherit {
+    color: inherit;
+  }
+  .MuiTypography-colorPrimary {
+    color: #ff5722;
+  }
+  .MuiTypography-colorSecondary {
+    color: #00897b;
+  }
+  .MuiTypography-colorTextPrimary {
+    color: rgba(0, 0, 0, 0.87);
+  }
+  .MuiTypography-colorTextSecondary {
+    color: rgba(0, 0, 0, 0.54);
+  }
+  .MuiTypography-colorError {
+    color: #f44336;
+  }
+  .MuiTypography-displayInline {
+    display: inline;
+  }
+  .MuiTypography-displayBlock {
+    display: block;
+  }
+  .MuiDrawer-docked {
+    flex: 0 0 auto;
+  }
+  .MuiDrawer-paper {
+    top: 0;
+    flex: 1 0 auto;
+    height: 100%;
+    display: flex;
+    outline: 0;
+    z-index: 1200;
+    position: fixed;
+    overflow-y: auto;
+    flex-direction: column;
+    -webkit-overflow-scrolling: touch;
+  }
+  .MuiDrawer-paperAnchorLeft {
+    left: 0;
+    right: auto;
+  }
+  .MuiDrawer-paperAnchorRight {
+    left: auto;
+    right: 0;
+  }
+  .MuiDrawer-paperAnchorTop {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    height: auto;
+    max-height: 100%;
+  }
+  .MuiDrawer-paperAnchorBottom {
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    max-height: 100%;
+  }
+  .MuiDrawer-paperAnchorDockedLeft {
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  .MuiDrawer-paperAnchorDockedTop {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  .MuiDrawer-paperAnchorDockedRight {
+    border-left: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  .MuiDrawer-paperAnchorDockedBottom {
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+  }</style></head><body><div id="__next"><main class="AppPage_app-page__1BR-L"><main class="Post_post__3Tvro"><header class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorTransparent MuiPaper-elevation4"><div class="MuiToolbar-root MuiToolbar-regular Post_toolbar__2mO1V MuiToolbar-gutters"><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary" tabindex="0" type="button"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42a.9959.9959 0 00-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></span></button><h1 class="MuiTypography-root Post_blog-name__r7eHh MuiTypography-h6 MuiTypography-colorPrimary">ux501 之 Arch 与 Win10 双系统安装记</h1><button class="MuiButtonBase-root MuiIconButton-root Post_menu-button-landscape__B2kk- MuiIconButton-colorPrimary" tabindex="0" type="button"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zM3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1z"></path></svg></span></button><button class="MuiButtonBase-root MuiIconButton-root Post_menu-button-portrait__3_Cqp MuiIconButton-colorPrimary" tabindex="0" type="button"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zM3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1z"></path></svg></span></button></div></header><div class="Post_main__DVEvK"><div class="Post_left-side__1EXUf"><div class="BlogTags_blog-tags__NfGLa"><span class="MuiTypography-root BlogTags_tag__1GPok MuiTypography-subtitle2 MuiTypography-colorSecondary">#<!-- -->OS</span><span class="MuiTypography-root BlogTags_tag__1GPok MuiTypography-subtitle2 MuiTypography-colorSecondary">#<!-- -->Linux</span><span class="MuiTypography-root BlogTags_tag__1GPok MuiTypography-subtitle2 MuiTypography-colorSecondary">#<!-- -->Windows</span><span class="MuiTypography-root BlogTags_tag__1GPok MuiTypography-subtitle2 MuiTypography-colorSecondary">#<!-- -->Arch</span></div><p class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextSecondary MuiTypography-gutterBottom">笔记本是华硕的ux501，自带 Win10 系统，自己又装了 Arch 作双系统。这里记录了安装时的操作以供将来快速查看。</p><article class="ArticleDisplay_article-display__PH3kw"><h1 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h3 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="1|安装前准备" href="#1|安装前准备"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>安装前准备</h1>
+<h2 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h4 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="1.1|分区计划" href="#1.1|分区计划"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>分区计划</h2>
+<ul class="MuiTypography-root ArticleDisplay_list__lFPbW MuiTypography-body1">
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">esp 分区：UEFI 启动模式支持多个 esp 分区，所以为 Windows 和 Linux 各建立一个 esp 分区，这样两个系统各自的变动互不影响</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">Linux 分区：之前曾经为<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">home</code>、<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">var</code>、<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">swap</code> 建立过单独的分区，但发现并没有什么特殊的必要，所以这次选择了只建立<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">/</code>分区。不过 btrfs 文件系统目前尚未支持 swap，所以如果使用 btrfs 依然需要创建单独的 <code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">swap</code> 分区，但如果使用 ext4 则没有这个问题。</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">Windows 分区：创建<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">C://</code>、<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">D://</code>两个分区即可。C 盘用于系统和软件安装，D 盘用于数据存放，同时 D 盘可以挂载到 Linux 下方便访问。</p>
+</li>
+</ul>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">最终分区方案如下表，分区表显然是 GPT 了。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="MuiTableContainer-root ArticleDisplay_table-container__3aYBZ"><table class="MuiTable-root"><thead class="MuiTableHead-root"><tr class="MuiTableRow-root MuiTableRow-head"><th class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter" scope="col">分区大小</th><th class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter" scope="col">分区用途</th><th class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter" scope="col">备注</th></tr></thead><tbody class="MuiTableBody-root"><tr class="MuiTableRow-root"><td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter">512MiB</td><td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter">esp for Linux</td><td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter">512M 对于 esp 分区来说足够大了，取 512M 主要是为了凑整。</td></tr><tr class="MuiTableRow-root"><td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter">512MiB</td><td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter">esp for Windows</td><td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"></td></tr><tr class="MuiTableRow-root"><td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter">320GiB</td><td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"><code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">/</code> for Linux</td><td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"></td></tr><tr class="MuiTableRow-root"><td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter">16GiB</td><td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter">swap for Linux</td><td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter">为 btrfs 单独划分的 swap 分区。</td></tr><tr class="MuiTableRow-root"><td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter">80GiB</td><td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"><code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">C://</code> for Windows</td><td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"></td></tr><tr class="MuiTableRow-root"><td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter">60GiB</td><td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"><code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">D://</code> for Windows</td><td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"></td></tr></tbody></table></div>
+<h2 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h4 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="1.2|安装流程" href="#1.2|安装流程"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>安装流程</h2>
+<ul class="MuiTypography-root ArticleDisplay_list__lFPbW MuiTypography-body1">
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">首先是数据的备份，有备无患。</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">下载 Arch Linux 的镜像，并制作启动镜像。制作启动镜像可以使用<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://rufus.akeo.ie/?locale=zh_CN/" rel="noreferrer" target="_blank">Rufus</a>，更多可以参考<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://wiki.archLinux.org/index.php/USB_flash_installation_media" rel="noreferrer" target="_blank">wiki</a>。</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">下载 Win10 的镜像，可以通过<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="http://msdn.itellyou.cn/" rel="noreferrer" target="_blank">msdn.itellyou.cn</a>获得。</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">进入 PE（我使用的是<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="http://www.wepe.com.cn/" rel="noreferrer" target="_blank">微 PE</a>），完成分区工作。</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">在 PE 下使用 Windows 安装器（使用安装器可以自由指定 esp 分区）完成 Windows 的安装，先安装 Windows 主要是为了安装后使<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://wiki.archLinux.org/index.php/Time#UTC_in_Windows" rel="noreferrer" target="_blank">Windows 使用 utc 时间</a>。</p>
+</li>
+<li class="MuiTypography-root MuiTypography-body1">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">使用 Arch 启动镜像完成 Arch 安装。</p>
+</li>
+</ul>
+<h1 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h3 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="2|安装 Windows" href="#2|安装 Windows"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>安装 Windows</h1>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">Windows 的安装相对比较简单，轻车熟路静待小娜念诗即可。</p>
+<h2 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h4 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="2.1|ESP 盘符分配" href="#2.1|ESP 盘符分配"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>ESP 盘符分配</h2>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">本来以为安装 Windows 会非常顺利，过结果刚上手就遇上了麻烦事情：在 PE 下没法给 ESP 分区分配盘符，所以安装器也无法选中 ESP 分区。不过这倒也启发了我，可以使用 ESP 分区藏匿一些隐私文件。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">上网查询之后发现可以通过下面操作为 ESP 分区分配盘符（需要管理员权限）</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb">:: 启动diskpart
+diskpart
+:: 选择磁盘0（如果有多个磁盘的话选实际要操作的磁盘编号）
+sel disk 0
+:: 列出分区
+list part
+:: 选中编号为x的分区
+sel part x
+:: 为x分区分配盘符y
+assign letter=y
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">之后安装器一路操作就好了。</p>
+<h2 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h4 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="2.2|安装驱动" href="#2.2|安装驱动"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>安装驱动</h2>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">Win10 自带的系统更新已经可以完成绝大多数驱动的安装，所以安装驱动也方便了很多。</p>
+<h1 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h3 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3|安装 Arch" href="#3|安装 Arch"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>安装 Arch</h1>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">Arch 的安装相比之下要麻烦很多，步骤多，需要手动操作的内容也多，之后的配置也麻烦。所以这里记录了我安装时的实际操作步骤，通用步骤还是需要参考 wiki 上的<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://wiki.archLinux.org/index.php/Installation_guide" rel="noreferrer" target="_blank">安装指南</a>。</p>
+<h2 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h4 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.1|执行安装" href="#3.1|执行安装"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>执行安装</h2>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">通过之前制作的 Arch 启动镜像启动电脑，开始执行安装。</p>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.1.1|用一个大一点的字体" href="#3.1.1|用一个大一点的字体"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>用一个大一点的字体</h3>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">ux501 的屏幕是一块 4K 的高分屏，进入启动镜像后，Linux 终端下的默认字体非常小，阅读起来极其不方便，所以首先需要调整一下终端字体大小。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">首先安装 <code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">terminus-font</code>，当然也可以选择其他<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://wiki.archlinux.org/index.php/fonts#Bitmap" rel="noreferrer" target="_blank">点阵字体</a>。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">执行<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">setfont ter-v32b</code>以使用一个较大的字体。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">执行<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">ls /usr/share/kbd/consolefonts/</code> 可以看到所有可用的字体，包括刚刚使用的<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">ter-v32b</code>。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">可以对这些字体随意试错，如果使用了不合适的字体，执行不带参数的<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">setfont</code>便可以将字体设置为默认值。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">更多可以参考 wiki 中的<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://wiki.archlinux.org/index.php/Linux_console" rel="noreferrer" target="_blank">说明</a>。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">选中合适的字体后编辑<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">/etc/vconsole.conf</code>就可以永久设置终端字体，当然对于启动镜像来说这样是无效的。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-attr">FONT</span>=ter-v32b
+</code></pre></pre>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.1.2|检查是否为 UEFI 模式" href="#3.1.2|检查是否为 UEFI 模式"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>检查是否为 UEFI 模式</h3>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># ls /sys/firmware/efi/efivars</span>
+</code></pre></pre>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.1.3|检查联网是否正常" href="#3.1.3|检查联网是否正常"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>检查联网是否正常</h3>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># ping -c 3 archLinux.org</span>
+</code></pre></pre>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.1.4|确认系统时间正确" href="#3.1.4|确认系统时间正确"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>确认系统时间正确</h3>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-meta"># </span><span class="language-bash">timedatectl set-ntp <span class="hljs-literal">true</span></span>
+</code></pre></pre>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.1.5|查看分区情况并格式化分区" href="#3.1.5|查看分区情况并格式化分区"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>查看分区情况并格式化分区</h3>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># fdisk -l</span>
+<span class="hljs-comment"># mkfs.btrfs /dev/sdaX</span>
+</code></pre></pre>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.1.6|挂载目录" href="#3.1.6|挂载目录"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>挂载目录</h3>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># 挂载根目录</span>
+<span class="hljs-comment"># mount /dev/sda1 /mnt</span>
+<span class="hljs-comment"># 创建 boot 文件夹</span>
+<span class="hljs-comment"># mkdir /mnt/boot</span>
+<span class="hljs-comment"># 挂载 Linux ESP 分区</span>
+<span class="hljs-comment"># mount /dev/sda2 /mnt/boot</span>
+<span class="hljs-comment"># 创建交换分区</span>
+<span class="hljs-comment"># mkswap /dev/sda2</span>
+<span class="hljs-comment"># 启用交换分区</span>
+<span class="hljs-comment"># swapon /dev/sda2</span>
+</code></pre></pre>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.1.7|镜像源选择" href="#3.1.7|镜像源选择"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>镜像源选择</h3>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">编辑<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">/etc/pacman.d/mirrorlist</code>，选择中国区的镜像可以获得速度的提升。</p>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.1.8|安装" href="#3.1.8|安装"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>安装</h3>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># pacstrap /mnt base linux linux-firmware base-devel btrfs-progs</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">其中<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">base-devel</code> 是日后使用 <code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">aur</code> 的必须，<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">btrfs-progs</code> 是使用 btrfs 的必须。</p>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.1.9|生成 fstab" href="#3.1.9|生成 fstab"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>生成 fstab</h3>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># genfstab -U /mnt &gt;&gt; /mnt/etc/fstab</span>
+</code></pre></pre>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.1.10|chroot" href="#3.1.10|chroot"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>chroot</h3>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># arch-chroot /mnt /bin/bash</span>
+</code></pre></pre>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.1.11|设置时间" href="#3.1.11|设置时间"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>设置时间</h3>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">设置时区为东 8 区</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">使用 UTC 时间</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># hwclock --systohc --utc</span>
+</code></pre></pre>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.1.12|本地化" href="#3.1.12|本地化"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>本地化</h3>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">编辑<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">/etc/locale.gen</code></p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">取消注释下面两行。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb">en_US<span class="hljs-selector-class">.UTF-8</span> UTF-<span class="hljs-number">8</span>
+zh_CN<span class="hljs-selector-class">.UTF-8</span> UTF-<span class="hljs-number">8</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">执行 <code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">locale-gen</code> 以生成 locale。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">创建<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">locale.conf</code>。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb">echo <span class="hljs-variable constant_">LANG</span>=en_US.<span class="hljs-property">UTF</span>-<span class="hljs-number">8</span> &gt; <span class="hljs-regexp">/etc/</span>locale.<span class="hljs-property">conf</span>
+</code></pre></pre>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.1.13|设置主机名" href="#3.1.13|设置主机名"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>设置主机名</h3>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-meta"># </span><span class="language-bash"><span class="hljs-built_in">echo</span> YOUR-HOST-NAME &gt; /etc/hostname</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">编辑<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">hosts</code>添加如下内容。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>       localhost
+::<span class="hljs-number">1</span>             localhost
+<span class="hljs-number">127.0</span>.<span class="hljs-number">1.1</span>       YOUR-HOST-NAME<span class="hljs-selector-class">.localdomain</span>        YOUR-HOST-NAME
+</code></pre></pre>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.1.14|网络配置" href="#3.1.14|网络配置"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>网络配置</h3>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">执行<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">pacman -S networkmanager</code>安装 <code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">networkmanager</code></p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">启动服务：<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">systemctl enable NetworkManager</code></p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">这样退出 镜像环境后启动电脑依然可以联网。方便后面的配置操作。</p>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.1.15|设置 root 密码" href="#3.1.15|设置 root 密码"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>设置 root 密码</h3>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># passwd</span>
+</code></pre></pre>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.1.16|安装引导程序" href="#3.1.16|安装引导程序"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>安装引导程序</h3>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">intel 的 cpu，需要安装 intel 的 <code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">intel-ucode</code>。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># pacman -S intel-ucode</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">我使用<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://wiki.archLinux.org/index.php/GRUB" rel="noreferrer" target="_blank">grub</a>做引导，可以安装各种主题，配置也简单，还可以添加 Windows 的启动项。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">安装 grub</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># pacman -S grub efibootmgr os-prober</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">grub 是引导程序，efibootmgr 是创建 GRUB 安装脚本使用的.efi 启动项，os-prober 用于发现电脑上的其他系统。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">使用安装引导程序</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">生成 grub 配置文件</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># grub-mkconfig -o /boot/grub/grub.cfg</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">安装来自 aur 的<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">grub-customizer</code>可以提供 grub 的图形化配置界面。</p>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.1.17|重启退出 u 盘环境" href="#3.1.17|重启退出 u 盘环境"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>重启退出 u 盘环境</h3>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">退出<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">chroot</code>并卸载<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">/</code>分区的挂载。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-meta"># </span><span class="language-bash"><span class="hljs-built_in">exit</span></span>
+<span class="hljs-meta"># </span><span class="language-bash">umount -R /mnt</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">执行<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">reboot</code>重启电脑后进入配置环节。</p>
+<h2 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h4 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.2|配置" href="#3.2|配置"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>配置</h2>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">配置主要参考 wiki 中的<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://wiki.archLinux.org/index.php/General_recommendations" rel="noreferrer" target="_blank">推荐</a>。</p>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.2.1|创建用户" href="#3.2.1|创建用户"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>创建用户</h3>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># useradd -m -g users -G wheel -s /bin/zsh eagzzycsl</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">如果使用了 <code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">zsh</code> 作为默认 shell 的话，需要先安装 <code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">zsh</code>，否则会导致登录失败。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">为创建的用户设置密码</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># passwd eagzzycsl</span>
+</code></pre></pre>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.2.2|开启 multilib" href="#3.2.2|开启 multilib"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>开启 multilib</h3>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">在<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">/etc/pacman.conf</code>中取消注释<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">[multilib]</code>的相关行。</p>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.2.3|图形界面" href="#3.2.3|图形界面"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>图形界面</h3>
+<blockquote class="MuiTypography-root QuoteView_quote-view__1QBzv MuiTypography-body1 MuiTypography-colorTextSecondary" style="border-left:solid 4px rgb(51, 160, 149)">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">图形界面我还是要要的。</p>
+</blockquote>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">安装 intel 的显卡驱动</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># pacman -S xf86-video-intel</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">nvidia 的驱动在系统配置好后再安装。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">安装 xorg</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># pacman -S xorg-server</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">安装 GNOME</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># pacman -S gnome</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">gdm 会随 GNOME 附带安装。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">不推荐现在就默认启动 gdm，以避免 gdm 启动遇到问题带来麻烦。可以在验证 gdm 启动正常后再执行<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">systemctl enable gdm</code>。</p>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.2.4|字体" href="#3.2.4|字体"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>字体</h3>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">字体这一块不太熟悉，所以选择先安装必要的字体，使页面上中文能够正常显示，后面可以再详细配置。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji adobe-source-han-sans-cn-fonts</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">mac os 上的<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">monaco</code>用于编程很不错，可以在 aur 下获得。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-meta">$ </span><span class="language-bash">yaourt -S ttf-monaco</span>
+</code></pre></pre>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.2.5|基本软件安装" href="#3.2.5|基本软件安装"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>基本软件安装</h3>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">执行<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">systemct start gdm</code>验证 gdm 启动成功后可以执行<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">systemct enable gdm</code>使 gdm 随系统启动。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">在有了图形界面后，在浏览器中查看 wiki 等就可以方便复制粘贴。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">安装 firefox 浏览器。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># pacman -S firefox</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">安装 network-manager-applet 用以管理网络。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># pacman -S network-manager-applet</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">安装 guake 作为拉幕式终端。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># pacman -S guake</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">安装 GNOME 的微调工具 gnome-tweak-tool。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># pacman -S gnome-tweak-tool</span>
+</code></pre></pre>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.2.6|输入法" href="#3.2.6|输入法"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>输入法</h3>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">如果暂时没有中文输入的需求的话，可以之后再安装输入法。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">参考<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://wiki.archLinux.org/index.php/Fcitx_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)" rel="noreferrer" target="_blank">wiki</a>安装 fcitx。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># pacman -S fcitx</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">安装 sunpinyin 和 cloudpinyin。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># pacman -S fcitx-sunpinyin fcitx-cloudpinyin</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">安装图形化的配置工具。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># pacman -S fcitx-configtool</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">安装针对 GTK 和 QT 的输入法模块。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># pacman -S fcitx-im</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">编辑<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">~/.xprofile</code>配置环境变量。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-built_in">export</span> GTK_IM_MODULE=fcitx
+<span class="hljs-built_in">export</span> QT_IM_MODULE=fcitx
+<span class="hljs-built_in">export</span> XMODIFIERS=<span class="hljs-string">&quot;@im=fcitx&quot;</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">安装 GNOME 的扩展 <code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">gnome-shell-extension-kimpanel</code> 可以使候选词界面与 GNOME shell 风格统一。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">更多诸如繁简切换、候选词个数等可以在 fcitx 的图形化设置中完成。</p>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.2.7|安装 sudo" href="#3.2.7|安装 sudo"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>安装 sudo</h3>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">yaourt 的使用依赖 sudo</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">安装 sudo</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># pacman -S sudo</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">编辑<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">sudo</code>的配置文件<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">/etc/sudoers</code>，添加<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">eagzzycsl ALL=(ALL) ALL</code></p>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.2.8|添加 archlinuxcn 源并安装 yaourt" href="#3.2.8|添加 archlinuxcn 源并安装 yaourt"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>添加 archlinuxcn 源并安装 yaourt</h3>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">archlinuxcn 是由非官方维护的镜像源，但提供了很多实用的软件，尤其针对中国地区。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">编辑<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">/etc/pacman.conf</code>加入 archlinuxcn。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-section">[archlinuxcn]</span>
+<span class="hljs-attr">SigLevel</span> = Optional TrustedOnly
+<span class="hljs-attr">Server</span> = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/<span class="hljs-variable">$arch</span>
+<span class="hljs-attr">Server</span> = https://repo.archlinuxcn.org/<span class="hljs-variable">$arch</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">更多镜像可以<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://github.com/archlinuxcn/mirrorlist-repo" rel="noreferrer" target="_blank">这里</a>找到。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">安装<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">archlinuxcn-keyring</code>。安装时遇到了一个问题，在<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://bbs.archlinuxcn.org/viewtopic.php?id=4129" rel="noreferrer" target="_blank">bbs</a>中看到了<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://www.archlinuxcn.org/gnupg-2-1-and-the-pacman-keyring/" rel="noreferrer" target="_blank">解决方案</a>。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">安装<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">yaourt</code>，之后就可以方便获取来自 aur 的包了。</p>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.2.9|固态" href="#3.2.9|固态"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>固态</h3>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://wiki.archLinux.org/index.php/Solid_State_Drives" rel="noreferrer" target="_blank">wiki</a>中提供了详细的针对固态的资料，这里的配置只适合我的电脑。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">添加<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">discard</code>参数以支持 TRIM，<strong class="MuiTypography-root ArticleDisplay_strong__rsvmq MuiTypography-body1 MuiTypography-colorSecondary">需要注意的是如果 SSD 不支持 TRIM 则使用 discard 参数挂载会导致数据丢失。</strong></p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">也可以通过启用<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">fstrim.timer</code>来按周执行 trim。</p>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.2.10|双显卡配置" href="#3.2.10|双显卡配置"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>双显卡配置</h3>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">虽然平时集显也够用了，但是既然有独显也不能浪费。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://wiki.archLinux.org/index.php/Bumblebee" rel="noreferrer" target="_blank">wiki</a>提供了对于 nvidia 双显卡的配置的说明。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">我选择了安装 nvidia 驱动配合 bumblebee 实现双显卡交火，bumblebee 提供<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">optirun</code>命令来使用独显运行程序。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">根据显卡型号选择驱动程序后安装相应包。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># pacman -S bumblebee mesa xf86-video-intel lib32-virtualgl lib32-nvidia-utils</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">添加用户到 bumblebee 用户组。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-meta"># </span><span class="language-bash">gpasswd -a <span class="hljs-variable">$USER</span> bumblebee</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">设置 bumblebeed 开机启动。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-meta"># </span><span class="language-bash">systemctl <span class="hljs-built_in">enable</span> bumblebeed.service</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">重启电脑进入配置环节。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">安装<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">mesa-demos</code>，执行<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">optirun glxgears -info</code>。如果看到转动的齿轮窗口就说明配置正常。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">在启动 bumblebee 的服务后，独立显卡会一直开启，增加电脑功耗和发热，所以需要配合 bbswitch 来控制独显的开关。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">安装<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">bbswitch</code>。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># pacman -S bbswitch</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">通过<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">cat /proc/acpi/bbswitch</code>可以查看显卡开关状态，更多操作见 bbswitch 的<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://github.com/Bumblebee-Project/bbswitch" rel="noreferrer" target="_blank">文档</a></p>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.2.11|挂载相关" href="#3.2.11|挂载相关"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>挂载相关</h3>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">支持 ntfs 和 exfat 格式分区挂载。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># pacman -S ntfs-3g exfat-utils</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">支持手机 mtp。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># pacman -S mtpfs libmtp</span>
+</code></pre></pre>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.2.12|蓝牙" href="#3.2.12|蓝牙"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>蓝牙</h3>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">参考<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://wiki.archLinux.org/index.php/Bluetooth" rel="noreferrer" target="_blank">wiki</a>关于蓝牙的说明。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">安装 bluez。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># pacman -S bluez</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">启用 bluetooth.service。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># systectl enalbe bluetooth.service</span>
+</code></pre></pre>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.2.13|更多 GNOME 配置" href="#3.2.13|更多 GNOME 配置"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>更多 GNOME 配置</h3>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">gnome 的更多配置见<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="../gnome-experience/" rel="noreferrer" target="_blank">《GNOME 使用经验》</a>。</p>
+<h2 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h4 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.3|ux501 高分辨率问题" href="#3.3|ux501 高分辨率问题"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>ux501 高分辨率问题</h2>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">前面已经提到，机器的 4K 屏会在一些时候带来麻烦，可以参考<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://wiki.archLinux.org/index.php/HiDPI" rel="noreferrer" target="_blank">wiki</a>中关于高分辨率的说明，还有一篇关于 ux501 的<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://wiki.archLinux.org/index.php/ASUS_Zenbook_Pro_UX501" rel="noreferrer" target="_blank">文章</a>可以参考。</p>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.3.1|虚拟终端下字体过下" href="#3.3.1|虚拟终端下字体过下"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>虚拟终端下字体过下</h3>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">这个问题在之前的安装环节已经遇到，按照之前的说明操作即可。同时推荐将更多的配置操作在 guake 等图形化终端模拟器中完成。</p>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.3.2|网易音乐界面问题" href="#3.3.2|网易音乐界面问题"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>网易音乐界面问题</h3>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">网易云音乐有提供 Linux 版本，但安装后发现界面小的可怜，在网上找到了如下解决办法。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-meta">$ </span><span class="language-bash">env QT_AUTO_SCREEN_SCALE_FACTOR=0 netease-cloud-music --force-device-scale-factor=2</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">如此启动的网易云音乐界面会放大为之前的 2 倍。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">在 GNOME 下可以通过 menu 编辑器（在 app 列表里标签叫<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">main menu</code>，需要安装<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">alacarte</code>）编辑网易云音乐的属性，这样在 app 列表中点击网易云音乐依然可以启动放大版本。</p>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.3.3|gimp 界面问题" href="#3.3.3|gimp 界面问题"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>gimp 界面问题</h3>
+<blockquote class="MuiTypography-root QuoteView_quote-view__1QBzv MuiTypography-body1 MuiTypography-colorTextSecondary" style="border-left:solid 4px rgb(51, 160, 149)">
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">反正就是高分辨率下的问题，我也说不清具体是哪儿了。</p>
+</blockquote>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">有一个 gimp 的<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://github.com/jedireza/gimp-hidpi" rel="noreferrer" target="_blank">主题</a>可以解决 gimp 的高分辨率问题。</p>
+<h2 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h4 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.4|美化" href="#3.4|美化"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>美化</h2>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">Linux 有跟多的可定制性，可以通过安装主题包图标包等方式对界面进行美化</p>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.4.1|图标包" href="#3.4.1|图标包"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>图标包</h3>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://snwh.org/paper" rel="noreferrer" target="_blank">paper</a>是一套 material design 的图标包，同时还提供了光标主题和界面主题。</p>
+<h3 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="3.4.2|主题" href="#3.4.2|主题"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>主题</h3>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://github.com/vinceliuice/vimix-gtk-themes" rel="noreferrer" target="_blank">vimix</a>是一套 material design 的主题。</p>
+<h1 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h3 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="4|双系统共存" href="#4|双系统共存"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>双系统共存</h1>
+<h2 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h4 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="4.1|grub 配置" href="#4.1|grub 配置"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>grub 配置</h2>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">grub 在安装<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">os-prober</code>后生成配置文件时可以自动添加其他操作系统的启动项，默认的启动项为 Arch。因此经常会有 Windows 下重启后进入 Linux 的情况，设置 grub 每次启动时使用上一次启动项即可解决这一问题。设置方法在<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="http://askubuntu.com/questions/148662/how-to-get-grub2-to-remember-last-choice" rel="noreferrer" target="_blank">这里</a>。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">编辑<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">/etc/default/grub</code>中如下内容。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-attr">GRUB_DEFAULT</span>=saved
+<span class="hljs-attr">GRUB_SAVEDEFAULT</span>=<span class="hljs-literal">true</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">保存配置后重新生成<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">grub.cfg</code>即可。</p>
+<h2 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h4 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="4.2|Linux 下自动挂载 Windows 分区" href="#4.2|Linux 下自动挂载 Windows 分区"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>Linux 下自动挂载 Windows 分区</h2>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">我在 Windows 下全部数据都存放在 D 盘，因此在 Linux 下自动挂载 D 盘可以带来很多方便。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">编辑<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">/etc/fstab</code>，添加如下行。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-comment"># /dev/sda6</span>
+<span class="hljs-attr">UUID</span>=<span class="hljs-number">00029</span>F68000CFF9F   /mnt/win_D    ntfs-<span class="hljs-number">3</span>g     uid=eagzzycsl,gid=users     <span class="hljs-number">0</span>     <span class="hljs-number">0</span>
+</code></pre></pre>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">其中 UUID 要根据实际情况来不能照搬。<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">gid=users</code>表示以用户权限挂载，参考<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://wiki.archLinux.org/index.php/NTFS-3G#Allowing_group.2Fuser" rel="noreferrer" target="_blank">ntfs-3g 的相关说明</a></p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">有时候会出现开机时挂载 D 盘失败的问题，wiki 上有关于此问题的<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://wiki.archLinux.org/index.php/NTFS-3G#Metadata_kept_in_Windows_cache.2C_refused_to_mount" rel="noreferrer" target="_blank">说明</a>，是因为 Windows 在 Win8 后的快速启动机制会在关机时把一些已挂载的分区的元数据保存到硬盘，但如果该分区下次是被 Linux 挂载了那么分区就处于不安全的状态，数据无法得到保障。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">对应的解决方法是关闭 Windows 的快速启动即可。</p>
+<h2 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h4 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="4.3|文件乱码问题" href="#4.3|文件乱码问题"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>文件乱码问题</h2>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">Windows 下 记事本 创建的文本文件编码都是 gbk2312，在 Linux 会导致乱码，最佳的方法是将它转换为通用的 UTF-8 编码。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">可以使用 nautilus 的 script 功能实现右键菜单中<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">转化为 UTF-8 编码</code>。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">在<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">~/.local/share/nautilus/scripts</code>目录下创建一个脚本文件<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">GBK-&gt;UTF-8.sh</code>。</p>
+<pre><pre class="CodeView_code-view__2h6L_"><code class="hljs CodeView_code__3ShQb"><span class="hljs-meta">#!/bin/bash</span>
+iconv -f <span class="hljs-string">&#x27;GB2312&#x27;</span> -t <span class="hljs-string">&#x27;UTF-8&#x27;</span> <span class="hljs-variable">$1</span> -o ./utf8_<span class="hljs-variable">$1</span>
+rm <span class="hljs-variable">$1</span>
+mv utf8_<span class="hljs-variable">$1</span> <span class="hljs-variable">$1</span>
+</code></pre></pre>
+<h2 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h4 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="4.4|zip 解压后文件名的乱码问题" href="#4.4|zip 解压后文件名的乱码问题"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>zip 解压后文件名的乱码问题</h2>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">这一问题的根源还是在于 zip 自身未保存文件名编码信息。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">参考的知乎上的<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="https://www.zhihu.com/question/20523036" rel="noreferrer" target="_blank">讨论</a>，最终采用了 Fwolf 提供的<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover ArticleDisplay_link__1D9km MuiTypography-colorSecondary" href="http://zhihu.com/question/20523036/answer/31746415" rel="noreferrer" target="_blank">答案</a></p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">安装<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">unzip-iconv</code>后使用<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">unzip -O cp936 xxx.zip</code>或<code class="MuiTypography-root CodeView_inline-code-view__3BoS9 MuiTypography-body1 MuiTypography-colorSecondary">unzip -O gbk xxx.zip</code>执行解压操作即可。</p>
+<h1 class="MuiTypography-root ArticleDisplay_heading__1MIvk MuiTypography-h3 MuiTypography-colorPrimary MuiTypography-gutterBottom"><a class="MuiTypography-root ArticleDisplay_anchor-symbol__3tA7d MuiTypography-body1 MuiTypography-colorInherit" id="5|桌面截图" href="#5|桌面截图"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1zm2 3H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h3c.55 0 1-.45 1-1s-.45-1-1-1H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h3c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg></a>桌面截图</h1>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1">最后附上各项配置完成的 Linux 桌面截图一张。</p>
+<p class="MuiTypography-root ArticleDisplay_paragraph__3lhbQ MuiTypography-body1"><span class="ImageView_image-view__2rQ8c"><img class="ImageView_image__3_C-i" src="/static/apps/Blog/data/images/ux501-screenshot.66d596a2.jpg" alt="Linux桌面截图"/><span class="MuiTypography-root ImageView_caption__cfbg_ MuiTypography-caption MuiTypography-colorTextSecondary">[ <!-- -->Linux桌面截图<!-- --> ]</span></span></p></article><div class="Discussion_discussion__-bcgx"><div id="disqus_thread"></div></div></div><div class="Post_right-side__-FHvn"><section class="MuiTypography-root Catalogue_catalogue__2jQgx MuiTypography-subtitle2 MuiTypography-colorTextSecondary"><h1 class="MuiTypography-root Catalogue_title__1fDn0 MuiTypography-h6 MuiTypography-colorPrimary">目录</h1><div class="Catalogue_content__2XfM3"><ol class="Catalogue_list__3EB0p"><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#1|安装前准备">安装前准备</a><ol class="Catalogue_list__3EB0p"><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#1.1|分区计划">分区计划</a><ol class="Catalogue_list__3EB0p"></ol></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#1.2|安装流程">安装流程</a><ol class="Catalogue_list__3EB0p"></ol></li></ol></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#2|安装 Windows">安装 Windows</a><ol class="Catalogue_list__3EB0p"><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#2.1|ESP 盘符分配">ESP 盘符分配</a><ol class="Catalogue_list__3EB0p"></ol></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#2.2|安装驱动">安装驱动</a><ol class="Catalogue_list__3EB0p"></ol></li></ol></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3|安装 Arch">安装 Arch</a><ol class="Catalogue_list__3EB0p"><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.1|执行安装">执行安装</a><ol class="Catalogue_list__3EB0p"><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.1.1|用一个大一点的字体">用一个大一点的字体</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.1.2|检查是否为 UEFI 模式">检查是否为 UEFI 模式</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.1.3|检查联网是否正常">检查联网是否正常</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.1.4|确认系统时间正确">确认系统时间正确</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.1.5|查看分区情况并格式化分区">查看分区情况并格式化分区</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.1.6|挂载目录">挂载目录</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.1.7|镜像源选择">镜像源选择</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.1.8|安装">安装</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.1.9|生成 fstab">生成 fstab</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.1.10|chroot">chroot</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.1.11|设置时间">设置时间</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.1.12|本地化">本地化</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.1.13|设置主机名">设置主机名</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.1.14|网络配置">网络配置</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.1.15|设置 root 密码">设置 root 密码</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.1.16|安装引导程序">安装引导程序</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.1.17|重启退出 u 盘环境">重启退出 u 盘环境</a></li></ol></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.2|配置">配置</a><ol class="Catalogue_list__3EB0p"><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.2.1|创建用户">创建用户</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.2.2|开启 multilib">开启 multilib</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.2.3|图形界面">图形界面</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.2.4|字体">字体</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.2.5|基本软件安装">基本软件安装</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.2.6|输入法">输入法</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.2.7|安装 sudo">安装 sudo</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.2.8|添加 archlinuxcn 源并安装 yaourt">添加 archlinuxcn 源并安装 yaourt</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.2.9|固态">固态</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.2.10|双显卡配置">双显卡配置</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.2.11|挂载相关">挂载相关</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.2.12|蓝牙">蓝牙</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.2.13|更多 GNOME 配置">更多 GNOME 配置</a></li></ol></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.3|ux501 高分辨率问题">ux501 高分辨率问题</a><ol class="Catalogue_list__3EB0p"><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.3.1|虚拟终端下字体过下">虚拟终端下字体过下</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.3.2|网易音乐界面问题">网易音乐界面问题</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.3.3|gimp 界面问题">gimp 界面问题</a></li></ol></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.4|美化">美化</a><ol class="Catalogue_list__3EB0p"><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.4.1|图标包">图标包</a></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#3.4.2|主题">主题</a></li></ol></li></ol></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#4|双系统共存">双系统共存</a><ol class="Catalogue_list__3EB0p"><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#4.1|grub 配置">grub 配置</a><ol class="Catalogue_list__3EB0p"></ol></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#4.2|Linux 下自动挂载 Windows 分区">Linux 下自动挂载 Windows 分区</a><ol class="Catalogue_list__3EB0p"></ol></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#4.3|文件乱码问题">文件乱码问题</a><ol class="Catalogue_list__3EB0p"></ol></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#4.4|zip 解压后文件名的乱码问题">zip 解压后文件名的乱码问题</a><ol class="Catalogue_list__3EB0p"></ol></li></ol></li><li class="Catalogue_list-item__1k-rW"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover Catalogue_link__3cPFO MuiTypography-colorInherit" href="#5|桌面截图">桌面截图</a><ol class="Catalogue_list__3EB0p"></ol></li></ol></div></section></div></div></main></main></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"postId":"ux501-arch-win10"},"__N_SSG":true},"page":"/blog/[postId]","query":{"postId":"ux501-arch-win10"},"buildId":"l6ldH-mv2uM7upTEu-70A","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
