@@ -22,6 +22,7 @@
     "site:domain": "yarn workspace @mine/site run export:domain",
     "site:local": "yarn workspace @mine/site run export:local && du -sh ./local-export",
     "site:serve": "yarn workspace @mine/site run serve",
+    "site:route": "yarn workspace @mine/site run route",
     "test": "jest",
     "test:ci": "jest --coverage",
     "verify": "npm-run-all prettier lint:md lint:style lint:es test lint:commit && yarn workspace @mine/site run ts:check"
