@@ -21,6 +21,7 @@ export interface BasicDisplayItem {
 
 export interface PictorialDisplayItem extends BasicDisplayItem {
   image: string
+  cover?: boolean
 }
 
 type DisplayItem = BasicDisplayItem | PictorialDisplayItem
@@ -58,12 +59,14 @@ export default {
       image: imageWallpaper,
       url: 'https://besthqwallpapers.com/abstract/colorful-strips-art-lines-design-material-abstract-material-25834',
       brief: '桌面壁纸来自 besthqwallpapers.com，为减小体积转制为svg',
+      cover: true,
     },
     {
       title: '课堂插图',
       image: imageClassroom,
       url: 'https://icons8.cn/illustrations/illustration/pluto-96',
       brief: '课堂插图 来自icons8.cn',
+      cover: true,
     },
   ],
   projects: [

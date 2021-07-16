@@ -41,14 +41,25 @@ const Action = ({ url }: { url: string }): JSX.Element => {
   )
 }
 
-const Media = ({ image }: { image: string }): JSX.Element => (
+interface MediaProps {
+  image: string
+  cover?: boolean
+}
+
+const Media = ({ image, cover }: MediaProps): JSX.Element => (
   <div
     className={styles.media}
     style={{
       backgroundImage: `url(${image})`,
+      // stylelint-disable-next-line csstree/validator
+      backgroundSize: cover ? 'cover' : 'contain',
     }}
   />
 )
+
+Media.defaultProps = {
+  cover: false,
+}
 
 interface PictorialCardProps {
   data: PictorialDisplayItem
@@ -57,7 +68,7 @@ interface PictorialCardProps {
 }
 
 const PictorialCard = ({
-  data: { image, title, brief, url },
+  data: { image, title, brief, url, cover },
   landscape,
   fill,
 }: PictorialCardProps): JSX.Element => (
@@ -73,12 +84,12 @@ const PictorialCard = ({
           <Content title={title} brief={brief} />
           <Action url={url} />
         </div>
-        <Media image={image} />
+        <Media image={image} cover={cover} />
       </>
     ) : (
       <>
-        <CardActionArea className={styles.top}>
-          <Media image={image} />
+        <CardActionArea>
+          <Media image={image} cover={cover} />
           <Content title={title} brief={brief} />
         </CardActionArea>
         <Action url={url} />
