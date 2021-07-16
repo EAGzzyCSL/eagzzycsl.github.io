@@ -44,3 +44,10 @@ declare module '*.md' {
     content,
   }
 }
+
+declare module '*.yml' {
+  export default unknown
+}
+declare module '*.yaml' {
+  export default unknown
+}
