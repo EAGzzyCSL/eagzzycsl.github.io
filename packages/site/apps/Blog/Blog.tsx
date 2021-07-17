@@ -13,10 +13,12 @@ import KeyboardArrowRightRoundedIcon from '@material-ui/icons/KeyboardArrowRight
 import SearchRoundedIcon from '@material-ui/icons/SearchRounded'
 import Pagination from '@material-ui/lab/Pagination'
 import cx from 'classnames'
+import { observer } from 'mobx-react-lite'
 import { GetStaticPropsResult } from 'next'
 import { useRouter } from 'next/router'
 import React, { useState } from 'react'
 
+import useStore from '@/hooks/useStore'
 import AppPage from '@/shell/AppPage'
 import { camel2kebab } from '@/utils/string'
 
@@ -48,7 +50,8 @@ interface BlogProps {
 }
 
 const Blog = ({ posts = dataOfPosts }: BlogProps): JSX.Element => {
-  const [isFocusOnLeft, setIsFocusOnLeft] = useState(true)
+  const store = useStore()
+
   const [currentPage, setCurrentPage] = useState(1)
 
   const router = useRouter()
@@ -72,7 +75,7 @@ const Blog = ({ posts = dataOfPosts }: BlogProps): JSX.Element => {
     <AppPage title='芹也集' theme={theme}>
       <section
         className={cx(styles.blog, {
-          [styles.focusOnLeft]: isFocusOnLeft,
+          [styles.focusOnLeft]: store.blogStore.focusOnLeft,
         })}
       >
         <Box className={styles.leftSide}>
@@ -139,20 +142,20 @@ const Blog = ({ posts = dataOfPosts }: BlogProps): JSX.Element => {
             onChange={handleTapPage}
           />
         </Box>
-        <Zoom in={!isFocusOnLeft}>
+        <Zoom in={!store.blogStore.focusOnLeft}>
           <Fab
             color='primary'
             className={cx(styles.switchFab, styles.left)}
-            onClick={() => setIsFocusOnLeft(true)}
+            onClick={() => store.blogStore.enableFocusOnLeft()}
           >
             <KeyboardArrowLeftRoundedIcon />
           </Fab>
         </Zoom>
-        <Zoom in={isFocusOnLeft}>
+        <Zoom in={store.blogStore.focusOnLeft}>
           <Fab
             color='primary'
             className={cx(styles.switchFab, styles.right)}
-            onClick={() => setIsFocusOnLeft(false)}
+            onClick={() => store.blogStore.disableFocusOnLeft()}
           >
             <KeyboardArrowRightRoundedIcon />
           </Fab>
@@ -166,7 +169,7 @@ Blog.defaultProps = {
   posts: dataOfPosts,
 }
 
-export default Blog
+export default observer(Blog)
 
 export const getStaticProps = (): GetStaticPropsResult<BlogProps> => ({
   props: {

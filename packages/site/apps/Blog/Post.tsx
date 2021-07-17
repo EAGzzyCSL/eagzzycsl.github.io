@@ -114,7 +114,12 @@ const Post = ({ postId: postIdFromProps }: PostProps): JSX.Element => {
             onClose={() => setCatalogueSideVisible(false)}
           >
             <div className={styles.drawerCatalogueContainer}>
-              <Catalogue toc={PostContent.toc} />
+              <Catalogue
+                toc={PostContent.toc}
+                onItemClick={() => {
+                  setCatalogueSideVisible(false)
+                }}
+              />
             </div>
           </Drawer>
         </div>
