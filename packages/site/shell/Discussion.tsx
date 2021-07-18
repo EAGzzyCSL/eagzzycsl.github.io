@@ -12,6 +12,8 @@ interface DiscussionProps {
   sidesMargin?: boolean
 }
 
+const isDev = process.env.NODE_ENV === 'development'
+
 const Discussion = ({
   title,
   sidesMargin = false,
@@ -23,14 +25,20 @@ const Discussion = ({
         [styles.sidesMargin]: sidesMargin,
       })}
     >
-      <DiscussionEmbed
-        shortname='eagzzycsl'
-        config={{
-          url: `${SITE_URL}${router.asPath}`,
-          identifier: router.asPath,
-          title,
-        }}
-      />
+      {isDev ? (
+        <div className={styles.discussionDev}>
+          development 模式下 disqus 不加载以避免网络错误
+        </div>
+      ) : (
+        <DiscussionEmbed
+          shortname='eagzzycsl'
+          config={{
+            url: `${SITE_URL}${router.asPath}`,
+            identifier: router.asPath,
+            title,
+          }}
+        />
+      )}
     </div>
   )
 }

@@ -1,6 +1,15 @@
 .discussion {
   margin-top: 36px;
 
+  .discussion-dev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    color: lightcoral;
+    border: solid 1px lightgray;
+  }
+
   &.sides-margin {
     margin: 36px;
   }
