@@ -11,11 +11,10 @@ import Typography from '@material-ui/core/Typography'
 import ArrowBackRoundedIcon from '@material-ui/icons/ArrowBackRounded'
 import MoreHorizRoundedIcon from '@material-ui/icons/MoreHorizRounded'
 import MoreVertRoundedIcon from '@material-ui/icons/MoreVertRounded'
-import NavigateBeforeRoundedIcon from '@material-ui/icons/NavigateBeforeRounded'
 import { GetStaticPropsResult } from 'next'
-import { useRouter } from 'next/router'
 import React, { useState } from 'react'
 
+import AppBarHomeButton from '@/shell/AppBarHomeButton'
 import AppPage from '@/shell/AppPage'
 
 import dataOfChats from './data/chats'
@@ -36,27 +35,42 @@ const theme = createMuiTheme({
 })
 
 interface LeftContentProps {
-  onTapBack: () => void
+  useCustomBack?: boolean
+  onTapBack?: () => void
 }
 
-const LeftContent = ({ onTapBack }: LeftContentProps): JSX.Element => (
-  <div className={styles.contentAbout}>
-    <AppBar position='static'>
-      <Toolbar>
-        <IconButton edge='start' color='inherit' onClick={onTapBack}>
-          <ArrowBackRoundedIcon />
-        </IconButton>
-        <Typography component='h1' variant='h6'>
-          他说破了事实
-        </Typography>
-      </Toolbar>
-    </AppBar>
-    <div className={styles.about}>
-      <AboutCard />
-    </div>
-  </div>
-)
+const LeftContent = (props: LeftContentProps): JSX.Element => {
+  const { useCustomBack, onTapBack } = props
+  return (
+    <div className={styles.contentAbout}>
+      <AppBar position='static'>
+        <Toolbar>
+          {useCustomBack ? (
+            <div className={styles.navBack}>
+              <IconButton edge='start' color='inherit' onClick={onTapBack}>
+                <ArrowBackRoundedIcon />
+              </IconButton>
+            </div>
+          ) : (
+            <AppBarHomeButton />
+          )}
 
+          <Typography component='h1' variant='h6'>
+            他说破了事实
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      <div className={styles.about}>
+        <AboutCard />
+      </div>
+    </div>
+  )
+}
+
+LeftContent.defaultProps = {
+  useCustomBack: false,
+  onTapBack: () => {},
+}
 interface RightContentProps {
   onTapBack: () => void
 }
@@ -94,14 +108,12 @@ const RightContent = ({ onTapBack }: RightContentProps): JSX.Element => (
 
 interface CenterContentProps {
   chats: Chats
-  onTapBack: () => void
   onTapAbout: () => void
   onTapReference: () => void
 }
 
 const CenterContent = ({
   chats,
-  onTapBack,
   onTapAbout,
   onTapReference,
 }: CenterContentProps): JSX.Element => {
@@ -121,9 +133,7 @@ const CenterContent = ({
     <div className={styles.contentCenter}>
       <AppBar position='static'>
         <Toolbar>
-          <IconButton edge='start' color='inherit' onClick={onTapBack}>
-            <NavigateBeforeRoundedIcon fontSize='large' />
-          </IconButton>
+          <AppBarHomeButton />
           <Typography
             className={styles.headerTitle}
             component='h2'
@@ -180,12 +190,6 @@ interface LittleCousinSpeakTheTruthProps {
 const LittleCousinSpeakTheTruth = ({
   chats = dataOfChats,
 }: LittleCousinSpeakTheTruthProps): JSX.Element => {
-  const router = useRouter()
-
-  const handleBack = (): void => {
-    router.back()
-  }
-
   const [aboutVisible, setAboutVisible] = useState(false)
 
   const [referenceVisible, setReferenceVisible] = useState(false)
@@ -194,7 +198,7 @@ const LittleCousinSpeakTheTruth = ({
     <AppPage title='他说破了事实' theme={theme}>
       <section className={styles.littleCousinSpeakTheTruth}>
         <div className={styles.leftPanel}>
-          <LeftContent onTapBack={handleBack} />
+          <LeftContent />
         </div>
         <div className={styles.centerPanel}>
           <Paper
@@ -205,7 +209,6 @@ const LittleCousinSpeakTheTruth = ({
           >
             <CenterContent
               chats={chats}
-              onTapBack={handleBack}
               onTapAbout={() => setAboutVisible(true)}
               onTapReference={() => setReferenceVisible(true)}
             />
@@ -219,7 +222,7 @@ const LittleCousinSpeakTheTruth = ({
           open={aboutVisible}
           onClose={() => setAboutVisible(false)}
         >
-          <LeftContent onTapBack={() => setAboutVisible(false)} />
+          <LeftContent useCustomBack onTapBack={() => setAboutVisible(false)} />
         </Drawer>
         <Drawer
           anchor='right'

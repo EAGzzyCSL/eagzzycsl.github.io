@@ -8,4 +8,4 @@ export default {
   router: {
     '/': 'Calculator.tsx',
   },
-} as Manifest
+} as Manifest<'/'>

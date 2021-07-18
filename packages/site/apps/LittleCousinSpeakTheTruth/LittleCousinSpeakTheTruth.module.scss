@@ -90,6 +90,18 @@
     align-items: center;
     justify-content: center;
   }
+
+  @media screen and (orientation: landscape) {
+    .nav-back {
+      display: none;
+    }
+  }
+
+  @media screen and (orientation: portrait) {
+    .nav-back {
+      display: block;
+    }
+  }
 }
 
 .content-reference {

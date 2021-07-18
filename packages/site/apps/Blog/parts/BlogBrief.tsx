@@ -1,8 +1,9 @@
 import Link from '@material-ui/core/Link'
 import Typography from '@material-ui/core/Typography'
 import dayjs from 'dayjs'
-import { useRouter } from 'next/router'
 import React from 'react'
+
+import { useMyRouter } from '@/router'
 
 import styles from './BlogBrief.module.scss'
 import BlogTags from './BlogTags'
@@ -22,13 +23,13 @@ const BlogBrief = ({
   updatedAt,
   tags,
 }: BlogBriefProps): JSX.Element => {
-  const router = useRouter()
+  const router = useMyRouter()
 
   const date = dayjs(updatedAt).format('YYYY-MM-DD')
 
   const handleNav = (event: React.MouseEvent): void => {
     event.preventDefault()
-    router.push(`${router.route}/[postId]`, `${router.pathname}/${postPath}`)
+    router.push('Blog', '/[postId]', postPath)
   }
   return (
     <section className={styles.blogBrief}>

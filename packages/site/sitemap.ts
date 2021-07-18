@@ -16,7 +16,7 @@ import WinterNine from '@/apps/WinterNine/manifest'
 import { AppDescribe } from './type'
 import { camel2kebab } from './utils/string'
 
-const appMap = {
+export const appMap = {
   Launcher,
   Acknowledgements,
   Blog,

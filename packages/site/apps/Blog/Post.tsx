@@ -3,17 +3,18 @@ import AppBar from '@material-ui/core/AppBar'
 import Drawer from '@material-ui/core/Drawer'
 import IconButton from '@material-ui/core/IconButton'
 import Toolbar from '@material-ui/core/Toolbar'
-import ArrowBackRoundedIcon from '@material-ui/icons/ArrowBackRounded'
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded'
 import Alert from '@material-ui/lab/Alert'
 import dayjs from 'dayjs'
 import { GetStaticPropsResult } from 'next'
-import { useRouter } from 'next/router'
 import React, { useState } from 'react'
 
+import { useMyRouter } from '@/router'
+import AppBarHomeButton from '@/shell/AppBarHomeButton'
 import AppPage from '@/shell/AppPage'
 import Discussion from '@/shell/Discussion'
 import { StaticPathsResponse, StaticPath } from '@/type'
+import Logger from '@/utils/logger'
 import { kebab2camel, camel2kebab } from '@/utils/string'
 
 import * as postsData from './data/index'
@@ -28,12 +29,20 @@ interface PostProps {
   postId: string
 }
 
-const Post = ({ postId: postIdFromProps }: PostProps): JSX.Element => {
-  const router = useRouter()
+const Post = (props: PostProps): JSX.Element => {
+  const { postId: postIdFromProps } = props
+  const router = useMyRouter()
 
   const [catalogueSideVisible, setCatalogueSideVisible] = useState(false)
 
-  const postId = postIdFromProps || (router.query.postId as string)
+  // TODO: 这里的query好像还有点问题
+  const query = router.getQuery<PostProps>()
+  const postId = postIdFromProps || query.postId
+
+  Logger.myRouter.log('postPageLoaded', {
+    postIdFromProps,
+    postIdFromQuery: query.postId,
+  })
 
   // TODO: blog的404页面
 
@@ -44,10 +53,6 @@ const Post = ({ postId: postIdFromProps }: PostProps): JSX.Element => {
 
   const outdatedDays = dayjs().diff(dayjs(PostContent.updatedAt), 'day')
 
-  const handleTapBack = (): void => {
-    router.back()
-  }
-
   const handleTapMenu = (): void => {
     setCatalogueSideVisible(true)
   }
@@ -57,9 +62,7 @@ const Post = ({ postId: postIdFromProps }: PostProps): JSX.Element => {
       <main className={styles.post}>
         <AppBar color='transparent' position='static'>
           <Toolbar className={styles.toolbar}>
-            <IconButton color='primary' onClick={handleTapBack}>
-              <ArrowBackRoundedIcon />
-            </IconButton>
+            <AppBarHomeButton inverse />
             <Typography
               className={styles.blogName}
               component='h1'

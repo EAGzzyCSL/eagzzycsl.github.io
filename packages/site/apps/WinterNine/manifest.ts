@@ -8,4 +8,4 @@ export default {
   router: {
     '/': 'WinterNine.tsx',
   },
-} as Manifest
+} as Manifest<'/'>

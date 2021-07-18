@@ -10,4 +10,4 @@ export default {
     '/': 'Launcher.tsx',
     '/404': 'NotFound.tsx',
   },
-} as Manifest
+} as Manifest<'/' | '/404'>

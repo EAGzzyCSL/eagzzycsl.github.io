@@ -3,7 +3,7 @@ interface TocItem {
   level: number
 }
 
-interface NestedTocItem extends TocItem {
+export interface NestedTocItem extends TocItem {
   sub: NestedTocItem[]
 }
 

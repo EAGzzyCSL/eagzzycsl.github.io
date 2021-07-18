@@ -1,10 +1,10 @@
-export interface Manifest {
+export interface Manifest<ROUTES extends string> {
   // 路由根目录
   root?: string
   icon: string
   title: string
   // app下的子路由
-  router: Record<string, string>
+  router: Record<ROUTES, string>
 }
 
 export interface StaticPath<P> {

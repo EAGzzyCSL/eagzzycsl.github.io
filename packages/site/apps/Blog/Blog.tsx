@@ -7,7 +7,6 @@ import Tabs from '@material-ui/core/Tabs'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import Zoom from '@material-ui/core/Zoom'
-import ArrowBackRoundedIcon from '@material-ui/icons/ArrowBackRounded'
 import KeyboardArrowLeftRoundedIcon from '@material-ui/icons/KeyboardArrowLeftRounded'
 import KeyboardArrowRightRoundedIcon from '@material-ui/icons/KeyboardArrowRightRounded'
 import SearchRoundedIcon from '@material-ui/icons/SearchRounded'
@@ -15,10 +14,10 @@ import Pagination from '@material-ui/lab/Pagination'
 import cx from 'classnames'
 import { observer } from 'mobx-react-lite'
 import { GetStaticPropsResult } from 'next'
-import { useRouter } from 'next/router'
 import React, { useState } from 'react'
 
 import useStore from '@/hooks/useStore'
+import AppBarHomeButton from '@/shell/AppBarHomeButton'
 import AppPage from '@/shell/AppPage'
 import { camel2kebab } from '@/utils/string'
 
@@ -54,11 +53,6 @@ const Blog = ({ posts = dataOfPosts }: BlogProps): JSX.Element => {
 
   const [currentPage, setCurrentPage] = useState(1)
 
-  const router = useRouter()
-
-  const handleTapBack = (): void => {
-    router.back()
-  }
   const handleTapPage = (
     event: React.ChangeEvent<unknown>,
     page: number,
@@ -81,9 +75,7 @@ const Blog = ({ posts = dataOfPosts }: BlogProps): JSX.Element => {
         <Box className={styles.leftSide}>
           <AppBar elevation={0} position='static' color='transparent'>
             <Toolbar className={styles.toolbar}>
-              <IconButton color='primary' onClick={handleTapBack}>
-                <ArrowBackRoundedIcon />
-              </IconButton>
+              <AppBarHomeButton inverse />
               {/* TODO: 实现搜索功能 */}
               <IconButton color='primary'>
                 <SearchRoundedIcon />

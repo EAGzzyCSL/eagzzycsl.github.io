@@ -2,17 +2,15 @@ import AppBar from '@material-ui/core/AppBar'
 import colorBlue from '@material-ui/core/colors/blue'
 import colorDeepOrange from '@material-ui/core/colors/deepOrange'
 import colorPink from '@material-ui/core/colors/pink'
-import IconButton from '@material-ui/core/IconButton'
 import { createMuiTheme } from '@material-ui/core/styles'
 import Tab from '@material-ui/core/Tab'
 import Tabs from '@material-ui/core/Tabs'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
-import ArrowBackRoundedIcon from '@material-ui/icons/ArrowBackRounded'
 import { GetStaticPropsResult } from 'next'
-import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 
+import AppBarHomeButton from '@/shell/AppBarHomeButton'
 import AppPage from '@/shell/AppPage'
 
 import styles from './Calculator.module.scss'
@@ -54,8 +52,6 @@ const theme = createMuiTheme({
 })
 
 const Calculator = (): JSX.Element => {
-  const router = useRouter()
-
   const [activeTabIndex, setActiveTabIndex] = React.useState(
     getPanelIndexFromHash(),
   )
@@ -70,10 +66,6 @@ const Calculator = (): JSX.Element => {
       window.removeEventListener('hashchange', hashListener)
     }
   }, [])
-
-  const handleBack = (): void => {
-    router.back()
-  }
 
   const handleSwitchTab = (
     event: React.ChangeEvent<unknown>,
@@ -90,9 +82,7 @@ const Calculator = (): JSX.Element => {
       <section className={styles.calculator}>
         <AppBar position='static' color='transparent'>
           <Toolbar>
-            <IconButton edge='start' color='primary' onClick={handleBack}>
-              <ArrowBackRoundedIcon />
-            </IconButton>
+            <AppBarHomeButton inverse />
             <Typography component='h1' variant='h6' color='primary'>
               计算器
             </Typography>

@@ -8,4 +8,4 @@ export default {
   router: {
     '/': 'Painter.tsx',
   },
-} as Manifest
+} as Manifest<'/'>

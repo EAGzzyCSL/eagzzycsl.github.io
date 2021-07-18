@@ -8,4 +8,4 @@ export default {
   router: {
     '/': 'Acknowledgements.tsx',
   },
-} as Manifest
+} as Manifest<'/'>

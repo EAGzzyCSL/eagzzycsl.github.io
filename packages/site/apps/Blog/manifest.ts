@@ -9,4 +9,4 @@ export default {
     '/': 'Blog.tsx',
     '/[postId]': 'Post.tsx',
   },
-} as Manifest
+} as Manifest<'/' | '/[postId]'>
