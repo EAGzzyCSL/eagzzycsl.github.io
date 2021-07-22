@@ -12,10 +12,11 @@ import ArrowBackRoundedIcon from '@material-ui/icons/ArrowBackRounded'
 import MoreHorizRoundedIcon from '@material-ui/icons/MoreHorizRounded'
 import MoreVertRoundedIcon from '@material-ui/icons/MoreVertRounded'
 import { GetStaticPropsResult } from 'next'
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 
 import AppBarHomeButton from '@/shell/AppBarHomeButton'
 import AppPage from '@/shell/AppPage'
+import SimpleAppBar from '@/shell/SimpleAppBar'
 
 import dataOfChats from './data/chats'
 import styles from './LittleCousinSpeakTheTruth.module.scss'
@@ -121,8 +122,13 @@ const CenterContent = ({
     null,
   )
 
+  const moreIconVert = useRef<SVGSVGElement>(null)
+  const moreIconHoriz = useRef<SVGSVGElement>(null)
+
   const handleTapMore = (event: React.MouseEvent<HTMLButtonElement>): void => {
-    setMenuAnchorEl(event.currentTarget)
+    if (event.target === moreIconVert.current) {
+      setMenuAnchorEl(event.currentTarget)
+    }
   }
 
   const handleCloseMenu = (): void => {
@@ -131,51 +137,47 @@ const CenterContent = ({
 
   return (
     <div className={styles.contentCenter}>
-      <AppBar position='static'>
-        <Toolbar>
-          <AppBarHomeButton />
-          <Typography
-            className={styles.headerTitle}
-            component='h2'
-            variant='h6'
-          >
-            {chats.leftName}
-          </Typography>
-          <div className={styles.headerMoreVert}>
-            <IconButton color='inherit' onClick={handleTapMore}>
-              <MoreVertRoundedIcon fontSize='large' />
-            </IconButton>
-          </div>
-          <div className={styles.headerMoreHoriz}>
-            <IconButton color='inherit'>
-              <MoreHorizRoundedIcon fontSize='large' />
-            </IconButton>
-          </div>
-          <Menu
-            anchorEl={menuAnchorEl}
-            keepMounted
-            open={!!menuAnchorEl}
-            onClose={handleCloseMenu}
-          >
-            <MenuItem
-              onClick={() => {
-                handleCloseMenu()
-                onTapAbout()
-              }}
-            >
-              关于
-            </MenuItem>
-            <MenuItem
-              onClick={() => {
-                handleCloseMenu()
-                onTapReference()
-              }}
-            >
-              参考
-            </MenuItem>
-          </Menu>
-        </Toolbar>
-      </AppBar>
+      <SimpleAppBar
+        title={chats.leftName}
+        endIcon={
+          <>
+            <MoreVertRoundedIcon
+              ref={moreIconVert}
+              className={styles.headerMoreVert}
+              fontSize='large'
+            />
+            <MoreHorizRoundedIcon
+              ref={moreIconHoriz}
+              className={styles.headerMoreHoriz}
+              fontSize='large'
+            />
+          </>
+        }
+        onEndIconClick={handleTapMore}
+      />
+      <Menu
+        anchorEl={menuAnchorEl}
+        keepMounted
+        open={!!menuAnchorEl}
+        onClose={handleCloseMenu}
+      >
+        <MenuItem
+          onClick={() => {
+            handleCloseMenu()
+            onTapAbout()
+          }}
+        >
+          关于
+        </MenuItem>
+        <MenuItem
+          onClick={() => {
+            handleCloseMenu()
+            onTapReference()
+          }}
+        >
+          参考
+        </MenuItem>
+      </Menu>
       <div className={styles.containerWeChat}>
         <WeChatShell chats={chats} />
       </div>

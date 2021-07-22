@@ -1,17 +1,15 @@
-import AppBar from '@material-ui/core/AppBar'
 import colorBlue from '@material-ui/core/colors/blue'
 import colorDeepOrange from '@material-ui/core/colors/deepOrange'
 import colorPink from '@material-ui/core/colors/pink'
 import { createMuiTheme } from '@material-ui/core/styles'
 import Tab from '@material-ui/core/Tab'
 import Tabs from '@material-ui/core/Tabs'
-import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import { GetStaticPropsResult } from 'next'
 import React, { useEffect } from 'react'
 
-import AppBarHomeButton from '@/shell/AppBarHomeButton'
 import AppPage from '@/shell/AppPage'
+import SimpleAppBar from '@/shell/SimpleAppBar'
 
 import styles from './Calculator.module.scss'
 import FunctionBMI from './panels/BMI'
@@ -80,27 +78,30 @@ const Calculator = (): JSX.Element => {
   return (
     <AppPage title='计算器' theme={theme}>
       <section className={styles.calculator}>
-        <AppBar position='static' color='transparent'>
-          <Toolbar>
-            <AppBarHomeButton inverse />
-            <Typography component='h1' variant='h6' color='primary'>
-              计算器
-            </Typography>
-            <div className={styles.tabs}>
-              <Tabs
-                value={activeTabIndex}
-                onChange={handleSwitchTab}
-                centered
-                indicatorColor='primary'
-                textColor='primary'
-              >
-                {panels.map(item => (
-                  <Tab label={item.title} key={item.id} />
-                ))}
-              </Tabs>
+        <SimpleAppBar
+          inverse
+          mainContent={
+            <div className={styles.appBarContent}>
+              <Typography component='h1' variant='h6' color='primary'>
+                计算器
+              </Typography>
+              <div className={styles.tabs}>
+                <Tabs
+                  value={activeTabIndex}
+                  onChange={handleSwitchTab}
+                  centered
+                  indicatorColor='primary'
+                  textColor='primary'
+                >
+                  {panels.map(item => (
+                    <Tab label={item.title} key={item.id} />
+                  ))}
+                </Tabs>
+              </div>
             </div>
-          </Toolbar>
-        </AppBar>
+          }
+          endIcon={undefined}
+        />
         <div className={styles.panel}>
           {/* FIXME: 需要保留面板状态 */}
           <ActivePanel />

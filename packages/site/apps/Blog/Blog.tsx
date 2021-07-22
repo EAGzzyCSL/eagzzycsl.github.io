@@ -1,10 +1,7 @@
-import AppBar from '@material-ui/core/AppBar'
 import Box from '@material-ui/core/Box'
 import Fab from '@material-ui/core/Fab'
-import IconButton from '@material-ui/core/IconButton'
 import Tab from '@material-ui/core/Tab'
 import Tabs from '@material-ui/core/Tabs'
-import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import Zoom from '@material-ui/core/Zoom'
 import KeyboardArrowLeftRoundedIcon from '@material-ui/icons/KeyboardArrowLeftRounded'
@@ -17,8 +14,8 @@ import { GetStaticPropsResult } from 'next'
 import React, { useState } from 'react'
 
 import useStore from '@/hooks/useStore'
-import AppBarHomeButton from '@/shell/AppBarHomeButton'
 import AppPage from '@/shell/AppPage'
+import SimpleAppBar from '@/shell/SimpleAppBar'
 import { camel2kebab } from '@/utils/string'
 
 import styles from './Blog.module.scss'
@@ -73,15 +70,8 @@ const Blog = ({ posts = dataOfPosts }: BlogProps): JSX.Element => {
         })}
       >
         <Box className={styles.leftSide}>
-          <AppBar elevation={0} position='static' color='transparent'>
-            <Toolbar className={styles.toolbar}>
-              <AppBarHomeButton inverse />
-              {/* TODO: 实现搜索功能 */}
-              <IconButton color='primary'>
-                <SearchRoundedIcon />
-              </IconButton>
-            </Toolbar>
-          </AppBar>
+          {/* TODO: 实现搜索功能 */}
+          <SimpleAppBar inverse endIcon={<SearchRoundedIcon />} />
           <Box className={styles.content}>
             <Box>
               <Typography

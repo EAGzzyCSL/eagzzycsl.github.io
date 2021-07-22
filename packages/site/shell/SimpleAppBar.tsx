@@ -9,11 +9,20 @@ import AppBarHomeButton from './AppBarHomeButton'
 import styles from './SimpleAppBar.module.scss'
 
 interface SimpleAppBarProps {
-  title: string
+  title?: string
   inverse?: boolean
+  mainContent?: JSX.Element
+  endIcon?: JSX.Element
+  onEndIconClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
 }
 
-const SimpleAppBar = ({ title, inverse }: SimpleAppBarProps): JSX.Element => (
+const SimpleAppBar = ({
+  title,
+  inverse,
+  mainContent,
+  endIcon,
+  onEndIconClick,
+}: SimpleAppBarProps): JSX.Element => (
   <AppBar
     className={styles.simpleAppBar}
     position='static'
@@ -22,22 +31,38 @@ const SimpleAppBar = ({ title, inverse }: SimpleAppBarProps): JSX.Element => (
   >
     <Toolbar>
       <AppBarHomeButton inverse={inverse} />
-      <Typography
-        className={styles.title}
-        component='h1'
-        variant='h6'
-        color={inverse ? 'primary' : 'initial'}
-      >
-        {title}
-      </Typography>
-      <IconButton edge='end' color={inverse ? 'primary' : 'inherit'}>
-        <MenuRoundedIcon />
-      </IconButton>
+
+      <div className={styles.mainContent}>
+        {mainContent}
+        {title && (
+          <Typography
+            component='h1'
+            variant='h6'
+            color={inverse ? 'primary' : 'initial'}
+          >
+            {title}
+          </Typography>
+        )}
+      </div>
+
+      {endIcon && (
+        <IconButton
+          edge='end'
+          color={inverse ? 'primary' : 'inherit'}
+          onClick={onEndIconClick}
+        >
+          {endIcon}
+        </IconButton>
+      )}
     </Toolbar>
   </AppBar>
 )
 
 SimpleAppBar.defaultProps = {
+  title: '',
   inverse: false,
+  mainContent: undefined,
+  endIcon: <MenuRoundedIcon />,
+  onEndIconClick: () => {},
 }
 export default SimpleAppBar
