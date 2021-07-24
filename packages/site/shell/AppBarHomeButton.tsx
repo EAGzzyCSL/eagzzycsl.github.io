@@ -2,9 +2,11 @@
  * 用于页面AppBar上的返回按钮
  * 如果页面是从上层页面跳转进入，按钮呈现为返回icon，否则呈现为home icon
  */
-import IconButton from '@material-ui/core/IconButton'
-import ArrowBackRoundedIcon from '@material-ui/icons/ArrowBackRounded'
-import HomeRoundedIcon from '@material-ui/icons/HomeRounded'
+import { IconButton } from '@material-ui/core'
+import {
+  ArrowBackRounded as ArrowBackRoundedIcon,
+  HomeRounded as HomeRoundedIcon,
+} from '@material-ui/icons'
 import React from 'react'
 
 import { useMyRouter } from '@/router'

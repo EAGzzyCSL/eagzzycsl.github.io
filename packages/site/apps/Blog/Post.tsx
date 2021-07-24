@@ -1,10 +1,12 @@
-import { Typography } from '@material-ui/core'
-import AppBar from '@material-ui/core/AppBar'
-import Drawer from '@material-ui/core/Drawer'
-import IconButton from '@material-ui/core/IconButton'
-import Toolbar from '@material-ui/core/Toolbar'
-import MenuRoundedIcon from '@material-ui/icons/MenuRounded'
-import Alert from '@material-ui/lab/Alert'
+import {
+  Typography,
+  AppBar,
+  Drawer,
+  IconButton,
+  Toolbar,
+} from '@material-ui/core'
+import { MenuRounded as MenuRoundedIcon } from '@material-ui/icons'
+import { Alert } from '@material-ui/lab'
 import dayjs from 'dayjs'
 import { GetStaticPropsResult } from 'next'
 import React, { useState } from 'react'

@@ -1,12 +1,10 @@
-import { Paper } from '@material-ui/core'
-import Button from '@material-ui/core/Button'
-import colorGreen from '@material-ui/core/colors/green'
-import colorOrange from '@material-ui/core/colors/orange'
-import Fab from '@material-ui/core/Fab'
+import { Paper, Button, Fab, TextField, Tooltip } from '@material-ui/core'
+import {
+  green as colorGreen,
+  orange as colorOrange,
+} from '@material-ui/core/colors'
 import { createMuiTheme } from '@material-ui/core/styles'
-import TextField from '@material-ui/core/TextField'
-import Tooltip from '@material-ui/core/Tooltip'
-import FormatPaintRoundedIcon from '@material-ui/icons/FormatPaintRounded'
+import { FormatPaintRounded as FormatPaintRoundedIcon } from '@material-ui/icons'
 import { GetStaticPropsResult } from 'next'
 import React, { useState, useRef } from 'react'
 

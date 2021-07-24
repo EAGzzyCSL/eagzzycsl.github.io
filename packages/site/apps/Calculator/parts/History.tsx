@@ -1,16 +1,20 @@
-import Button from '@material-ui/core/Button'
-import IconButton from '@material-ui/core/IconButton'
-import Snackbar from '@material-ui/core/Snackbar'
-import Table from '@material-ui/core/Table'
-import TableBody from '@material-ui/core/TableBody'
-import TableCell from '@material-ui/core/TableCell'
-import TableContainer from '@material-ui/core/TableContainer'
-import TableHead from '@material-ui/core/TableHead'
-import TableRow from '@material-ui/core/TableRow'
-import Typography from '@material-ui/core/Typography'
-import CloseRoundedIcon from '@material-ui/icons/CloseRounded'
-import DeleteOutlineRoundedIcon from '@material-ui/icons/DeleteOutlineRounded'
-import EditRoundedIcon from '@material-ui/icons/EditRounded'
+import {
+  Button,
+  IconButton,
+  Snackbar,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Typography,
+} from '@material-ui/core'
+import {
+  CloseRounded as CloseRoundedIcon,
+  DeleteOutlineRounded as DeleteOutlineRoundedIcon,
+  EditRounded as EditRoundedIcon,
+} from '@material-ui/icons'
 import React, { useState } from 'react'
 
 import styles from './History.module.scss'

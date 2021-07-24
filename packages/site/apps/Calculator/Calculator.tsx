@@ -1,10 +1,10 @@
-import colorBlue from '@material-ui/core/colors/blue'
-import colorDeepOrange from '@material-ui/core/colors/deepOrange'
-import colorPink from '@material-ui/core/colors/pink'
+import { Tab, Tabs, Typography } from '@material-ui/core'
+import {
+  blue as colorBlue,
+  deepOrange as colorDeepOrange,
+  pink as colorPink,
+} from '@material-ui/core/colors'
 import { createMuiTheme } from '@material-ui/core/styles'
-import Tab from '@material-ui/core/Tab'
-import Tabs from '@material-ui/core/Tabs'
-import Typography from '@material-ui/core/Typography'
 import { GetStaticPropsResult } from 'next'
 import React, { useEffect } from 'react'
 

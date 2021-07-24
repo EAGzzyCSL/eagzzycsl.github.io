@@ -1,6 +1,5 @@
 import { Typography } from '@material-ui/core'
-import colorGreen from '@material-ui/core/colors/amber'
-import colorRed from '@material-ui/core/colors/red'
+import { green as colorAmber, red as colorRed } from '@material-ui/core/colors'
 import { createMuiTheme } from '@material-ui/core/styles'
 import dayjs from 'dayjs'
 import { GetStaticPropsResult } from 'next'
@@ -20,7 +19,7 @@ const theme = createMuiTheme({
       main: colorRed[500],
     },
     secondary: {
-      main: colorGreen[500],
+      main: colorAmber[500],
     },
   },
 })

@@ -1,5 +1,4 @@
-import IconButton from '@material-ui/core/IconButton'
-import Paper from '@material-ui/core/Paper'
+import { IconButton, Paper } from '@material-ui/core'
 import React, { useState } from 'react'
 
 import styles from './SearchBar.module.scss'

@@ -1,16 +1,20 @@
-import AppBar from '@material-ui/core/AppBar'
-import colorGrey from '@material-ui/core/colors/grey'
-import Drawer from '@material-ui/core/Drawer'
-import IconButton from '@material-ui/core/IconButton'
-import Menu from '@material-ui/core/Menu'
-import MenuItem from '@material-ui/core/MenuItem'
-import Paper from '@material-ui/core/Paper'
+import {
+  AppBar,
+  Drawer,
+  IconButton,
+  Menu,
+  MenuItem,
+  Paper,
+  Toolbar,
+  Typography,
+} from '@material-ui/core'
+import { grey as colorGrey } from '@material-ui/core/colors'
 import { createMuiTheme } from '@material-ui/core/styles'
-import Toolbar from '@material-ui/core/Toolbar'
-import Typography from '@material-ui/core/Typography'
-import ArrowBackRoundedIcon from '@material-ui/icons/ArrowBackRounded'
-import MoreHorizRoundedIcon from '@material-ui/icons/MoreHorizRounded'
-import MoreVertRoundedIcon from '@material-ui/icons/MoreVertRounded'
+import {
+  ArrowBackRounded as ArrowBackRoundedIcon,
+  MoreHorizRounded as MoreHorizRoundedIcon,
+  MoreVertRounded as MoreVertRoundedIcon,
+} from '@material-ui/icons'
 import { GetStaticPropsResult } from 'next'
 import React, { useState, useRef } from 'react'
 

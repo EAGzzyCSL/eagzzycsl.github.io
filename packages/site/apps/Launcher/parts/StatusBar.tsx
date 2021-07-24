@@ -1,5 +1,7 @@
-import ClearAllRoundedIcon from '@material-ui/icons/ClearAllRounded'
-import DoubleArrowRoundedIcon from '@material-ui/icons/DoubleArrowRounded'
+import {
+  ClearAllRounded as ClearAllRoundedIcon,
+  DoubleArrowRounded as DoubleArrowRoundedIcon,
+} from '@material-ui/icons'
 import React from 'react'
 
 import styles from './StatusBar.module.scss'

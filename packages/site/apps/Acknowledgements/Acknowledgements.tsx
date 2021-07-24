@@ -1,8 +1,7 @@
-import colorPink from '@material-ui/core/colors/pink'
-import Link from '@material-ui/core/Link'
+import { Link, Typography } from '@material-ui/core'
+import { pink as colorPink } from '@material-ui/core/colors'
 import { createMuiTheme } from '@material-ui/core/styles'
-import Typography from '@material-ui/core/Typography'
-import GitHubIcon from '@material-ui/icons/GitHub'
+import { GitHub as GitHubIcon } from '@material-ui/icons'
 import { GetStaticPropsResult } from 'next'
 import React, { ReactNode } from 'react'
 

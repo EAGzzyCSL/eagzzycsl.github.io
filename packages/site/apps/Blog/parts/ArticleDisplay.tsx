@@ -1,12 +1,14 @@
-import { Typography } from '@material-ui/core'
-import Link from '@material-ui/core/Link'
-import Table from '@material-ui/core/Table'
-import TableBody from '@material-ui/core/TableBody'
-import TableCell from '@material-ui/core/TableCell'
-import TableContainer from '@material-ui/core/TableContainer'
-import TableHead from '@material-ui/core/TableHead'
-import TableRow from '@material-ui/core/TableRow'
-import LinkRoundedIcon from '@material-ui/icons/LinkRounded'
+import {
+  Typography,
+  Link,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+} from '@material-ui/core'
+import { LinkRounded as LinkRoundedIcon } from '@material-ui/icons'
 import React, { ReactNode } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { Components, NormalComponent } from 'react-markdown/src/ast-to-react'

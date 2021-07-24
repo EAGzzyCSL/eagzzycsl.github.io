@@ -1,16 +1,19 @@
-import Accordion from '@material-ui/core/Accordion'
-import AccordionDetails from '@material-ui/core/AccordionDetails'
-import AccordionSummary from '@material-ui/core/AccordionSummary'
-import Box from '@material-ui/core/Box'
-import Button from '@material-ui/core/Button'
-import colorBlue from '@material-ui/core/colors/blue'
-import colorRed from '@material-ui/core/colors/red'
-import Paper from '@material-ui/core/Paper'
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Box,
+  Button,
+  Paper,
+  Typography,
+} from '@material-ui/core'
+import { blue as colorBlue, red as colorRed } from '@material-ui/core/colors'
 import { createMuiTheme } from '@material-ui/core/styles'
-import Typography from '@material-ui/core/Typography'
-import ExpandMoreRoundedIcon from '@material-ui/icons/ExpandMoreRounded'
-import GitHubIcon from '@material-ui/icons/GitHub'
-import TelegramIcon from '@material-ui/icons/Telegram'
+import {
+  ExpandMoreRounded as ExpandMoreRoundedIcon,
+  GitHub as GitHubIcon,
+  Telegram as TelegramIcon,
+} from '@material-ui/icons'
 import { GetStaticPropsResult } from 'next'
 import React from 'react'
 

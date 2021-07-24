@@ -1,13 +1,10 @@
-import Box from '@material-ui/core/Box'
-import Fab from '@material-ui/core/Fab'
-import Tab from '@material-ui/core/Tab'
-import Tabs from '@material-ui/core/Tabs'
-import Typography from '@material-ui/core/Typography'
-import Zoom from '@material-ui/core/Zoom'
-import KeyboardArrowLeftRoundedIcon from '@material-ui/icons/KeyboardArrowLeftRounded'
-import KeyboardArrowRightRoundedIcon from '@material-ui/icons/KeyboardArrowRightRounded'
-import SearchRoundedIcon from '@material-ui/icons/SearchRounded'
-import Pagination from '@material-ui/lab/Pagination'
+import { Box, Fab, Tab, Tabs, Typography, Zoom } from '@material-ui/core'
+import {
+  KeyboardArrowLeftRounded as KeyboardArrowLeftRoundedIcon,
+  KeyboardArrowRightRounded as KeyboardArrowRightRoundedIcon,
+  SearchRounded as SearchRoundedIcon,
+} from '@material-ui/icons'
+import { Pagination } from '@material-ui/lab'
 import cx from 'classnames'
 import { observer } from 'mobx-react-lite'
 import { GetStaticPropsResult } from 'next'

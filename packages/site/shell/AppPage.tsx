@@ -1,5 +1,4 @@
-import colorCyan from '@material-ui/core/colors/cyan'
-import colorRed from '@material-ui/core/colors/red'
+import { cyan as colorCyan, red as colorRed } from '@material-ui/core/colors'
 import { createMuiTheme, Theme, ThemeProvider } from '@material-ui/core/styles'
 import Head from 'next/head'
 import React from 'react'

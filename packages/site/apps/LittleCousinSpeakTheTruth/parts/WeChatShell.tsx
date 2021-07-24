@@ -1,6 +1,8 @@
-import AddCircleOutlineRoundedIcon from '@material-ui/icons/AddCircleOutlineRounded'
-import InsertEmoticonRoundedIcon from '@material-ui/icons/InsertEmoticonRounded'
-import MicIcon from '@material-ui/icons/Mic'
+import {
+  AddCircleOutlineRounded as AddCircleOutlineRoundedIcon,
+  InsertEmoticonRounded as InsertEmoticonRoundedIcon,
+  Mic as MicIcon,
+} from '@material-ui/icons'
 import React, { useState } from 'react'
 
 import ChatHistory from './ChatHistory'

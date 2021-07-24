@@ -1,5 +1,4 @@
-import Paper from '@material-ui/core/Paper'
-import Typography from '@material-ui/core/Typography'
+import { Typography, Paper } from '@material-ui/core'
 import { useRouter } from 'next/router'
 import React from 'react'
 
