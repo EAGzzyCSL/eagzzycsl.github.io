@@ -25,7 +25,13 @@
     "site:route": "yarn workspace @mine/site run route",
     "test": "jest",
     "test:ci": "jest --coverage",
-    "verify": "npm-run-all prettier lint:md lint:style lint:es test lint:commit && yarn workspace @mine/site run ts:check"
+    "verify": "npm-run-all prettier lint:md lint:style lint:es test lint:commit && yarn workspace @mine/site run ts:check",
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
+    }
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
@@ -42,6 +48,8 @@
     "@types/node": "^16.0.0",
     "babel-jest": "^27.0.6",
     "cloc": "^2.8.0",
+    "commitizen": "^4.2.4",
+    "cz-customizable": "^6.3.0",
     "eslint": "^7.30.0",
     "husky": "^7.0.0",
     "identity-obj-proxy": "^3.0.0",
