@@ -1,6 +1,6 @@
 import { Typography } from '@material-ui/core'
 import { green as colorAmber, red as colorRed } from '@material-ui/core/colors'
-import { createMuiTheme } from '@material-ui/core/styles'
+import { createTheme } from '@material-ui/core/styles'
 import dayjs from 'dayjs'
 import { GetStaticPropsResult } from 'next'
 import React from 'react'
@@ -12,7 +12,7 @@ import Nine from './parts/Nine'
 import { numberToChar } from './utils'
 import styles from './WinterNine.module.scss'
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     type: 'light',
     primary: {

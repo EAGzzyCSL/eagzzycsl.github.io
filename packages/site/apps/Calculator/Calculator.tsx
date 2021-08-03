@@ -4,7 +4,7 @@ import {
   deepOrange as colorDeepOrange,
   pink as colorPink,
 } from '@material-ui/core/colors'
-import { createMuiTheme } from '@material-ui/core/styles'
+import { createTheme } from '@material-ui/core/styles'
 import { GetStaticPropsResult } from 'next'
 import React, { useEffect } from 'react'
 
@@ -34,7 +34,7 @@ const getPanelIndexFromHash = (): number => {
   return matchedIndx >= 0 ? matchedIndx : 0
 }
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     type: 'light',
     primary: {

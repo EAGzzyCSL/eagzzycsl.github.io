@@ -8,7 +8,7 @@ import {
   Typography,
 } from '@material-ui/core'
 import { blue as colorBlue, red as colorRed } from '@material-ui/core/colors'
-import { createMuiTheme } from '@material-ui/core/styles'
+import { createTheme } from '@material-ui/core/styles'
 import {
   ExpandMoreRounded as ExpandMoreRoundedIcon,
   GitHub as GitHubIcon,
@@ -25,7 +25,7 @@ import SimpleAppBar from '@/shell/SimpleAppBar'
 import styles from './About.module.scss'
 import dataOfInfo, { Info } from './data'
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     type: 'light',
     primary: {

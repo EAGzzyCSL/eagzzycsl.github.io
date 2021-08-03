@@ -1,5 +1,5 @@
 import { cyan as colorCyan, red as colorRed } from '@material-ui/core/colors'
-import { createMuiTheme, Theme, ThemeProvider } from '@material-ui/core/styles'
+import { createTheme, Theme, ThemeProvider } from '@material-ui/core/styles'
 import Head from 'next/head'
 import React from 'react'
 
@@ -11,7 +11,7 @@ interface AppPageProps {
   children: JSX.Element
 }
 
-export const defaultTheme = createMuiTheme({
+export const defaultTheme = createTheme({
   palette: {
     type: 'light',
     primary: {

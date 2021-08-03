@@ -3,7 +3,7 @@ import {
   green as colorGreen,
   orange as colorOrange,
 } from '@material-ui/core/colors'
-import { createMuiTheme } from '@material-ui/core/styles'
+import { createTheme } from '@material-ui/core/styles'
 import { FormatPaintRounded as FormatPaintRoundedIcon } from '@material-ui/icons'
 import { GetStaticPropsResult } from 'next'
 import React, { useState, useRef } from 'react'
@@ -13,7 +13,7 @@ import SimpleAppBar from '@/shell/SimpleAppBar'
 
 import styles from './Painter.module.scss'
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     type: 'light',
     primary: {

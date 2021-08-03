@@ -9,7 +9,7 @@ import {
   Typography,
 } from '@material-ui/core'
 import { grey as colorGrey } from '@material-ui/core/colors'
-import { createMuiTheme } from '@material-ui/core/styles'
+import { createTheme } from '@material-ui/core/styles'
 import {
   ArrowBackRounded as ArrowBackRoundedIcon,
   MoreHorizRounded as MoreHorizRoundedIcon,
@@ -29,7 +29,7 @@ import ReferenceStatement from './parts/ReferenceStatement'
 import WeChatShell from './parts/WeChatShell'
 import { Chats } from './type'
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     type: 'light',
     primary: {

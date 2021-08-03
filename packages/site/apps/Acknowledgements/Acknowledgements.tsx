@@ -1,6 +1,6 @@
 import { Link, Typography } from '@material-ui/core'
 import { pink as colorPink } from '@material-ui/core/colors'
-import { createMuiTheme } from '@material-ui/core/styles'
+import { createTheme } from '@material-ui/core/styles'
 import { GitHub as GitHubIcon } from '@material-ui/icons'
 import { GetStaticPropsResult } from 'next'
 import React, { ReactNode } from 'react'
@@ -14,7 +14,7 @@ import BasicDisplayCard from './parts/BasicDisplayCard'
 import IconDisplayCard from './parts/IconDisplayCard'
 import PictorialDisplayCard from './parts/PictorialDisplayCard'
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     type: 'light',
     primary: {
