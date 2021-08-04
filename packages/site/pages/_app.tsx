@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 
+import favicon from '@/assets/favicon.png'
 import { useMyRouter } from '@/router'
 import './app.scss'
 
@@ -46,6 +47,8 @@ const MyApp = ({
           content='minimum-scale=1, initial-scale=1, width=device-width'
         />
         <title>芹也</title>
+        {/* favicon.icon 用于防止 404，这里用于在手机上展示更清晰的 icon */}
+        <link rel='icon' href={favicon} />
       </Head>
       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
       <Component {...pageProps} />
