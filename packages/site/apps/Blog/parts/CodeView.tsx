@@ -9,7 +9,7 @@ import styles from './CodeView.module.scss'
 
 export interface CodeViewProps {
   children: string
-  language: string
+  language?: string
 }
 
 const CodeView = ({ children, language }: CodeViewProps): JSX.Element => {

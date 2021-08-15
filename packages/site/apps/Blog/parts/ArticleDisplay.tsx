@@ -10,8 +10,8 @@ import {
 } from '@material-ui/core'
 import { LinkRounded as LinkRoundedIcon } from '@material-ui/icons'
 import React, { ReactNode } from 'react'
-import ReactMarkdown from 'react-markdown'
-import { Components, NormalComponent } from 'react-markdown/src/ast-to-react'
+import ReactMarkdown, { Components } from 'react-markdown'
+import { ReactMarkdownProps } from 'react-markdown/lib/ast-to-react'
 import rehypeRaw from 'rehype-raw'
 import rehypeSanitize from 'rehype-sanitize'
 import remarkGfm from 'remark-gfm'
@@ -21,68 +21,65 @@ import CodeView, { InlineCodeView } from './CodeView'
 import ImageView from './ImageView'
 import QuoteView from './QuoteView'
 
-interface RendererProps {
-  // 规则本身有bug
-  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-prop-types.md
-  // eslint-disable-next-line react/no-unused-prop-types
-  children: ReactNode
-}
-
-const ParagraphRenderer = ({ children }: RendererProps): JSX.Element => (
+const ParagraphRenderer = ({ children }: ReactMarkdownProps): JSX.Element => (
   <Typography className={styles.paragraph} component='p'>
     {children}
   </Typography>
 )
 
-const TableRenderer = ({ children }: RendererProps): JSX.Element => (
+const TableRenderer = ({ children }: ReactMarkdownProps): JSX.Element => (
   <TableContainer className={styles.tableContainer}>
     <Table>{children}</Table>
   </TableContainer>
 )
 
-const TableHeadRenderer = ({ children }: RendererProps): JSX.Element => (
+const TableHeadRenderer = ({ children }: ReactMarkdownProps): JSX.Element => (
   <TableHead>{children}</TableHead>
 )
 
-const TableBodyRenderer = ({ children }: RendererProps): JSX.Element => (
+const TableBodyRenderer = ({ children }: ReactMarkdownProps): JSX.Element => (
   <TableBody>{children}</TableBody>
 )
 
-const TableRowRenderer = ({ children }: RendererProps): JSX.Element => (
+const TableRowRenderer = ({ children }: ReactMarkdownProps): JSX.Element => (
   <TableRow>{children}</TableRow>
 )
 
-const TableCellRenderer = ({ children }: RendererProps): JSX.Element => (
+const TableCellRenderer = ({ children }: ReactMarkdownProps): JSX.Element => (
   <TableCell align='center'>{children}</TableCell>
 )
 
 const ListRenderer = ({
   children,
   ordered,
-}: RendererProps & {
-  ordered: number
+}: ReactMarkdownProps & {
+  ordered: boolean
 }): JSX.Element => (
   <Typography className={styles.list} component={ordered ? 'ol' : 'ul'}>
     {children}
   </Typography>
 )
 
-const ListItemRenderer = ({ children }: RendererProps): JSX.Element => (
+const ListItemRenderer = ({ children }: ReactMarkdownProps): JSX.Element => (
   <Typography component='li'>{children}</Typography>
 )
 
 const ImageRenderer = ({
   alt,
   src,
-}: RendererProps & {
-  alt: string
-  src: string
+}: ReactMarkdownProps & {
+  alt?: string
+  src?: string
 }): JSX.Element => <ImageView src={src} alt={alt} />
 
+ImageRenderer.defaultProps = {
+  alt: undefined,
+  src: undefined,
+}
 interface CodeRenderProps {
   children: ReactNode
-  className: string
-  inline: boolean
+  className?: string
+  inline?: boolean
 }
 
 const CodeRenderer = ({
@@ -96,15 +93,20 @@ const CodeRenderer = ({
     <CodeView language={className}>{String(children)}</CodeView>
   )
 
-const BlockquoteRenderer = ({ children }: RendererProps): JSX.Element => (
+CodeRenderer.defaultProps = {
+  className: '',
+  inline: false,
+}
+
+const BlockquoteRenderer = ({ children }: ReactMarkdownProps): JSX.Element => (
   <QuoteView>{children}</QuoteView>
 )
 
 const LinkRenderer = ({
   children,
   href,
-}: RendererProps & {
-  href: string
+}: ReactMarkdownProps & {
+  href?: string
 }): JSX.Element => (
   <Link
     className={styles.link}
@@ -118,13 +120,17 @@ const LinkRenderer = ({
   </Link>
 )
 
-const EmphasisRenderer = ({ children }: RendererProps): JSX.Element => (
+LinkRenderer.defaultProps = {
+  href: '',
+}
+
+const EmphasisRenderer = ({ children }: ReactMarkdownProps): JSX.Element => (
   <Typography component='em' color='secondary' className={styles.emphasis}>
     {children}
   </Typography>
 )
 
-const StrongRenderer = ({ children }: RendererProps): JSX.Element => (
+const StrongRenderer = ({ children }: ReactMarkdownProps): JSX.Element => (
   <Typography component='strong' color='secondary' className={styles.strong}>
     {children}
   </Typography>
@@ -144,17 +150,17 @@ const renderers: Components = {
   th: TableCellRenderer,
   td: TableCellRenderer,
   // 列表
-  ol: ListRenderer as unknown as NormalComponent,
-  ul: ListRenderer as unknown as NormalComponent,
+  ol: ListRenderer,
+  ul: ListRenderer,
   li: ListItemRenderer,
   // 图片
-  img: ImageRenderer as unknown as NormalComponent,
+  img: ImageRenderer,
   // 代码
-  code: CodeRenderer as unknown as NormalComponent,
+  code: CodeRenderer,
   // 引用
   blockquote: BlockquoteRenderer,
   // 链接
-  a: LinkRenderer as unknown as NormalComponent,
+  a: LinkRenderer,
   // 强调
   em: EmphasisRenderer,
   strong: StrongRenderer,
