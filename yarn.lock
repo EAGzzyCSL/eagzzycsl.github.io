@@ -10863,10 +10863,10 @@ stylelint-order@4.1.x:
     postcss "^7.0.31"
     postcss-sorting "^5.0.1"
 
-stylelint-scss@^3.19.0:
-  version "3.19.0"
-  resolved "https://registry.npm.taobao.org/stylelint-scss/download/stylelint-scss-3.19.0.tgz#528006d5a4c5a0f1f4d709b02fd3f626ed66d742"
-  integrity sha1-UoAG1aTFoPH01wmwL9P2Ju1m10I=
+stylelint-scss@^3.21.0:
+  version "3.21.0"
+  resolved "https://registry.nlark.com/stylelint-scss/download/stylelint-scss-3.21.0.tgz#9f50898691b16b1c1ca3945837381d98c5b22331"
+  integrity sha1-n1CJhpGxaxwco5RYNzgdmMWyIzE=
   dependencies:
     lodash "^4.17.15"
     postcss-media-query-parser "^0.2.3"
