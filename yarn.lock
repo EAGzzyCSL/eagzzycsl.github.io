@@ -10204,10 +10204,10 @@ safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   resolved "https://registry.nlark.com/safer-buffer/download/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha1-RPoWGwGHuVSd2Eu5GAL5vYOFzWo=
 
-sass@^1.35.1:
-  version "1.35.1"
-  resolved "https://registry.nlark.com/sass/download/sass-1.35.1.tgz?cache=0&sync_timestamp=1623790632238&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fsass%2Fdownload%2Fsass-1.35.1.tgz#90ecf774dfe68f07b6193077e3b42fb154b9e1cd"
-  integrity sha1-kOz3dN/mjwe2GTB347QvsVS54c0=
+sass@^1.43.4:
+  version "1.43.4"
+  resolved "https://registry.npmmirror.com/sass/download/sass-1.43.4.tgz#68c7d6a1b004bef49af0d9caf750e9b252105d1f"
+  integrity sha1-aMfWobAEvvSa8NnK91DpslIQXR8=
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
 
