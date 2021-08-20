@@ -45,7 +45,7 @@
     "@mine/prettier-config": "^0.0.0",
     "@mine/stylelint-config": "^0.0.0",
     "@types/jest": "^27.0.0",
-    "@types/node": "^16.0.0",
+    "@types/node": "^16.11.1",
     "babel-jest": "^27.0.6",
     "cloc": "^2.8.0",
     "commitizen": "^4.2.4",
