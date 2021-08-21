@@ -8,9 +8,9 @@ import {
 } from '@material-ui/core'
 import React from 'react'
 
-import styles from './BasicDisplayCard.module.scss'
-
 import { BasicDisplayItem } from '../data'
+
+import styles from './BasicDisplayCard.module.scss'
 
 interface BasicDisplayCardProps {
   data: BasicDisplayItem

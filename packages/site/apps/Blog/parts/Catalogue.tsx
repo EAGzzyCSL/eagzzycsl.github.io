@@ -1,9 +1,9 @@
 import { Link, Typography } from '@material-ui/core'
 import React from 'react'
 
-import styles from './Catalogue.module.scss'
-
 import { Article, NestedTocItem } from '../type'
+
+import styles from './Catalogue.module.scss'
 
 interface CatalogueProps {
   toc: Article['toc']

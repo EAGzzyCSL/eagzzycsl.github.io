@@ -1,8 +1,6 @@
 /* eslint-disable import/extensions */
 import React, { useRef, useEffect } from 'react'
 
-import styles from './CharBlock.module.scss'
-
 import char亭 from '../data/亭.json'
 import char前 from '../data/前.json'
 import char垂 from '../data/垂.json'
@@ -14,6 +12,8 @@ import char重 from '../data/重.json'
 import char風 from '../data/風.json'
 import { PointLineTo, PointMoveTo, PointQuadTo, CharDescription } from '../type'
 import { smoothPoints } from '../utils'
+
+import styles from './CharBlock.module.scss'
 
 const sentence = [
   char亭,

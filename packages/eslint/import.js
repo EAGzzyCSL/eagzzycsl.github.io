@@ -21,8 +21,8 @@ module.exports = {
           'builtin',
           'external',
           'internal',
-          'sibling',
           'parent',
+          'sibling',
           'index',
           'object',
           'unknown',
@@ -31,6 +31,13 @@ module.exports = {
           order: 'asc',
           caseInsensitive: true,
         },
+        pathGroups: [
+          {
+            // TODO: 这里的pattern应该通过外部配置
+            pattern: '@/**',
+            group: 'internal',
+          },
+        ],
         'newlines-between': 'always',
       },
     ],

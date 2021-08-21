@@ -2,10 +2,10 @@ import { Button, TextField, Typography } from '@material-ui/core'
 import cx from 'classnames'
 import React, { useState, useRef } from 'react'
 
+import History, { HistoryItem } from '../parts/History'
+
 import styles from './DPI.module.scss'
 import { calDPI } from './functions'
-
-import History, { HistoryItem } from '../parts/History'
 
 const validateAndParse = (
   numberString: string,

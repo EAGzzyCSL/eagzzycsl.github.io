@@ -1,5 +1,8 @@
 import MyAvatar from '@/assets/avatar.png'
 
+import { MsgType, MsgItem, Chats } from '../../type'
+import CousinAvatar from '../cousin-avatar.jpg'
+
 import Image双城记 from './images/双城记.jpg'
 import Image另一张自拍 from './images/另一张自拍.jpg'
 import Image巨人传 from './images/巨人传.jpg'
@@ -49,9 +52,6 @@ import Voice28回来再看 from './voices/28_回来再看.mp3'
 import Voice29可笑 from './voices/29_可笑.mp3'
 import Voice30什么了 from './voices/30_什么了.mp3'
 import Voice31知道了原来你在看这道题 from './voices/31_知道了原来你在看这道题.mp3'
-
-import { MsgType, MsgItem, Chats } from '../../type'
-import CousinAvatar from '../cousin-avatar.jpg'
 
 const history: MsgItem[] = [
   {

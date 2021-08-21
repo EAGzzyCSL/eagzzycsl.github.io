@@ -9,9 +9,9 @@ import {
 import cx from 'classnames'
 import React from 'react'
 
-import styles from './PictorialDisplayCard.module.scss'
-
 import { PictorialDisplayItem } from '../data'
+
+import styles from './PictorialDisplayCard.module.scss'
 
 const Content = ({
   title,

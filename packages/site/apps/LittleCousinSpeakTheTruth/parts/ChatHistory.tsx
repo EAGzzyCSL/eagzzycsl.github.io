@@ -1,9 +1,9 @@
 import React from 'react'
 
+import { MsgItem, MsgType } from '../type'
+
 import AudioMsg from './AudioMsg'
 import styles from './ChatHistory.module.scss'
-
-import { MsgItem, MsgType } from '../type'
 
 interface ChatHistoryProps {
   history: MsgItem[]

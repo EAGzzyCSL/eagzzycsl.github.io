@@ -1,10 +1,10 @@
 import { IconButton, Paper } from '@material-ui/core'
 import React, { useState } from 'react'
 
-import styles from './SearchBar.module.scss'
-
 import IconAliHead from '../assets/icon-ali-head.svg'
 import IconSearch from '../assets/icon-search.svg'
+
+import styles from './SearchBar.module.scss'
 
 interface SearchBarProps {
   onSearch: (keyword: string) => void

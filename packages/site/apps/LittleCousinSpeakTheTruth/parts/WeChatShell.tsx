@@ -5,10 +5,10 @@ import {
 } from '@material-ui/icons'
 import React, { useState } from 'react'
 
+import { Chats } from '../type'
+
 import ChatHistory from './ChatHistory'
 import styles from './WeChatShell.module.scss'
-
-import { Chats } from '../type'
 
 const Footer = (): JSX.Element => (
   <div className={styles.footer}>

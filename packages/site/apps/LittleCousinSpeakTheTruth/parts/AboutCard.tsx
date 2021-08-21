@@ -7,9 +7,9 @@ import {
 } from '@material-ui/core'
 import React from 'react'
 
-import styles from './AboutCard.module.scss'
-
 import AboutCardHeaderImage from '../assets/about-header.png'
+
+import styles from './AboutCard.module.scss'
 
 const AboutCard = (): JSX.Element => (
   <Card className={styles.aboutCard}>

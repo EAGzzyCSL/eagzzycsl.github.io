@@ -1,9 +1,9 @@
 import { Typography } from '@material-ui/core'
 import React, { ReactNode } from 'react'
 
-import styles from './QuoteView.module.scss'
-
 import theme from '../theme'
+
+import styles from './QuoteView.module.scss'
 
 const QuoteView = ({ children }: { children: ReactNode }): JSX.Element => (
   <Typography
