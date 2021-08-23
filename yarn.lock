@@ -7970,17 +7970,6 @@ map-obj@^4.0.0:
   resolved "https://registry.npm.taobao.org/map-obj/download/map-obj-4.2.1.tgz#e4ea399dbc979ae735c83c863dd31bdf364277b7"
   integrity sha1-5Oo5nbyXmuc1yDyGPdMb3zZCd7c=
 
-markdown-it@12.0.4:
-  version "12.0.4"
-  resolved "https://registry.nlark.com/markdown-it/download/markdown-it-12.0.4.tgz#eec8247d296327eac3ba9746bdeec9cfcc751e33"
-  integrity sha1-7sgkfSljJ+rDupdGve7Jz8x1HjM=
-  dependencies:
-    argparse "^2.0.1"
-    entities "~2.1.0"
-    linkify-it "^3.0.1"
-    mdurl "^1.0.1"
-    uc.micro "^1.0.5"
-
 markdown-it@12.2.0:
   version "12.2.0"
   resolved "https://registry.nlark.com/markdown-it/download/markdown-it-12.2.0.tgz#091f720fd5db206f80de7a8d1f1a7035fd0d38db"
@@ -8047,14 +8036,7 @@ markdownlint-rule-helpers@~0.15.0:
   resolved "https://registry.nlark.com/markdownlint-rule-helpers/download/markdownlint-rule-helpers-0.15.0.tgz#11434c573649b9235ae70b967314f5711f7d8fa8"
   integrity sha1-EUNMVzZJuSNa5wuWcxT1cR99j6g=
 
-markdownlint@^0.23.1:
-  version "0.23.1"
-  resolved "https://registry.npm.taobao.org/markdownlint/download/markdownlint-0.23.1.tgz#98292b5d340d01e9c113f3d7fb3b2ccf89628dc2"
-  integrity sha1-mCkrXTQNAenBE/PX+zssz4lijcI=
-  dependencies:
-    markdown-it "12.0.4"
-
-markdownlint@~0.24.0:
+markdownlint@^0.24.0, markdownlint@~0.24.0:
   version "0.24.0"
   resolved "https://registry.nlark.com/markdownlint/download/markdownlint-0.24.0.tgz#224b53f671367a237d40c8be1745c7be9a322671"
   integrity sha1-IktT9nE2eiN9QMi+F0XHvpoyJnE=
