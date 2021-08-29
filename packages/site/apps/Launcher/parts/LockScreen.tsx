@@ -21,10 +21,10 @@ interface LockScreenProps {
   onUnlockScreen: () => void
 }
 
-export default function LockScreen({
+const LockScreen = ({
   locked,
   onUnlockScreen,
-}: LockScreenProps): JSX.Element {
+}: LockScreenProps): JSX.Element => {
   const [clock, setClock] = useState<Clock>({
     time: '',
     date: '',
@@ -92,3 +92,4 @@ export default function LockScreen({
     </Slide>
   )
 }
+export default LockScreen

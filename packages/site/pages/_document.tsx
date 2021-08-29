@@ -15,7 +15,7 @@ export default class MyDocument extends Document {
 
     ctx.renderPage = () =>
       originalRenderPage({
-        // eslint-disable-next-line react/jsx-props-no-spreading
+        // eslint-disable-next-line react/jsx-props-no-spreading, react/display-name
         enhanceApp: App => props => sheets.collect(<App {...props} />),
       })
 

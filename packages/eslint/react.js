@@ -33,5 +33,12 @@ module.exports = {
     ...a11yOff,
     'css-modules/no-unused-class': ['error', { camelCase: true }],
     'css-modules/no-undef-class': ['error', { camelCase: true }],
+    'react/function-component-definition': [
+      'error',
+      {
+        namedComponents: 'arrow-function',
+        unnamedComponents: 'arrow-function',
+      },
+    ],
   },
 }
