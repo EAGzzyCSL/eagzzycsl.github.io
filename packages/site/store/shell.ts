@@ -3,6 +3,8 @@ import { makeAutoObservable } from 'mobx'
 export default class ShellStore {
   isScreenLocked = true
 
+  desktopImagePreLoaded = false
+
   constructor() {
     makeAutoObservable(this)
   }
@@ -13,5 +15,9 @@ export default class ShellStore {
 
   lockScreen(): void {
     this.isScreenLocked = true
+  }
+
+  markDesktopImageLoaded(): void {
+    this.desktopImagePreLoaded = true
   }
 }

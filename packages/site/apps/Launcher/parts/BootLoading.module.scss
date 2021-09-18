@@ -1,0 +1,72 @@
+$animation-loop-time: 500ms;
+
+.boot-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: focus $animation-loop-time linear;
+
+    @media (orientation: portrait) {
+      margin-bottom: 12px;
+      font-size: 28px;
+    }
+    @media (orientation: landscape) {
+      margin-bottom: 20px;
+      font-size: 40px;
+    }
+  }
+
+  .loading {
+    @media (orientation: portrait) {
+      width: 160px;
+    }
+    @media (orientation: landscape) {
+      width: 200px;
+    }
+
+    .loading-bar {
+      position: relative;
+      width: 100%;
+      height: 2px;
+      overflow: hidden;
+      background-color: lightgray;
+      &::before {
+        position: absolute;
+        right: 100%;
+        left: 0;
+        width: 25%;
+        height: 2px;
+        content: '';
+        background: black;
+        animation: shuttle $animation-loop-time linear infinite;
+      }
+    }
+  }
+}
+
+@keyframes focus {
+  0% {
+    color: lightgray;
+  }
+  100% {
+    color: black;
+  }
+}
+
+@keyframes shuttle {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(400%);
+  }
+}
