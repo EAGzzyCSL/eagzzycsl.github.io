@@ -273,7 +273,7 @@ grub 是引导程序，efibootmgr 是创建 GRUB 安装脚本使用的.efi 启�
 ### 创建用户
 
 ```shell
-# useradd -m -g users -G wheel -s /bin/zsh eagzzycsl
+# useradd -m -g users -G wheel -s path-of-zsh eagzzycsl
 ```
 
 如果使用了 `zsh` 作为默认 shell 的话，需要先安装 `zsh`，否则会导致登录失败。
