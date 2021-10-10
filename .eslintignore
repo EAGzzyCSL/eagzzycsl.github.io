@@ -1,3 +1,7 @@
 .next
 /local-export
 /domain-export
+
+# dotfile
+!.cz-config.js
+!.prettierrc.js

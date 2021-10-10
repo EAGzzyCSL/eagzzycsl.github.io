@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "main": "index.js",
+  "scripts": {
+    "lint:es": "eslint --ext .js,.ts,.tsx ./",
+    "lint:es-fix": "npm run lint:es -- --fix"
+  },
   "dependencies": {
     "gray-matter": "^4.0.3",
     "markdown-toc": "^1.2.0"

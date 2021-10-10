@@ -2,10 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "rootDir": ".",
-    "strict": true,
-    "paths": {
-      "@/*": ["./packages/site/*"]
-    }
+    "strict": true
   },
   "exclude": ["node_modules"]
 }

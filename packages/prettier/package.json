@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "main": "index.js",
+  "scripts": {
+    "lint:es": "eslint --ext .js,.ts,.tsx ./",
+    "lint:es-fix": "npm run lint:es -- --fix"
+  },
   "dependencies": {
     "prettier-plugin-packagejson": "^2.2.11"
   },

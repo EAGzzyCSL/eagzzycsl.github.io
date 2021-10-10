@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "main": "index.js",
+  "scripts": {
+    "lint:es": "eslint --ext .js,.ts,.tsx ./",
+    "lint:es-fix": "npm run lint:es -- --fix"
+  },
   "dependencies": {
     "@commitlint/config-conventional": "^14.1.0"
   },

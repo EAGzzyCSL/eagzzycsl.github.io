@@ -6,6 +6,10 @@
   "bin": {
     "webpack-node": "bin.js"
   },
+  "scripts": {
+    "lint:es": "eslint --ext .js,.ts,.tsx ./",
+    "lint:es-fix": "npm run lint:es -- --fix"
+  },
   "dependencies": {
     "memfs": "^3.2.2",
     "null-loader": "^4.0.1",
