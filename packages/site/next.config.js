@@ -7,8 +7,6 @@ const isLocal = process.env.DEPLOY_ENV === 'local'
 
 const baseUrl = isLocal ? '/eagzzycsl.github.io' : ''
 
-const markdownLoader = require.resolve('@mine/markdown-loader')
-
 module.exports = {
   // 配置本地部署路径
   assetPrefix: baseUrl,
@@ -57,7 +55,15 @@ module.exports = {
     // 支持import markdown
     config.module.rules.push({
       test: /\.md$/,
-      use: markdownLoader,
+      oneOf: [
+        {
+          test: /apps\/Blog\/data\/.*\.md$/,
+          use: require.resolve('@mine/markdown-loader/lib/article.js'),
+        },
+        {
+          use: require.resolve('@mine/markdown-loader/lib/normal.js'),
+        },
+      ],
     })
     // 支持yaml
     config.module.rules.push({

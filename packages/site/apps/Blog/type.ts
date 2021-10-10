@@ -1,22 +1,12 @@
-interface TocItem {
-  title: string
-  level: number
-}
+import type {
+  TocItem,
+  NestedTocItem,
+  Toc,
+  MarkdownArticleModule,
+} from '@mine/markdown-loader'
 
-export interface NestedTocItem extends TocItem {
-  sub: NestedTocItem[]
-}
+export type { TocItem, NestedTocItem, Toc }
 
-export interface Article {
+export interface Article extends MarkdownArticleModule {
   path: string
-  title: string
-  createdAt: string
-  updatedAt: string
-  tags: string[]
-  introduction: string
-  content: string
-  toc: {
-    list: TocItem[]
-    nested: NestedTocItem[]
-  }
 }

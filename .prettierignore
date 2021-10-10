@@ -2,3 +2,6 @@
 .next
 /local-export
 /domain-export
+
+# packages
+/packages/markdown-loader/lib/

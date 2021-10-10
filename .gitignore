@@ -15,3 +15,6 @@ lerna-debug.log*
 /packages/site/public/static
 /local-export
 /domain-export
+
+# packages
+/packages/markdown-loader/lib/

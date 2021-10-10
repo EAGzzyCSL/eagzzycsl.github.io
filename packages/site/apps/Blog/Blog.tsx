@@ -13,28 +13,22 @@ import React, { useState } from 'react'
 import useStore from '@/hooks/useStore'
 import AppPage from '@/shell/AppPage'
 import SimpleAppBar from '@/shell/SimpleAppBar'
-import { camel2kebab } from '@/utils/string'
 
 import styles from './Blog.module.scss'
-import * as _exportedPosts from './data/index'
+import _exportedPosts from './data/index'
 import BlogBrief from './parts/BlogBrief'
 import theme from './theme'
 import { Article } from './type'
 
-const dataOfPosts = Object.entries(_exportedPosts)
-  .map(([path, contents]) => ({
-    path: camel2kebab(path),
-    ...contents,
-  }))
-  .sort((pa, pb) => {
-    if (pa.createdAt > pb.createdAt) {
-      return -1
-    }
-    if (pa.createdAt < pb.createdAt) {
-      return 1
-    }
-    return 0
-  })
+const dataOfPosts = _exportedPosts.sort((pa, pb) => {
+  if (pa.createdAt > pb.createdAt) {
+    return -1
+  }
+  if (pa.createdAt < pb.createdAt) {
+    return 1
+  }
+  return 0
+})
 
 const PAGE_SIZE = 5
 

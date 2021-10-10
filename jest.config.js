@@ -3,7 +3,7 @@ module.exports = {
 
   collectCoverage: false,
 
-  collectCoverageFrom: ['packages/**/*.{js,ts,tsx}'],
+  collectCoverageFrom: ['packages/**/*.{ts,tsx}'],
 
   coverageDirectory: 'coverage',
 
@@ -31,7 +31,7 @@ module.exports = {
   },
 
   testEnvironment: 'jsdom',
-  testMatch: ['<rootDir>/**/*.test.{js,ts,tsx}'],
+  testMatch: ['<rootDir>/**/*.test.{ts,tsx}'],
 
   testPathIgnorePatterns: ['/node_modules/'],
 }

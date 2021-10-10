@@ -16,7 +16,8 @@
     "prepare": "husky install",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
-    "setup": "yarn install --frozen-lockfile && lerna bootstrap",
+    "setup": "yarn install --frozen-lockfile && lerna bootstrap && npm run init",
+    "init": "yarn workspace @mine/markdown-loader run build",
     "site:build": "yarn workspace @mine/site run build",
     "site:dev": "yarn workspace @mine/site run dev",
     "site:domain": "yarn workspace @mine/site run export:domain",
@@ -25,7 +26,8 @@
     "site:route": "yarn workspace @mine/site run route",
     "test": "jest",
     "test:ci": "jest --coverage",
-    "verify": "npm-run-all prettier lint:md lint:style lint:es test lint:commit && yarn workspace @mine/site run ts:check",
+    "ts:check": "lerna run ts:check",
+    "verify": "npm-run-all prettier lint:md lint:style lint:es test lint:commit ts:check",
     "commit": "git-cz"
   },
   "config": {

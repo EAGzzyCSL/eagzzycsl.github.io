@@ -1,9 +1,20 @@
-export { default as rebuildSite } from './rebuild-site.md'
-export { default as turtleSoupCollection } from './turtle-soup-collection.md'
-export { default as beautifyEclipse } from './beautify-eclipse.md'
-export { default as epitaphResearch } from './epitaph-research.md'
-export { default as gnomeExperience } from './gnome-experience.md'
-export { default as ux501ArchWin10 } from './ux501-arch-win10.md'
-export { default as lineContinue } from './line-continue.md'
-export { default as nginxIssues } from './nginx-issues.md'
-export { default as accelerateHomebrew } from './accelerate-homebrew.md'
+import { Article } from '../type'
+
+export default [
+  'accelerate-homebrew',
+  'beautify-eclipse',
+  'epitaph-research',
+  'gnome-experience',
+  'line-continue',
+  'nginx-issues',
+  'rebuild-site',
+  'turtle-soup-collection',
+  'ux501-arch-win10',
+].map(fileName => {
+  // eslint-disable-next-line import/no-dynamic-require, @typescript-eslint/no-var-requires, global-require
+  const markdownModule = require(`./${fileName}.md`).default
+  return {
+    path: fileName,
+    ...markdownModule,
+  } as Article
+}) as Article[]

@@ -12,37 +12,16 @@ declare module '*.svg'
 
 declare module '*.mp3'
 
+/**
+ * markdown 模块
+ */
+interface TocItem {
+  title: string
+  level: number
+}
+
 declare module '*.md' {
-  type title = string
-  const createdAt: string
-  const updatedAt: string
-  const tags: string[]
-  const content: string
-  const introduction: string
-
-  interface TocItem {
-    title: string
-    level: number
-  }
-
-  interface NestedTocItem extends TocItem {
-    sub: NestedTocItem[]
-  }
-
-  type toc = {
-    list: TocItem[]
-    nested: NestedTocItem[]
-  }
-
-  export default {
-    title,
-    createdAt,
-    updatedAt,
-    tags,
-    introduction,
-    toc,
-    content,
-  }
+  export default unknown
 }
 
 declare module '*.yml' {

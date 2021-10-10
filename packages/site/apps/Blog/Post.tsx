@@ -17,9 +17,8 @@ import AppPage from '@/shell/AppPage'
 import Discussion from '@/shell/Discussion'
 import { StaticPathsResponse, StaticPath } from '@/type'
 import Logger from '@/utils/logger'
-import { kebab2camel, camel2kebab } from '@/utils/string'
 
-import * as postsData from './data/index'
+import _exportedPosts from './data/index'
 import ArticleDisplay from './parts/ArticleDisplay'
 import BlogTags from './parts/BlogTags'
 import Catalogue from './parts/Catalogue'
@@ -47,11 +46,9 @@ const Post = (props: PostProps): JSX.Element => {
   })
 
   // TODO: blog的404页面
-
-  // eslint-disable-next-line import/namespace
-  const PostContent: Article = (
-    postsData as unknown as Record<string, Article>
-  )[kebab2camel(postId)]
+  // 假定一定可以查找到，如果找不到的话ssg也不会产生页面
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  const PostContent: Article = _exportedPosts.find(p => p.path === postId)!
 
   const outdatedDays = dayjs().diff(dayjs(PostContent.updatedAt), 'day')
 
@@ -137,9 +134,9 @@ export default Post
 
 export function getStaticPaths(): StaticPathsResponse<PostProps> {
   return {
-    paths: Object.keys(postsData).map(item => ({
+    paths: _exportedPosts.map(item => ({
       params: {
-        postId: camel2kebab(item),
+        postId: item.path,
       },
     })),
     fallback: false,
