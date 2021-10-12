@@ -3,6 +3,7 @@
     @media screen and (orientation: portrait) {
       display: flex;
       flex-direction: column;
+
       .input-filed {
         margin: 1em 0;
       }
@@ -11,6 +12,7 @@
     .symbol {
       margin: 0 12px;
       font-size: 32px;
+
       @media screen and (orientation: portrait) {
         display: none;
       }

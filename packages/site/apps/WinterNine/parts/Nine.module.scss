@@ -11,6 +11,7 @@
 
   @media screen and (orientation: landscape) {
     $block-size: 20vh;
+
     .nine-container {
       display: grid;
       grid-template-rows: $block-size $block-size $block-size;
@@ -22,6 +23,7 @@
 
   @media screen and (orientation: portrait) {
     $block-size: 10vh;
+
     .nine-container {
       display: grid;
       grid-template-rows: $block-size $block-size $block-size;

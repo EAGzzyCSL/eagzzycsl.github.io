@@ -10935,10 +10935,10 @@ styled-jsx@4.0.1:
     stylis "3.5.4"
     stylis-rule-sheet "0.0.10"
 
-stylelint-config-prettier@^8.0.2:
-  version "8.0.2"
-  resolved "https://registry.npm.taobao.org/stylelint-config-prettier/download/stylelint-config-prettier-8.0.2.tgz#da9de33da4c56893cbe7e26df239a7374045e14e"
-  integrity sha1-2p3jPaTFaJPL5+Jt8jmnN0BF4U4=
+stylelint-config-prettier@^9.0.2:
+  version "9.0.2"
+  resolved "https://registry.npmmirror.com/stylelint-config-prettier/download/stylelint-config-prettier-9.0.2.tgz#f1d591f7f973169fe5186f8aa4d70f174e9832dc"
+  integrity sha1-8dWR9/lzFp/lGG+KpNcPF06YMtw=
 
 stylelint-config-recess-order@^2.5.0:
   version "2.5.0"
