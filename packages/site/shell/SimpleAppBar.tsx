@@ -8,6 +8,7 @@ import styles from './SimpleAppBar.module.scss'
 interface SimpleAppBarProps {
   title?: string
   inverse?: boolean
+  sticky?: boolean
   mainContent?: JSX.Element
   endIcon?: JSX.Element
   onEndIconClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
@@ -16,13 +17,14 @@ interface SimpleAppBarProps {
 const SimpleAppBar = ({
   title,
   inverse,
+  sticky,
   mainContent,
   endIcon,
   onEndIconClick,
 }: SimpleAppBarProps): JSX.Element => (
   <AppBar
     className={styles.simpleAppBar}
-    position='static'
+    position={sticky ? 'sticky' : 'static'}
     elevation={inverse ? 0 : undefined}
     color={inverse ? 'transparent' : 'primary'}
   >
@@ -58,8 +60,10 @@ const SimpleAppBar = ({
 SimpleAppBar.defaultProps = {
   title: '',
   inverse: false,
+  sticky: false,
   mainContent: undefined,
   endIcon: <MenuRoundedIcon />,
   onEndIconClick: () => {},
 }
+
 export default SimpleAppBar

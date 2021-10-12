@@ -65,7 +65,7 @@ interface AboutProps {
 const About = ({ info = dataOfInfo }: AboutProps): JSX.Element => (
   <AppPage title='关于' theme={theme}>
     <section className={styles.about}>
-      <SimpleAppBar title='关于' inverse />
+      <SimpleAppBar title='关于' inverse sticky />
       <div className={styles.main}>
         <Box className={styles.basicInfoPanel}>
           <Paper className={styles.avatarWrapper} elevation={3}>

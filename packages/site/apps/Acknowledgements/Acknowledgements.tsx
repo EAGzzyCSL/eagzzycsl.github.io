@@ -50,7 +50,7 @@ const Acknowledgements = ({
 }: AcknowledgementsProps): JSX.Element => (
   <AppPage title='版权与致谢' theme={theme}>
     <section className={styles.acknowledgements}>
-      <SimpleAppBar title='版权与致谢' />
+      <SimpleAppBar title='版权与致谢' sticky />
       <div className={styles.declare}>
         <Typography
           component='h2'
