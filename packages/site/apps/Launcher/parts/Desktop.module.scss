@@ -15,7 +15,7 @@
     display: flex;
     flex: 1 1 auto;
 
-    @media screen and (orientation: portrait) {
+    @media (orientation: portrait) {
       flex-direction: column;
     }
 
@@ -32,7 +32,7 @@
       align-content: flex-start;
       justify-content: flex-start;
 
-      @media screen and (orientation: portrait) {
+      @media (orientation: portrait) {
         align-content: flex-start;
         justify-content: space-around;
       }

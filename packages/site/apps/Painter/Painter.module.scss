@@ -61,11 +61,11 @@
       }
     }
 
-    @media screen and (orientation: landscape) {
+    @media (orientation: landscape) {
       padding: 0 32px;
     }
 
-    @media screen and (orientation: portrait) {
+    @media (orientation: portrait) {
       flex-direction: column;
       padding: 0 16px;
 

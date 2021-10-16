@@ -9,7 +9,7 @@
     display: grid;
   }
 
-  @media screen and (orientation: landscape) {
+  @media (orientation: landscape) {
     $block-size: 20vh;
 
     .nine-container {
@@ -21,7 +21,7 @@
     }
   }
 
-  @media screen and (orientation: portrait) {
+  @media (orientation: portrait) {
     $block-size: 10vh;
 
     .nine-container {

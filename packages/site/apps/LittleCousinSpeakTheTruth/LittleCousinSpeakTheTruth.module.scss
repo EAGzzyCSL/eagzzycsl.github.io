@@ -32,7 +32,7 @@
     }
   }
 
-  @media screen and (orientation: landscape) {
+  @media (orientation: landscape) {
     .left-panel {
       flex: 8 1 auto;
     }
@@ -52,7 +52,7 @@
     }
   }
 
-  @media screen and (orientation: portrait) {
+  @media (orientation: portrait) {
     .left-panel,
     .right-panel {
       display: none;
@@ -87,13 +87,13 @@
     justify-content: center;
   }
 
-  @media screen and (orientation: landscape) {
+  @media (orientation: landscape) {
     .nav-back {
       display: none;
     }
   }
 
-  @media screen and (orientation: portrait) {
+  @media (orientation: portrait) {
     .nav-back {
       display: block;
     }
@@ -109,13 +109,13 @@
     justify-content: center;
   }
 
-  @media screen and (orientation: landscape) {
+  @media (orientation: landscape) {
     .nav-back {
       display: none;
     }
   }
 
-  @media screen and (orientation: portrait) {
+  @media (orientation: portrait) {
     .nav-back {
       display: block;
     }

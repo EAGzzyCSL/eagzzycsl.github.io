@@ -15,7 +15,7 @@ $icon-size-small: 60px;
   height: $entry-size;
   margin: $entry-margin;
 
-  @media screen and (orientation: portrait) {
+  @media (orientation: portrait) {
     width: $entry-size-small;
     height: $entry-size-small;
     margin: $entry-margin;
@@ -30,7 +30,7 @@ $icon-size-small: 60px;
     background-color: white;
     border-radius: 100%;
 
-    @media screen and (orientation: portrait) {
+    @media (orientation: portrait) {
       width: $icon-size-small;
       height: $icon-size-small;
     }

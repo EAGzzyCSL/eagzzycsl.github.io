@@ -38,7 +38,7 @@
     }
   }
 
-  @media screen and (orientation: landscape) {
+  @media (orientation: landscape) {
     .left-side {
       flex: 0 0 auto;
       width: 360px;
@@ -50,7 +50,7 @@
     }
   }
 
-  @media screen and (orientation: portrait) {
+  @media (orientation: portrait) {
     flex-direction: column;
 
     .left-side {
@@ -88,7 +88,7 @@
       right: 0;
     }
 
-    @media screen and (orientation: landscape) {
+    @media (orientation: landscape) {
       display: none;
     }
   }

@@ -37,7 +37,7 @@ $avatar-size-small: 80px;
       }
     }
 
-    @media screen and (orientation: landscape) {
+    @media (orientation: landscape) {
       align-items: center;
       justify-content: space-around;
       height: 60vh;
@@ -65,7 +65,7 @@ $avatar-size-small: 80px;
       }
     }
 
-    @media screen and (orientation: portrait) {
+    @media (orientation: portrait) {
       flex-direction: column;
       padding: 0 16px;
       margin-bottom: 64px;

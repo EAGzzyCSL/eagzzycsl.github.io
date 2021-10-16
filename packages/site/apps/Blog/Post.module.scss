@@ -12,7 +12,7 @@
       flex: 1 0 0;
     }
 
-    @media screen and (orientation: landscape) {
+    @media (orientation: landscape) {
       .menu-button-landscape {
         display: initial;
       }
@@ -22,7 +22,7 @@
       }
     }
 
-    @media screen and (orientation: portrait) {
+    @media (orientation: portrait) {
       .menu-button-landscape {
         display: none;
       }
@@ -52,7 +52,7 @@
       height: 100%;
     }
 
-    @media screen and (orientation: landscape) {
+    @media (orientation: landscape) {
       flex-direction: row;
 
       .left-side {
@@ -71,7 +71,7 @@
       }
     }
 
-    @media screen and (orientation: portrait) {
+    @media (orientation: portrait) {
       flex-direction: column;
       padding: 60px 32px 160px;
 
