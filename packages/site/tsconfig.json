@@ -18,7 +18,9 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "esModuleInterop": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "downlevelIteration": true,
+    "importHelpers": true
   },
   "exclude": [".next"],
   "include": ["**/*.ts", "**/*.tsx"]
