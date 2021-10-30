@@ -30,6 +30,10 @@ module.exports = {
     '\\.(jpg|jpeg|png|gif|svg)$': '<rootDir>/scripts/fileMock.js',
   },
 
+  transform: {
+    '^.+\\.(t|j)sx?$': '@swc/jest',
+  },
+
   testEnvironment: 'jsdom',
   testMatch: ['<rootDir>/**/*.test.{ts,tsx}'],
 
