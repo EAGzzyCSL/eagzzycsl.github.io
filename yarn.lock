@@ -7496,10 +7496,10 @@ mdurl@^1.0.0, mdurl@^1.0.1:
   resolved "https://registry.npmmirror.com/mdurl/download/mdurl-1.0.1.tgz#fe85b2ec75a59037f2adfec100fd6c601761152e"
   integrity sha1-/oWy7HWlkDfyrf7BAP1sYBdhFS4=
 
-memfs@^3.2.2:
-  version "3.2.2"
-  resolved "https://registry.npmmirror.com/memfs/download/memfs-3.2.2.tgz?cache=0&sync_timestamp=1617599925444&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmemfs%2Fdownload%2Fmemfs-3.2.2.tgz#5de461389d596e3f23d48bb7c2afb6161f4df40e"
-  integrity sha1-XeRhOJ1Zbj8j1Iu3wq+2Fh9N9A4=
+memfs@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.npmmirror.com/memfs/download/memfs-3.3.0.tgz#4da2d1fc40a04b170a56622c7164c6be2c4cbef2"
+  integrity sha1-TaLR/ECgSxcKVmIscWTGvixMvvI=
   dependencies:
     fs-monkey "1.0.3"
 
