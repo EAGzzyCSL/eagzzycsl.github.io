@@ -73,4 +73,5 @@ module.exports = {
     })
     return config
   },
+  autoprefixer: false,
 }
