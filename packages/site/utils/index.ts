@@ -1,5 +1,7 @@
 export const sleep = (ms: number): Promise<void> =>
-  new Promise(resolve => setTimeout(resolve, ms))
+  new Promise(resolve => {
+    setTimeout(resolve, ms)
+  })
 
 const loadImg = (imgUrl: string): Promise<void> =>
   new Promise<void>((resolve, reject) => {
