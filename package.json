@@ -11,7 +11,7 @@
     "lint:es": "eslint ./*.js && eslint ./.*.js && lerna run lint:es",
     "lint:es-fix": "eslint ./*.js --fix && eslint ./.*.js --fix && lerna run lint:es",
     "lint:md": "markdownlint '**/*.md' --ignore-path .gitignore",
-    "lint:style": "stylelint './packages/**/*.scss' --syntax scss",
+    "lint:style": "stylelint './packages/**/*.scss'",
     "lint:style-fix": "npm run lint:style -- --fix",
     "prepare": "husky install",
     "prettier": "prettier --check .",
@@ -57,7 +57,7 @@
     "markdownlint-cli": "^0.29.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.4.0",
-    "stylelint": "^13.13.1",
+    "stylelint": "^14.1.0",
     "typescript": "^4.4.3"
   }
 }

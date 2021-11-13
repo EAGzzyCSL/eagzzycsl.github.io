@@ -1,4 +1,5 @@
 module.exports = {
+  customSyntax: 'postcss-scss',
   extends: ['./css.js', 'stylelint-config-prettier'],
   plugins: ['stylelint-scss', 'stylelint-use-nesting'],
   rules: {
