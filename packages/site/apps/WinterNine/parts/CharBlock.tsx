@@ -1,6 +1,8 @@
 /* eslint-disable import/extensions */
 import React, { useRef, useEffect } from 'react'
 
+import { sleep } from '@/utils'
+
 import char亭 from '../data/亭.json'
 import char前 from '../data/前.json'
 import char垂 from '../data/垂.json'
@@ -30,22 +32,12 @@ const sentence = [
 const STROKE_TABLET_ORIGIN_SIZE = 2048
 const TRACK_STROKE_SIZE = 200
 
-interface CharBlockProps {
-  charIndex: number
-  // 挂载时渲染到哪一笔
-  currentStroke: number
-}
-
 /**
- * chrome的clip没有抗锯齿，因此使用红色和灰色模糊边缘的锯齿
+ * chrome的clip没有抗锯齿，因此使用红色和灰色模糊边缘的锯齿（目前的组合效果便不错）
  */
 const colorPlaceholder = '#bbb'
 const colorFill = '#c33'
 
-/**
- * 就现在这个代码和颜色搭配就不错，可以做到把锯齿藏起来
- *
- */
 class CharWriter {
   private char: CharDescription
 
@@ -53,14 +45,19 @@ class CharWriter {
 
   private nextStrokeIndex = 0
 
+  private canvas: HTMLCanvasElement
+
   private canvasContext: CanvasRenderingContext2D
 
   private isAnimatingStroke = false
+
+  private isDestroyed = false
 
   constructor(char: CharDescription, canvas: HTMLCanvasElement) {
     this.char = char
     const scaleRatio = canvas.width / STROKE_TABLET_ORIGIN_SIZE
     this.scaleRatio = scaleRatio
+    this.canvas = canvas
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     this.canvasContext = canvas.getContext('2d')!
     // 设置为dpr的一倍，避免锯齿出现
@@ -127,6 +124,11 @@ class CharWriter {
       this.canvasContext.strokeStyle = colorFill
       this.canvasContext.lineWidth = this.scaleRatio * TRACK_STROKE_SIZE
       const drawFrame = (): void => {
+        if (this.isDestroyed) {
+          resolve()
+          // 如果已销毁，则后续的绘制不要再进行了
+          return
+        }
         this.canvasContext.beginPath()
         const { x, y, size } = smoothedTrack[frameCursor]
         this.canvasContext.arc(
@@ -177,43 +179,79 @@ class CharWriter {
       this.nextStrokeIndex += 1
     }
   }
+
+  /**
+   * 清空画布
+   */
+  public clearCanvas(): void {
+    this.canvasContext.clearRect(0, 0, this.canvas.width, this.canvas.height)
+  }
+
+  /**
+   * 释放绘制
+   * (用于避免两个动画的绘制并发发生
+   */
+  public destroy(): void {
+    this.isDestroyed = true
+  }
+}
+
+interface CharBlockProps {
+  charIndex: number
+  /**
+   * 当前绘制到第x笔（最后一笔可以选择以动画方式绘制）
+   */
+  currentStroke: number
+  /**
+   * 是否以动画方式绘制最后一笔（已经写满的字没有以动画方式绘制最后一笔的需求）
+   */
+  animateLastStroke?: boolean
+  /**
+   * 最后一笔的动画延迟出现的时间
+   */
+  lastAnimateStrokeTimeout: number
 }
 
 const CharBlock = ({
   charIndex,
   currentStroke,
+  animateLastStroke,
+  lastAnimateStrokeTimeout,
 }: CharBlockProps): JSX.Element => {
   const tablet = useRef<HTMLCanvasElement>(null)
-  const charWriterRef = useRef<CharWriter>()
-  const initCanvas = (): void => {
+
+  useEffect(() => {
     if (!tablet.current) {
-      return
+      return () => {}
     }
     const { offsetHeight, offsetWidth } = tablet.current
     tablet.current.width = devicePixelRatio * offsetWidth
     tablet.current.height = devicePixelRatio * offsetHeight
 
-    charWriterRef.current = new CharWriter(sentence[charIndex], tablet.current)
-    if (currentStroke === 0) {
-      charWriterRef.current.writeFirstXStrokes(0)
-    } else if (currentStroke === 10) {
-      charWriterRef.current.writeFirstXStrokes(9)
+    const charWriter = new CharWriter(sentence[charIndex], tablet.current)
+    if (animateLastStroke) {
+      charWriter.writeFirstXStrokes(currentStroke - 1)
+      // 有动画的一画延迟一点出来避免没有重点
+      sleep(lastAnimateStrokeTimeout).then(() => {
+        charWriter.writeNext()
+      })
     } else {
-      charWriterRef.current.writeFirstXStrokes(currentStroke - 1)
-      charWriterRef.current.writeNext()
+      charWriter.writeFirstXStrokes(currentStroke)
     }
-  }
-
-  useEffect(() => {
-    setTimeout(() => {
-      initCanvas()
-    }, 200)
+    return () => {
+      charWriter.destroy()
+      charWriter.clearCanvas()
+    }
   })
   return (
     <section className={styles.charBlock}>
       <canvas ref={tablet} className={styles.canvas} />
     </section>
   )
+}
+
+CharBlock.defaultProps = {
+  animateLastStroke: false,
 }
 
 export default CharBlock
