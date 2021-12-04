@@ -1,0 +1,19 @@
+.plum-painting {
+  display: block;
+
+  // 横纵比例为16:10
+  @media (orientation: landscape) {
+    width: 50vw;
+    height: 31.25vw;
+  }
+
+  @media (orientation: portrait) {
+    width: 100vw;
+    height: 62.5vw;
+  }
+
+  .canvas {
+    width: 100%;
+    height: 100%;
+  }
+}

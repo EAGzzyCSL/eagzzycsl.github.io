@@ -3,7 +3,59 @@ $block-size: 25vh;
 .winter-nine {
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 100%;
   height: 100%;
+  background-size: cover;
+
+  .main {
+    position: relative;
+    flex: 1 0 0;
+
+    .back {
+      position: absolute;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+
+      @media (orientation: landscape) {
+        align-items: flex-end;
+        padding-right: 20%;
+      }
+
+      @media (orientation: portrait) {
+        align-items: center;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        overflow: hidden;
+
+        .description {
+          text-shadow: 1px 1px #888;
+        }
+
+        @media (orientation: landscape) {
+          justify-content: space-around;
+        }
+
+        @media (orientation: portrait) {
+          justify-content: flex-end;
+
+          .description {
+            margin-top: 50px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+
+    .front {
+      display: block;
+    }
+  }
 }

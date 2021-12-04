@@ -11,6 +11,7 @@ import iconOfWinterNine from '@/apps/WinterNine/icon.png'
 
 import projectMaterialUi from './images/material-ui.svg'
 import projectNext from './images/next.svg'
+import plumPhoto from './images/plum.jpg'
 
 export interface BasicDisplayItem {
   title: string
@@ -66,6 +67,13 @@ export default {
       image: imageClassroom,
       url: 'https://icons8.cn/illustrations/illustration/pluto-96',
       brief: '课堂插图 来自icons8.cn',
+      cover: true,
+    },
+    {
+      title: '数九梅花图',
+      image: plumPhoto,
+      url: 'https://www.photophoto.cn/sucai/38019572.html',
+      brief: '数九梅花图参考了图行天下提供的共享授权图片',
       cover: true,
     },
   ],

@@ -30,3 +30,5 @@ export interface CharDescription {
     track: PointTrack[]
   }[]
 }
+
+export type XYTuple = [number, number]

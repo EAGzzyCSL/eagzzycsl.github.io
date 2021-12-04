@@ -30,3 +30,6 @@ export const preLoadImages = (
     })(),
     sleep(timeout),
   ])
+
+export const getHashContent = (): string =>
+  process.browser ? document.location.hash.slice(1) : ''
