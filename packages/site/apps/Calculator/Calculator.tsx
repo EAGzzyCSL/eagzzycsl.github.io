@@ -100,7 +100,6 @@ const Calculator = (): JSX.Element => {
               </div>
             </div>
           }
-          endIcon={undefined}
         />
         <div className={styles.panel}>
           {/* FIXME: 需要保留面板状态 */}

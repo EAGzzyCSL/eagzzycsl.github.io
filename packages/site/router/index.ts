@@ -55,8 +55,8 @@ export class MyRouter {
     const appPath = appMap[app].root ? appMap[app].root : `/${camel2kebab(app)}`
     const realPage = pageAs ? `/${pageAs}` : page
 
-    const url = `${appPath}${page}`
-    const urlAs = `${appPath}${realPage}`
+    const url = appPath === '/' ? page : `${appPath}${page}`
+    const urlAs = appPath === '/' ? realPage : `${appPath}${realPage}`
 
     Logger.myRouter.log('myRouter.push', { app, page, pageAs, url, urlAs })
 
