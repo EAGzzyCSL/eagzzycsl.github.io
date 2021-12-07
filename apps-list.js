@@ -8,4 +8,5 @@ module.exports = [
   { name: 'about', desc: '「关于」' },
   { name: 'painter', desc: '「出图」' },
   { name: 'nine', desc: '「管城春满」' },
+  { name: 'changelog', desc: '「更新记录」' },
 ]

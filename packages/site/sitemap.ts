@@ -8,6 +8,7 @@ import About from '@/apps/About/manifest'
 import Acknowledgements from '@/apps/Acknowledgements/manifest'
 import Blog from '@/apps/Blog/manifest'
 import Calculator from '@/apps/Calculator/manifest'
+import Changelog from '@/apps/Changelog/manifest'
 import Launcher from '@/apps/Launcher/manifest'
 import LittleCousinSpeakTheTruth from '@/apps/LittleCousinSpeakTheTruth/manifest'
 import Painter from '@/apps/Painter/manifest'
@@ -19,8 +20,9 @@ import { camel2kebab } from './utils/string'
 export const appMap = {
   Launcher,
   Acknowledgements,
-  Blog,
+  Changelog,
   About,
+  Blog,
   LittleCousinSpeakTheTruth,
   Calculator,
   Painter,

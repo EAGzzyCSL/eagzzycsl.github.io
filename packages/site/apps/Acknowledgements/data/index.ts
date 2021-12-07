@@ -1,12 +1,13 @@
-import glassesV4 from '@/apps/About/icon.png'
+import iconOfAbout from '@/apps/About/icon.png'
 import iconOfAcknowledgements from '@/apps/Acknowledgements/icon.png'
 import iconOfBlog from '@/apps/Blog/icon.png'
 import iconOfCalculator from '@/apps/Calculator/icon.png'
+import iconOfChangelog from '@/apps/Changelog/icon.png'
 import imageWallpaper from '@/apps/Launcher/assets/wallpaper.svg'
 import iconOfLauncher from '@/apps/Launcher/icon.png'
 import imageClassroom from '@/apps/LittleCousinSpeakTheTruth/assets/about-header.png'
 import iconOfLittleCousinSpeakTheTruth from '@/apps/LittleCousinSpeakTheTruth/icon.png'
-import borderColor from '@/apps/Painter/icon.png'
+import iconOfPainter from '@/apps/Painter/icon.png'
 import iconOfWinterNine from '@/apps/WinterNine/icon.png'
 
 import projectMaterialUi from './images/material-ui.svg'
@@ -42,9 +43,10 @@ const icon8Icons = [
   ],
   [iconOfCalculator, 'https://icons8.cn/icons/set/pincode-keyboard'],
   [iconOfBlog, 'https://icons8.cn/icons/set/quill-pen'],
-  [glassesV4, 'https://icons8.cn/icons/set/glasses--v4'],
-  [borderColor, 'https://icons8.cn/icons/set/border-color'],
+  [iconOfAbout, 'https://icons8.cn/icons/set/glasses--v4'],
+  [iconOfPainter, 'https://icons8.cn/icons/set/border-color'],
   [iconOfWinterNine, 'https://icons8.com/icon/67935/雪人'],
+  [iconOfChangelog, 'https://icons8.cn/icon/81967/cinema'],
 ].map(([image, url = null]) => ({
   title: 'from icon8',
   image,
