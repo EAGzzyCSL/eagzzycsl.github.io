@@ -1,4 +1,9 @@
 import {
+  ArrowBackRounded as ArrowBackRoundedIcon,
+  MoreHorizRounded as MoreHorizRoundedIcon,
+  MoreVertRounded as MoreVertRoundedIcon,
+} from '@mui/icons-material'
+import {
   AppBar,
   Drawer,
   IconButton,
@@ -7,14 +12,9 @@ import {
   Paper,
   Toolbar,
   Typography,
-} from '@material-ui/core'
-import { grey as colorGrey } from '@material-ui/core/colors'
-import { createTheme } from '@material-ui/core/styles'
-import {
-  ArrowBackRounded as ArrowBackRoundedIcon,
-  MoreHorizRounded as MoreHorizRoundedIcon,
-  MoreVertRounded as MoreVertRoundedIcon,
-} from '@material-ui/icons'
+} from '@mui/material'
+import { grey as colorGrey } from '@mui/material/colors'
+import { createTheme } from '@mui/material/styles'
 import { GetStaticPropsResult } from 'next'
 import React, { useState, useRef } from 'react'
 
@@ -31,7 +31,6 @@ import { Chats } from './type'
 
 const theme = createTheme({
   palette: {
-    type: 'light',
     primary: {
       main: colorGrey[700],
       contrastText: '#fff',
@@ -52,7 +51,12 @@ const LeftContent = (props: LeftContentProps): JSX.Element => {
         <Toolbar>
           {useCustomBack ? (
             <div className={styles.navBack}>
-              <IconButton edge='start' color='inherit' onClick={onTapBack}>
+              <IconButton
+                edge='start'
+                color='inherit'
+                onClick={onTapBack}
+                size='large'
+              >
                 <ArrowBackRoundedIcon />
               </IconButton>
             </div>
@@ -85,7 +89,12 @@ const RightContent = ({ onTapBack }: RightContentProps): JSX.Element => (
     <AppBar position='static'>
       <Toolbar>
         <div className={styles.navBack}>
-          <IconButton edge='start' color='inherit' onClick={onTapBack}>
+          <IconButton
+            edge='start'
+            color='inherit'
+            onClick={onTapBack}
+            size='large'
+          >
             <ArrowBackRoundedIcon />
           </IconButton>
         </div>

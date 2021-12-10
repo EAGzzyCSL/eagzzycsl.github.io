@@ -6,7 +6,8 @@ exports[`render NotFound 1`] = `
 >
   <svg
     aria-hidden={true}
-    className="MuiSvgIcon-root"
+    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+    data-testid="SentimentDissatisfiedRoundedIcon"
     focusable="false"
     style={
       Object {
@@ -31,7 +32,7 @@ exports[`render NotFound 1`] = `
     />
   </svg>
   <h1
-    className="MuiTypography-root MuiTypography-h2"
+    className="MuiTypography-root MuiTypography-h2 css-1sra7t5-MuiTypography-root"
   >
     404 Not Found
   </h1>

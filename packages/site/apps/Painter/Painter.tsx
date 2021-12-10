@@ -1,10 +1,10 @@
-import { Paper, Button, Fab, TextField, Tooltip } from '@material-ui/core'
+import { FormatPaintRounded as FormatPaintRoundedIcon } from '@mui/icons-material'
+import { Paper, Button, Fab, TextField, Tooltip } from '@mui/material'
 import {
   green as colorGreen,
   orange as colorOrange,
-} from '@material-ui/core/colors'
-import { createTheme } from '@material-ui/core/styles'
-import { FormatPaintRounded as FormatPaintRoundedIcon } from '@material-ui/icons'
+} from '@mui/material/colors'
+import { createTheme } from '@mui/material/styles'
 import { GetStaticPropsResult } from 'next'
 import React, { useState, useRef } from 'react'
 
@@ -15,7 +15,6 @@ import styles from './Painter.module.scss'
 
 const theme = createTheme({
   palette: {
-    type: 'light',
     primary: {
       main: colorOrange[800],
     },

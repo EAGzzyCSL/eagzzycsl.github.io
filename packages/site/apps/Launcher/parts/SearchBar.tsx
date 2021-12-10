@@ -1,4 +1,4 @@
-import { IconButton, Paper } from '@material-ui/core'
+import { IconButton, Paper } from '@mui/material'
 import React, { useState } from 'react'
 
 import IconAliHead from '../assets/icon-ali-head.svg'

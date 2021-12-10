@@ -1,10 +1,10 @@
-import { Tab, Tabs, Typography } from '@material-ui/core'
+import { Tab, Tabs, Typography } from '@mui/material'
 import {
   blue as colorBlue,
   deepOrange as colorDeepOrange,
   pink as colorPink,
-} from '@material-ui/core/colors'
-import { createTheme } from '@material-ui/core/styles'
+} from '@mui/material/colors'
+import { createTheme } from '@mui/material/styles'
 import { GetStaticPropsResult } from 'next'
 import React, { useEffect } from 'react'
 
@@ -36,7 +36,6 @@ const getPanelIndexFromHash = (): number => {
 
 const theme = createTheme({
   palette: {
-    type: 'light',
     primary: {
       main: colorBlue[500],
     },

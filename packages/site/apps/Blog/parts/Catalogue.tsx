@@ -1,4 +1,4 @@
-import { Link, Typography } from '@material-ui/core'
+import { Link, Typography } from '@mui/material'
 import React from 'react'
 
 import { Article, NestedTocItem } from '../type'
@@ -27,6 +27,7 @@ const CatalogueStratum = ({
         <Link
           color='inherit'
           variant='inherit'
+          underline='none'
           className={styles.link}
           href={`#${parentIndexPrefix}${hIndex + 1}|${h.title}`}
           onClick={() => {

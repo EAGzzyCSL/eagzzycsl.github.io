@@ -1,4 +1,9 @@
 import {
+  ExpandMoreRounded as ExpandMoreRoundedIcon,
+  GitHub as GitHubIcon,
+  Telegram as TelegramIcon,
+} from '@mui/icons-material'
+import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
@@ -6,14 +11,9 @@ import {
   Button,
   Paper,
   Typography,
-} from '@material-ui/core'
-import { blue as colorBlue, red as colorRed } from '@material-ui/core/colors'
-import { createTheme } from '@material-ui/core/styles'
-import {
-  ExpandMoreRounded as ExpandMoreRoundedIcon,
-  GitHub as GitHubIcon,
-  Telegram as TelegramIcon,
-} from '@material-ui/icons'
+} from '@mui/material'
+import { blue as colorBlue, red as colorRed } from '@mui/material/colors'
+import { createTheme } from '@mui/material/styles'
 import { GetStaticPropsResult } from 'next'
 import React from 'react'
 
@@ -27,7 +27,6 @@ import dataOfInfo, { Info } from './data'
 
 const theme = createTheme({
   palette: {
-    type: 'light',
     primary: {
       main: colorBlue[500],
     },
@@ -110,7 +109,6 @@ const About = ({ info = dataOfInfo }: AboutProps): JSX.Element => (
               </AccordionDetails>
             </Accordion>
           ))}
-          {/* TODO: 添加评论功能 */}
         </Box>
       </div>
       <footer className={styles.footer}>

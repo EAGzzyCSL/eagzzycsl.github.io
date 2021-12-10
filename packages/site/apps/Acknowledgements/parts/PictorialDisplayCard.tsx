@@ -5,7 +5,7 @@ import {
   CardActions,
   CardContent,
   Typography,
-} from '@material-ui/core'
+} from '@mui/material'
 import cx from 'classnames'
 import React from 'react'
 

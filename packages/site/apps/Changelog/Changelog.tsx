@@ -1,9 +1,3 @@
-import { Typography } from '@material-ui/core'
-import {
-  brown as colorBrown,
-  pink as colorPink,
-} from '@material-ui/core/colors'
-import { createTheme } from '@material-ui/core/styles'
 import {
   Timeline,
   TimelineConnector,
@@ -12,7 +6,10 @@ import {
   TimelineItem,
   TimelineOppositeContent,
   TimelineSeparator,
-} from '@material-ui/lab'
+} from '@mui/lab'
+import { Typography } from '@mui/material'
+import { brown as colorBrown, pink as colorPink } from '@mui/material/colors'
+import { createTheme } from '@mui/material/styles'
 import { GetStaticPropsResult } from 'next'
 import React from 'react'
 
@@ -24,7 +21,6 @@ import changelogData from './data/index'
 
 const theme = createTheme({
   palette: {
-    type: 'light',
     primary: {
       main: colorBrown[500],
     },
@@ -39,7 +35,7 @@ const Changelog = (): JSX.Element => (
     <section className={styles.changelog}>
       <SimpleAppBar title='更新记录' inverse />
       <div className={styles.main}>
-        <Timeline align='alternate'>
+        <Timeline position='alternate'>
           {changelogData.map(item => (
             <TimelineItem key={item.date}>
               <TimelineOppositeContent>

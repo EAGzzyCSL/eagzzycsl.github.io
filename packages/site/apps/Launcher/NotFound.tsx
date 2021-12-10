@@ -1,5 +1,5 @@
-import { Typography } from '@material-ui/core'
-import { SentimentDissatisfiedRounded as SentimentDissatisfiedRoundedIcon } from '@material-ui/icons'
+import { SentimentDissatisfiedRounded as SentimentDissatisfiedRoundedIcon } from '@mui/icons-material'
+import { Typography } from '@mui/material'
 import { GetStaticPropsResult } from 'next'
 import React from 'react'
 

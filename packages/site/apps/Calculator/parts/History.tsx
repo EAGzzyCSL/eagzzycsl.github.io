@@ -1,4 +1,9 @@
 import {
+  CloseRounded as CloseRoundedIcon,
+  DeleteOutlineRounded as DeleteOutlineRoundedIcon,
+  EditRounded as EditRoundedIcon,
+} from '@mui/icons-material'
+import {
   Button,
   IconButton,
   Snackbar,
@@ -9,12 +14,7 @@ import {
   TableHead,
   TableRow,
   Typography,
-} from '@material-ui/core'
-import {
-  CloseRounded as CloseRoundedIcon,
-  DeleteOutlineRounded as DeleteOutlineRoundedIcon,
-  EditRounded as EditRoundedIcon,
-} from '@material-ui/icons'
+} from '@mui/material'
 import React, { useState } from 'react'
 
 import styles from './History.module.scss'
@@ -104,10 +104,13 @@ const History = ({
                   </TableCell>
                 ))}
                 <TableCell align='center'>
-                  <IconButton onClick={() => onReportItem(row.id)}>
+                  <IconButton onClick={() => onReportItem(row.id)} size='large'>
                     <EditRoundedIcon />
                   </IconButton>
-                  <IconButton onClick={() => handleRemoveItem(row)}>
+                  <IconButton
+                    onClick={() => handleRemoveItem(row)}
+                    size='large'
+                  >
                     <DeleteOutlineRoundedIcon />
                   </IconButton>
                 </TableCell>

@@ -1,8 +1,8 @@
-import { Typography, Avatar, Slide, IconButton } from '@material-ui/core'
 import {
   LockOpenRounded as LockOpenRoundedIcon,
   LockRounded as LockRoundedIcon,
-} from '@material-ui/icons'
+} from '@mui/icons-material'
+import { Typography, Avatar, Slide, IconButton } from '@mui/material'
 import dayjs from 'dayjs'
 import React, { useState, useEffect } from 'react'
 
@@ -80,7 +80,11 @@ const LockScreen = ({
           </Typography>
         </div>
         <div className={styles.bottomLock}>
-          <IconButton className={styles.lockButton} onClick={onUnlockScreen}>
+          <IconButton
+            className={styles.lockButton}
+            onClick={onUnlockScreen}
+            size='large'
+          >
             {locked ? (
               <LockRoundedIcon fontSize='large' color='inherit' />
             ) : (

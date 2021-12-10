@@ -5,7 +5,7 @@ import {
   CardActions,
   CardContent,
   Typography,
-} from '@material-ui/core'
+} from '@mui/material'
 import React from 'react'
 
 import styles from './ReferenceStatement.module.scss'

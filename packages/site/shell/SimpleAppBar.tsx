@@ -1,3 +1,4 @@
+import { MenuRounded as MenuRoundedIcon } from '@mui/icons-material'
 import {
   AppBar,
   IconButton,
@@ -5,8 +6,7 @@ import {
   Typography,
   Menu,
   MenuItem,
-} from '@material-ui/core'
-import { MenuRounded as MenuRoundedIcon } from '@material-ui/icons'
+} from '@mui/material'
 import React, { useState } from 'react'
 
 import { useMyRouter } from '@/router'
@@ -58,7 +58,7 @@ const SimpleAppBar = ({
             <Typography
               component='h1'
               variant='h6'
-              color={inverse ? 'primary' : 'initial'}
+              color={inverse ? 'primary' : 'inherit'}
             >
               {title}
             </Typography>

@@ -1,9 +1,11 @@
+import CssBaseline from '@mui/material/CssBaseline'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 
 import favicon from '@/assets/favicon.png'
 import { useMyRouter } from '@/router'
+
 import './app.scss'
 
 const MyApp = ({
@@ -50,6 +52,7 @@ const MyApp = ({
         {/* favicon.icon 用于防止 404，这里用于在手机上展示更清晰的 icon */}
         <link rel='icon' href={favicon} />
       </Head>
+      <CssBaseline />
       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
       <Component {...pageProps} />
     </>

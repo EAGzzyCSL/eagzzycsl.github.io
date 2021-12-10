@@ -2,7 +2,7 @@ import {
   AddCircleOutlineRounded as AddCircleOutlineRoundedIcon,
   InsertEmoticonRounded as InsertEmoticonRoundedIcon,
   Mic as MicIcon,
-} from '@material-ui/icons'
+} from '@mui/icons-material'
 import React, { useState } from 'react'
 
 import { Chats } from '../type'

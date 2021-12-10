@@ -1,4 +1,4 @@
-import { Typography } from '@material-ui/core'
+import { Typography } from '@mui/material'
 import cx from 'classnames'
 import hljs from 'highlight.js/lib/core'
 import React from 'react'

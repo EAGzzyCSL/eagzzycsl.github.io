@@ -1,6 +1,6 @@
-import { Typography, Slide, Fade } from '@material-ui/core'
-import { green as colorAmber, red as colorRed } from '@material-ui/core/colors'
-import { createTheme } from '@material-ui/core/styles'
+import { Typography, Slide, Fade } from '@mui/material'
+import { green as colorAmber, red as colorRed } from '@mui/material/colors'
+import { createTheme } from '@mui/material/styles'
 import dayjs from 'dayjs'
 import { GetStaticPropsResult } from 'next'
 import dynamic from 'next/dynamic'
@@ -22,7 +22,6 @@ const MemoPlumPainting = React.memo(PlumPainting)
 
 const theme = createTheme({
   palette: {
-    type: 'light',
     primary: {
       main: colorRed[500],
     },

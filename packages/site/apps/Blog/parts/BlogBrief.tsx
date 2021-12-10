@@ -1,4 +1,4 @@
-import { Link, Typography } from '@material-ui/core'
+import { Link, Typography } from '@mui/material'
 import dayjs from 'dayjs'
 import React from 'react'
 
@@ -33,7 +33,7 @@ const BlogBrief = ({
   return (
     <section className={styles.blogBrief}>
       <Typography component='h1' variant='h4' color='primary' gutterBottom>
-        <Link href='#' onClick={handleNav}>
+        <Link href='#' underline='hover' onClick={handleNav}>
           {title}
         </Link>
       </Typography>
@@ -57,7 +57,7 @@ const BlogBrief = ({
         color='secondary'
         component='span'
       >
-        <Link href='#' onClick={handleNav} color='secondary'>
+        <Link href='#' underline='hover' onClick={handleNav} color='secondary'>
           阅读全文…
         </Link>
       </Typography>

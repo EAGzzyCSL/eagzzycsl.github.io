@@ -1,4 +1,4 @@
-import { RecordVoiceOverRounded as RecordVoiceOverRoundedIcon } from '@material-ui/icons'
+import { RecordVoiceOverRounded as RecordVoiceOverRoundedIcon } from '@mui/icons-material'
 import React, { useRef, useState } from 'react'
 
 import styles from './AudioMsg.module.scss'

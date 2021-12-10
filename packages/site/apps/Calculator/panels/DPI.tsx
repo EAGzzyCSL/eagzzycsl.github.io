@@ -1,4 +1,4 @@
-import { Button, TextField, Typography } from '@material-ui/core'
+import { Button, TextField, Typography } from '@mui/material'
 import cx from 'classnames'
 import React, { useState, useRef } from 'react'
 
@@ -45,6 +45,7 @@ const DPITextField = ({
       <TextField
         error={validateInfo.error}
         helperText={validateInfo.helperText}
+        variant='standard'
         size='small'
         label={label}
         value={value}

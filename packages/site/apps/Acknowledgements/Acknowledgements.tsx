@@ -1,7 +1,7 @@
-import { Link, Typography } from '@material-ui/core'
-import { pink as colorPink } from '@material-ui/core/colors'
-import { createTheme } from '@material-ui/core/styles'
-import { GitHub as GitHubIcon } from '@material-ui/icons'
+import { GitHub as GitHubIcon } from '@mui/icons-material'
+import { Link, Typography } from '@mui/material'
+import { pink as colorPink } from '@mui/material/colors'
+import { createTheme } from '@mui/material/styles'
 import { GetStaticPropsResult } from 'next'
 import React, { ReactNode } from 'react'
 
@@ -16,7 +16,6 @@ import PictorialDisplayCard from './parts/PictorialDisplayCard'
 
 const theme = createTheme({
   palette: {
-    type: 'light',
     primary: {
       main: colorPink[500],
     },
@@ -106,6 +105,7 @@ const Acknowledgements = ({
           color='textSecondary'
           target='_blank'
           rel='noopener'
+          underline='hover'
           href='https://github.com/EAGzzyCSL/eagzzycsl.github.io'
         >
           查看更多...

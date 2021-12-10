@@ -1,12 +1,12 @@
+import { MenuRounded as MenuRoundedIcon } from '@mui/icons-material'
 import {
+  Alert,
   Typography,
   AppBar,
   Drawer,
   IconButton,
   Toolbar,
-} from '@material-ui/core'
-import { MenuRounded as MenuRoundedIcon } from '@material-ui/icons'
-import { Alert } from '@material-ui/lab'
+} from '@mui/material'
 import dayjs from 'dayjs'
 import { GetStaticPropsResult } from 'next'
 import React, { useState } from 'react'
@@ -70,7 +70,11 @@ const Post = (props: PostProps): JSX.Element => {
             >
               {PostContent.title}
             </Typography>
-            <IconButton className={styles.menuButtonLandscape} color='primary'>
+            <IconButton
+              className={styles.menuButtonLandscape}
+              color='primary'
+              size='large'
+            >
               <MenuRoundedIcon />
             </IconButton>
 
@@ -78,6 +82,7 @@ const Post = (props: PostProps): JSX.Element => {
               className={styles.menuButtonPortrait}
               color='primary'
               onClick={handleTapMenu}
+              size='large'
             >
               <MenuRoundedIcon />
             </IconButton>

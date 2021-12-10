@@ -1,3 +1,4 @@
+import { LinkRounded as LinkRoundedIcon } from '@mui/icons-material'
 import {
   Typography,
   Link,
@@ -7,8 +8,7 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-} from '@material-ui/core'
-import { LinkRounded as LinkRoundedIcon } from '@material-ui/icons'
+} from '@mui/material'
 import React, { ReactNode } from 'react'
 import ReactMarkdown, { Components } from 'react-markdown'
 import { ReactMarkdownProps } from 'react-markdown/lib/ast-to-react'
@@ -111,6 +111,7 @@ const LinkRenderer = ({
   <Link
     className={styles.link}
     href={href}
+    underline='hover'
     variant='inherit'
     rel='noreferrer'
     target='_blank'

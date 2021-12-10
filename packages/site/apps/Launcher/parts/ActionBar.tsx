@@ -1,9 +1,9 @@
-import { Button } from '@material-ui/core'
 import {
   NavigateBeforeRounded as NavigateBeforeRoundedIcon,
   NavigateNextRounded as NavigateNextRoundedIcon,
   StopRounded as StopRoundedIcon,
-} from '@material-ui/icons'
+} from '@mui/icons-material'
+import { Button } from '@mui/material'
 import React from 'react'
 
 import styles from './ActionBar.module.scss'

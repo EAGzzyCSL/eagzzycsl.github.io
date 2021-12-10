@@ -1,10 +1,17 @@
-import { Box, Fab, Tab, Tabs, Typography, Zoom } from '@material-ui/core'
 import {
   KeyboardArrowLeftRounded as KeyboardArrowLeftRoundedIcon,
   KeyboardArrowRightRounded as KeyboardArrowRightRoundedIcon,
   SearchRounded as SearchRoundedIcon,
-} from '@material-ui/icons'
-import { Pagination } from '@material-ui/lab'
+} from '@mui/icons-material'
+import {
+  Box,
+  Fab,
+  Tab,
+  Tabs,
+  Typography,
+  Zoom,
+  Pagination,
+} from '@mui/material'
 import cx from 'classnames'
 import { observer } from 'mobx-react-lite'
 import { GetStaticPropsResult } from 'next'
