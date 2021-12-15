@@ -10,6 +10,8 @@ module.exports = {
     'scss/operator-no-unspaced': true,
     'scss/operator-no-newline-after': true,
     'scss/double-slash-comment-whitespace-inside': 'always',
-    'csstools/use-nesting': 'always',
+    'csstree/validator': {
+      syntaxExtensions: ['sass'],
+    },
   },
 }
