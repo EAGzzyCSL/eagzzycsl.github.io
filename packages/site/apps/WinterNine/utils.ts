@@ -39,11 +39,12 @@ export const numberToChar = (num: number): string => chars[num]
 
 /**
  * 根据与冬至的日期差值，获取描述文字
+ * 日期差值为1天，对应倒计时应该是还剩0天
  * @param dayDiff 日期差值
  */
 export const getNineDescription = (dayDiff: number): string => {
   if (dayDiff < 0) {
-    return `距离冬至还有${Math.abs(dayDiff)}天`
+    return `距离冬至还有${Math.abs(dayDiff) - 1}天`
   }
   if (dayDiff > 89) {
     return '出九'

@@ -47,19 +47,23 @@ const AnimationTimeConfig = {
   wait_plum: 200 + 400 + 100 + 800 + 600,
 }
 
+// 获取日期并避免小时分钟导致的天的差值问题
+const getSelectedDate = (): dayjs.Dayjs =>
+  dayjs(dayjs(getHashContent() || undefined).format('YYYY-MM-DD'))
+
 const WinterNine = (): JSX.Element => {
-  const selectedDate = dayjs(getHashContent() || undefined)
+  const [selectedDate, setSelectedDate] = useState(() => getSelectedDate())
+
+  const dayDiff = selectedDate.diff(WINTER_SOLSTICE_DATE, 'day')
+
   const displayDate = selectedDate.format('YYYY-MM-DD')
-  const [dayDiff, setDayDiff] = useState(() =>
-    selectedDate.diff(WINTER_SOLSTICE_DATE, 'day'),
-  )
 
   const text = getNineDescription(dayDiff)
 
   // 留一个调试的小口子，可以直接通过hash指定日期
   useEffect(() => {
     const hashListener = (): void => {
-      setDayDiff(dayjs(getHashContent()).diff(WINTER_SOLSTICE_DATE, 'day'))
+      setSelectedDate(getSelectedDate())
     }
     window.addEventListener('hashchange', hashListener)
     return () => {
