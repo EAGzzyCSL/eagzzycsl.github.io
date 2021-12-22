@@ -47,7 +47,7 @@ export class MyRouter {
    */
   push<A extends keyof RouteMap>(
     app: A,
-    page: RouteMap[typeof app],
+    page: RouteMap[A],
     pageAs?: string,
   ): void {
     const { router } = this

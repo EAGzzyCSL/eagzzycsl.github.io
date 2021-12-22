@@ -1,11 +1,17 @@
-import { Manifest } from '@/type'
+import { Manifest } from '@/utils/app'
 
 import icon from './icon.png'
 
-export default {
+export default Manifest.create({
   icon,
   title: '关于',
   router: {
     '/': 'About.tsx',
   },
-} as Manifest<'/'>
+  acknowledgements: [
+    Manifest.acknowledgeIcon8icon(
+      icon,
+      'https://icons8.cn/icons/set/glasses--v4',
+    ),
+  ],
+})

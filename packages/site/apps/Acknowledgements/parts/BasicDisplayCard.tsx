@@ -8,7 +8,7 @@ import {
 } from '@mui/material'
 import React from 'react'
 
-import { BasicDisplayItem } from '../data'
+import { BasicDisplayItem } from '../type'
 
 import styles from './BasicDisplayCard.module.scss'
 

@@ -2,7 +2,7 @@ import { Typography, Paper } from '@mui/material'
 import { useRouter } from 'next/router'
 import React from 'react'
 
-import { AppDescribe } from '@/type'
+import { AppDescribe } from '@/types/app'
 
 import styles from './AppEntry.module.scss'
 

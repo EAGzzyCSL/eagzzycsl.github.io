@@ -14,7 +14,7 @@ import LittleCousinSpeakTheTruth from '@/apps/LittleCousinSpeakTheTruth/manifest
 import Painter from '@/apps/Painter/manifest'
 import WinterNine from '@/apps/WinterNine/manifest'
 
-import { AppDescribe } from './type'
+import { AppDescribe } from './types/app'
 import { camel2kebab } from './utils/string'
 
 export const appMap = {

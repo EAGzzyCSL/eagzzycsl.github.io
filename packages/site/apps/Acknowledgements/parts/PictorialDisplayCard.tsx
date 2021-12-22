@@ -9,7 +9,7 @@ import {
 import cx from 'classnames'
 import React from 'react'
 
-import { PictorialDisplayItem } from '../data'
+import { PictorialDisplayItem } from '../type'
 
 import styles from './PictorialDisplayCard.module.scss'
 
@@ -45,23 +45,16 @@ const Action = ({ url }: { url: string }): JSX.Element => {
 
 interface MediaProps {
   image: string
-  cover?: boolean
 }
 
-const Media = ({ image, cover }: MediaProps): JSX.Element => (
+const Media = ({ image }: MediaProps): JSX.Element => (
   <div
     className={styles.media}
     style={{
       backgroundImage: `url(${image})`,
-      // stylelint-disable-next-line csstree/validator
-      backgroundSize: cover ? 'cover' : 'contain',
     }}
   />
 )
-
-Media.defaultProps = {
-  cover: false,
-}
 
 interface PictorialCardProps {
   data: PictorialDisplayItem
@@ -70,7 +63,7 @@ interface PictorialCardProps {
 }
 
 const PictorialCard = ({
-  data: { image, title, brief, url, cover },
+  data: { image, title, brief, url },
   landscape,
   fill,
 }: PictorialCardProps): JSX.Element => (
@@ -86,12 +79,12 @@ const PictorialCard = ({
           <Content title={title} brief={brief} />
           <Action url={url} />
         </div>
-        <Media image={image} cover={cover} />
+        <Media image={image} />
       </>
     ) : (
       <>
         <CardActionArea>
-          <Media image={image} cover={cover} />
+          <Media image={image} />
           <Content title={title} brief={brief} />
         </CardActionArea>
         <Action url={url} />

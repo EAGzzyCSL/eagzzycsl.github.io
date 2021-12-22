@@ -15,7 +15,7 @@ import { useMyRouter } from '@/router'
 import AppBarHomeButton from '@/shell/AppBarHomeButton'
 import AppPage from '@/shell/AppPage'
 import Discussion from '@/shell/Discussion'
-import { StaticPathsResponse, StaticPath } from '@/type'
+import { StaticPathsResponse, StaticPath } from '@/types/app'
 import Logger from '@/utils/logger'
 
 import _exportedPosts from './data/index'

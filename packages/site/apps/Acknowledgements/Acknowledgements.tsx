@@ -9,10 +9,11 @@ import AppPage from '@/shell/AppPage'
 import SimpleAppBar from '@/shell/SimpleAppBar'
 
 import styles from './Acknowledgements.module.scss'
-import dataOfResources, { DisplayData, PictorialDisplayItem } from './data'
+import dataOfResources from './data'
 import BasicDisplayCard from './parts/BasicDisplayCard'
 import IconDisplayCard from './parts/IconDisplayCard'
 import PictorialDisplayCard from './parts/PictorialDisplayCard'
+import { DisplayData, PictorialDisplayItem } from './type'
 
 const theme = createTheme({
   palette: {
