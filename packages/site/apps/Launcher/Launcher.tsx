@@ -15,7 +15,10 @@ import Desktop from './parts/Desktop'
 import LockScreen from './parts/LockScreen'
 import StatusBar from './parts/StatusBar'
 
-const imagesShouldPreLoad = [Wallpaper, ...sitemap.map(item => item.icon)]
+const imagesShouldPreLoad = [
+  Wallpaper,
+  ...sitemap.appList.map(item => item.icon),
+]
 
 const Launcher = (): JSX.Element => {
   const store = useStore()
@@ -49,7 +52,7 @@ const Launcher = (): JSX.Element => {
         >
           <div className={styles.main}>
             <StatusBar />
-            <Desktop apps={sitemap} />
+            <Desktop apps={sitemap.appList} />
             <ActionBar />
           </div>
           <LockScreen

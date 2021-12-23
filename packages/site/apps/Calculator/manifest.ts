@@ -8,6 +8,7 @@ export default Manifest.create({
   router: {
     '/': 'Calculator.tsx',
   },
+  shortId: 'calc',
   acknowledgements: [
     Manifest.acknowledgeIcon8icon(
       icon,

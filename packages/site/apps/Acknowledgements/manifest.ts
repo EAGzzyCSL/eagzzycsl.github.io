@@ -5,6 +5,7 @@ import icon from './icon.png'
 export default Manifest.create({
   icon,
   title: '致谢',
+  shortId: 'ack',
   router: {
     '/': 'Acknowledgements.tsx',
   },

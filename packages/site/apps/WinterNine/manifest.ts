@@ -6,6 +6,7 @@ import icon from './icon.png'
 export default Manifest.create({
   icon,
   title: '管城春满',
+  shortId: 'nine',
   router: {
     '/': 'WinterNine.tsx',
   },

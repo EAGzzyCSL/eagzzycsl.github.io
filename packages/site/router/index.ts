@@ -6,10 +6,10 @@ import { useMemo } from 'react'
 import Logger from '@/utils/logger'
 import { camel2kebab } from '@/utils/string'
 
-import { appMap } from '../sitemap'
+import sitemap from '../sitemap'
 
 type RouteMap = {
-  [K in keyof typeof appMap]: keyof typeof appMap[K]['router']
+  [K in keyof typeof sitemap.appMap]: keyof typeof sitemap.appMap[K]['router']
 }
 
 /**
@@ -52,7 +52,9 @@ export class MyRouter {
   ): void {
     const { router } = this
 
-    const appPath = appMap[app].root ? appMap[app].root : `/${camel2kebab(app)}`
+    const appPath = sitemap.appMap[app].root
+      ? sitemap.appMap[app].root
+      : `/${camel2kebab(app)}`
     const realPage = pageAs ? `/${pageAs}` : page
 
     const url = appPath === '/' ? page : `${appPath}${page}`

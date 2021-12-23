@@ -6,6 +6,7 @@ import icon from './icon.png'
 export default Manifest.create({
   icon,
   title: '他说破了事实',
+  shortId: 'lcstt',
   router: {
     '/': 'LittleCousinSpeakTheTruth.tsx',
   },

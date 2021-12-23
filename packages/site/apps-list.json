@@ -1,0 +1,47 @@
+[
+  {
+    "appId": "Launcher",
+    "shortId": "launcher",
+    "title": "launcher"
+  },
+  {
+    "appId": "Acknowledgements",
+    "shortId": "ack",
+    "title": "致谢"
+  },
+  {
+    "appId": "Changelog",
+    "shortId": "changelog",
+    "title": "更新记录"
+  },
+  {
+    "appId": "About",
+    "shortId": "about",
+    "title": "关于"
+  },
+  {
+    "appId": "Blog",
+    "shortId": "blog",
+    "title": "blog"
+  },
+  {
+    "appId": "LittleCousinSpeakTheTruth",
+    "shortId": "lcstt",
+    "title": "他说破了事实"
+  },
+  {
+    "appId": "Calculator",
+    "shortId": "calc",
+    "title": "计算器"
+  },
+  {
+    "appId": "Painter",
+    "shortId": "painter",
+    "title": "出图"
+  },
+  {
+    "appId": "WinterNine",
+    "shortId": "nine",
+    "title": "管城春满"
+  }
+]

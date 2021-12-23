@@ -14,6 +14,8 @@ export interface IAcknowledgementItem {
 export interface IManifest<ROUTES extends string> {
   // app的路由根目录
   root?: string
+  // app的简写id，目前只用于 commitlint
+  shortId?: string
   // app的icon
   icon: string
   // app的标题
@@ -29,6 +31,7 @@ export interface IManifest<ROUTES extends string> {
 export interface AppDescribe extends IManifest<string> {
   appId: string
   root: string
+  shortId: string
 }
 
 export interface StaticPath<P> {

@@ -14,10 +14,9 @@ import LittleCousinSpeakTheTruth from '@/apps/LittleCousinSpeakTheTruth/manifest
 import Painter from '@/apps/Painter/manifest'
 import WinterNine from '@/apps/WinterNine/manifest'
 
-import { AppDescribe } from './types/app'
-import { camel2kebab } from './utils/string'
+import { registerApps } from './utils/app'
 
-export const appMap = {
+export default registerApps({
   Launcher,
   Acknowledgements,
   Changelog,
@@ -27,14 +26,4 @@ export const appMap = {
   Calculator,
   Painter,
   WinterNine,
-}
-
-const apps: AppDescribe[] = Object.entries(appMap).map(([key, app]) => ({
-  ...app,
-  // appId就是apps下的目录名
-  appId: key,
-  // 如果未声明root则使用appId作为root，且app的root均以/开头
-  root: app.root || `/${camel2kebab(key)}`,
-}))
-
-export default apps
+})

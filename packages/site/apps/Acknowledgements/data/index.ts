@@ -26,7 +26,7 @@ const globalAcknowledgementItems: IAcknowledgementItem[] = [
 /**
  * 汇总致谢名单并按类型分类导出
  */
-const acknowledgementItems = sitemap.reduce<IAcknowledgementItem[]>(
+const acknowledgementItems = sitemap.appList.reduce<IAcknowledgementItem[]>(
   (r, item) => [...r, ...(item.acknowledgements || [])],
   globalAcknowledgementItems,
 )

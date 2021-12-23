@@ -1,4 +1,4 @@
-const appsList = require('./apps-list')
+const appsList = require('./commit-scope-list')
 
 module.exports = {
   extends: ['@mine/commitlint-config'],

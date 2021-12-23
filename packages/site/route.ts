@@ -35,7 +35,7 @@ const getPageCode = (
 const trimEndTsx = (s: string): string => s.replace(/\.tsx$/, '')
 
 // 对每一个app按照router中配置的每一条匹配创建对应的以页面文件
-sitemap.forEach(app => {
+sitemap.appList.forEach(app => {
   const pages = Object.entries(app.router).map(([match, file]) => ({
     match,
     file,
@@ -57,3 +57,19 @@ sitemap.forEach(app => {
     )
   })
 })
+
+/**
+ * 生成一份apps的json列表供 commitlint 使用
+ */
+fs.writeFileSync(
+  path.resolve('./apps-list.json'),
+  `${JSON.stringify(
+    sitemap.appList.map(app => ({
+      appId: app.appId,
+      shortId: app.shortId,
+      title: app.title,
+    })),
+    undefined,
+    2,
+  )}\n`,
+)
