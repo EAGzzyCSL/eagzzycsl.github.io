@@ -11,6 +11,13 @@ export interface IAcknowledgementItem {
   brief?: string
 }
 
+export interface IChangelogItem {
+  // 日期，以yyyy-mm-dd格式书写
+  date: string
+  // 更新内容
+  content: string
+}
+
 export interface IManifest<ROUTES extends string> {
   // app的路由根目录
   root?: string
@@ -28,6 +35,8 @@ export interface IManifest<ROUTES extends string> {
   tableIndex: number
   // app使用的资源致谢
   acknowledgements?: IAcknowledgementItem[]
+  // 更新记录
+  changelog?: IChangelogItem[]
 }
 
 export interface AppDescribe extends IManifest<string> {

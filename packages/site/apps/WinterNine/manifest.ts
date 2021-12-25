@@ -21,4 +21,14 @@ export default Manifest.create({
       brief: '数九梅花图参考了图行天下提供的共享授权图片',
     },
   ],
+  changelog: [
+    {
+      date: '2021-12-06',
+      content: '大雪，为「管城春满」添加梅花',
+    },
+    {
+      date: '2020-12-21',
+      content: '冬至夜，创建「管城春满」',
+    },
+  ],
 })

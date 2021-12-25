@@ -27,4 +27,10 @@ export default Manifest.create({
       brief: '桌面壁纸来自 besthqwallpapers.com，为减小体积转制为svg',
     },
   ],
+  changelog: [
+    {
+      date: '2021-09-19',
+      content: '优化首页的启动与图片加载',
+    },
+  ],
 })
