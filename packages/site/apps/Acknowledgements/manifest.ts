@@ -9,6 +9,7 @@ export default Manifest.create({
   router: {
     '/': 'Acknowledgements.tsx',
   },
+  tableIndex: 0,
   acknowledgements: [
     Manifest.acknowledgeIcon8icon(
       icon,

@@ -5,6 +5,10 @@ export default class ShellStore {
 
   desktopImagePreLoaded = false
 
+  desktopCurrentTableIndex = 0
+
+  desktopTableCount = 0
+
   constructor() {
     makeAutoObservable(this)
   }
@@ -19,5 +23,13 @@ export default class ShellStore {
 
   markDesktopImageLoaded(): void {
     this.desktopImagePreLoaded = true
+  }
+
+  updateDesktopCurrentTableIndex(tableIndex: number): void {
+    this.desktopCurrentTableIndex = tableIndex
+  }
+
+  reportDesktopTableCount(tableCount: number): void {
+    this.desktopTableCount = tableCount
   }
 }

@@ -24,6 +24,8 @@ export interface IManifest<ROUTES extends string> {
   router: {
     [key in ROUTES]: string
   }
+  // app所属的桌面编号（从0开始）
+  tableIndex: number
   // app使用的资源致谢
   acknowledgements?: IAcknowledgementItem[]
 }

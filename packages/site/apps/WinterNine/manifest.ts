@@ -10,6 +10,7 @@ export default Manifest.create({
   router: {
     '/': 'WinterNine.tsx',
   },
+  tableIndex: 0,
   acknowledgements: [
     Manifest.acknowledgeIcon8icon(icon, 'https://icons8.com/icon/67935/雪人'),
     {

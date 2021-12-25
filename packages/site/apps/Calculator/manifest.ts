@@ -9,6 +9,7 @@ export default Manifest.create({
     '/': 'Calculator.tsx',
   },
   shortId: 'calc',
+  tableIndex: 1,
   acknowledgements: [
     Manifest.acknowledgeIcon8icon(
       icon,

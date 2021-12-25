@@ -8,18 +8,26 @@ import React from 'react'
 
 import styles from './ActionBar.module.scss'
 
-const ActionBar = (): JSX.Element => (
-  <div className={styles.actionBar}>
-    <Button className={styles.navButton} size='large'>
-      <NavigateBeforeRoundedIcon fontSize='large' />
-    </Button>
-    <Button className={styles.navButton} size='large'>
-      <StopRoundedIcon fontSize='large' />
-    </Button>
-    <Button className={styles.navButton} size='large'>
-      <NavigateNextRoundedIcon fontSize='large' />
-    </Button>
-  </div>
-)
+interface ActionBarProps {
+  onTablePrevious: () => void
+  onTableNext: () => void
+}
+
+const ActionBar = (props: ActionBarProps): JSX.Element => {
+  const { onTablePrevious, onTableNext } = props
+  return (
+    <div className={styles.actionBar}>
+      <Button className={styles.navButton} onClick={() => onTablePrevious()}>
+        <NavigateBeforeRoundedIcon fontSize='large' />
+      </Button>
+      <Button className={styles.navButton}>
+        <StopRoundedIcon fontSize='large' />
+      </Button>
+      <Button className={styles.navButton} onClick={() => onTableNext()}>
+        <NavigateNextRoundedIcon fontSize='large' />
+      </Button>
+    </div>
+  )
+}
 
 export default ActionBar

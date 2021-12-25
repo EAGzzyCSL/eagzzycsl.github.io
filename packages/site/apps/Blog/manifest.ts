@@ -9,6 +9,7 @@ export default Manifest.create({
     '/': 'Blog.tsx',
     '/[postId]': 'Post.tsx',
   },
+  tableIndex: 0,
   acknowledgements: [
     Manifest.acknowledgeIcon8icon(
       icon,

@@ -10,6 +10,7 @@ export default Manifest.create({
   router: {
     '/': 'LittleCousinSpeakTheTruth.tsx',
   },
+  tableIndex: 1,
   acknowledgements: [
     Manifest.acknowledgeIcon8icon(
       icon,

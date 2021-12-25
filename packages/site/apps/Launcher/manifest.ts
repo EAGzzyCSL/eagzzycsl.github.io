@@ -11,6 +11,7 @@ export default Manifest.create({
     '/': 'Launcher.tsx',
     '/404': 'NotFound.tsx',
   },
+  tableIndex: 0,
   acknowledgements: [
     {
       type: 'icon',

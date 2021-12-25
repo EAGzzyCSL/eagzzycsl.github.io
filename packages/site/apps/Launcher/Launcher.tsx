@@ -39,6 +39,25 @@ const Launcher = (): JSX.Element => {
       })
     }
   }
+
+  const handleToPagePrevious = (): void => {
+    const { desktopCurrentTableIndex } = store.shellStore
+    if (desktopCurrentTableIndex > 0) {
+      store.shellStore.updateDesktopCurrentTableIndex(
+        desktopCurrentTableIndex - 1,
+      )
+    }
+  }
+
+  const handleToPageNext = (): void => {
+    const { desktopCurrentTableIndex, desktopTableCount } = store.shellStore
+    if (desktopCurrentTableIndex < desktopTableCount - 1) {
+      store.shellStore.updateDesktopCurrentTableIndex(
+        desktopCurrentTableIndex + 1,
+      )
+    }
+  }
+
   return (
     <AppPage title='首页'>
       {!store.shellStore.desktopImagePreLoaded ? (
@@ -52,8 +71,19 @@ const Launcher = (): JSX.Element => {
         >
           <div className={styles.main}>
             <StatusBar />
-            <Desktop apps={sitemap.appList} />
-            <ActionBar />
+            <Desktop
+              currentTableIndex={store.shellStore.desktopCurrentTableIndex}
+              apps={sitemap.appList}
+              onTablePrevious={handleToPagePrevious}
+              onTableNext={handleToPageNext}
+              updateCurrentTableIndex={index =>
+                store.shellStore.updateDesktopCurrentTableIndex(index)
+              }
+            />
+            <ActionBar
+              onTablePrevious={handleToPagePrevious}
+              onTableNext={handleToPageNext}
+            />
           </div>
           <LockScreen
             locked={store.shellStore.isScreenLocked}
