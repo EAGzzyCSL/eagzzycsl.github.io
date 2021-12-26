@@ -43,5 +43,10 @@
     "appId": "WinterNine",
     "shortId": "nine",
     "title": "管城春满"
+  },
+  {
+    "appId": "Template",
+    "shortId": "template",
+    "title": "模板"
   }
 ]
