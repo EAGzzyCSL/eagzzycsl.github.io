@@ -10,7 +10,7 @@
     "dev": "next dev",
     "export:domain": "cross-env DEPLOY_ENV=domain npm run build && next export -o ../../domain-export/",
     "export:local": "cross-env DEPLOY_ENV=local npm run build && next export -o ../../local-export/",
-    "route": "webpack-node route.ts tsconfig.route.json ",
+    "route": "webpack-node ./scripts/route.ts ./scripts/tsconfig.route.json",
     "serve": "next start",
     "ts:check": "tsc --noEmit"
   },

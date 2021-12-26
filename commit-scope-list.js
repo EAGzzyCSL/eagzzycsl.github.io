@@ -1,4 +1,4 @@
-const appsList = require('./packages/site/apps-list')
+const appsList = require('./packages/site/scripts/apps-list')
 
 /**
  * commit的scope由基础的scope和site下的app名两部分组成

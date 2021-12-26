@@ -4,7 +4,7 @@
 import fs from 'fs'
 import path from 'path'
 
-import sitemap from './sitemap'
+import sitemap from '../sitemap'
 
 const PAGES_ROOT = path.resolve('./pages')
 
@@ -62,7 +62,7 @@ sitemap.appList.forEach(app => {
  * 生成一份apps的json列表供 commitlint 使用
  */
 fs.writeFileSync(
-  path.resolve('./apps-list.json'),
+  path.resolve('./scripts/apps-list.json'),
   `${JSON.stringify(
     sitemap.appList.map(app => ({
       appId: app.appId,

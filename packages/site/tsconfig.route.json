@@ -1,8 +1,0 @@
-{
-  "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "rootDir": "./",
-    "importHelpers": false
-  },
-  "include": ["./route.ts", "./global.d.ts"]
-}
