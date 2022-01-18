@@ -21,7 +21,7 @@ foo: bar
 正文
 `,
     ),
-  ).toStrictEqual(
+  ).toBe(
     `export default ${JSON.stringify({
       title: 'mock-title',
       foo: 'bar',
