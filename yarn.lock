@@ -3694,10 +3694,10 @@ cliui@^7.0.2:
     strip-ansi "^6.0.0"
     wrap-ansi "^7.0.0"
 
-cloc@^2.8.0:
-  version "2.8.0"
-  resolved "https://registry.npmmirror.com/cloc/download/cloc-2.8.0.tgz#43b8265fc475947540b9fb0c8125a17ca52d6739"
-  integrity sha1-Q7gmX8R1lHVAufsMgSWhfKUtZzk=
+cloc@^2.9.0:
+  version "2.9.0"
+  resolved "https://registry.npmmirror.com/cloc/download/cloc-2.9.0.tgz#70bcac923342acf8724ec3f618e7f6fd900706ba"
+  integrity sha512-Eo97MtQ5nozSd5CFcYgwUg5Ej7GVcdopVd5T+SGwJc3VAmu0vNxV/ZDl06QAQhCUkM2EGKl8nhhP1BZuQXGiZg==
 
 clone-deep@^4.0.1:
   version "4.0.1"
