@@ -31,6 +31,10 @@ const CodeView = ({ children, language }: CodeViewProps): JSX.Element => {
   )
 }
 
+CodeView.defaultProps = {
+  language: '',
+}
+
 export const InlineCodeView = ({
   children,
 }: {
