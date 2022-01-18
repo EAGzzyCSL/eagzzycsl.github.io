@@ -7749,6 +7749,17 @@ markdown-it@12.2.0:
     mdurl "^1.0.1"
     uc.micro "^1.0.5"
 
+markdown-it@12.3.2:
+  version "12.3.2"
+  resolved "https://registry.npmmirror.com/markdown-it/download/markdown-it-12.3.2.tgz#bf92ac92283fe983fe4de8ff8abfb5ad72cd0c90"
+  integrity sha512-TchMembfxfNVpHkbtriWltGWc+m3xszaRD0CZup7GFFhzIgQqxIfn3eGj1yZpfuflzPvfkt611B2Q/Bsk1YnGg==
+  dependencies:
+    argparse "^2.0.1"
+    entities "~2.1.0"
+    linkify-it "^3.0.1"
+    mdurl "^1.0.1"
+    uc.micro "^1.0.5"
+
 markdown-link@^0.1.1:
   version "0.1.1"
   resolved "https://registry.npmmirror.com/markdown-link/download/markdown-link-0.1.1.tgz#32c5c65199a6457316322d1e4229d13407c8c7cf"
@@ -7802,7 +7813,14 @@ markdownlint-rule-helpers@~0.15.0:
   resolved "https://registry.npmmirror.com/markdownlint-rule-helpers/download/markdownlint-rule-helpers-0.15.0.tgz#11434c573649b9235ae70b967314f5711f7d8fa8"
   integrity sha1-EUNMVzZJuSNa5wuWcxT1cR99j6g=
 
-markdownlint@^0.24.0, markdownlint@~0.24.0:
+markdownlint@^0.25.1:
+  version "0.25.1"
+  resolved "https://registry.npmmirror.com/markdownlint/download/markdownlint-0.25.1.tgz#df04536607ebeeda5ccd5e4f38138823ed623788"
+  integrity sha512-AG7UkLzNa1fxiOv5B+owPsPhtM4D6DoODhsJgiaNg1xowXovrYgOnLqAgOOFQpWOlHFVQUzjMY5ypNNTeov92g==
+  dependencies:
+    markdown-it "12.3.2"
+
+markdownlint@~0.24.0:
   version "0.24.0"
   resolved "https://registry.npmmirror.com/markdownlint/download/markdownlint-0.24.0.tgz#224b53f671367a237d40c8be1745c7be9a322671"
   integrity sha1-IktT9nE2eiN9QMi+F0XHvpoyJnE=
