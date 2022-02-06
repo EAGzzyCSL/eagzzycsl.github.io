@@ -3987,10 +3987,10 @@ commander@^2.20.0:
   resolved "https://registry.npmmirror.com/commander/download/commander-2.20.3.tgz?cache=0&sync_timestamp=1624609510051&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fcommander%2Fdownload%2Fcommander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha1-/UhehMA+tIgcIHIrpIA16FMa6zM=
 
-commander@~8.3.0:
-  version "8.3.0"
-  resolved "https://registry.npmmirror.com/commander/download/commander-8.3.0.tgz#4837ea1b2da67b9c616a67afbb0fafee567bca66"
-  integrity sha1-SDfqGy2me5xhamevuw+v7lZ7ymY=
+commander@~9.0.0:
+  version "9.0.0"
+  resolved "https://registry.npmmirror.com/commander/-/commander-9.0.0.tgz#86d58f24ee98126568936bd1d3574e0308a99a40"
+  integrity sha512-JJfP2saEKbQqvW+FI93OYUB4ByV5cizMpFMiiJI8xDbBvQvSkIk0VvQdn1CZ8mqAO8Loq2h0gYTYtDFUZUeERw==
 
 commitizen@^4.0.3, commitizen@^4.2.4:
   version "4.2.4"
@@ -4522,7 +4522,7 @@ dedent@0.7.0, dedent@^0.7.0:
   resolved "https://registry.npmmirror.com/dedent/download/dedent-0.7.0.tgz#2495ddbaf6eb874abb0e1be9df22d2e5a544326c"
   integrity sha1-JJXduvbrh0q7Dhvp3yLS5aVEMmw=
 
-deep-extend@^0.6.0, deep-extend@~0.6.0:
+deep-extend@^0.6.0:
   version "0.6.0"
   resolved "https://registry.npmmirror.com/deep-extend/download/deep-extend-0.6.0.tgz#c4fa7c95404a17a9c3e8ca7e1537312b736330ac"
   integrity sha1-xPp8lUBKF6nD6Mp+FTcxK3NjMKw=
@@ -5640,10 +5640,15 @@ get-port@^5.1.1:
   resolved "https://registry.npmmirror.com/get-port/download/get-port-5.1.1.tgz#0469ed07563479de6efb986baf053dcd7d4e3193"
   integrity sha1-BGntB1Y0ed5u+5hrrwU9zX1OMZM=
 
-get-stdin@^8.0.0, get-stdin@~8.0.0:
+get-stdin@^8.0.0:
   version "8.0.0"
   resolved "https://registry.npmmirror.com/get-stdin/download/get-stdin-8.0.0.tgz?cache=0&sync_timestamp=1618557624027&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fget-stdin%2Fdownload%2Fget-stdin-8.0.0.tgz#cbad6a73feb75f6eeb22ba9e01f89aa28aa97a53"
   integrity sha1-y61qc/63X27rIrqeAfiaooqpelM=
+
+get-stdin@~9.0.0:
+  version "9.0.0"
+  resolved "https://registry.npmmirror.com/get-stdin/-/get-stdin-9.0.0.tgz#3983ff82e03d56f1b2ea0d3e60325f39d703a575"
+  integrity sha512-dVKBjfWisLAicarI2Sf+JuBE/DghV4UzNAVe9yhEJuzeREd3JhOTE9cUaJTeSa77fsbQUK3pcOpJfM59+VKZaA==
 
 get-stream@^6.0.0:
   version "6.0.1"
@@ -6263,10 +6268,15 @@ ignore@^5.1.1, ignore@^5.1.4, ignore@^5.1.8:
   resolved "https://registry.npmmirror.com/ignore/download/ignore-5.1.8.tgz#f150a8b50a34289b33e22f5889abd4d8016f0e57"
   integrity sha1-8VCotQo0KJsz4i9YiavU2AFvDlc=
 
-ignore@^5.1.9, ignore@~5.1.9:
+ignore@^5.1.9:
   version "5.1.9"
   resolved "https://registry.npmmirror.com/ignore/download/ignore-5.1.9.tgz?cache=0&sync_timestamp=1635926664038&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fignore%2Fdownload%2Fignore-5.1.9.tgz#9ec1a5cbe8e1446ec60d4420060d43aa6e7382fb"
   integrity sha1-nsGly+jhRG7GDUQgBg1Dqm5zgvs=
+
+ignore@~5.2.0:
+  version "5.2.0"
+  resolved "https://registry.npmmirror.com/ignore/-/ignore-5.2.0.tgz#6d3bac8fa7fe0d45d9f9be7bac2fc279577e345a"
+  integrity sha512-CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ==
 
 image-size@1.0.0:
   version "1.0.0"
@@ -7721,16 +7731,6 @@ lodash._reinterpolate@^3.0.0:
   resolved "https://registry.npmmirror.com/lodash._reinterpolate/download/lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d"
   integrity sha1-DM8tiRZq8Ds2Y8eWU4t1rG4RTZ0=
 
-lodash.differencewith@~4.5.0:
-  version "4.5.0"
-  resolved "https://registry.npmmirror.com/lodash.differencewith/download/lodash.differencewith-4.5.0.tgz#bafafbc918b55154e179176a00bb0aefaac854b7"
-  integrity sha1-uvr7yRi1UVTheRdqALsK76rIVLc=
-
-lodash.flatten@~4.4.0:
-  version "4.4.0"
-  resolved "https://registry.npmmirror.com/lodash.flatten/download/lodash.flatten-4.4.0.tgz#f31c22225a9632d2bbf8e4addbef240aa765a61f"
-  integrity sha1-8xwiIlqWMtK7+OSt2+8kCqdlph8=
-
 lodash.get@^4:
   version "4.4.2"
   resolved "https://registry.npmmirror.com/lodash.get/download/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
@@ -7901,17 +7901,6 @@ map-obj@^4.0.0:
   resolved "https://registry.npmmirror.com/map-obj/download/map-obj-4.2.1.tgz#e4ea399dbc979ae735c83c863dd31bdf364277b7"
   integrity sha1-5Oo5nbyXmuc1yDyGPdMb3zZCd7c=
 
-markdown-it@12.2.0:
-  version "12.2.0"
-  resolved "https://registry.npmmirror.com/markdown-it/download/markdown-it-12.2.0.tgz#091f720fd5db206f80de7a8d1f1a7035fd0d38db"
-  integrity sha1-CR9yD9XbIG+A3nqNHxpwNf0NONs=
-  dependencies:
-    argparse "^2.0.1"
-    entities "~2.1.0"
-    linkify-it "^3.0.1"
-    mdurl "^1.0.1"
-    uc.micro "^1.0.5"
-
 markdown-it@12.3.2:
   version "12.3.2"
   resolved "https://registry.npmmirror.com/markdown-it/download/markdown-it-12.3.2.tgz#bf92ac92283fe983fe4de8ff8abfb5ad72cd0c90"
@@ -7951,44 +7940,33 @@ markdown-toc@^1.2.0:
     repeat-string "^1.6.1"
     strip-color "^0.1.0"
 
-markdownlint-cli@^0.30.0:
-  version "0.30.0"
-  resolved "https://registry.npmmirror.com/markdownlint-cli/download/markdownlint-cli-0.30.0.tgz#4ec0ab85a491eb161182e5c26eff308bf90f18f3"
-  integrity sha1-TsCrhaSR6xYRguXCbv8wi/kPGPM=
+markdownlint-cli@^0.31.1:
+  version "0.31.1"
+  resolved "https://registry.npmmirror.com/markdownlint-cli/-/markdownlint-cli-0.31.1.tgz#8db34eec453e84bed06a954c8a289333f7c2c1c7"
+  integrity sha512-keIOMwQn+Ch7MoBwA+TdkyVMuxAeZFEGmIIlvwgV0Z1TGS5MxPnRr29XCLhkNzCHU+uNKGjU+VEjLX+Z9kli6g==
   dependencies:
-    commander "~8.3.0"
-    deep-extend "~0.6.0"
-    get-stdin "~8.0.0"
+    commander "~9.0.0"
+    get-stdin "~9.0.0"
     glob "~7.2.0"
-    ignore "~5.1.9"
+    ignore "~5.2.0"
     js-yaml "^4.1.0"
     jsonc-parser "~3.0.0"
-    lodash.differencewith "~4.5.0"
-    lodash.flatten "~4.4.0"
-    markdownlint "~0.24.0"
-    markdownlint-rule-helpers "~0.15.0"
-    minimatch "~3.0.4"
-    minimist "~1.2.5"
+    markdownlint "~0.25.1"
+    markdownlint-rule-helpers "~0.16.0"
+    minimatch "~3.0.5"
     run-con "~1.2.10"
 
-markdownlint-rule-helpers@~0.15.0:
-  version "0.15.0"
-  resolved "https://registry.npmmirror.com/markdownlint-rule-helpers/download/markdownlint-rule-helpers-0.15.0.tgz#11434c573649b9235ae70b967314f5711f7d8fa8"
-  integrity sha1-EUNMVzZJuSNa5wuWcxT1cR99j6g=
+markdownlint-rule-helpers@~0.16.0:
+  version "0.16.0"
+  resolved "https://registry.npmmirror.com/markdownlint-rule-helpers/-/markdownlint-rule-helpers-0.16.0.tgz#c327f72782bd2b9475127a240508231f0413a25e"
+  integrity sha512-oEacRUVeTJ5D5hW1UYd2qExYI0oELdYK72k1TKGvIeYJIbqQWAz476NAc7LNixSySUhcNl++d02DvX0ccDk9/w==
 
-markdownlint@^0.25.1:
+markdownlint@^0.25.1, markdownlint@~0.25.1:
   version "0.25.1"
   resolved "https://registry.npmmirror.com/markdownlint/download/markdownlint-0.25.1.tgz#df04536607ebeeda5ccd5e4f38138823ed623788"
   integrity sha512-AG7UkLzNa1fxiOv5B+owPsPhtM4D6DoODhsJgiaNg1xowXovrYgOnLqAgOOFQpWOlHFVQUzjMY5ypNNTeov92g==
   dependencies:
     markdown-it "12.3.2"
-
-markdownlint@~0.24.0:
-  version "0.24.0"
-  resolved "https://registry.npmmirror.com/markdownlint/download/markdownlint-0.24.0.tgz#224b53f671367a237d40c8be1745c7be9a322671"
-  integrity sha1-IktT9nE2eiN9QMi+F0XHvpoyJnE=
-  dependencies:
-    markdown-it "12.2.0"
 
 math-random@^1.0.1:
   version "1.0.4"
@@ -8527,7 +8505,7 @@ minimalistic-crypto-utils@^1.0.1:
   resolved "https://registry.npmmirror.com/minimalistic-crypto-utils/download/minimalistic-crypto-utils-1.0.1.tgz#f6c00c1c0b082246e5c4d99dfb8c7c083b2b582a"
   integrity sha1-9sAMHAsIIkblxNmd+4x8CDsrWCo=
 
-minimatch@^3.0.4, minimatch@~3.0.4:
+minimatch@^3.0.4:
   version "3.0.4"
   resolved "https://registry.npmmirror.com/minimatch/download/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
   integrity sha1-UWbihkV/AzBgZL5Ul+jbsMPTIIM=
@@ -8541,6 +8519,13 @@ minimatch@^3.1.2:
   dependencies:
     brace-expansion "^1.1.7"
 
+minimatch@~3.0.5:
+  version "3.0.8"
+  resolved "https://registry.npmmirror.com/minimatch/-/minimatch-3.0.8.tgz#5e6a59bd11e2ab0de1cfb843eb2d82e546c321c1"
+  integrity sha512-6FsRAQsxQ61mw+qP1ZzbL9Bc78x2p5OqNgNpnoAFLTrX8n5Kxph0CsnhmKKNXTWjXqU5L0pGPR7hYk+XWZr60Q==
+  dependencies:
+    brace-expansion "^1.1.7"
+
 minimist-options@4.1.0:
   version "4.1.0"
   resolved "https://registry.npmmirror.com/minimist-options/download/minimist-options-4.1.0.tgz#c0655713c53a8a2ebd77ffa247d342c40f010619"
@@ -8550,7 +8535,7 @@ minimist-options@4.1.0:
     is-plain-obj "^1.1.0"
     kind-of "^6.0.3"
 
-minimist@1.2.5, minimist@^1.2.0, minimist@^1.2.5, minimist@~1.2.5:
+minimist@1.2.5, minimist@^1.2.0, minimist@^1.2.5:
   version "1.2.5"
   resolved "https://registry.npmmirror.com/minimist/download/minimist-1.2.5.tgz?cache=0&sync_timestamp=1618847181284&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fminimist%2Fdownload%2Fminimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
   integrity sha1-Z9ZgFLZqaoqqDAg8X9WN9OTpdgI=
