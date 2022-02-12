@@ -1,5 +1,15 @@
 .simple-app-bar {
+  &.white-bg {
+    background-color: white;
+  }
+
   .main-content {
     flex: 1 0 0;
+  }
+
+  @media (orientation: landscape) {
+    .extra-icon-portrait {
+      display: none;
+    }
   }
 }

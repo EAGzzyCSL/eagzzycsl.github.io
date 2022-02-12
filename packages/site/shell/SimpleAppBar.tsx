@@ -6,7 +6,9 @@ import {
   Typography,
   Menu,
   MenuItem,
+  Tooltip,
 } from '@mui/material'
+import cx from 'classnames'
 import React, { useState } from 'react'
 
 import { useMyRouter } from '@/router'
@@ -14,22 +16,31 @@ import { useMyRouter } from '@/router'
 import AppBarHomeButton from './AppBarHomeButton'
 import styles from './SimpleAppBar.module.scss'
 
+const TOOLTIP_DELAY = 800
+
 interface SimpleAppBarProps {
-  title?: string
   inverse?: boolean
+  whiteBg?: boolean
   sticky?: boolean
+  title?: string
   mainContent?: JSX.Element
-  endIcon?: JSX.Element
-  onEndIconClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
+  hideMenuIcon?: boolean
+  extraIcons?: {
+    visible?: 'always' | 'never' | 'portraitOnly'
+    component: JSX.Element
+    tooltip: string
+    onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
+  }[]
 }
 
 const SimpleAppBar = ({
   title,
   inverse,
+  whiteBg,
   sticky,
   mainContent,
-  endIcon,
-  onEndIconClick,
+  hideMenuIcon,
+  extraIcons,
 }: SimpleAppBarProps): JSX.Element => {
   const router = useMyRouter()
 
@@ -38,13 +49,16 @@ const SimpleAppBar = ({
   const handleShowMenu = (event: React.MouseEvent<HTMLButtonElement>): void => {
     setMenuAnchor(event.currentTarget)
   }
+
   const handleCloseMenu = (): void => {
     setMenuAnchor(null)
   }
 
   return (
     <AppBar
-      className={styles.simpleAppBar}
+      className={cx(styles.simpleAppBar, {
+        [styles.whiteBg]: whiteBg,
+      })}
       position={sticky ? 'sticky' : 'static'}
       elevation={inverse ? 0 : undefined}
       color={inverse ? 'transparent' : 'primary'}
@@ -53,6 +67,7 @@ const SimpleAppBar = ({
         <AppBarHomeButton inverse={inverse} />
 
         <div className={styles.mainContent}>
+          {/* 如果定义了mainContent就不展示title */}
           {mainContent}
           {title && (
             <Typography
@@ -64,26 +79,45 @@ const SimpleAppBar = ({
             </Typography>
           )}
         </div>
+        <div>
+          {extraIcons
+            ?.filter(item => item.visible !== 'never')
+            .map((ei, index) => (
+              <Tooltip
+                // eslint-disable-next-line react/no-array-index-key
+                key={index}
+                title={ei.tooltip}
+                enterDelay={TOOLTIP_DELAY}
+              >
+                <IconButton
+                  className={cx({
+                    [styles.extraIconPortrait]: ei.visible === 'portraitOnly',
+                  })}
+                  color={inverse ? 'primary' : 'inherit'}
+                  onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
+                    if (ei.onClick) {
+                      ei.onClick(event)
+                    }
+                  }}
+                >
+                  {ei.component}
+                </IconButton>
+              </Tooltip>
+            ))}
+          {!hideMenuIcon && (
+            <Tooltip title='菜单项' enterDelay={TOOLTIP_DELAY}>
+              <IconButton
+                color={inverse ? 'primary' : 'inherit'}
+                onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
+                  handleShowMenu(event)
+                }}
+              >
+                <MenuRoundedIcon />
+              </IconButton>
+            </Tooltip>
+          )}
+        </div>
 
-        {endIcon && (
-          <IconButton
-            edge='end'
-            color={inverse ? 'primary' : 'inherit'}
-            onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
-              // 临时方案，如果endIcon是menu就展示默认菜单
-              if (
-                endIcon === SimpleAppBar.defaultProps.endIcon
-                // endIcon?.type?.type?.render?.displayName === 'MenuRoundedIcon'
-              ) {
-                handleShowMenu(event)
-              } else if (onEndIconClick) {
-                onEndIconClick(event)
-              }
-            }}
-          >
-            {endIcon}
-          </IconButton>
-        )}
         <Menu
           anchorEl={menuAnchor}
           open={!!menuAnchor}
@@ -124,10 +158,11 @@ const SimpleAppBar = ({
 SimpleAppBar.defaultProps = {
   title: '',
   inverse: false,
+  whiteBg: false,
   sticky: false,
   mainContent: undefined,
-  endIcon: <MenuRoundedIcon />,
-  onEndIconClick: () => {},
+  hideMenuIcon: false,
+  extraIcons: [],
 }
 
 export default SimpleAppBar

@@ -29,7 +29,6 @@ const AppBarHomeButton = (props: AppBarHomeButtonProps): JSX.Element => {
       edge='start'
       color={inverse ? 'primary' : 'inherit'}
       onClick={handleBack}
-      size='large'
     >
       {router.couldBack() ? <ArrowBackRoundedIcon /> : <HomeRoundedIcon />}
     </IconButton>

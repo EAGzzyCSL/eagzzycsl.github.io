@@ -1,5 +1,6 @@
 import { cyan as colorCyan, red as colorRed } from '@mui/material/colors'
 import { createTheme, Theme, ThemeProvider } from '@mui/material/styles'
+import cx from 'classnames'
 import Head from 'next/head'
 import React from 'react'
 
@@ -8,6 +9,7 @@ import styles from './AppPage.module.scss'
 interface AppPageProps {
   title: string
   theme?: Theme
+  fullHeight?: boolean
   children: JSX.Element
 }
 
@@ -25,9 +27,14 @@ export const defaultTheme = createTheme({
 const AppPage = ({
   title,
   children,
+  fullHeight,
   theme = defaultTheme,
 }: AppPageProps): JSX.Element => (
-  <main className={styles.appPage}>
+  <main
+    className={cx(styles.appPage, {
+      [styles.fullHeight]: fullHeight,
+    })}
+  >
     <Head>
       <title>芹也·{title}</title>
     </Head>
@@ -37,6 +44,7 @@ const AppPage = ({
 
 AppPage.defaultProps = {
   theme: defaultTheme,
+  fullHeight: false,
 }
 
 export default AppPage

@@ -94,7 +94,7 @@ const WinterNine = (): JSX.Element => {
   const drawIndex = Math.max(dayDiff + 1, 0)
 
   return (
-    <AppPage title='管城春满' theme={theme}>
+    <AppPage title='管城春满' theme={theme} fullHeight>
       <section
         className={styles.winterNine}
         style={{

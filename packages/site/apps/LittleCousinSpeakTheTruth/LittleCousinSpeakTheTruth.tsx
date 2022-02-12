@@ -152,21 +152,28 @@ const CenterContent = ({
     <div className={styles.contentCenter}>
       <SimpleAppBar
         title={chats.leftName}
-        endIcon={
-          <>
-            <MoreVertRoundedIcon
-              ref={moreIconVert}
-              className={styles.headerMoreVert}
-              fontSize='large'
-            />
-            <MoreHorizRoundedIcon
-              ref={moreIconHoriz}
-              className={styles.headerMoreHoriz}
-              fontSize='large'
-            />
-          </>
-        }
-        onEndIconClick={handleTapMore}
+        hideMenuIcon
+        extraIcons={[
+          {
+            visible: 'always',
+            component: (
+              <>
+                <MoreVertRoundedIcon
+                  ref={moreIconVert}
+                  className={styles.headerMoreVert}
+                  fontSize='large'
+                />
+                <MoreHorizRoundedIcon
+                  ref={moreIconHoriz}
+                  className={styles.headerMoreHoriz}
+                  fontSize='large'
+                />
+              </>
+            ),
+            tooltip: '菜单',
+            onClick: handleTapMore,
+          },
+        ]}
       />
       <Menu
         anchorEl={menuAnchorEl}
@@ -210,7 +217,7 @@ const LittleCousinSpeakTheTruth = ({
   const [referenceVisible, setReferenceVisible] = useState(false)
 
   return (
-    <AppPage title='他说破了事实' theme={theme}>
+    <AppPage title='他说破了事实' theme={theme} fullHeight>
       <section className={styles.littleCousinSpeakTheTruth}>
         <div className={styles.leftPanel}>
           <LeftContent />

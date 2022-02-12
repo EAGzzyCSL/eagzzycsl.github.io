@@ -31,7 +31,7 @@ const theme = createTheme({
 })
 
 const Changelog = (): JSX.Element => (
-  <AppPage title='更新记录' theme={theme}>
+  <AppPage title='更新记录' theme={theme} fullHeight>
     <section className={styles.changelog}>
       <SimpleAppBar title='更新记录' inverse />
       <div className={styles.main}>

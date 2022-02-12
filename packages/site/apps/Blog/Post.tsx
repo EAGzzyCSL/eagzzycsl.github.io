@@ -1,27 +1,20 @@
-import { MenuRounded as MenuRoundedIcon } from '@mui/icons-material'
-import {
-  Alert,
-  Typography,
-  AppBar,
-  Drawer,
-  IconButton,
-  Toolbar,
-} from '@mui/material'
+import { ViewSidebarRounded as ViewSidebarRoundedIcon } from '@mui/icons-material'
+import { Alert, Typography, Drawer } from '@mui/material'
 import dayjs from 'dayjs'
 import { GetStaticPropsResult } from 'next'
 import React, { useState } from 'react'
 
 import { useMyRouter } from '@/router'
-import AppBarHomeButton from '@/shell/AppBarHomeButton'
+import Catalogue from '@/share/Catalogue'
 import AppPage from '@/shell/AppPage'
 import Discussion from '@/shell/Discussion'
+import SimpleAppBar from '@/shell/SimpleAppBar'
 import { StaticPathsResponse, StaticPath } from '@/types/app'
 import Logger from '@/utils/logger'
 
 import _exportedPosts from './data/index'
 import ArticleDisplay from './parts/ArticleDisplay'
 import BlogTags from './parts/BlogTags'
-import Catalogue from './parts/Catalogue'
 import styles from './Post.module.scss'
 import theme from './theme'
 import { Article } from './type'
@@ -59,35 +52,21 @@ const Post = (props: PostProps): JSX.Element => {
   return (
     <AppPage title={PostContent.title} theme={theme}>
       <main className={styles.post}>
-        <AppBar color='transparent' position='static'>
-          <Toolbar className={styles.toolbar}>
-            <AppBarHomeButton inverse />
-            <Typography
-              className={styles.blogName}
-              component='h1'
-              variant='h6'
-              color='primary'
-            >
-              {PostContent.title}
-            </Typography>
-            <IconButton
-              className={styles.menuButtonLandscape}
-              color='primary'
-              size='large'
-            >
-              <MenuRoundedIcon />
-            </IconButton>
+        <SimpleAppBar
+          inverse
+          sticky
+          whiteBg
+          title={PostContent.title}
+          extraIcons={[
+            {
+              visible: 'portraitOnly',
+              component: <ViewSidebarRoundedIcon />,
+              onClick: handleTapMenu,
+              tooltip: '显示目录',
+            },
+          ]}
+        />
 
-            <IconButton
-              className={styles.menuButtonPortrait}
-              color='primary'
-              onClick={handleTapMenu}
-              size='large'
-            >
-              <MenuRoundedIcon />
-            </IconButton>
-          </Toolbar>
-        </AppBar>
         <div className={styles.main}>
           <div className={styles.leftSide}>
             <BlogTags tags={PostContent.tags} />
@@ -113,7 +92,9 @@ const Post = (props: PostProps): JSX.Element => {
             <Discussion title={PostContent.title} />
           </div>
           <div className={styles.rightSide}>
-            <Catalogue toc={PostContent.toc} />
+            <div className={styles.catalogueContainer}>
+              <Catalogue toc={PostContent.toc} />
+            </div>
           </div>
           <Drawer
             anchor='right'

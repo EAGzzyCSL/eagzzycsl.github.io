@@ -176,15 +176,17 @@ const AnchorSymbol = ({
 }): JSX.Element => {
   const id = `${autoId}|${headingText}`
   return (
-    <Typography
-      id={id}
-      href={`#${id}`}
-      component='a'
-      color='inherit'
-      className={styles.anchorSymbol}
-    >
-      <LinkRoundedIcon />
-    </Typography>
+    <div className={styles.anchorSymbol}>
+      <div id={id} className={styles.anchor} />
+      <Typography
+        href={`#${id}`}
+        component='a'
+        color='inherit'
+        className={styles.anchorIcon}
+      >
+        <LinkRoundedIcon />
+      </Typography>
+    </div>
   )
 }
 

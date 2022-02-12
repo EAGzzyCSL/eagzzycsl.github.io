@@ -59,7 +59,7 @@ const Launcher = (): JSX.Element => {
   }
 
   return (
-    <AppPage title='首页'>
+    <AppPage title='首页' fullHeight>
       {!store.shellStore.desktopImagePreLoaded ? (
         <BootLoading />
       ) : (

@@ -105,7 +105,7 @@ const Painter = (): JSX.Element => {
   }
 
   return (
-    <AppPage title='出图' theme={theme}>
+    <AppPage title='出图' theme={theme} fullHeight>
       <section className={styles.painter}>
         <SimpleAppBar title='出图' inverse />
         <div className={styles.main}>

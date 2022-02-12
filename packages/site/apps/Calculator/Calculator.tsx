@@ -75,7 +75,7 @@ const Calculator = (): JSX.Element => {
   const ActivePanel = panels[activeTabIndex].component
 
   return (
-    <AppPage title='计算器' theme={theme}>
+    <AppPage title='计算器' theme={theme} fullHeight>
       <section className={styles.calculator}>
         <SimpleAppBar
           inverse

@@ -61,7 +61,7 @@ const Blog = ({ posts = dataOfPosts }: BlogProps): JSX.Element => {
   )
 
   return (
-    <AppPage title='芹也集' theme={theme}>
+    <AppPage title='芹也集' theme={theme} fullHeight>
       <section
         className={cx(styles.blog, {
           [styles.focusOnLeft]: store.blogStore.focusOnLeft,
@@ -69,7 +69,17 @@ const Blog = ({ posts = dataOfPosts }: BlogProps): JSX.Element => {
       >
         <Box className={styles.leftSide}>
           {/* TODO: 实现搜索功能 */}
-          <SimpleAppBar inverse endIcon={<SearchRoundedIcon />} />
+          <SimpleAppBar
+            inverse
+            hideMenuIcon
+            extraIcons={[
+              {
+                visible: 'always',
+                component: <SearchRoundedIcon />,
+                tooltip: '搜索',
+              },
+            ]}
+          />
           <Box className={styles.content}>
             <Box>
               <Typography
