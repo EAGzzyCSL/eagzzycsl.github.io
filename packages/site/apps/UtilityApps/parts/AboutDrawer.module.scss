@@ -1,0 +1,33 @@
+$icon-size: 24px;
+
+.about-drawer {
+  display: flex;
+  flex-direction: column;
+  max-width: 90vw;
+  padding: 32px;
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+  }
+}
+
+.trait-list {
+  .list {
+    padding: 0;
+
+    .list-item {
+      display: flex;
+      align-items: flex-start;
+      list-style: none;
+
+      .particular {
+        margin-top: 4px;
+      }
+    }
+  }
+}

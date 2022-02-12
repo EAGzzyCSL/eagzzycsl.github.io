@@ -1,0 +1,11 @@
+$icon-size: 24px;
+
+.spec-icon {
+  width: $icon-size;
+  height: $icon-size;
+}
+
+.info-icons {
+  display: flex;
+  justify-content: center;
+}

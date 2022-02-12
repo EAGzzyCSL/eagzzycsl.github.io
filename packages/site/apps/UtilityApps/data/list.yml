@@ -1,0 +1,262 @@
+- domain: 粘贴板管理
+  name: Maccy
+  link: https://maccy.app/
+  trait: 开源
+  platform: mac
+  remarks:
+    - 历史记录同时支持文本和图片，完全可以满足基本的使用场景，是付费软件Paste的绝佳平替。
+    - UI比较简单，比不得Paste，功能也不及Paste丰富，但Paste需要年费订阅。
+
+- domain: 文本编辑器
+  name: Sublime
+  link: https://www.sublimetext.com/
+  trait: 开源、受限免费
+  platform: mac、win、linux
+  remarks:
+    - 相比于系统自带的编辑器，Sublime 的在轻量、启动速度、功能、大文件处理等方面做到了平衡且表现都不错，很适合替换系统默认编辑器。
+    - 作为一款付费软件，Sublime2 允许无限期试用：https://www.sublimetext.com/2
+
+- domain: 二维码处理
+  name: QR Capture
+  link: https://apps.apple.com/us/app/qr-capture/id1369524274
+  trait:
+  platform: mac
+  remarks:
+    - 适用于一个很特殊的场景，使用电脑扫描电脑屏幕上的二维码。
+
+- domain: 二维码处理
+  name: QR 扫描
+  link: https://play.google.com/store/apps/details?id=com.teacapps.barcodescanner
+  trait: 有广告
+  platform: android
+  remarks:
+    - 虽然现在各家 App 都带了扫码功能，但会有需要联网、只支持自家链接、检测到网址就直接打开等Feature，并不适合只单纯期望解码二维码的场景。
+    - 考虑到使用频率不会太高，广告的影响可以忽略。
+
+- domain: 二维码处理
+  name: 草料二维码
+  link: https://cli.im/
+  trait: 受限免费
+  platform: web
+  remarks:
+    - 域名好记，功能丰富，很适合一般的需要创建二维码的场景。虽然有付费功能但我没有使用过。
+    - 新建二维码时注意区分静态码和活码。
+
+- domain: 图像编辑
+  name: Pixelmator Pro
+  link: https://www.pixelmator.com/pro/
+  trait: 付费
+  platform: mac、ios
+  remarks:
+    - 相比于 PhotoShop，它的价格与体积更适合我这样的非专业用户。
+    - 可以蹲一蹲黑五这样的大促，会有50%的折扣。
+
+- domain: 图像压缩
+  name: TinyPng
+  link: https://tinypng.com/
+  trait: 受限免费
+  platform: web
+  remarks:
+    - 免费版支持单张图片最大5M。
+
+- domain: 截图
+  name: Xnip
+  link: https://zh.xnipapp.com/
+  trait: 受限免费
+  platform: mac
+  remarks:
+    - 功能丰富操作简单，常用到的窗口截图、截图标注、滚动截图等场景都可以满足。
+    - 绝大部分功能是免费的，足够日常使用。
+
+- domain: 截图
+  name: 带壳截图Pro
+  link: https://sulisong.cn/index.php/archives/6/
+  trait: 受限免费
+  platform: android
+  remarks:
+    - 用来给截图加上手机壳，适合于做海报等场景。
+
+- domain: 磁盘管理
+  name: DiskGenius
+  link: https://www.diskgenius.cn/
+  trait: 受限免费
+  platform: win
+  remarks:
+    - 提供图形化界面，操作起来更直观。
+    - 分区功能是免费的，数据恢复等高级功能需要付费。
+
+- domain: 磁盘占用分析
+  name: WizTree
+  link: https://wiztreefree.com/
+  trait: 受限免费
+  platform: win
+  remarks:
+    - 免费版与付费版功能无差异，付费版可以用于商业使用。
+
+- domain: 数据恢复
+  name: Ontrack EasyRecovery
+  link: https://www.ontrack.com/en-us/data-recovery/software
+  trait: 付费
+  platform: mac、win、ios
+  remarks:
+    - 数据无价，自己动手恢复数据时请务必权衡风险。如果数据非常重要，建议求助专业人士。
+    - 软件本身需要付费，但可以免费试用。
+    - 下载时注意避免下到山寨产品。
+    - 数据无价，丢失数据后切莫慌乱，不要病急乱投医。
+
+- domain: 风扇转速管理
+  name: Macs Fan Control
+  link: https://crystalidea.com/macs-fan-control
+  trait: 受限免费
+  platform: mac
+  remarks:
+    - 基础功能是免费的，付费可保存多个自定义配置。
+    - 可以设置风扇转速基于Palm Rest，避免掌托位置烫手。
+
+- domain: 多桌面管理
+  name: WhichSpace
+  link: https://github.com/gechr/WhichSpace
+  trait: 开源
+  platform: mac
+  remarks:
+    - 在状态栏上提供一个指示当前桌面编号的图标。
+
+- domain: 多窗口管理
+  name: Rectangle
+  link: https://rectangleapp.com/
+  trait: 开源
+  platform: mac
+  remarks:
+    - 提供快捷键用于切换窗口全屏/半屏，也支持切换显示器。
+
+- domain: 状态栏管理
+  name: Dozer
+  link: https://github.com/Mortennn/Dozer/
+  trait: 开源
+  platform: mac
+  remarks:
+    - 提供隐藏状态栏指定图标的功能，使状态栏回归清爽。
+
+- domain: 软件包管理
+  name: Homebrew
+  trait: 开源
+  link: https://brew.sh/
+  platform: mac
+  remarks:
+    - mac 平台下最流行的包管理工具，很多命令行程序或桌面应用都可以通过 brew 安装。
+
+- domain: 软件包管理
+  name: scoop
+  trait: 开源
+  link: https://scoop.sh/
+  platform: win
+  remarks:
+    - Windows 上流行的包管理工具之一，但 Windows 下包管理工具的生态和规模远不及 mac、Linux 平台。
+
+- domain: 远程桌面连接
+  name: Microsoft remote desktop
+  link: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients
+  trait:
+  platform: mac、win、android、ios
+  remarks:
+    - 微软官方提供的远程桌面客户端，可用于连接远程 Windows 机器。
+
+- domain: 天文
+  name: 星空地图
+  link: https://github.com/sky-map-team/stardroid
+  trait: 开源
+  platform: android
+  remarks:
+    - 利用手机的陀螺仪，提供沉浸式的星空地图，可以用来快速识别或定位夜空中看到的星星。
+
+- domain: 删除文件到回收站
+  name: trash
+  link: https://github.com/sindresorhus/trash
+  trait: 开源
+  platform: mac、win、linux
+  remarks:
+    - 可以用于替换 rm 命令，删除文件时不再直接删除而是移动到回收站，一来删除速度飞升，二来万一误删还有后悔的余地。
+
+- domain: 图标制作
+  name: 在线工具
+  link: https://tool.lu/favicon/
+  trait:
+  platform: web
+  remarks:
+    - 在线工具用于制作 favicon，最大支持128px。
+
+- domain: 图标制作
+  name: Image2icon
+  link: https://apps.apple.com/cn/app/image2icon-%E5%88%B6%E4%BD%9C%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E6%A0%87/id992115977
+  trait: 受限免费
+  platform: mac
+  remarks:
+    - 支持导出多种格式的图标文件，自带模板功能丰富，大部分功能都免费。
+    - 导出 mac 使用的 .icns 是免费的，但导出 Windows 使用的 .icon 文件需要付费，因此适合于只为 mac 下应用制作 icon 的场景。
+
+- domain: 远程协助
+  name: TeamViewer
+  link: https://www.teamviewer.com/
+  trait: 受限免费
+  platform: mac、win、linux、android、ios、web
+  remarks:
+    - 入门版支持个人免费使用。
+
+- domain: 压缩解压缩
+  name: 7-zip
+  link: https://www.7-zip.org/download.html
+  trait: 开源
+  platform: mac、win、linux
+  remarks:
+    - 开源且体积小巧的工具，如果不在意界面朴素，7-zip 是 Windows 下解压缩工具的最佳免费选择。
+
+- domain: 流程图绘制
+  name: asciiflow
+  link: http://asciiflow.com/
+  trait: 开源
+  platform: web
+  remarks:
+    - 一个功能并不强大的流程图绘制软件，特点是绘制的流程图以ascii码的方式呈现，适合于绘制简易的流程图插入到纯文本中。
+    - 缺点是不支持中文（会破坏对齐），另外就是对于复杂的流程图有些无能为力。
+
+- domain: 流程图绘制
+  name: ProcessOn
+  link: https://www.processon.com/
+  trait: 受限免费、有广告
+  platform: web
+  remarks:
+    - 支持多种流程图绘制，模板丰富，浏览器打开就可以直接使用简单方便。
+    - 免费版限制同时最多9个文件，适合不需要经常绘制流程图的用户。
+
+- domain: ppt制作
+  name: reveal-md
+  link: https://github.com/webpro/reveal-md
+  trait: 开源
+  platform: mac、win、linux、web
+  remarks:
+    - 根据 markdown 文件生成漂亮的 ppt（网页）
+
+- domain: 终端模拟器
+  name: iTerm2
+  link: https://iterm2.com/
+  trait: 开源
+  platform: mac
+  remarks:
+    - mac 下流行的终端模拟器。
+
+- domain: 终端模拟器
+  name: Tilix
+  link: https://github.com/gnunn1/tilix
+  trait: 开源
+  platform: linux
+  remarks:
+    - Linux 下一个 GTK3 的终端模拟器。
+
+- domain: 设计素材
+  name: ICONS8
+  link: https://icons8.cn/
+  trait: 受限免费
+  platform: web
+  remarks:
+    - 提供大量免费的 icon 素材，且包含多种设计风格可选择。
+    - 免费用户对图标格式和尺寸有限制，但对资源无限制。

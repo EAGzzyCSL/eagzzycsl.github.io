@@ -50,6 +50,11 @@
     "title": "模板"
   },
   {
+    "appId": "UtilityApps",
+    "shortId": "utility",
+    "title": "工具应用集"
+  },
+  {
     "appId": "Booklet",
     "shortId": "booklet",
     "title": "篇册"

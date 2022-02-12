@@ -7099,6 +7099,13 @@ jest-snapshot@^28.1.0:
     pretty-format "^28.1.0"
     semver "^7.3.5"
 
+jest-transform-yaml@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmmirror.com/jest-transform-yaml/-/jest-transform-yaml-1.0.0.tgz#666fd8b30bb7f7c059d8722da0e96fdf17f8a91c"
+  integrity sha512-W2vVRXLCF2sCc6p0/hwRx0PgimmXqImLlRzXxtZAQZTjcUvzydWgg5dQ+Xc2FpvkXj0k0vmin4dPsylVOWuE2Q==
+  dependencies:
+    js-yaml "4.1.0"
+
 jest-util@^28.1.0:
   version "28.1.0"
   resolved "https://registry.npmmirror.com/jest-util/-/jest-util-28.1.0.tgz#d54eb83ad77e1dd441408738c5a5043642823be5"
@@ -7169,6 +7176,13 @@ jest@^28.1.0:
   resolved "https://registry.npmmirror.com/js-tokens/download/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
   integrity sha1-GSA/tZmR35jjoocFDUZHzerzJJk=
 
+js-yaml@4.1.0, js-yaml@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.npmmirror.com/js-yaml/download/js-yaml-4.1.0.tgz#c1fb65f8f5017901cdd2c951864ba18458a10602"
+  integrity sha1-wftl+PUBeQHN0slRhkuhhFihBgI=
+  dependencies:
+    argparse "^2.0.1"
+
 js-yaml@^3.13.1, js-yaml@^3.8.1:
   version "3.14.1"
   resolved "https://registry.npmmirror.com/js-yaml/download/js-yaml-3.14.1.tgz?cache=0&sync_timestamp=1618846844115&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fjs-yaml%2Fdownload%2Fjs-yaml-3.14.1.tgz#dae812fdb3825fa306609a8717383c50c36a0537"
@@ -7176,13 +7190,6 @@ js-yaml@^3.13.1, js-yaml@^3.8.1:
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
-
-js-yaml@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.npmmirror.com/js-yaml/download/js-yaml-4.1.0.tgz#c1fb65f8f5017901cdd2c951864ba18458a10602"
-  integrity sha1-wftl+PUBeQHN0slRhkuhhFihBgI=
-  dependencies:
-    argparse "^2.0.1"
 
 jsbn@~0.1.0:
   version "0.1.1"

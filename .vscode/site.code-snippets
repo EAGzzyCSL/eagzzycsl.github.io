@@ -1,0 +1,17 @@
+{
+  "UtilityAppsListTemplate": {
+    "scope": "yaml",
+    "prefix": "domain",
+    "body": [
+      "- domain: $1",
+      "  name: $2",
+      "  link: $3",
+      "  trait: 开源、有广告、受限免费、付费$4",
+      "  platform: mac、win、linux、android、ios、web$5",
+      "  remarks:",
+      "    - $6",
+      ""
+    ],
+    "description": "工具应用新建Item"
+  }
+}
