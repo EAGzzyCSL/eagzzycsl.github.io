@@ -1,13 +1,14 @@
 import { MarkdownNormalModule, MatterData } from './type'
 import { createLoader, CustomerProcessor } from './utils'
 
-export const normalProcessor: CustomerProcessor<MarkdownNormalModule> = (
-  matterData: MatterData,
-  content: string,
-) => ({
+export const normalProcessor: CustomerProcessor<
+  MarkdownNormalModule,
+  never,
+  never
+> = (matterData: MatterData<never, never>, content: string) => ({
   content,
 })
 
-const loadArticle = createLoader<MarkdownNormalModule>(normalProcessor)
+const loadNormal = createLoader(normalProcessor)
 
-export default loadArticle
+export default loadNormal

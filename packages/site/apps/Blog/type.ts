@@ -1,11 +1,4 @@
-import type {
-  TocItem,
-  NestedTocItem,
-  Toc,
-  MarkdownArticleModule,
-} from '@mine/markdown-loader'
-
-export type { TocItem, NestedTocItem, Toc }
+import type { MarkdownArticleModule } from '@mine/markdown-loader'
 
 export interface Article extends MarkdownArticleModule {
   path: string

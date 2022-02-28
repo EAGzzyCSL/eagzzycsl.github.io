@@ -2,10 +2,18 @@ import { MarkdownArticleModule, MatterData } from './type'
 import { createLoader, CustomerProcessor } from './utils'
 import { extractToc } from './utils/toc'
 
-export const articleProcessor: CustomerProcessor<MarkdownArticleModule> = (
-  matterData: MatterData,
-  content: string,
-) => {
+type MatterStringKey =
+  | 'title'
+  | 'createdAt'
+  | 'updatedAt'
+  | 'introduction'
+  | 'tags'
+
+export const articleProcessor: CustomerProcessor<
+  MarkdownArticleModule,
+  MatterStringKey,
+  never
+> = (matterData: MatterData<MatterStringKey, never>, content: string) => {
   const toc = extractToc(content)
   const {
     title = '',
@@ -25,6 +33,6 @@ export const articleProcessor: CustomerProcessor<MarkdownArticleModule> = (
   }
 }
 
-const loadArticle = createLoader<MarkdownArticleModule>(articleProcessor)
+const loadArticle = createLoader(articleProcessor)
 
 export default loadArticle

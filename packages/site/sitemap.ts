@@ -7,6 +7,7 @@
 import About from '@/apps/About/manifest'
 import Acknowledgements from '@/apps/Acknowledgements/manifest'
 import Blog from '@/apps/Blog/manifest'
+import Booklet from '@/apps/Booklet/manifest'
 import Calculator from '@/apps/Calculator/manifest'
 import Changelog from '@/apps/Changelog/manifest'
 import Launcher from '@/apps/Launcher/manifest'
@@ -28,4 +29,5 @@ export default registerApps({
   Painter,
   WinterNine,
   Template,
+  Booklet,
 })

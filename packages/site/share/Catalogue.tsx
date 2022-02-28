@@ -1,13 +1,17 @@
+import type {
+  MarkdownArticleModule,
+  NestedTocItem,
+} from '@mine/markdown-loader'
 import { Link, Typography } from '@mui/material'
 import React from 'react'
 
-import { Article, NestedTocItem } from '../type'
-
 import styles from './Catalogue.module.scss'
 
-interface CatalogueProps {
-  toc: Article['toc']
+interface CatalogueStratumProps {
+  nestedToc: NestedTocItem[]
   onItemClick?: () => void
+  parentIndexPrefix: string
+  noLevelId?: boolean
 }
 
 // 递归渲染目录层级
@@ -15,11 +19,8 @@ const CatalogueStratum = ({
   nestedToc,
   onItemClick,
   parentIndexPrefix,
-}: {
-  nestedToc: NestedTocItem[]
-  onItemClick?: () => void
-  parentIndexPrefix: string
-}): JSX.Element => (
+  noLevelId,
+}: CatalogueStratumProps): JSX.Element => (
   <ol className={styles.list}>
     {nestedToc.map((h, hIndex) => (
       // eslint-disable-next-line react/no-array-index-key
@@ -29,13 +30,19 @@ const CatalogueStratum = ({
           variant='inherit'
           underline='none'
           className={styles.link}
-          href={`#${parentIndexPrefix}${hIndex + 1}|${h.title}`}
+          href={
+            noLevelId
+              ? `#${h.title}`
+              : `#${parentIndexPrefix}${hIndex + 1}|${h.title}`
+          }
           onClick={() => {
             // 使用 replaceState 暂时避免前进后退时一直在hash间跳转
             window.history.replaceState(
               null,
               '',
-              `#${parentIndexPrefix}${hIndex + 1}|${h.title}`,
+              noLevelId
+                ? `#${h.title}`
+                : `#${parentIndexPrefix}${hIndex + 1}|${h.title}`,
             )
             if (onItemClick) {
               onItemClick()
@@ -50,6 +57,7 @@ const CatalogueStratum = ({
             nestedToc={h.sub}
             parentIndexPrefix={`${parentIndexPrefix}${hIndex + 1}.`}
             onItemClick={onItemClick}
+            noLevelId={noLevelId}
           />
         )}
       </li>
@@ -59,10 +67,18 @@ const CatalogueStratum = ({
 
 CatalogueStratum.defaultProps = {
   onItemClick: () => {},
+  noLevelId: false,
+}
+
+interface CatalogueProps {
+  toc: MarkdownArticleModule['toc']
+  onItemClick?: () => void
+  noLevelId?: boolean
 }
 
 const Catalogue = ({
   toc: { nested },
+  noLevelId,
   onItemClick,
 }: CatalogueProps): JSX.Element => (
   <Typography
@@ -83,6 +99,7 @@ const Catalogue = ({
       <CatalogueStratum
         nestedToc={nested}
         parentIndexPrefix=''
+        noLevelId={noLevelId}
         onItemClick={onItemClick}
       />
     </div>
@@ -90,6 +107,7 @@ const Catalogue = ({
 )
 
 Catalogue.defaultProps = {
+  noLevelId: false,
   onItemClick: () => {},
 }
 

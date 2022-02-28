@@ -1,9 +1,7 @@
-import { MatterData } from '../type'
-
 import { createLoader } from './index'
 
 test('loader工作情况', () => {
-  const loader = createLoader((matterData: MatterData, content) => {
+  const loader = createLoader((matterData, content) => {
     const { title, foo } = matterData
     return {
       title,

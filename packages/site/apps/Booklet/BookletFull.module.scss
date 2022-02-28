@@ -1,0 +1,70 @@
+.booklet-full {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  .main {
+    display: flex;
+    flex: 1 0 0;
+    width: 100%;
+    padding: 32px 60px 0;
+    overflow-y: auto;
+
+    .left-side {
+      height: max-content;
+
+      .changelog {
+        padding-top: 12px;
+        margin-top: 24px;
+        border-top: solid 1px lightgray;
+      }
+    }
+
+    .right-side {
+      height: 100%;
+    }
+
+    @media (orientation: landscape) {
+      flex-direction: row;
+
+      .left-side {
+        flex: 1 1 auto;
+        width: 0;
+        padding-right: 60px;
+        padding-bottom: 240px;
+      }
+
+      .right-side {
+        position: relative;
+        flex: 0 1 auto;
+        width: 200px;
+        height: 100%;
+
+        .catalogue-container {
+          position: fixed;
+        }
+      }
+    }
+
+    @media (orientation: portrait) {
+      flex-direction: column;
+      padding: 60px 32px 160px;
+
+      .left-side {
+        width: 100%;
+        padding-bottom: 80px;
+      }
+
+      .right-side {
+        display: none;
+      }
+    }
+  }
+}
+
+.drawer-catalogue-container {
+  display: flex;
+  width: 300px;
+  padding: 60px 16px 16px 32px;
+}

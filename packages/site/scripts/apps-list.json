@@ -48,5 +48,10 @@
     "appId": "Template",
     "shortId": "template",
     "title": "模板"
+  },
+  {
+    "appId": "Booklet",
+    "shortId": "booklet",
+    "title": "篇册"
   }
 ]

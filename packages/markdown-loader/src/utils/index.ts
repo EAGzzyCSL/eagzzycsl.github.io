@@ -4,8 +4,8 @@ import { MatterData } from '../type'
 
 type LoaderFunction = (source: string) => string
 
-export type CustomerProcessor<R> = (
-  matterData: MatterData,
+export type CustomerProcessor<R, MSK extends string, MBK extends string> = (
+  matterData: MatterData<MSK, MBK>,
   content: string,
 ) => R
 
@@ -13,7 +13,9 @@ export type CustomerProcessor<R> = (
  * 用于创建一个自定义的loader的工具函数
  */
 export const createLoader =
-  <R>(customerProcessor: CustomerProcessor<R>): LoaderFunction =>
+  (
+    customerProcessor: CustomerProcessor<unknown, string, string>,
+  ): LoaderFunction =>
   (source: string): string => {
     const { data, content } = grayMatter(source)
     // 使用自定义的处理器处理拆分后的matterData和content部分

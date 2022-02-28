@@ -61,6 +61,10 @@ module.exports = {
           use: require.resolve('@mine/markdown-loader/lib/article.js'),
         },
         {
+          test: /apps\/Booklet\/data\/.*\.md$/,
+          use: require.resolve('@mine/markdown-loader/lib/booklet.js'),
+        },
+        {
           use: require.resolve('@mine/markdown-loader/lib/normal.js'),
         },
       ],

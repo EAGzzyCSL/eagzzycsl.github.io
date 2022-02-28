@@ -27,7 +27,8 @@ test('处理结构完整的markdown', () => {
 })
 
 test('处理空markdown', () => {
-  expect(articleProcessor({}, '')).toStrictEqual({
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  expect(articleProcessor({} as any, '')).toStrictEqual({
     title: '',
     createdAt: '',
     updatedAt: '',
