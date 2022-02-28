@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import React from 'react'
 
 import { SITE_URL } from '@/constants'
+import Logger from '@/utils/logger'
 
 import styles from './Discussion.module.scss'
 
@@ -19,6 +20,11 @@ const Discussion = ({
   sidesMargin = false,
 }: DiscussionProps): JSX.Element => {
   const router = useRouter()
+
+  const routerPath = router.asPath.split('#')[0]
+
+  Logger.discussion.log('discussion.identifier', routerPath)
+
   return (
     <div
       className={cx(styles.discussion, {
@@ -33,8 +39,8 @@ const Discussion = ({
         <DiscussionEmbed
           shortname='eagzzycsl'
           config={{
-            url: `${SITE_URL}${router.asPath}`,
-            identifier: router.asPath,
+            url: `${SITE_URL}${routerPath}`,
+            identifier: routerPath,
             title,
           }}
         />

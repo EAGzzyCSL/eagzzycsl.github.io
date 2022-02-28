@@ -19,6 +19,7 @@ class LoggerFor {
 
 const Logger = {
   myRouter: new LoggerFor('myRouter', false),
+  discussion: new LoggerFor('discussion', true),
 }
 
 export default Logger
