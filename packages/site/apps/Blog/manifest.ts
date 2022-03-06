@@ -16,13 +16,13 @@ export default Manifest.create({
       'https://icons8.cn/icons/set/quill-pen',
     ),
     {
-      type: 'project',
+      type: 'openSource',
       title: 'highlight.js',
       url: 'https://highlightjs.org/',
       brief: '用于web的代码高亮库',
     },
     {
-      type: 'project',
+      type: 'openSource',
       title: 'markdownlint',
       url: 'https://github.com/DavidAnson/markdownlint',
       brief: '适用于 Markdown 文件的 lint 工具',

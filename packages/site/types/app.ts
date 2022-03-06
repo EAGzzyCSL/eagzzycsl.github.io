@@ -1,6 +1,6 @@
 export interface IAcknowledgementItem {
   // 资源类型
-  type: 'project' | 'icon' | 'image'
+  type: 'openSource' | 'project' | 'icon' | 'image'
   // 资源名称
   title: string
   // 资源的图片地址，用于展示（如果未提供则使用title作为替代）

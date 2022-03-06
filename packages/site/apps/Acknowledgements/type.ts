@@ -15,4 +15,5 @@ export interface DisplayData {
   icons: PictorialDisplayItem[]
   images: PictorialDisplayItem[]
   projects: DisplayItem[]
+  openSources: DisplayItem[]
 }

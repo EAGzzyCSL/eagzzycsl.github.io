@@ -8,14 +8,14 @@ import projectNext from './images/next.svg'
 
 const globalAcknowledgementItems: IAcknowledgementItem[] = [
   {
-    type: 'project',
+    type: 'openSource',
     title: 'NEXT',
     image: projectNext,
     url: 'https://nextjs.org/',
     brief: '基于 React 的前端框架',
   },
   {
-    type: 'project',
+    type: 'openSource',
     title: 'MATERIAL-UI',
     image: projectMaterialUi,
     url: 'https://material-ui.com/',
@@ -34,5 +34,6 @@ const acknowledgementItems = sitemap.appList.reduce<IAcknowledgementItem[]>(
 export default {
   icons: acknowledgementItems.filter(item => item.type === 'icon'),
   images: acknowledgementItems.filter(item => item.type === 'image'),
+  openSources: acknowledgementItems.filter(item => item.type === 'openSource'),
   projects: acknowledgementItems.filter(item => item.type === 'project'),
 } as DisplayData

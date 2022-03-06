@@ -73,6 +73,20 @@ const Acknowledgements = ({
       </div>
       <div className={styles.main}>
         <Block title='开源项目'>
+          {resources.openSources.map(item =>
+            item.image ? (
+              // eslint-disable-next-line react/no-array-index-key
+              <PictorialDisplayCard
+                key={item.title}
+                data={item as PictorialDisplayItem}
+              />
+            ) : (
+              // eslint-disable-next-line react/no-array-index-key
+              <BasicDisplayCard key={item.title} data={item} />
+            ),
+          )}
+        </Block>
+        <Block title='项目'>
           {resources.projects.map(item =>
             item.image ? (
               // eslint-disable-next-line react/no-array-index-key
