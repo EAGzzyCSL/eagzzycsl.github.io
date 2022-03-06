@@ -1,0 +1,33 @@
+@import './var.scss';
+
+.pinyin-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: $square-size;
+  height: 40px;
+
+  .input {
+    width: 100%;
+  }
+
+  .display {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    &:hover {
+      border-bottom: solid 1px lightgray;
+    }
+  }
+}
+
+.pinyin-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  .pinyin {
+    margin-left: $square-width;
+  }
+}

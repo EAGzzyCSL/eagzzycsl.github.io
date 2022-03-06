@@ -1,196 +1,101 @@
-import { FormatPaintRounded as FormatPaintRoundedIcon } from '@mui/icons-material'
-import { Paper, Button, Fab, TextField, Tooltip } from '@mui/material'
-import {
-  green as colorGreen,
-  orange as colorOrange,
-} from '@mui/material/colors'
-import { createTheme } from '@mui/material/styles'
+import { Tab, Tabs, Typography } from '@mui/material'
 import { GetStaticPropsResult } from 'next'
-import React, { useState, useRef } from 'react'
+import dynamic from 'next/dynamic'
+import React, { useEffect } from 'react'
 
 import AppPage from '@/shell/AppPage'
 import SimpleAppBar from '@/shell/SimpleAppBar'
+import { getHashContent } from '@/utils'
 
 import styles from './Painter.module.scss'
+import PanelDictionary from './panels/Dictionary'
+import PanelWordInWord from './panels/WordInWord'
+import theme from './theme'
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: colorOrange[800],
-    },
-    secondary: {
-      main: colorGreen[600],
-    },
+const panels = [
+  {
+    id: 'dictionary',
+    title: '字典',
+    component: PanelDictionary,
   },
-})
+  {
+    id: 'word-in-word',
+    title: '话里有话',
+    component: PanelWordInWord,
+  },
+]
+
+const getPanelIndexFromHash = (): number => {
+  const panelId = getHashContent()
+  const matchedIndx = panels.findIndex(panel => panel.id === panelId)
+  return matchedIndx >= 0 ? matchedIndx : 0
+}
 
 const Painter = (): JSX.Element => {
-  const [microText, setMicroText] = useState('')
-  const [macroText, setMacroText] = useState('')
-  const mainCanvas = useRef<null | HTMLCanvasElement>(null)
+  const [activeTabIndex, setActiveTabIndex] = React.useState(
+    getPanelIndexFromHash(),
+  )
 
-  const setDemo = (mit: string, mat: string): void => {
-    setMicroText(mit)
-    setMacroText(mat)
+  // 监听hash变化，实现路由返回时tab随之切换
+  useEffect(() => {
+    const hashListener = (): void => {
+      setActiveTabIndex(getPanelIndexFromHash())
+    }
+    window.addEventListener('hashchange', hashListener)
+    return () => {
+      window.removeEventListener('hashchange', hashListener)
+    }
+  }, [])
+
+  const handleSwitchTab = (
+    event: React.ChangeEvent<unknown>,
+    newValue: number,
+  ): void => {
+    setActiveTabIndex(newValue)
+    document.location.hash = panels[newValue].id
   }
 
-  const handleDraw = (mit: string, mat: string): void => {
-    if (!mainCanvas.current) {
-      return
-    }
-    const { offsetHeight, offsetWidth } = mainCanvas.current
-    mainCanvas.current.width = devicePixelRatio * offsetWidth
-    mainCanvas.current.height = devicePixelRatio * offsetHeight
-    const context = mainCanvas.current.getContext('2d')
-    if (!context) {
-      return
-    }
-    /**
-     * 首先绘制宏观文本，而后保留其imageData用做裁剪边界
-     */
-    const macroFontSize = Math.floor(
-      // 左右各留一定空白
-      (mainCanvas.current.width - 64) / mat.length,
-    )
-    Object.assign(context, {
-      font: `bold ${macroFontSize}px monospace`,
-      fillStyle: 'black',
-      textAlign: 'center',
-      textBaseline: 'middle',
-    })
-    context.fillText(
-      mat,
-      mainCanvas.current.width / 2,
-      mainCanvas.current.height / 2,
-    )
-    const macroImageData = context.getImageData(
-      0,
-      0,
-      mainCanvas.current.width,
-      mainCanvas.current.height,
-    )
-    context.clearRect(0, 0, mainCanvas.current.width, mainCanvas.current.height)
-    /**
-     * 使用微观文本密铺画布
-     */
-    const mitFontSize = 24
-    Object.assign(context, {
-      font: `bold ${mitFontSize}px monospace`,
-      fillStyle: 'black',
-    })
-    const mitWidth = context.measureText(mit).width
-    for (let i = 0; i < mainCanvas.current.width / mitWidth; i += 1) {
-      for (let j = 0; j < mainCanvas.current.height / mitFontSize; j += 1) {
-        // 稍微间隔一点间隙避免过于密集
-        context.fillText(mit, i * mitWidth, j * (mitFontSize + 4))
-      }
-    }
-    /**
-     * 获取微观文本imageData
-     *
-     * 利用宏观文本imageData对其做滤镜操作：宏观文本中透明的像素点在微观文本中同样透明
-     */
-    const microImageData = context.getImageData(
-      0,
-      0,
-      mainCanvas.current.width,
-      mainCanvas.current.height,
-    )
-    macroImageData.data.forEach((value, index) => {
-      if (index % 4 === 3 && value === 0) {
-        microImageData.data[index] = 0
-      }
-    })
-    context.putImageData(microImageData, 0, 0)
-  }
+  const ActivePanel = panels[activeTabIndex].component
 
   return (
     <AppPage title='出图' theme={theme} fullHeight>
       <section className={styles.painter}>
-        <SimpleAppBar title='出图' inverse />
-        <div className={styles.main}>
-          <div className={styles.displayPanel}>
-            <Paper elevation={3} className={styles.canvasBoard}>
-              <canvas ref={mainCanvas} className={styles.canvas} />
-            </Paper>
-          </div>
-          <div className={styles.operatingPanel}>
-            <div className={styles.controlBoard}>
-              <div className={styles.inputArea}>
-                <TextField
-                  variant='outlined'
-                  className={styles.input}
-                  size='small'
-                  label='宏观文字'
-                  value={macroText}
-                  onChange={event => {
-                    setMacroText(event.target.value)
-                  }}
-                />
-                <TextField
-                  variant='outlined'
-                  className={styles.input}
-                  size='small'
-                  label='微观文字'
-                  value={microText}
-                  onChange={event => {
-                    setMicroText(event.target.value)
-                  }}
-                />
+        <SimpleAppBar
+          inverse
+          mainContent={
+            <div className={styles.appBarContent}>
+              <Typography component='h1' variant='h6' color='primary'>
+                出图
+              </Typography>
+              <div className={styles.tabs}>
+                <Tabs
+                  value={activeTabIndex}
+                  onChange={handleSwitchTab}
+                  centered
+                  indicatorColor='primary'
+                  textColor='primary'
+                >
+                  {panels.map(item => (
+                    <Tab label={item.title} key={item.id} />
+                  ))}
+                </Tabs>
               </div>
-              <Fab
-                disabled={!microText || !macroText}
-                variant='extended'
-                color='primary'
-                onClick={() => {
-                  handleDraw(microText, macroText)
-                }}
-              >
-                <FormatPaintRoundedIcon />
-                生成
-              </Fab>
             </div>
-
-            <div className={styles.quickDemo}>
-              <Tooltip
-                arrow
-                title='我翻开历史一查，这历史没有年代，...，才从字缝里看出字来，满本都写着两个字是“吃人”！'
-              >
-                <Button
-                  variant='contained'
-                  size='small'
-                  color='secondary'
-                  className={styles.demoButton}
-                  onClick={() => {
-                    setDemo('吃人', '历史')
-                    handleDraw('吃人', '历史')
-                  }}
-                >
-                  吃人
-                </Button>
-              </Tooltip>
-              <Tooltip arrow title='一定来一定来，不会咕，不会咕'>
-                <Button
-                  variant='contained'
-                  size='small'
-                  color='secondary'
-                  className={styles.demoButton}
-                  onClick={() => {
-                    setDemo('咕', '一定来')
-                    handleDraw('咕', '一定来')
-                  }}
-                >
-                  咕
-                </Button>
-              </Tooltip>
-            </div>
-          </div>
+          }
+        />
+        <div className={styles.panel}>
+          {/* FIXME: 需要保留面板状态 */}
+          <ActivePanel />
         </div>
       </section>
     </AppPage>
   )
 }
-export default Painter
+
+// ssr会导致页面加载时tab不能响应hash
+export default dynamic(() => Promise.resolve(Painter), {
+  ssr: false,
+})
 
 export const getStaticProps = (): GetStaticPropsResult<unknown> => ({
   props: {},

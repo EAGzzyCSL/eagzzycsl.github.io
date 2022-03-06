@@ -33,3 +33,19 @@ export const preLoadImages = (
 
 export const getHashContent = (): string =>
   process.browser ? document.location.hash.slice(1) : ''
+
+export const triggerDownload = (name: string, url: string): void => {
+  const a = document.createElement('a')
+  a.href = url
+  a.download = name
+  a.click()
+}
+
+/**
+ * 输入x，返回一个最接近x的y，且min<=y<=max
+ */
+export const getRestrictValue = (
+  min: number,
+  input: number,
+  max: number,
+): number => Math.max(min, Math.min(input, max))
