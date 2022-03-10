@@ -40,6 +40,7 @@ const Saver = (props: SaverProps): JSX.Element => {
     }
 
     if (downloadUrl) {
+      setShotImg(downloadUrl)
       const defaultFileName = dayjs().format('出图-HH:mm:ss')
       setTimeout(() => {
         setShotImg('')

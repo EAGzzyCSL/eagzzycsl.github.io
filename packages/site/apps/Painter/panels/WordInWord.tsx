@@ -1,5 +1,5 @@
 import { FormatPaintRounded as FormatPaintRoundedIcon } from '@mui/icons-material'
-import { Button, Fab, TextField, Tooltip } from '@mui/material'
+import { Button, TextField, Tooltip } from '@mui/material'
 import React, { useState, useRef } from 'react'
 
 import { getRestrictValue } from '@/utils'
@@ -134,17 +134,18 @@ const WordInWord = (): JSX.Element => {
                   }}
                 />
               </div>
-              <Fab
-                disabled={!microText || !macroText}
-                variant='extended'
-                color='primary'
-                onClick={() => {
-                  handleDraw(microText, macroText)
-                }}
-              >
-                <FormatPaintRoundedIcon />
-                生成
-              </Fab>
+              <div className={styles.genButton}>
+                <Button
+                  disabled={!microText || !macroText}
+                  startIcon={<FormatPaintRoundedIcon />}
+                  variant='contained'
+                  onClick={() => {
+                    handleDraw(microText, macroText)
+                  }}
+                >
+                  生成
+                </Button>
+              </div>
             </div>
 
             <div className={styles.quickDemo}>

@@ -20,6 +20,7 @@
     .control-board {
       display: flex;
       align-items: center;
+      justify-content: space-between;
 
       .input-area {
         display: flex;
@@ -29,6 +30,10 @@
           margin-top: 16px;
           margin-right: 24px;
         }
+      }
+
+      .gen-button {
+        flex: 1 0 auto;
       }
     }
 
