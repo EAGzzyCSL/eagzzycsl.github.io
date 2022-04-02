@@ -4194,10 +4194,10 @@ dateformat@^3.0.0:
   resolved "https://registry.npmmirror.com/dateformat/download/dateformat-3.0.3.tgz#a6e37499a4d9a9cf85ef5872044d62901c9889ae"
   integrity sha1-puN0maTZqc+F71hyBE1ikByYia4=
 
-dayjs@^1.10.5:
-  version "1.10.5"
-  resolved "https://registry.npmmirror.com/dayjs/download/dayjs-1.10.5.tgz?cache=0&sync_timestamp=1622012243793&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fdayjs%2Fdownload%2Fdayjs-1.10.5.tgz#5600df4548fc2453b3f163ebb2abbe965ccfb986"
-  integrity sha1-VgDfRUj8JFOz8WPrsqu+llzPuYY=
+dayjs@^1.11.0:
+  version "1.11.0"
+  resolved "https://registry.npmmirror.com/dayjs/-/dayjs-1.11.0.tgz#009bf7ef2e2ea2d5db2e6583d2d39a4b5061e805"
+  integrity sha512-JLC809s6Y948/FuCZPm5IX8rRhQwOiyMb2TfVVQEixG7P8Lm/gt5S7yoQZmC8x1UehI9Pb7sksEt4xx14m+7Ug==
 
 debug@4, debug@^4.0.0, debug@^4.1.0, debug@^4.1.1, debug@^4.3.2:
   version "4.3.2"
