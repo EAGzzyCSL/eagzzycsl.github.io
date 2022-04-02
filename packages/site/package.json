@@ -33,7 +33,7 @@
     "classnames": "^2.3.1",
     "dayjs": "^1.10.5",
     "disqus-react": "^1.1.1",
-    "highlight.js": "^11.4.0",
+    "highlight.js": "^11.5.1",
     "html2canvas": "^1.4.0",
     "lodash": "^4.17.21",
     "mobx": "^6.3.2",
