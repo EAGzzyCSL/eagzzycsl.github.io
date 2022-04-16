@@ -9,6 +9,7 @@ import { getHashContent } from '@/utils'
 
 import styles from './Painter.module.scss'
 import PanelDictionary from './panels/Dictionary'
+import PanelImpossibleTrinity from './panels/ImpossibleTrinity'
 import PanelWordInWord from './panels/WordInWord'
 import theme from './theme'
 
@@ -22,6 +23,11 @@ const panels = [
     id: 'word-in-word',
     title: '话里有话',
     component: PanelWordInWord,
+  },
+  {
+    id: 'impossible-trinity',
+    title: '不可能三角',
+    component: PanelImpossibleTrinity,
   },
 ]
 
@@ -64,7 +70,12 @@ const Painter = (): JSX.Element => {
           inverse
           mainContent={
             <div className={styles.appBarContent}>
-              <Typography component='h1' variant='h6' color='primary'>
+              <Typography
+                component='h1'
+                variant='h6'
+                color='primary'
+                className={styles.title}
+              >
                 出图
               </Typography>
               <div className={styles.tabs}>
@@ -74,6 +85,8 @@ const Painter = (): JSX.Element => {
                   centered
                   indicatorColor='primary'
                   textColor='primary'
+                  scrollButtons
+                  allowScrollButtonsMobile
                 >
                   {panels.map(item => (
                     <Tab label={item.title} key={item.id} />

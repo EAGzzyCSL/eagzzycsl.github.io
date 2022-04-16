@@ -6,10 +6,16 @@
 
   .app-bar-content {
     display: flex;
+    flex: 1 0 0;
     align-items: center;
 
+    .title {
+      flex-shrink: 0;
+    }
+
     .tabs {
-      flex: 1 1 auto;
+      flex: 1 0 auto;
+      width: 0;
     }
   }
 

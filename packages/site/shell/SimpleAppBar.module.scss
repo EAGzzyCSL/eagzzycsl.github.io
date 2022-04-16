@@ -4,7 +4,13 @@
   }
 
   .main-content {
+    display: flex;
     flex: 1 0 0;
+    align-items: center;
+
+    .title {
+      flex: 1 0 0;
+    }
   }
 
   @media (orientation: landscape) {

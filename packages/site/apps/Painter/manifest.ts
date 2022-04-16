@@ -40,5 +40,9 @@ export default Manifest.create({
       date: '2022-03-06',
       content: '惊蛰后，「出图」增加「字典」',
     },
+    {
+      date: '2022-04-16',
+      content: '居家中，「出图」增加「不可能三角」',
+    },
   ],
 })

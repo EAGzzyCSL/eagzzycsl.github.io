@@ -1,7 +1,8 @@
-import { Autocomplete, TextField, Typography } from '@mui/material'
+import { Autocomplete, TextField } from '@mui/material'
 import pinyin from 'pinyin'
-import React, { useState, useMemo } from 'react'
+import React, { useMemo } from 'react'
 
+import HoverInput from './HoverInput'
 import styles from './PinyinRow.module.scss'
 
 interface PinyinItemProps {
@@ -11,47 +12,22 @@ interface PinyinItemProps {
 
 const PinyinItem = (props: PinyinItemProps): JSX.Element => {
   const { pinyinOfChar } = props
-  const [isEdit, setIsEdit] = useState(false)
-  const [displayPinyin, setDisplayPinyin] = useState(pinyinOfChar[0])
   return (
     <div className={styles.pinyinItem}>
-      {isEdit ? (
+      <HoverInput initValue={pinyinOfChar[0]}>
         <Autocomplete
-          className={styles.input}
           freeSolo
           options={pinyinOfChar}
-          value={displayPinyin}
-          onChange={(event, newValue) => {
-            if (newValue) {
-              setDisplayPinyin(newValue)
-            }
-          }}
-          onBlur={() => {
-            setIsEdit(false)
-          }}
           renderInput={params => (
             <TextField
               // eslint-disable-next-line react/jsx-props-no-spreading
               {...params}
               variant='standard'
               autoFocus
-              onChange={event => {
-                setDisplayPinyin(event.target.value)
-              }}
             />
           )}
         />
-      ) : (
-        <Typography
-          onClick={() => {
-            setIsEdit(true)
-          }}
-          variant='h6'
-          className={styles.display}
-        >
-          {displayPinyin || pinyinOfChar[0]}
-        </Typography>
-      )}
+      </HoverInput>
     </div>
   )
 }

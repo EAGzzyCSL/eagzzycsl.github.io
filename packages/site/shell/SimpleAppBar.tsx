@@ -73,12 +73,14 @@ const SimpleAppBar = ({
             <Typography
               component='h1'
               variant='h6'
+              className={styles.title}
               color={inverse ? 'primary' : 'inherit'}
             >
               {title}
             </Typography>
           )}
         </div>
+
         <div>
           {extraIcons
             ?.filter(item => item.visible !== 'never')
