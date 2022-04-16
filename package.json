@@ -28,7 +28,7 @@
     "test": "jest",
     "test:ci": "jest --coverage",
     "ts:check": "lerna run ts:check",
-    "verify": "npm-run-all prettier lint:md lint:style lint:es test lint:commit ts:check",
+    "verify": "npm-run-all prettier lint:md lint:style lint:es test ts:check lint:commit",
     "commit": "git-cz"
   },
   "config": {
