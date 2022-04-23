@@ -32,9 +32,9 @@ const theme = createTheme({
 })
 
 const Changelog = (): JSX.Element => (
-  <AppPage title='更新记录' theme={theme} fullHeight>
+  <AppPage title='更新记录' theme={theme}>
     <section className={styles.changelog}>
-      <SimpleAppBar title='更新记录' inverse />
+      <SimpleAppBar title='更新记录' inverse sticky whiteBg />
       <div className={styles.main}>
         <Timeline position='alternate'>
           {changelogData.map(item => (
