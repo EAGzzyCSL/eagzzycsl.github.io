@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 
 import { IconButton, Paper } from '@mui/material'
 
-import IconAliHead from '../assets/icon-ali-head.svg'
-import IconSearch from '../assets/icon-search.svg'
+import IconAliHead from '../../assets/icon-ali-head.svg'
+import IconSearch from '../../assets/icon-search.svg'
 
 import styles from './SearchBar.module.scss'
 
