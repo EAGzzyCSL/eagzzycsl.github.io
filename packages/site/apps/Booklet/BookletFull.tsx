@@ -51,7 +51,7 @@ const BookletFull = (props: BookletFullProps): JSX.Element => {
   }
 
   return (
-    <AppPage title={bookletId} theme={theme}>
+    <AppPage title={bookletContent.title} theme={theme}>
       <section className={styles.bookletFull}>
         <SimpleAppBar
           title={bookletContent.title}
