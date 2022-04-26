@@ -1,6 +1,7 @@
+import React from 'react'
+
 import { observer } from 'mobx-react-lite'
 import { GetStaticPropsResult } from 'next'
-import React from 'react'
 
 import useStore from '@/hooks/useStore'
 import AppPage from '@/shell/AppPage'

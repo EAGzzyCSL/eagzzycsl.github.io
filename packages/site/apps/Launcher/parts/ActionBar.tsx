@@ -1,10 +1,11 @@
+import React from 'react'
+
 import {
   NavigateBeforeRounded as NavigateBeforeRoundedIcon,
   NavigateNextRounded as NavigateNextRoundedIcon,
   StopRounded as StopRoundedIcon,
 } from '@mui/icons-material'
 import { Button } from '@mui/material'
-import React from 'react'
 
 import styles from './ActionBar.module.scss'
 

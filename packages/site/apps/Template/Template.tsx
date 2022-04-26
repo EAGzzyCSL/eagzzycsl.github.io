@@ -1,5 +1,6 @@
-import { GetStaticPropsResult } from 'next'
 import React from 'react'
+
+import { GetStaticPropsResult } from 'next'
 
 import AppPage from '@/shell/AppPage'
 

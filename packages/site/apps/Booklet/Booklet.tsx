@@ -1,5 +1,6 @@
-import { GetStaticPropsResult } from 'next'
 import React from 'react'
+
+import { GetStaticPropsResult } from 'next'
 
 import { useMyRouter } from '@/router'
 import AppPage from '@/shell/AppPage'

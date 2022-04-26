@@ -1,3 +1,5 @@
+import React, { useState, useRef } from 'react'
+
 import {
   ArrowBackRounded as ArrowBackRoundedIcon,
   MoreHorizRounded as MoreHorizRoundedIcon,
@@ -16,7 +18,6 @@ import {
 import { grey as colorGrey } from '@mui/material/colors'
 import { createTheme } from '@mui/material/styles'
 import { GetStaticPropsResult } from 'next'
-import React, { useState, useRef } from 'react'
 
 import AppBarHomeButton from '@/shell/AppBarHomeButton'
 import AppPage from '@/shell/AppPage'

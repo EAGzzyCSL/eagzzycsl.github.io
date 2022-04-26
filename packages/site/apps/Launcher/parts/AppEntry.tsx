@@ -1,6 +1,7 @@
+import React from 'react'
+
 import { Typography, Paper } from '@mui/material'
 import { useRouter } from 'next/router'
-import React from 'react'
 
 import { AppDescribe } from '@/types/app'
 

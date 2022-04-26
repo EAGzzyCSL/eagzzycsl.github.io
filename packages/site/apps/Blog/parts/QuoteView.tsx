@@ -1,5 +1,6 @@
-import { Typography } from '@mui/material'
 import React, { ReactNode } from 'react'
+
+import { Typography } from '@mui/material'
 
 import theme from '../theme'
 

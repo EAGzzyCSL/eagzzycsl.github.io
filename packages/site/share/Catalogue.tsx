@@ -1,9 +1,10 @@
+import React from 'react'
+
 import type {
   MarkdownArticleModule,
   NestedTocItem,
 } from '@mine/markdown-loader'
 import { Link, Typography } from '@mui/material'
-import React from 'react'
 
 import styles from './Catalogue.module.scss'
 

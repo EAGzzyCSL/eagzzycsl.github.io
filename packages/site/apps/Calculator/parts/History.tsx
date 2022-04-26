@@ -1,3 +1,5 @@
+import React, { useState } from 'react'
+
 import {
   CloseRounded as CloseRoundedIcon,
   DeleteOutlineRounded as DeleteOutlineRoundedIcon,
@@ -15,7 +17,6 @@ import {
   TableRow,
   Typography,
 } from '@mui/material'
-import React, { useState } from 'react'
 
 import styles from './History.module.scss'
 

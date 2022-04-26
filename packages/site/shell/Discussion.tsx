@@ -1,7 +1,8 @@
+import React from 'react'
+
 import cx from 'classnames'
 import { DiscussionEmbed } from 'disqus-react'
 import { useRouter } from 'next/router'
-import React from 'react'
 
 import { SITE_URL } from '@/constants'
 import Logger from '@/utils/logger'

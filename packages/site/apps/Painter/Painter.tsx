@@ -1,7 +1,8 @@
+import React, { useEffect } from 'react'
+
 import { Tab, Tabs, Typography } from '@mui/material'
 import { GetStaticPropsResult } from 'next'
 import dynamic from 'next/dynamic'
-import React, { useEffect } from 'react'
 
 import AppPage from '@/shell/AppPage'
 import SimpleAppBar from '@/shell/SimpleAppBar'

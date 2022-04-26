@@ -1,3 +1,5 @@
+import React from 'react'
+
 import {
   ExpandMoreRounded as ExpandMoreRoundedIcon,
   GitHub as GitHubIcon,
@@ -15,7 +17,6 @@ import {
 import { blue as colorBlue, red as colorRed } from '@mui/material/colors'
 import { createTheme } from '@mui/material/styles'
 import { GetStaticPropsResult } from 'next'
-import React from 'react'
 
 import avatarPng from '@/assets/avatar.png'
 import AppPage from '@/shell/AppPage'

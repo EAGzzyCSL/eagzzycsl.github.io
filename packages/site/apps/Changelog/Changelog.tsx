@@ -1,3 +1,5 @@
+import React from 'react'
+
 import {
   Timeline,
   TimelineConnector,
@@ -11,7 +13,6 @@ import { Typography } from '@mui/material'
 import { brown as colorBrown, pink as colorPink } from '@mui/material/colors'
 import { createTheme } from '@mui/material/styles'
 import { GetStaticPropsResult } from 'next'
-import React from 'react'
 
 import AppPage from '@/shell/AppPage'
 import SimpleAppBar from '@/shell/SimpleAppBar'

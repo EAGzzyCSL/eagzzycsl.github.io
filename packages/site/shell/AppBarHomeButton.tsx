@@ -2,12 +2,13 @@
  * 用于页面AppBar上的返回按钮
  * 如果页面是从上层页面跳转进入，按钮呈现为返回icon，否则呈现为home icon
  */
+import React from 'react'
+
 import {
   ArrowBackRounded as ArrowBackRoundedIcon,
   HomeRounded as HomeRoundedIcon,
 } from '@mui/icons-material'
 import { IconButton } from '@mui/material'
-import React from 'react'
 
 import { useMyRouter } from '@/router'
 

@@ -1,8 +1,9 @@
+import React from 'react'
+
 import { cyan as colorCyan, red as colorRed } from '@mui/material/colors'
 import { createTheme, Theme, ThemeProvider } from '@mui/material/styles'
 import cx from 'classnames'
 import Head from 'next/head'
-import React from 'react'
 
 import styles from './AppPage.module.scss'
 

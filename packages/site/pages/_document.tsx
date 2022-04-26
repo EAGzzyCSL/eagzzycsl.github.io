@@ -1,3 +1,5 @@
+import React from 'react'
+
 import { ServerStyleSheets } from '@mui/styles'
 import Document, {
   DocumentContext,
@@ -7,7 +9,6 @@ import Document, {
   Main,
   NextScript,
 } from 'next/document'
-import React from 'react'
 
 export default class MyDocument extends Document {
   /**

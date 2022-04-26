@@ -1,3 +1,5 @@
+import React from 'react'
+
 import {
   Card,
   CardActionArea,
@@ -5,7 +7,6 @@ import {
   CardMedia,
   Typography,
 } from '@mui/material'
-import React from 'react'
 
 import AboutCardHeaderImage from '../assets/about-header.png'
 

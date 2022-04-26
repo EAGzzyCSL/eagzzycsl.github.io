@@ -1,7 +1,8 @@
+import React, { useEffect } from 'react'
+
 import CssBaseline from '@mui/material/CssBaseline'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import React, { useEffect } from 'react'
 
 import favicon from '@/assets/favicon.png'
 import { useMyRouter } from '@/router'

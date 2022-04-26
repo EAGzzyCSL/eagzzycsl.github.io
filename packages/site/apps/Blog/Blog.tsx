@@ -1,3 +1,5 @@
+import React, { useState } from 'react'
+
 import {
   KeyboardArrowLeftRounded as KeyboardArrowLeftRoundedIcon,
   KeyboardArrowRightRounded as KeyboardArrowRightRoundedIcon,
@@ -15,7 +17,6 @@ import {
 import cx from 'classnames'
 import { observer } from 'mobx-react-lite'
 import { GetStaticPropsResult } from 'next'
-import React, { useState } from 'react'
 
 import useStore from '@/hooks/useStore'
 import AppPage from '@/shell/AppPage'

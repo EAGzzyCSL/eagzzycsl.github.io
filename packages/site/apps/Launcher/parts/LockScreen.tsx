@@ -1,16 +1,16 @@
+import React, { useState, useEffect } from 'react'
+
 import {
   LockOpenRounded as LockOpenRoundedIcon,
   LockRounded as LockRoundedIcon,
 } from '@mui/icons-material'
 import { Typography, Avatar, Slide, IconButton } from '@mui/material'
 import dayjs from 'dayjs'
-import React, { useState, useEffect } from 'react'
+import 'dayjs/locale/zh-cn'
 
 import AvatarPng from '@/assets/avatar.png'
 
 import styles from './LockScreen.module.scss'
-
-import 'dayjs/locale/zh-cn'
 
 interface Clock {
   time: string

@@ -1,10 +1,11 @@
+import React, { useState, useEffect } from 'react'
+
 import { Typography, Slide, Fade } from '@mui/material'
 import { green as colorAmber, red as colorRed } from '@mui/material/colors'
 import { createTheme } from '@mui/material/styles'
 import dayjs from 'dayjs'
 import { GetStaticPropsResult } from 'next'
 import dynamic from 'next/dynamic'
-import React, { useState, useEffect } from 'react'
 
 import { transparentBase64 } from '@/constants/style'
 import AppPage from '@/shell/AppPage'

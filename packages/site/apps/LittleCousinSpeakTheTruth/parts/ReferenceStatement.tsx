@@ -1,3 +1,5 @@
+import React from 'react'
+
 import {
   Button,
   Card,
@@ -6,7 +8,6 @@ import {
   CardContent,
   Typography,
 } from '@mui/material'
-import React from 'react'
 
 import styles from './ReferenceStatement.module.scss'
 

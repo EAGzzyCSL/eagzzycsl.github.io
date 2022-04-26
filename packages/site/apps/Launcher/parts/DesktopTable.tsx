@@ -1,6 +1,7 @@
+import React, { useEffect, useRef, useMemo } from 'react'
+
 import cx from 'classnames'
 import throttle from 'lodash/throttle'
-import React, { useEffect, useRef, useMemo } from 'react'
 
 import useStore from '@/hooks/useStore'
 

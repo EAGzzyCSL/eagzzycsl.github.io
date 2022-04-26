@@ -1,3 +1,5 @@
+import React, { useState } from 'react'
+
 import {
   Subject as SubjectIcon,
   ShortText as ShortTextIcon,
@@ -6,7 +8,6 @@ import {
 } from '@mui/icons-material'
 import { Drawer, Typography } from '@mui/material'
 import { GetStaticPropsResult } from 'next'
-import React, { useState } from 'react'
 
 import Catalogue from '@/share/Catalogue'
 import AppPage from '@/shell/AppPage'

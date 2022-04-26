@@ -1,6 +1,7 @@
+import React, { useMemo } from 'react'
+
 import { Autocomplete, TextField } from '@mui/material'
 import pinyin from 'pinyin'
-import React, { useMemo } from 'react'
 
 import HoverInput from './HoverInput'
 import styles from './PinyinRow.module.scss'

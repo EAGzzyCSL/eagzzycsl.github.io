@@ -1,9 +1,10 @@
+import React, { ReactNode } from 'react'
+
 import { GitHub as GitHubIcon } from '@mui/icons-material'
 import { Link, Typography } from '@mui/material'
 import { pink as colorPink } from '@mui/material/colors'
 import { createTheme } from '@mui/material/styles'
 import { GetStaticPropsResult } from 'next'
-import React, { ReactNode } from 'react'
 
 import AppPage from '@/shell/AppPage'
 import SimpleAppBar from '@/shell/SimpleAppBar'

@@ -1,3 +1,5 @@
+import React, { ReactNode } from 'react'
+
 import { LinkRounded as LinkRoundedIcon } from '@mui/icons-material'
 import {
   Typography,
@@ -9,7 +11,6 @@ import {
   TableHead,
   TableRow,
 } from '@mui/material'
-import React, { ReactNode } from 'react'
 import ReactMarkdown, { Components } from 'react-markdown'
 import { ReactMarkdownProps } from 'react-markdown/lib/ast-to-react'
 import rehypeRaw from 'rehype-raw'

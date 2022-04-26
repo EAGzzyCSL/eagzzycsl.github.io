@@ -1,3 +1,5 @@
+import React, { useEffect } from 'react'
+
 import { Tab, Tabs, Typography } from '@mui/material'
 import {
   blue as colorBlue,
@@ -6,7 +8,6 @@ import {
 } from '@mui/material/colors'
 import { createTheme } from '@mui/material/styles'
 import { GetStaticPropsResult } from 'next'
-import React, { useEffect } from 'react'
 
 import AppPage from '@/shell/AppPage'
 import SimpleAppBar from '@/shell/SimpleAppBar'

@@ -31,14 +31,25 @@ module.exports = {
           order: 'asc',
           caseInsensitive: true,
         },
+        /**
+         * TODO: 这里的pattern应该通过外部配置
+         */
         pathGroups: [
+          // 让react永远排在最前面
           {
-            // TODO: 这里的pattern应该通过外部配置
+            pattern: 'react',
+            group: 'builtin',
+            position: 'before',
+          },
+          // @开头的视为内部模块
+          {
             pattern: '@/**',
             group: 'internal',
           },
         ],
+        pathGroupsExcludedImportTypes: ['react'],
         'newlines-between': 'always',
+        warnOnUnassignedImports: true,
       },
     ],
     'import/prefer-default-export': 'off',
