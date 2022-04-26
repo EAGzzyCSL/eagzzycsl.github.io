@@ -5,10 +5,9 @@ import {
   LockRounded as LockRoundedIcon,
 } from '@mui/icons-material'
 import { Typography, Avatar, Slide, IconButton } from '@mui/material'
-import dayjs from 'dayjs'
-import 'dayjs/locale/zh-cn'
 
 import AvatarPng from '@/assets/avatar.png'
+import { dayjs } from '@/utils/date'
 
 import styles from './LockScreen.module.scss'
 
@@ -33,7 +32,7 @@ const LockScreen = ({
   const updateClock = (): void => {
     setClock({
       time: dayjs().format('HH:MM'),
-      date: dayjs().locale('zh-cn').format('M月 D日 周dd'),
+      date: dayjs().format('M月 D日 周dd'),
     })
   }
 

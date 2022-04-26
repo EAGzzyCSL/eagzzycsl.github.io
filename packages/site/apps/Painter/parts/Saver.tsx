@@ -2,10 +2,10 @@ import React, { useRef, useState } from 'react'
 
 import { CameraEnhanceRounded as CameraEnhanceRoundedIcon } from '@mui/icons-material/'
 import { Fab, Paper } from '@mui/material'
-import dayjs from 'dayjs'
 import html2canvas from 'html2canvas'
 
 import { triggerDownload } from '@/utils'
+import { dayjs } from '@/utils/date'
 
 import styles from './Saver.module.scss'
 

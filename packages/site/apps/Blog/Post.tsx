@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 
 import { ViewSidebarRounded as ViewSidebarRoundedIcon } from '@mui/icons-material'
 import { Alert, Typography, Drawer } from '@mui/material'
-import dayjs from 'dayjs'
 import { GetStaticPropsResult } from 'next'
 
 import { useMyRouter } from '@/router'
@@ -11,6 +10,7 @@ import AppPage from '@/shell/AppPage'
 import Discussion from '@/shell/Discussion'
 import SimpleAppBar from '@/shell/SimpleAppBar'
 import { StaticPathsResponse, StaticPath } from '@/types/app'
+import { dayjs } from '@/utils/date'
 import Logger from '@/utils/logger'
 
 import _exportedPosts from './data/index'

@@ -48,6 +48,20 @@ module.exports = {
           },
         },
       },
+      rules: {
+        '@typescript-eslint/no-restricted-imports': [
+          'error',
+          {
+            paths: [
+              {
+                name: 'dayjs',
+                message: 'Please use @/utils/date instead.',
+                allowTypeImports: false,
+              },
+            ],
+          },
+        ],
+      },
     },
   ],
 }
