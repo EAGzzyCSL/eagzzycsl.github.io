@@ -1,12 +1,11 @@
 import React from 'react'
 
-import { Card, CardContent, Typography } from '@mui/material'
-
 import { AppDescribe } from '@/types/app'
 
 import AppEntry from './AppEntry'
 import styles from './Desktop.module.scss'
 import DesktopTable from './DesktopTable'
+import CalendarCard from './widgets/CalendarCard'
 import PoemCard from './widgets/PoemCard'
 import SearchBar from './widgets/SearchBar'
 
@@ -68,6 +67,7 @@ const Desktop = (props: DesktopProps): JSX.Element => {
           </div>,
           <div className={styles.tableThree} key='three'>
             <PoemCard />
+            <CalendarCard />
           </div>,
         ]}
       />

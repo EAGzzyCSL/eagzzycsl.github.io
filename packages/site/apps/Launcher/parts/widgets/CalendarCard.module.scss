@@ -1,0 +1,15 @@
+.calendar-card {
+  .calendar-picker-root {
+    /* stylelint-disable-next-line selector-max-type */
+    > div:first-child {
+      display: none;
+    }
+
+    .calendar-picker-view-transition-container {
+      /* stylelint-disable-next-line selector-max-type */
+      > div:first-child > div:nth-child(2) {
+        min-height: 230px;
+      }
+    }
+  }
+}
