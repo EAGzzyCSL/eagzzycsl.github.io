@@ -14,6 +14,7 @@ $icon-size-small: 60px;
   width: $entry-size;
   height: $entry-size;
   margin: $entry-margin;
+  user-select: none;
 
   @media (orientation: portrait) {
     width: $entry-size-small;

@@ -6,6 +6,7 @@ $search-bar-height: 60px;
   width: 500px;
   height: $search-bar-height;
   padding: 10px;
+  user-select: none;
   background-color: white;
 
   @media (orientation: portrait) {

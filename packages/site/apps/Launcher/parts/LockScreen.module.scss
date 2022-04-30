@@ -21,6 +21,7 @@
       width: 32px;
       height: 32px;
       margin-left: 8px;
+      border-radius: 100%;
     }
   }
 
@@ -31,6 +32,7 @@
     align-items: center;
     margin-top: 60px;
     color: white;
+    user-select: none;
   }
 
   .bottom-lock {

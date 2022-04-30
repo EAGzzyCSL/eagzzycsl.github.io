@@ -22,7 +22,7 @@ const AppEntry = ({ app }: AppEntryInterface): JSX.Element => {
   return (
     <div className={styles.appEntry} onClick={handleNav}>
       <Paper className={styles.iconWrapper} elevation={3}>
-        <img className={styles.iconImg} src={app.icon} />
+        <img className={styles.iconImg} src={app.icon} draggable='false' />
       </Paper>
       <Typography
         className={styles.title}

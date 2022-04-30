@@ -4,7 +4,7 @@ import {
   LockOpenRounded as LockOpenRoundedIcon,
   LockRounded as LockRoundedIcon,
 } from '@mui/icons-material'
-import { Typography, Avatar, Slide, IconButton } from '@mui/material'
+import { Typography, Slide, IconButton } from '@mui/material'
 
 import AvatarPng from '@/assets/avatar.png'
 import { dayjs } from '@/utils/date'
@@ -68,7 +68,7 @@ const LockScreen = ({
     <Slide in={locked} timeout={locked ? 0 : undefined}>
       <section className={styles.lockScreen} onWheel={handleScreenWheel}>
         <div className={styles.header}>
-          <Avatar alt='avatar' src={AvatarPng} className={styles.avatar} />
+          <img src={AvatarPng} className={styles.avatar} draggable='false' />
         </div>
         <div className={styles.centerClock}>
           <Typography component='h1' variant='h1'>

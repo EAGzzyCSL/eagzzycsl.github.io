@@ -24,7 +24,7 @@ const SearchBar = ({ onSearch }: SearchBarProps): JSX.Element => {
   return (
     <Paper className={styles.searchBar}>
       <IconButton className={styles.startIcon} size='small'>
-        <img src={IconAliHead} className={styles.iconImg} />
+        <img src={IconAliHead} className={styles.iconImg} draggable='false' />
       </IconButton>
       <div className={styles.inputArea}>
         <input
@@ -39,7 +39,7 @@ const SearchBar = ({ onSearch }: SearchBarProps): JSX.Element => {
         size='small'
         onClick={handleTapSearch}
       >
-        <img src={IconSearch} className={styles.iconImg} />
+        <img src={IconSearch} className={styles.iconImg} draggable='false' />
       </IconButton>
     </Paper>
   )
