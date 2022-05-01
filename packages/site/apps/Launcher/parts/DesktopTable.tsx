@@ -84,9 +84,7 @@ const DesktopTable = (props: DesktopTableProps): JSX.Element => {
           className={styles.tableList}
           style={{
             width: `${tables.length * 100}%`,
-            transform: `translateX(-${
-              (100 / tables.length) * currentTableIndex
-            }%)`,
+            left: `-${currentTableIndex * 100}%`,
           }}
         >
           {tables.map((table, index) => (

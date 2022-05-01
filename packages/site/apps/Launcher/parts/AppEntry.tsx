@@ -1,8 +1,8 @@
 import React from 'react'
 
 import { Typography, Paper } from '@mui/material'
-import { useRouter } from 'next/router'
 
+import { useMyRouter } from '@/router'
 import { AppDescribe } from '@/types/app'
 
 import styles from './AppEntry.module.scss'
@@ -12,11 +12,9 @@ interface AppEntryInterface {
 }
 
 const AppEntry = ({ app }: AppEntryInterface): JSX.Element => {
-  const router = useRouter()
+  const router = useMyRouter()
   const handleNav = (): void => {
-    if (app.root !== '/') {
-      router.push(app.root)
-    }
+    router.navToApp(app)
   }
 
   return (

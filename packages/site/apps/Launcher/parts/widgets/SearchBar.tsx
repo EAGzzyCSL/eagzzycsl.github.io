@@ -1,6 +1,20 @@
-import React, { useState } from 'react'
+import React, { useEffect, useMemo, useRef, useState, useCallback } from 'react'
 
-import { IconButton, Paper } from '@mui/material'
+import {
+  IconButton,
+  Paper,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Backdrop,
+  Typography,
+} from '@mui/material'
+import cx from 'classnames'
+
+import { useMyRouter } from '@/router'
+import { AppDescribe } from '@/types/app'
 
 import IconAliHead from '../../assets/icon-ali-head.svg'
 import IconSearch from '../../assets/icon-search.svg'
@@ -9,10 +23,14 @@ import styles from './SearchBar.module.scss'
 
 interface SearchBarProps {
   onSearch: (keyword: string) => void
+  apps: AppDescribe[]
 }
 
-const SearchBar = ({ onSearch }: SearchBarProps): JSX.Element => {
+const SearchBar = ({ onSearch, apps }: SearchBarProps): JSX.Element => {
+  const router = useMyRouter()
+
   const [inputValue, setInputValue] = useState('')
+
   const handleTapSearch = (): void => {
     onSearch(inputValue)
   }
@@ -21,27 +39,162 @@ const SearchBar = ({ onSearch }: SearchBarProps): JSX.Element => {
     setInputValue(event.target.value)
   }
 
+  const handleNavToApp = useCallback(
+    (app: AppDescribe): void => {
+      router.navToApp(app)
+    },
+    [router],
+  )
+
+  const [selectedAppIndex, setSelectedAppIndex] = useState(0)
+
+  const [searchVisible, setSearchVisible] = useState(false)
+
+  const appItemRef = useRef<HTMLDivElement>(null)
+
+  const handleSearchBarFocus = (): void => {
+    setSelectedAppIndex(0)
+    setSearchVisible(true)
+  }
+
+  const handleClickAppItem = (index: number): void => {
+    setSelectedAppIndex(index)
+    handleNavToApp(appsInList[index])
+  }
+
+  const handleClickBackdrop = (): void => {
+    setSearchVisible(false)
+    setInputValue('')
+  }
+
+  const appsInList = useMemo(
+    () =>
+      apps.filter(
+        app =>
+          app.title.includes(inputValue) ||
+          app.appId.toLowerCase().includes(inputValue.toLowerCase()),
+      ),
+    [apps, inputValue],
+  )
+
+  useEffect(() => {
+    const handleKeyUpDown = (event: KeyboardEvent): void => {
+      if (!searchVisible) {
+        return
+      }
+      switch (event.code) {
+        case 'ArrowDown': {
+          setSelectedAppIndex(
+            Math.min(selectedAppIndex + 1, appsInList.length - 1),
+          )
+          appItemRef.current?.scrollIntoView({
+            block: 'end',
+            inline: 'nearest',
+            behavior: 'smooth',
+          })
+          break
+        }
+        case 'ArrowUp': {
+          setSelectedAppIndex(Math.max(selectedAppIndex - 1, 0))
+          appItemRef.current?.scrollIntoView({
+            block: 'start',
+            inline: 'nearest',
+            behavior: 'smooth',
+          })
+          break
+        }
+        case 'Escape': {
+          setSearchVisible(false)
+          break
+        }
+        case 'Enter': {
+          const selectedApp = appsInList[selectedAppIndex]
+          if (selectedApp) {
+            handleNavToApp(selectedApp)
+          }
+          break
+        }
+        default:
+          break
+      }
+    }
+    document.addEventListener('keydown', handleKeyUpDown)
+    return () => {
+      document.removeEventListener('keydown', handleKeyUpDown)
+    }
+  }, [handleNavToApp, searchVisible, selectedAppIndex, appsInList])
+
   return (
-    <Paper className={styles.searchBar}>
-      <IconButton className={styles.startIcon} size='small'>
-        <img src={IconAliHead} className={styles.iconImg} draggable='false' />
-      </IconButton>
-      <div className={styles.inputArea}>
-        <input
-          className={styles.input}
-          placeholder='Search'
-          value={inputValue}
-          onChange={handleInput}
-        />
-      </div>
-      <IconButton
-        className={styles.endIcon}
-        size='small'
-        onClick={handleTapSearch}
-      >
-        <img src={IconSearch} className={styles.iconImg} draggable='false' />
-      </IconButton>
-    </Paper>
+    <div className={styles.searchBar}>
+      <Backdrop
+        className={styles.back}
+        open={searchVisible}
+        onClick={handleClickBackdrop}
+      />
+      <Paper className={styles.bar}>
+        <div className={styles.content}>
+          <IconButton className={styles.startIcon} size='small'>
+            <img
+              src={IconAliHead}
+              className={styles.iconImg}
+              draggable='false'
+            />
+          </IconButton>
+          <div className={styles.inputArea}>
+            <input
+              className={styles.input}
+              placeholder='Search'
+              value={inputValue}
+              onChange={handleInput}
+              onFocus={handleSearchBarFocus}
+            />
+          </div>
+          <IconButton
+            className={styles.endIcon}
+            size='small'
+            onClick={handleTapSearch}
+          >
+            <img
+              src={IconSearch}
+              className={styles.iconImg}
+              draggable='false'
+            />
+          </IconButton>
+        </div>
+        <Paper
+          className={cx(styles.searchResult, {
+            [styles.expand]: searchVisible,
+          })}
+        >
+          {appsInList.length ? (
+            <List>
+              {appsInList.map((app, index) => (
+                <div
+                  key={app.appId}
+                  ref={index === selectedAppIndex ? appItemRef : undefined}
+                >
+                  <ListItem disablePadding>
+                    <ListItemButton
+                      selected={index === selectedAppIndex}
+                      onClick={() => handleClickAppItem(index)}
+                    >
+                      <ListItemIcon>
+                        <img src={app.icon} className={styles.appIcon} />
+                      </ListItemIcon>
+                      <ListItemText primary={app.title} />
+                    </ListItemButton>
+                  </ListItem>
+                </div>
+              ))}
+            </List>
+          ) : (
+            <div className={styles.emptyResult}>
+              <Typography color='text.secondary'>no result</Typography>
+            </div>
+          )}
+        </Paper>
+      </Paper>
+    </div>
   )
 }
 

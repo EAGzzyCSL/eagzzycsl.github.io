@@ -47,7 +47,7 @@ const Desktop = (props: DesktopProps): JSX.Element => {
         tables={[
           <div className={styles.tableOne} key='one'>
             <div className={styles.top}>
-              <SearchBar onSearch={handleSearch} />
+              <SearchBar onSearch={handleSearch} apps={apps} />
             </div>
             <div className={styles.main}>
               <div className={styles.widgetArea} />

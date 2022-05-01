@@ -4,6 +4,7 @@ import path from 'path'
 
 import { NextRouter, useRouter as useNextRouter } from 'next/router'
 
+import { AppDescribe } from '@/types/app'
 import Logger from '@/utils/logger'
 import { camel2kebab } from '@/utils/string'
 
@@ -38,6 +39,15 @@ export class MyRouter {
   ) {
     this.router = router
     this.historyRecordOfRoute = historyRecordOfRoute
+  }
+
+  /**
+   * 跳转到App
+   */
+  navToApp(app: AppDescribe): void {
+    if (app.root !== '/') {
+      this.router.push(app.root)
+    }
   }
 
   /**
