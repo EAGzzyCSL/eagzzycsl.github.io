@@ -1,0 +1,24 @@
+.app-bar-tabs {
+  .selector {
+    padding: 0 8px;
+
+    .mui-select {
+      padding: 8px;
+    }
+  }
+
+  @media (orientation: landscape) {
+    .selector {
+      display: none;
+    }
+  }
+
+  @media (orientation: portrait) {
+    .tabs {
+      // 使用display none 控制台会有报错
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+    }
+  }
+}

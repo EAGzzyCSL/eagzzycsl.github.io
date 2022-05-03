@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
-import { Tab, Tabs, Typography } from '@mui/material'
+import { Typography } from '@mui/material'
 import {
   blue as colorBlue,
   deepOrange as colorDeepOrange,
@@ -9,6 +9,8 @@ import {
 import { createTheme } from '@mui/material/styles'
 import { GetStaticPropsResult } from 'next'
 
+import { useHashChange } from '@/hooks'
+import AppBarTabs from '@/shell/AppBarTabs'
 import AppPage from '@/shell/AppPage'
 import SimpleAppBar from '@/shell/SimpleAppBar'
 
@@ -55,22 +57,13 @@ const Calculator = (): JSX.Element => {
   )
 
   // 监听hash变化，实现路由返回时tab随之切换
-  useEffect(() => {
-    const hashListener = (): void => {
-      setActiveTabIndex(getPanelIndexFromHash())
-    }
-    window.addEventListener('hashchange', hashListener)
-    return () => {
-      window.removeEventListener('hashchange', hashListener)
-    }
-  }, [])
+  useHashChange(() => {
+    setActiveTabIndex(getPanelIndexFromHash())
+  })
 
-  const handleSwitchTab = (
-    event: React.ChangeEvent<unknown>,
-    newValue: number,
-  ): void => {
-    setActiveTabIndex(newValue)
-    document.location.hash = panels[newValue].id
+  const handleSwitchTab = (activeTabIndex: number): void => {
+    setActiveTabIndex(activeTabIndex)
+    document.location.hash = panels[activeTabIndex].id
   }
 
   const ActivePanel = panels[activeTabIndex].component
@@ -86,17 +79,11 @@ const Calculator = (): JSX.Element => {
                 计算器
               </Typography>
               <div className={styles.tabs}>
-                <Tabs
-                  value={activeTabIndex}
-                  onChange={handleSwitchTab}
-                  centered
-                  indicatorColor='primary'
-                  textColor='primary'
-                >
-                  {panels.map(item => (
-                    <Tab label={item.title} key={item.id} />
-                  ))}
-                </Tabs>
+                <AppBarTabs
+                  tabs={panels}
+                  activeTabIndex={activeTabIndex}
+                  handleSwitchTab={handleSwitchTab}
+                />
               </div>
             </div>
           }
