@@ -1,6 +1,5 @@
 import React from 'react'
 
-import { Typography } from '@mui/material'
 import {
   blue as colorBlue,
   deepOrange as colorDeepOrange,
@@ -71,23 +70,13 @@ const Calculator = (): JSX.Element => {
   return (
     <AppPage title='计算器' theme={theme} fullHeight>
       <section className={styles.calculator}>
-        <SimpleAppBar
-          inverse
-          mainContent={
-            <div className={styles.appBarContent}>
-              <Typography component='h1' variant='h6' color='primary'>
-                计算器
-              </Typography>
-              <div className={styles.tabs}>
-                <AppBarTabs
-                  tabs={panels}
-                  activeTabIndex={activeTabIndex}
-                  handleSwitchTab={handleSwitchTab}
-                />
-              </div>
-            </div>
-          }
-        />
+        <SimpleAppBar inverse title='计算器'>
+          <AppBarTabs
+            tabs={panels}
+            activeTabIndex={activeTabIndex}
+            handleSwitchTab={handleSwitchTab}
+          />
+        </SimpleAppBar>
         <div className={styles.panel}>
           {/* FIXME: 需要保留面板状态 */}
           <ActivePanel />

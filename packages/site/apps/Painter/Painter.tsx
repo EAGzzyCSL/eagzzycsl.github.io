@@ -1,6 +1,5 @@
 import React from 'react'
 
-import { Typography } from '@mui/material'
 import { GetStaticPropsResult } from 'next'
 import dynamic from 'next/dynamic'
 
@@ -60,28 +59,13 @@ const Painter = (): JSX.Element => {
   return (
     <AppPage title='出图' theme={theme} fullHeight>
       <section className={styles.painter}>
-        <SimpleAppBar
-          inverse
-          mainContent={
-            <div className={styles.appBarContent}>
-              <Typography
-                component='h1'
-                variant='h6'
-                color='primary'
-                className={styles.title}
-              >
-                出图
-              </Typography>
-              <div className={styles.tabs}>
-                <AppBarTabs
-                  tabs={panels}
-                  activeTabIndex={activeTabIndex}
-                  handleSwitchTab={handleSwitchTab}
-                />
-              </div>
-            </div>
-          }
-        />
+        <SimpleAppBar inverse title='出图'>
+          <AppBarTabs
+            tabs={panels}
+            activeTabIndex={activeTabIndex}
+            handleSwitchTab={handleSwitchTab}
+          />
+        </SimpleAppBar>
         <div className={styles.panel}>
           {/* FIXME: 需要保留面板状态 */}
           <ActivePanel />

@@ -1,15 +1,27 @@
 .simple-app-bar {
+  display: flex;
+
   &.white-bg {
     background-color: white;
   }
 
-  .main-content {
+  .toolbar {
     display: flex;
-    flex: 1 0 0;
-    align-items: center;
 
     .title {
-      flex: 1 0 0;
+      flex: 0 0 auto;
+    }
+
+    .main-content {
+      display: flex;
+      flex: 1 1 auto;
+      align-items: center;
+      justify-content: center;
+      width: 0;
+    }
+
+    .extra-icons {
+      flex: 0 0 auto;
     }
   }
 

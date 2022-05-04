@@ -24,7 +24,7 @@ interface SimpleAppBarProps {
   whiteBg?: boolean
   sticky?: boolean
   title?: string
-  mainContent?: JSX.Element
+  children?: JSX.Element
   hideMenuIcon?: boolean
   extraIcons?: {
     visible?: 'always' | 'never' | 'portraitOnly'
@@ -39,7 +39,7 @@ const SimpleAppBar = ({
   inverse,
   whiteBg,
   sticky,
-  mainContent,
+  children,
   hideMenuIcon,
   extraIcons,
 }: SimpleAppBarProps): JSX.Element => {
@@ -64,25 +64,25 @@ const SimpleAppBar = ({
       elevation={inverse ? 0 : undefined}
       color={inverse ? 'transparent' : 'primary'}
     >
-      <Toolbar>
+      <Toolbar className={styles.toolbar}>
+        {/* home按钮 */}
         <AppBarHomeButton inverse={inverse} />
-
-        <div className={styles.mainContent}>
-          {/* 如果定义了mainContent就不展示title */}
-          {mainContent}
-          {title && (
-            <Typography
-              component='h1'
-              variant='h6'
-              className={styles.title}
-              color={inverse ? 'primary' : 'inherit'}
-            >
-              {title}
-            </Typography>
-          )}
-        </div>
-
-        <div>
+        {/* 标题 */}
+        {title && (
+          <Typography
+            component='h1'
+            variant='h6'
+            className={styles.title}
+            color={inverse ? 'primary' : 'inherit'}
+          >
+            {title}
+          </Typography>
+        )}
+        {/* 主内容 */}
+        {/* 即使children没有内容也要保留元素以撑开宽度 */}
+        <div className={styles.mainContent}>{children}</div>
+        {/* tail按钮 */}
+        <div className={styles.extraIcons}>
           {extraIcons
             ?.filter(item => item.visible !== 'never')
             .map((ei, index) => (
@@ -107,6 +107,7 @@ const SimpleAppBar = ({
                 </IconButton>
               </Tooltip>
             ))}
+          {/* 默认菜单按钮 */}
           {!hideMenuIcon && (
             <Tooltip title='菜单项' enterDelay={TOOLTIP_DELAY}>
               <IconButton
@@ -163,7 +164,7 @@ SimpleAppBar.defaultProps = {
   inverse: false,
   whiteBg: false,
   sticky: false,
-  mainContent: undefined,
+  children: undefined,
   hideMenuIcon: false,
   extraIcons: [],
 }
