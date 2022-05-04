@@ -1,288 +1,189 @@
-import React, { useState, useRef } from 'react'
+import React, {
+  useState,
+  useImperativeHandle,
+  PropsWithChildren,
+  ForwardedRef,
+  useRef,
+} from 'react'
 
-import { Button, TextField, Typography } from '@mui/material'
-import cx from 'classnames'
+import CalculatorPanel from '../parts/CalculatorPanel'
+import {
+  ExpressionFiled,
+  ExpressionResult,
+  ExpressionContainer,
+  IExpressionFiledHandler,
+  OperatorParenthesis,
+  OperatorPower,
+  OperatorBinary,
+  OperatorFraction,
+} from '../parts/Expression'
+import {
+  IExpressionFC,
+  IExpressionProps,
+  IExpressionHandler,
+  TFormula,
+} from '../types/expression'
+import { IHistoryItem, IHistoryItemContent } from '../types/history'
 
-import History, { HistoryItem } from '../parts/History'
-
-import styles from './DPI.module.scss'
 import { calDPI } from './functions'
 
-const validateAndParse = (
-  numberString: string,
-): {
-  numberValue: number
-  errorMsg: string
-} => {
-  const value = parseInt(numberString, 10)
-  return {
-    numberValue: value,
-    errorMsg: value > 0 ? '' : '请输入大于0的数值',
-  }
+const enum DPIFormulaField {
+  widthPx = 'widthPx',
+  heightPx = 'heightPx',
+  diagonalInch = 'diagonalInch',
+  dpi = 'dpi',
 }
 
-interface DPITextFieldProps {
-  label: string
-  value: string
-  onChange: (value: string) => void
-  readOnly?: boolean
+interface DPIFormula extends TFormula<DPIFormulaField> {
+  [DPIFormulaField.widthPx]: string
+  [DPIFormulaField.heightPx]: string
+  [DPIFormulaField.diagonalInch]: string
+  [DPIFormulaField.dpi]: string
 }
 
-const DPITextField = ({
-  value,
-  label,
-  onChange,
-  readOnly,
-}: DPITextFieldProps): JSX.Element => {
-  const [validateInfo, setValidateInfo] = useState<{
-    error: boolean
-    helperText: string
-  }>({
-    error: false,
-    helperText: '',
+const DPIFormulaLabel = {
+  [DPIFormulaField.widthPx]: '长边像素',
+  [DPIFormulaField.heightPx]: '短边像素',
+  [DPIFormulaField.diagonalInch]: '对角线英寸',
+  [DPIFormulaField.dpi]: '屏幕dpi',
+}
+
+const DPIExpression: IExpressionFC<DPIFormula> = (
+  props: PropsWithChildren<IExpressionProps<DPIFormula>>,
+  forwardedRef: ForwardedRef<IExpressionHandler<DPIFormula>>,
+): JSX.Element => {
+  const { onExecute } = props
+
+  const [formula, setFormula] = useState<DPIFormula>({
+    [DPIFormulaField.widthPx]: '',
+    [DPIFormulaField.heightPx]: '',
+    [DPIFormulaField.diagonalInch]: '',
+    [DPIFormulaField.dpi]: '',
   })
-  return (
-    <span className={styles.inputFiled}>
-      <TextField
-        error={validateInfo.error}
-        helperText={validateInfo.helperText}
-        variant='standard'
-        size='small'
-        label={label}
-        value={value}
-        onChange={event => {
-          onChange(event.target.value)
-          const { errorMsg } = validateAndParse(event.target.value)
-          setValidateInfo({
-            error: !!errorMsg,
-            helperText: errorMsg,
-          })
-        }}
-        InputProps={{
-          readOnly,
-        }}
-      />
-    </span>
-  )
-}
 
-DPITextField.defaultProps = {
-  readOnly: false,
-}
+  useImperativeHandle<
+    IExpressionHandler<DPIFormula>,
+    IExpressionHandler<DPIFormula>
+  >(forwardedRef, () => ({
+    setFormula: (formula: DPIFormula) => {
+      setFormula(formula)
+    },
+  }))
 
-interface DPIFormulaInput {
-  widthPx: string
-  heightPx: string
-  diagonalInch: string
-  dpi: string
-}
-
-const DPIFormulaDescription: {
-  label: string
-  field: keyof DPIFormulaInput
-}[] = [
-  {
-    label: '屏幕长边像素',
-    field: 'widthPx',
-  },
-  {
-    label: '屏幕短边像素',
-    field: 'heightPx',
-  },
-  {
-    label: '屏幕对角线英寸',
-    field: 'diagonalInch',
-  },
-  {
-    label: '屏幕dpi',
-    field: 'dpi',
-  },
-]
-
-interface ExpressionProps {
-  formulaInput: DPIFormulaInput
-  onChangeFormulaInput: (formulaInput: DPIFormulaInput) => void
-  onExecuted: (formulaInput: DPIFormulaInput) => void
-}
-
-const ExpressionSymbol = ({
-  content,
-  sup,
-}: {
-  content: string
-  sup?: boolean
-}): JSX.Element => (
-  <Typography
-    component={sup ? 'sup' : 'span'}
-    variant='inherit'
-    color='secondary'
-    className={styles.symbol}
-  >
-    {content}
-  </Typography>
-)
-
-ExpressionSymbol.defaultProps = {
-  sup: false,
-}
-
-const Expression = ({
-  formulaInput,
-  onChangeFormulaInput,
-  onExecuted,
-}: ExpressionProps): JSX.Element => {
-  const handleDPITextFieldChange = (
-    field: keyof DPIFormulaInput,
-    value: string,
-  ): void => {
-    onChangeFormulaInput({
-      ...formulaInput,
-      [field]: value,
-    })
-  }
-
-  const handleEvaluateClick = (): void => {
-    const { widthPx, heightPx, diagonalInch } = formulaInput
+  const handleEvaluate = (): void => {
+    const { widthPx, heightPx, diagonalInch } = formula
 
     const newerFormulaInput = {
-      ...formulaInput,
+      ...formula,
       dpi: `${calDPI(
-        validateAndParse(widthPx).numberValue,
-        validateAndParse(heightPx).numberValue,
-        validateAndParse(diagonalInch).numberValue,
+        parseInt(widthPx, 10),
+        parseInt(heightPx, 10),
+        parseInt(diagonalInch, 10),
       )}`,
     }
 
-    onChangeFormulaInput(newerFormulaInput)
-    onExecuted(newerFormulaInput)
+    setFormula(newerFormulaInput)
+    onExecute(newerFormulaInput)
   }
 
-  const createFormulaField = (
-    indexInFormula: number,
-    readOnly?: boolean,
-  ): JSX.Element => (
-    <DPITextField
-      readOnly={readOnly}
-      label={DPIFormulaDescription[indexInFormula].label}
-      value={formulaInput[DPIFormulaDescription[indexInFormula].field]}
-      onChange={value => {
-        handleDPITextFieldChange(
-          DPIFormulaDescription[indexInFormula].field,
-          value,
-        )
-      }}
-    />
+  const widthPxFieldRef = useRef<IExpressionFiledHandler>(null)
+  const heightPxFieldRef = useRef<IExpressionFiledHandler>(null)
+  const diagonalInchFieldRef = useRef<IExpressionFiledHandler>(null)
+
+  const signEnable = !!(
+    widthPxFieldRef.current?.isValid() &&
+    heightPxFieldRef.current?.isValid() &&
+    diagonalInchFieldRef.current?.isValid()
   )
 
-  const evaluateButtonDisabled = DPIFormulaDescription.slice(0, 3)
-    .map(item => formulaInput[item.field])
-    .map(value => validateAndParse(value).errorMsg)
-    .some(errorMsg => errorMsg)
-
   return (
-    <section className={styles.expression}>
-      <ExpressionSymbol content='(' />
-      {createFormulaField(0)}
-      <ExpressionSymbol content='2' />
-      <ExpressionSymbol content='+' />
-      {createFormulaField(1)}
-      <ExpressionSymbol content='2' sup />
-      <ExpressionSymbol content=')' />
-      <ExpressionSymbol content='½' sup />
-      <ExpressionSymbol content='÷' />
-      {createFormulaField(2)}
-      <span className={cx(styles.symbol, styles.execute)}>
-        <Button
-          variant='contained'
-          color='secondary'
-          disabled={evaluateButtonDisabled}
-          onClick={() => handleEvaluateClick()}
-        >
-          =
-        </Button>
-      </span>
-      {createFormulaField(3, true)}
-    </section>
+    <ExpressionContainer
+      signEnable={signEnable}
+      onEvaluate={handleEvaluate}
+      result={
+        <div>
+          <ExpressionResult
+            label={DPIFormulaLabel[DPIFormulaField.dpi]}
+            result={formula.dpi}
+          />
+        </div>
+      }
+    >
+      <OperatorFraction
+        molecule={
+          <OperatorPower power='½'>
+            <OperatorParenthesis>
+              <OperatorBinary
+                left={
+                  <OperatorPower power='2'>
+                    <ExpressionFiled<DPIFormula>
+                      myRef={widthPxFieldRef}
+                      formula={formula}
+                      setFormula={setFormula}
+                      label={DPIFormulaLabel[DPIFormulaField.widthPx]}
+                      fieldKey={DPIFormulaField.widthPx}
+                    />
+                  </OperatorPower>
+                }
+                operator='+'
+                right={
+                  <OperatorPower power='2'>
+                    <ExpressionFiled<DPIFormula>
+                      myRef={heightPxFieldRef}
+                      formula={formula}
+                      setFormula={setFormula}
+                      label={DPIFormulaLabel[DPIFormulaField.heightPx]}
+                      fieldKey={DPIFormulaField.heightPx}
+                    />
+                  </OperatorPower>
+                }
+              />
+            </OperatorParenthesis>
+          </OperatorPower>
+        }
+        denominator={
+          <ExpressionFiled<DPIFormula>
+            myRef={diagonalInchFieldRef}
+            formula={formula}
+            setFormula={setFormula}
+            label={DPIFormulaLabel[DPIFormulaField.diagonalInch]}
+            fieldKey={DPIFormulaField.diagonalInch}
+          />
+        }
+      />
+    </ExpressionContainer>
   )
 }
 
-const formulaInput2HistoryItem = (
-  id: number,
-  { widthPx, heightPx, diagonalInch, dpi }: DPIFormulaInput,
-): HistoryItem => ({
-  id,
-  content: [`${widthPx}`, `${heightPx}`, `${diagonalInch}`, `${dpi}`],
-})
-
-const historyItem2formulaInput = (
-  historyItem: HistoryItem,
-): DPIFormulaInput => ({
-  widthPx: historyItem.content[0],
-  heightPx: historyItem.content[1],
-  diagonalInch: historyItem.content[2],
-  dpi: historyItem.content[3],
-})
-
-const DPI = (): JSX.Element => {
-  const [formulaInput, setFormulaInput] = useState<DPIFormulaInput>({
-    widthPx: '',
-    heightPx: '',
-    diagonalInch: '',
-    dpi: '',
-  })
-
-  const [history, setHistory] = useState<Record<number, HistoryItem>>({})
-
-  const historyCounter = useRef(1)
-
-  const handleOnExpressionExecuted = (
-    newerFormulaInput: DPIFormulaInput,
-  ): void => {
-    setHistory({
-      ...history,
-      [historyCounter.current]: formulaInput2HistoryItem(
-        historyCounter.current,
-        newerFormulaInput,
-      ),
-    })
-    historyCounter.current += 1
-  }
-
-  const handleOnRemoveHistoryItem = (id: number): void => {
-    const historyBackup = { ...history }
-    delete historyBackup[id]
-    setHistory(historyBackup)
-  }
-
-  const handleOnInsertHistoryItem = (historyItem: HistoryItem): void => {
-    setHistory({
-      ...history,
-      [historyItem.id]: historyItem,
-    })
-  }
-
-  const handleOnUseHistoryItem = (id: number): void => {
-    setFormulaInput(historyItem2formulaInput(history[id]))
-  }
-
-  return (
-    <section className={styles.dpi}>
-      <Expression
-        formulaInput={formulaInput}
-        onChangeFormulaInput={setFormulaInput}
-        onExecuted={handleOnExpressionExecuted}
-      />
-      <History
-        data={{
-          head: DPIFormulaDescription.map(({ label }) => label),
-          list: Object.values(history).sort((a, b) => b.id - a.id),
-        }}
-        onRemoveItem={handleOnRemoveHistoryItem}
-        onReportItem={handleOnUseHistoryItem}
-        onInsertItem={handleOnInsertHistoryItem}
-      />
-    </section>
-  )
-}
+const DPI = (): JSX.Element => (
+  <CalculatorPanel<DPIFormula>
+    ExpressionFC={DPIExpression}
+    historyHead={[
+      DPIFormulaLabel[DPIFormulaField.widthPx],
+      DPIFormulaLabel[DPIFormulaField.heightPx],
+      DPIFormulaLabel[DPIFormulaField.diagonalInch],
+      DPIFormulaLabel[DPIFormulaField.dpi],
+    ]}
+    adaptor={{
+      formula2HistoryItemContent: ({
+        widthPx,
+        heightPx,
+        diagonalInch,
+        dpi,
+      }: DPIFormula): IHistoryItemContent => [
+        `${widthPx}`,
+        `${heightPx}`,
+        `${diagonalInch}`,
+        `${dpi}`,
+      ],
+      historyItem2formula: (historyItem: IHistoryItem): DPIFormula => ({
+        widthPx: historyItem.content[0],
+        heightPx: historyItem.content[1],
+        diagonalInch: historyItem.content[2],
+        dpi: historyItem.content[3],
+      }),
+    }}
+  />
+)
 
 export default DPI

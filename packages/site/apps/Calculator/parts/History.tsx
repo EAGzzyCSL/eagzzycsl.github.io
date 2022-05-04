@@ -18,54 +18,59 @@ import {
   Typography,
 } from '@mui/material'
 
+import { IHistoryItem } from '../types/history'
+
 import styles from './History.module.scss'
 
-export interface HistoryItem {
-  id: number
-  content: string[]
-}
-
 interface HistoryProps {
-  data: {
-    head: string[]
-    list: HistoryItem[]
-  }
-  onRemoveItem: (id: number) => void
-  onReportItem: (id: number) => void
-  onInsertItem: (historyItem: HistoryItem) => void
+  head: string[]
+  list: IHistoryItem[]
+  onRemoveItem: (itemIndex: number) => void
+  onReUseItem: (itemIndex: number) => void
+  onRepealItemDelete: (
+    itemOriginalIndex: number,
+    historyItem: IHistoryItem,
+  ) => void
 }
 
 const History = ({
-  data,
+  head,
+  list,
   onRemoveItem,
-  onReportItem,
-  onInsertItem,
+  onReUseItem: onReuseItem,
+  onRepealItemDelete,
 }: HistoryProps): JSX.Element => {
-  const { head, list } = data
   const headLabels = ['序号', ...head, '操作']
 
   const [snackBarVisible, setSnackBarVisible] = useState(false)
 
   const [recentRemovedItem, setRecentRemovedItem] =
-    useState<HistoryItem | null>(null)
+    useState<IHistoryItem | null>(null)
+
+  const [recentRemovedItemIndex, setRecentRemovedItemIndex] = useState(0)
 
   const handleCloseSnackBar = (): void => {
     setSnackBarVisible(false)
   }
 
+  // FIXME: 如果同时删除两个snackBar只会展示一个并用第二个的内容覆盖第一个
   const handleShowSnackBar = (): void => {
     setSnackBarVisible(true)
   }
 
-  const handleRecallItemRemove = (): void => {
-    if (recentRemovedItem) {
-      onInsertItem(recentRemovedItem)
+  const handleRepealItemDelete = (
+    itemOriginalIndex: number,
+    historyItem: IHistoryItem,
+  ): void => {
+    if (historyItem) {
+      onRepealItemDelete(itemOriginalIndex, historyItem)
     }
   }
 
-  const handleRemoveItem = (historyItem: HistoryItem): void => {
-    onRemoveItem(historyItem.id)
-    setRecentRemovedItem(historyItem)
+  const handleRemoveItem = (itemIndex: number): void => {
+    onRemoveItem(itemIndex)
+    setRecentRemovedItem(list[itemIndex])
+    setRecentRemovedItemIndex(itemIndex)
     handleShowSnackBar()
   }
 
@@ -74,8 +79,8 @@ const History = ({
       <Typography variant='h5' component='h1' color='primary' gutterBottom>
         历史记录
       </Typography>
-      <TableContainer>
-        <Table aria-label='simple table'>
+      <TableContainer className={styles.table}>
+        <Table stickyHeader size='small'>
           <TableHead>
             <TableRow>
               {headLabels.map((label, index) => (
@@ -87,7 +92,7 @@ const History = ({
             </TableRow>
           </TableHead>
           <TableBody>
-            {list.map(row => (
+            {list.map((row, index) => (
               <TableRow key={row.id}>
                 <TableCell component='th' align='center' color='secondary'>
                   <Typography
@@ -105,11 +110,11 @@ const History = ({
                   </TableCell>
                 ))}
                 <TableCell align='center'>
-                  <IconButton onClick={() => onReportItem(row.id)} size='large'>
+                  <IconButton onClick={() => onReuseItem(index)} size='large'>
                     <EditRoundedIcon />
                   </IconButton>
                   <IconButton
-                    onClick={() => handleRemoveItem(row)}
+                    onClick={() => handleRemoveItem(index)}
                     size='large'
                   >
                     <DeleteOutlineRoundedIcon />
@@ -135,7 +140,12 @@ const History = ({
               <Button
                 color='secondary'
                 size='small'
-                onClick={handleRecallItemRemove}
+                onClick={() =>
+                  handleRepealItemDelete(
+                    recentRemovedItemIndex,
+                    recentRemovedItem,
+                  )
+                }
               >
                 撤销
               </Button>

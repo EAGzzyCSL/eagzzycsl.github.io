@@ -1,12 +1,11 @@
-.history {
+.calculator-panel {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  padding-top: 16px;
+  width: 100%;
   overflow: hidden;
 
-  .table {
+  .history-part {
     flex: 1 0 0;
-    height: 100%;
+    overflow: hidden;
   }
 }

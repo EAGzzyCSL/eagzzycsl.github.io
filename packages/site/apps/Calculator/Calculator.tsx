@@ -1,12 +1,7 @@
 import React from 'react'
 
-import {
-  blue as colorBlue,
-  deepOrange as colorDeepOrange,
-  pink as colorPink,
-} from '@mui/material/colors'
-import { createTheme } from '@mui/material/styles'
 import { GetStaticPropsResult } from 'next'
+import dynamic from 'next/dynamic'
 
 import { useHashChange } from '@/hooks'
 import AppBarTabs from '@/shell/AppBarTabs'
@@ -17,6 +12,7 @@ import { getHashContent } from '@/utils'
 import styles from './Calculator.module.scss'
 import FunctionBMI from './panels/BMI'
 import FunctionDPI from './panels/DPI'
+import theme from './theme'
 
 const panels = [
   {
@@ -36,20 +32,6 @@ const getPanelIndexFromHash = (): number => {
   const matchedIndx = panels.findIndex(panel => panel.id === panelId)
   return matchedIndx >= 0 ? matchedIndx : 0
 }
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: colorBlue[500],
-    },
-    secondary: {
-      main: colorDeepOrange[500],
-    },
-    error: {
-      main: colorPink[500],
-    },
-  },
-})
 
 const Calculator = (): JSX.Element => {
   const [activeTabIndex, setActiveTabIndex] = React.useState(
@@ -87,7 +69,9 @@ const Calculator = (): JSX.Element => {
   )
 }
 
-export default Calculator
+export default dynamic(() => Promise.resolve(Calculator), {
+  ssr: false,
+})
 
 export const getStaticProps = (): GetStaticPropsResult<unknown> => ({
   props: {},

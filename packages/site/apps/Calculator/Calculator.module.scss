@@ -1,10 +1,14 @@
 .calculator {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
   .panel {
     display: flex;
+    flex: 1 0 0;
     flex-direction: column;
     align-items: center;
-    padding: 24px;
+    padding: 12px;
+    overflow: hidden;
   }
 }
