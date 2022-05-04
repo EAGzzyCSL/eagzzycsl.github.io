@@ -12,6 +12,7 @@ import { useHashChange } from '@/hooks'
 import AppBarTabs from '@/shell/AppBarTabs'
 import AppPage from '@/shell/AppPage'
 import SimpleAppBar from '@/shell/SimpleAppBar'
+import { getHashContent } from '@/utils'
 
 import styles from './Calculator.module.scss'
 import FunctionBMI from './panels/BMI'
@@ -31,7 +32,7 @@ const panels = [
 ]
 
 const getPanelIndexFromHash = (): number => {
-  const panelId = process.browser ? document.location.hash.slice(1) : ''
+  const panelId = getHashContent()
   const matchedIndx = panels.findIndex(panel => panel.id === panelId)
   return matchedIndx >= 0 ? matchedIndx : 0
 }

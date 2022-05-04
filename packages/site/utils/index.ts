@@ -32,7 +32,7 @@ export const preLoadImages = (
   ])
 
 export const getHashContent = (): string =>
-  process.browser ? document.location.hash.slice(1) : ''
+  typeof window === 'undefined' ? '' : document.location.hash.slice(1)
 
 export const triggerDownload = (name: string, url: string): void => {
   const a = document.createElement('a')
