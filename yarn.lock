@@ -8512,10 +8512,10 @@ mobx-react-lite@3.2.0:
   resolved "https://registry.npmmirror.com/mobx-react-lite/download/mobx-react-lite-3.2.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmobx-react-lite%2Fdownload%2Fmobx-react-lite-3.2.0.tgz#331d7365a6b053378dfe9c087315b4e41c5df69f"
   integrity sha1-Mx1zZaawUzeN/pwIcxW05Bxd9p8=
 
-mobx@^6.3.2:
-  version "6.3.2"
-  resolved "https://registry.npmmirror.com/mobx/download/mobx-6.3.2.tgz#125590961f702a572c139ab69392bea416d2e51b"
-  integrity sha1-ElWQlh9wKlcsE5q2k5K+pBbS5Rs=
+mobx@^6.5.0:
+  version "6.5.0"
+  resolved "https://registry.npmmirror.com/mobx/-/mobx-6.5.0.tgz#dc2d028b1882737f6e813fc92454381e438b7ad3"
+  integrity sha512-pHZ/cySF00FVENDWIDzJyoObFahK6Eg4d0papqm6d7yMkxWTZ/S/csqJX1A3PsYy4t5k3z2QnlwuCfMW5lSEwA==
 
 modify-values@^1.0.0:
   version "1.0.1"
