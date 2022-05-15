@@ -1,4 +1,4 @@
-import { jointGoogleSearchUrl } from './Desktop'
+import { jointGoogleSearchUrl } from './index'
 
 test('jointGoogleSearchUrl', () => {
   expect(jointGoogleSearchUrl('hello')).toBe(

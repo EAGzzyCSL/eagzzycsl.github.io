@@ -2,15 +2,14 @@ import React from 'react'
 
 import { AppDescribe } from '@/types/app'
 
+import { jointGoogleSearchUrl } from '../utils/index'
+
 import AppEntry from './AppEntry'
 import styles from './Desktop.module.scss'
 import DesktopTable from './DesktopTable'
 import CalendarCard from './widgets/CalendarCard'
 import PoemCard from './widgets/PoemCard'
 import SearchBar from './widgets/SearchBar'
-
-export const jointGoogleSearchUrl = (keyword: string): string =>
-  `https://www.google.com/search?q=${encodeURIComponent(keyword)}`
 
 interface DesktopProps {
   apps: AppDescribe[]
