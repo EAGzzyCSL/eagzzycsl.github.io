@@ -60,8 +60,38 @@ const LockScreen = ({
     }
 
     document.addEventListener('keydown', keyDownListener)
+
+    let yStart = 0
+    let enableSwipeUp = false
+
+    const touchStartListener = (event: TouchEvent): void => {
+      const firstTouch = event.touches[0]
+      // 多点滑动时不触发
+      if (event.touches.length > 1) {
+        return
+      }
+      yStart = firstTouch.clientY
+      enableSwipeUp = true
+    }
+
+    const touchMoveListener = (event: TouchEvent): void => {
+      if (enableSwipeUp) {
+        const firstTouch = event.touches[0]
+        const yNew = firstTouch.clientY
+        const diff = yStart - yNew
+        if (diff > 60) {
+          onUnlockScreen()
+        }
+      }
+    }
+
+    document.addEventListener('touchmove', touchMoveListener)
+    document.addEventListener('touchstart', touchStartListener)
+
     return () => {
       document.removeEventListener('keydown', keyDownListener)
+      document.removeEventListener('touchstart', touchStartListener)
+      document.removeEventListener('touchmove', touchMoveListener)
     }
   })
 
