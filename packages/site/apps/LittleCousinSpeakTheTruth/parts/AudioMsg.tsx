@@ -32,7 +32,7 @@ const AudioMsg = ({ audioUrl, length }: AudioMsgProps): JSX.Element => {
           audioAnimating ? styles.animating : ''
         }`}
       >
-        <RecordVoiceOverRoundedIcon fontSize='small' color='primary' />
+        <RecordVoiceOverRoundedIcon fontSize='small' />
       </div>
       <span className={styles.length}>{length}</span>
       <audio
