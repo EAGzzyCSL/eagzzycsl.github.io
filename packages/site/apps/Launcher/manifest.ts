@@ -1,5 +1,6 @@
 import { Manifest } from '@/utils/app'
 
+import imageSwiper from './assets/swiper.png'
 import imageWallpaper from './assets/wallpaper.svg'
 import icon from './icon.png'
 
@@ -25,6 +26,13 @@ export default Manifest.create({
       url: 'https://besthqwallpapers.com/abstract/colorful-strips-art-lines-design-material-abstract-material-25834',
       image: imageWallpaper,
       brief: '桌面壁纸来自 besthqwallpapers.com，为减小体积转制为svg',
+    },
+    {
+      type: 'openSource',
+      title: 'Swiper',
+      url: 'https://swiperjs.com/',
+      image: imageSwiper,
+      brief: 'The Most Modern Mobile Touch Slider',
     },
   ],
   changelog: [

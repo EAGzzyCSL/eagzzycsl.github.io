@@ -75,8 +75,6 @@ const Launcher = (): JSX.Element => {
             <Desktop
               currentTableIndex={store.shellStore.desktopCurrentTableIndex}
               apps={sitemap.appList}
-              onTablePrevious={handleToPagePrevious}
-              onTableNext={handleToPageNext}
               updateCurrentTableIndex={index =>
                 store.shellStore.updateDesktopCurrentTableIndex(index)
               }
