@@ -1,0 +1,29 @@
+.notification {
+  width: 400px;
+  margin-bottom: 4px !important;
+
+  @media (orientation: portrait) {
+    width: 100%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 12px;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 4px;
+    }
+  }
+}

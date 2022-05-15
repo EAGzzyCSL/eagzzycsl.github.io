@@ -29,6 +29,7 @@ const Logger = {
   myRouter: new LoggerFor('myRouter', false),
   discussion: new LoggerFor('discussion', true),
   bookletFull: new LoggerFor('bookletFull', true),
+  storage: new LoggerFor('storage', true),
 }
 
 export default Logger

@@ -3,18 +3,25 @@ import React, { useState, useEffect } from 'react'
 import {
   LockOpenRounded as LockOpenRoundedIcon,
   LockRounded as LockRoundedIcon,
+  ComputerRounded as ComputerRoundedIcon,
 } from '@mui/icons-material'
 import { Typography, Slide, IconButton } from '@mui/material'
 
 import AvatarPng from '@/assets/avatar.png'
+import { useMyRouter } from '@/router'
 import { dayjs } from '@/utils/date'
 
+import notificationManager from '../service/NotificationManager'
+import { localStorageManager } from '../service/StorageManager'
+
 import styles from './LockScreen.module.scss'
+import Notification from './Notification'
 
 interface Clock {
   time: string
   date: string
 }
+
 interface LockScreenProps {
   locked: boolean
   onUnlockScreen: () => void
@@ -64,6 +71,28 @@ const LockScreen = ({
     }
   }
 
+  const myRouter = useMyRouter()
+
+  const [notifications, setNotifications] = useState(
+    notificationManager.getAllNotification(),
+  )
+
+  useEffect(() => {
+    if (!localStorageManager.getBooleanItem('hasShowWelcomeNotification')) {
+      notificationManager.registerNotification({
+        icon: <ComputerRoundedIcon fontSize='small' />,
+        header: '芹也',
+        title: '欢迎访问',
+        content: '查看网站介绍',
+        onClick: ({ router }) => {
+          localStorageManager.setBooleanItem('hasShowWelcomeNotification', true)
+          router.push('About', '/')
+        },
+      })
+      setNotifications(notificationManager.getAllNotification())
+    }
+  }, [])
+
   return (
     <Slide in={locked} timeout={locked ? 0 : undefined}>
       <section className={styles.lockScreen} onWheel={handleScreenWheel}>
@@ -77,6 +106,22 @@ const LockScreen = ({
           <Typography component='h2' variant='h5' gutterBottom>
             {clock.date}
           </Typography>
+        </div>
+        <div className={styles.notifications}>
+          {notifications.map(n => (
+            <Notification
+              key={n.id}
+              icon={n.icon}
+              header={n.header}
+              title={n.title}
+              content={n.content}
+              onClick={() => {
+                notificationManager.unRegisterNotification(n)
+                setNotifications(notificationManager.getAllNotification())
+                n.onClick({ router: myRouter })
+              }}
+            />
+          ))}
         </div>
         <div className={styles.bottomLock}>
           <IconButton
