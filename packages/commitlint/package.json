@@ -8,9 +8,9 @@
     "lint:es-fix": "npm run lint:es -- --fix"
   },
   "dependencies": {
-    "@commitlint/config-conventional": "^16.2.1"
+    "@commitlint/config-conventional": "^17.0.0"
   },
   "peerDependencies": {
-    "@commitlint/cli": "^16.2.3"
+    "@commitlint/cli": "^17.0.0"
   }
 }

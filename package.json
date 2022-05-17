@@ -37,7 +37,7 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.2.1",
+    "@commitlint/cli": "^17.0.0",
     "@mine/commitlint-config": "^0.0.0",
     "@mine/eslint-config": "^0.0.0",
     "@mine/prettier-config": "^0.0.0",
