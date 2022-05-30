@@ -35,7 +35,6 @@ module.exports = {
   transform: {
     ...defaults.transform,
     '^.+\\.(t|j)sx?$': '@swc/jest',
-    '\\.yaml$': 'jest-transform-yaml',
   },
 
   testEnvironment: 'jsdom',

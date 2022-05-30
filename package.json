@@ -55,7 +55,6 @@
     "jest": "^28.1.0",
     "jest-config": "^28.1.0",
     "jest-environment-jsdom": "^28.1.0",
-    "jest-transform-yaml": "^1.0.0",
     "lerna": "^5.0.0",
     "markdownlint": "^0.25.1",
     "markdownlint-cli": "^0.31.1",
