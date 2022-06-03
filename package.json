@@ -44,7 +44,7 @@
     "@mine/stylelint-config": "^0.0.0",
     "@swc/core": "^1.2.105",
     "@swc/jest": "^0.2.20",
-    "@types/jest": "^27.5.0",
+    "@types/jest": "^28.1.0",
     "@types/node": "^17.0.9",
     "cloc": "^2.9.0",
     "commitizen": "^4.2.4",
