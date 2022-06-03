@@ -1,6 +1,8 @@
 import { makeAutoObservable } from 'mobx'
 
-export default class ShellStore {
+import { createStore } from '@/store'
+
+class LauncherStore {
   isScreenLocked = true
 
   desktopImagePreLoaded = false
@@ -33,3 +35,5 @@ export default class ShellStore {
     this.desktopTableCount = tableCount
   }
 }
+
+export default createStore<LauncherStore>(new LauncherStore())

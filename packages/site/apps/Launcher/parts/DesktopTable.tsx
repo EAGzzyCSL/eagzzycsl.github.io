@@ -8,7 +8,7 @@ import 'swiper/css/pagination'
 // eslint-disable-next-line import/no-unresolved
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-import { useStore } from '@/hooks'
+import useStore from '../store'
 
 import styles from './DesktopTable.module.scss'
 
@@ -23,8 +23,8 @@ const DesktopTable = (props: DesktopTableProps): JSX.Element => {
   const store = useStore()
 
   useEffect(() => {
-    store.shellStore.reportDesktopTableCount(tables.length)
-  }, [store.shellStore, tables])
+    store.reportDesktopTableCount(tables.length)
+  }, [store, tables])
 
   const [swiper, setSwiper] = useState<SwiperClass | null>(null)
 

@@ -1,6 +1,8 @@
 import { makeAutoObservable } from 'mobx'
 
-export default class BlogStore {
+import { createStore } from '@/store'
+
+class BlogStore {
   focusOnLeft = true
 
   constructor() {
@@ -15,3 +17,5 @@ export default class BlogStore {
     this.focusOnLeft = true
   }
 }
+
+export default createStore<BlogStore>(new BlogStore())

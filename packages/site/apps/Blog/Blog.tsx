@@ -18,13 +18,13 @@ import cx from 'classnames'
 import { observer } from 'mobx-react-lite'
 import { GetStaticPropsResult } from 'next'
 
-import useStore from '@/hooks/useStore'
 import AppPage from '@/shell/AppPage'
 import SimpleAppBar from '@/shell/SimpleAppBar'
 
 import styles from './Blog.module.scss'
 import _exportedPosts from './data/index'
 import BlogBrief from './parts/BlogBrief'
+import useStore from './store'
 import theme from './theme'
 import { Article } from './type'
 
@@ -65,7 +65,7 @@ const Blog = ({ posts = dataOfPosts }: BlogProps): JSX.Element => {
     <AppPage title='芹也集' theme={theme} fullHeight>
       <section
         className={cx(styles.blog, {
-          [styles.focusOnLeft]: store.blogStore.focusOnLeft,
+          [styles.focusOnLeft]: store.focusOnLeft,
         })}
       >
         <Box className={styles.leftSide}>
@@ -133,20 +133,20 @@ const Blog = ({ posts = dataOfPosts }: BlogProps): JSX.Element => {
             onChange={handleTapPage}
           />
         </Box>
-        <Zoom in={!store.blogStore.focusOnLeft}>
+        <Zoom in={!store.focusOnLeft}>
           <Fab
             color='primary'
             className={cx(styles.switchFab, styles.left)}
-            onClick={() => store.blogStore.enableFocusOnLeft()}
+            onClick={() => store.enableFocusOnLeft()}
           >
             <KeyboardArrowLeftRoundedIcon />
           </Fab>
         </Zoom>
-        <Zoom in={store.blogStore.focusOnLeft}>
+        <Zoom in={store.focusOnLeft}>
           <Fab
             color='primary'
             className={cx(styles.switchFab, styles.right)}
-            onClick={() => store.blogStore.disableFocusOnLeft()}
+            onClick={() => store.disableFocusOnLeft()}
           >
             <KeyboardArrowRightRoundedIcon />
           </Fab>

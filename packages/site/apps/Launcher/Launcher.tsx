@@ -3,7 +3,6 @@ import React from 'react'
 import { observer } from 'mobx-react-lite'
 import { GetStaticPropsResult } from 'next'
 
-import useStore from '@/hooks/useStore'
 import AppPage from '@/shell/AppPage'
 import sitemap from '@/sitemap'
 import { preLoadImages, sleep } from '@/utils'
@@ -15,6 +14,7 @@ import BootLoading from './parts/BootLoading'
 import Desktop from './parts/Desktop'
 import LockScreen from './parts/LockScreen'
 import StatusBar from './parts/StatusBar'
+import useStore from './store'
 
 const imagesShouldPreLoad = [
   Wallpaper,
@@ -25,10 +25,10 @@ const Launcher = (): JSX.Element => {
   const store = useStore()
 
   const handleUnlockScreen = (): void => {
-    store.shellStore.unlockScreen()
+    store.unlockScreen()
   }
 
-  if (!store.shellStore.desktopImagePreLoaded) {
+  if (!store.desktopImagePreLoaded) {
     // 只在browser端执行预加载，避免ssr问题
     if (typeof window !== 'undefined') {
       // 避免loading一闪而过太突兀，至少让loading跑到触及右边（动画时间的4/5）
@@ -36,32 +36,28 @@ const Launcher = (): JSX.Element => {
         preLoadImages(imagesShouldPreLoad, 1500),
         sleep(400),
       ]).finally(() => {
-        store.shellStore.markDesktopImageLoaded()
+        store.markDesktopImageLoaded()
       })
     }
   }
 
   const handleToPagePrevious = (): void => {
-    const { desktopCurrentTableIndex } = store.shellStore
+    const { desktopCurrentTableIndex } = store
     if (desktopCurrentTableIndex > 0) {
-      store.shellStore.updateDesktopCurrentTableIndex(
-        desktopCurrentTableIndex - 1,
-      )
+      store.updateDesktopCurrentTableIndex(desktopCurrentTableIndex - 1)
     }
   }
 
   const handleToPageNext = (): void => {
-    const { desktopCurrentTableIndex, desktopTableCount } = store.shellStore
+    const { desktopCurrentTableIndex, desktopTableCount } = store
     if (desktopCurrentTableIndex < desktopTableCount - 1) {
-      store.shellStore.updateDesktopCurrentTableIndex(
-        desktopCurrentTableIndex + 1,
-      )
+      store.updateDesktopCurrentTableIndex(desktopCurrentTableIndex + 1)
     }
   }
 
   return (
     <AppPage title='首页' fullHeight>
-      {!store.shellStore.desktopImagePreLoaded ? (
+      {!store.desktopImagePreLoaded ? (
         <BootLoading />
       ) : (
         <section
@@ -73,10 +69,10 @@ const Launcher = (): JSX.Element => {
           <div className={styles.main}>
             <StatusBar />
             <Desktop
-              currentTableIndex={store.shellStore.desktopCurrentTableIndex}
+              currentTableIndex={store.desktopCurrentTableIndex}
               apps={sitemap.appList}
               updateCurrentTableIndex={index =>
-                store.shellStore.updateDesktopCurrentTableIndex(index)
+                store.updateDesktopCurrentTableIndex(index)
               }
             />
             <ActionBar
@@ -85,7 +81,7 @@ const Launcher = (): JSX.Element => {
             />
           </div>
           <LockScreen
-            locked={store.shellStore.isScreenLocked}
+            locked={store.isScreenLocked}
             onUnlockScreen={handleUnlockScreen}
           />
         </section>

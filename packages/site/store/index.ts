@@ -1,7 +1,6 @@
-import BlogStore from './blog'
-import ShellStore from './shell'
+import { useContext, createContext } from 'react'
 
-export default {
-  shellStore: new ShellStore(),
-  blogStore: new BlogStore(),
+export const createStore = <T>(store: T): (() => T) => {
+  const storeContext = createContext(store)
+  return () => useContext(storeContext)
 }
