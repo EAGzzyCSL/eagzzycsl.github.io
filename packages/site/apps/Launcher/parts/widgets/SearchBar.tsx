@@ -18,6 +18,7 @@ import { AppDescribe } from '@/types/app'
 
 import IconAliHead from '../../assets/icon-ali-head.svg'
 import IconSearch from '../../assets/icon-search.svg'
+import useStore from '../../store'
 
 import styles from './SearchBar.module.scss'
 
@@ -52,7 +53,16 @@ const SearchBar = ({ onSearch, apps }: SearchBarProps): JSX.Element => {
 
   const appItemRef = useRef<HTMLDivElement>(null)
 
+  const store = useStore()
+
+  const handleCloseSearchResult = useCallback(() => {
+    store.updateShellMaskVisible(false)
+    setSearchVisible(false)
+    setInputValue('')
+  }, [store])
+
   const handleSearchBarFocus = (): void => {
+    store.updateShellMaskVisible(true)
     setSelectedAppIndex(0)
     setSearchVisible(true)
   }
@@ -63,8 +73,7 @@ const SearchBar = ({ onSearch, apps }: SearchBarProps): JSX.Element => {
   }
 
   const handleClickBackdrop = (): void => {
-    setSearchVisible(false)
-    setInputValue('')
+    handleCloseSearchResult()
   }
 
   const appsInList = useMemo(
@@ -104,7 +113,7 @@ const SearchBar = ({ onSearch, apps }: SearchBarProps): JSX.Element => {
           break
         }
         case 'Escape': {
-          setSearchVisible(false)
+          handleCloseSearchResult()
           break
         }
         case 'Enter': {
@@ -122,7 +131,13 @@ const SearchBar = ({ onSearch, apps }: SearchBarProps): JSX.Element => {
     return () => {
       document.removeEventListener('keydown', handleKeyUpDown)
     }
-  }, [handleNavToApp, searchVisible, selectedAppIndex, appsInList])
+  }, [
+    handleNavToApp,
+    searchVisible,
+    selectedAppIndex,
+    appsInList,
+    handleCloseSearchResult,
+  ])
 
   return (
     <div className={styles.searchBar}>

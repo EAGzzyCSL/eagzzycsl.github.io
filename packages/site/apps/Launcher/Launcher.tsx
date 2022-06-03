@@ -68,13 +68,7 @@ const Launcher = (): JSX.Element => {
         >
           <div className={styles.main}>
             <StatusBar />
-            <Desktop
-              currentTableIndex={store.desktopCurrentTableIndex}
-              apps={sitemap.appList}
-              updateCurrentTableIndex={index =>
-                store.updateDesktopCurrentTableIndex(index)
-              }
-            />
+            <Desktop apps={sitemap.appList} />
             <ActionBar
               onTablePrevious={handleToPagePrevious}
               onTableNext={handleToPageNext}

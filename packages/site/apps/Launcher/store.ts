@@ -11,6 +11,8 @@ class LauncherStore {
 
   desktopTableCount = 0
 
+  shellMaskVisible = false
+
   constructor() {
     makeAutoObservable(this)
   }
@@ -33,6 +35,10 @@ class LauncherStore {
 
   reportDesktopTableCount(tableCount: number): void {
     this.desktopTableCount = tableCount
+  }
+
+  updateShellMaskVisible = (visible: boolean): void => {
+    this.shellMaskVisible = visible
   }
 }
 

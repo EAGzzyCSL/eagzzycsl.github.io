@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
+import { observer } from 'mobx-react-lite'
 import SwiperClass, { Pagination, Keyboard, Mousewheel } from 'swiper'
 // eslint-disable-next-line import/no-unresolved
 import 'swiper/css'
@@ -14,13 +15,12 @@ import styles from './DesktopTable.module.scss'
 
 interface DesktopTableProps {
   tables: JSX.Element[]
-  currentTableIndex: number
-  updateCurrentTableIndex: (index: number) => void
 }
 
 const DesktopTable = (props: DesktopTableProps): JSX.Element => {
-  const { tables, currentTableIndex, updateCurrentTableIndex } = props
+  const { tables } = props
   const store = useStore()
+  const { shellMaskVisible, desktopCurrentTableIndex } = store
 
   useEffect(() => {
     store.reportDesktopTableCount(tables.length)
@@ -29,8 +29,8 @@ const DesktopTable = (props: DesktopTableProps): JSX.Element => {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null)
 
   useEffect(() => {
-    swiper?.slideTo(currentTableIndex)
-  }, [swiper, currentTableIndex])
+    swiper?.slideTo(desktopCurrentTableIndex)
+  }, [swiper, desktopCurrentTableIndex])
 
   return (
     <section className={styles.desktopTable}>
@@ -49,12 +49,14 @@ const DesktopTable = (props: DesktopTableProps): JSX.Element => {
         }}
         onSwiper={swiper => {
           // 初始化时切到currentTableIndex
-          swiper.slideTo(currentTableIndex, 0)
+          swiper.slideTo(desktopCurrentTableIndex, 0)
           setSwiper(swiper)
         }}
         onActiveIndexChange={swiper => {
-          updateCurrentTableIndex(swiper.activeIndex)
+          store.updateDesktopCurrentTableIndex(swiper.activeIndex)
         }}
+        allowSlidePrev={!shellMaskVisible}
+        allowSlideNext={!shellMaskVisible}
       >
         {tables.map((table, index) => (
           // eslint-disable-next-line react/no-array-index-key
@@ -67,4 +69,4 @@ const DesktopTable = (props: DesktopTableProps): JSX.Element => {
   )
 }
 
-export default DesktopTable
+export default observer(DesktopTable)

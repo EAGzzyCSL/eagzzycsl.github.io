@@ -13,12 +13,10 @@ import SearchBar from './widgets/SearchBar'
 
 interface DesktopProps {
   apps: AppDescribe[]
-  currentTableIndex: number
-  updateCurrentTableIndex: (index: number) => void
 }
 
 const Desktop = (props: DesktopProps): JSX.Element => {
-  const { apps, currentTableIndex, updateCurrentTableIndex } = props
+  const { apps } = props
 
   const firstTableApps = apps.filter(app => app.tableIndex === 0)
   const secondTableApps = apps.filter(app => app.tableIndex === 1)
@@ -31,8 +29,6 @@ const Desktop = (props: DesktopProps): JSX.Element => {
     <section className={styles.desktop}>
       {/* 多桌面支持 */}
       <DesktopTable
-        currentTableIndex={currentTableIndex}
-        updateCurrentTableIndex={updateCurrentTableIndex}
         tables={[
           <div className={styles.tableOne} key='one'>
             <div className={styles.top}>
