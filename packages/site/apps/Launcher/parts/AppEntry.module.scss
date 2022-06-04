@@ -1,5 +1,7 @@
-$entry-size: 118px;
-$entry-size-small: 88px;
+$entry-width: 118px;
+$entry-height: 118px + 28px;
+$entry-width-small: 88px;
+$entry-height-small: 88px + 28px;
 
 $entry-margin: 12px;
 
@@ -10,15 +12,15 @@ $icon-size-small: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  width: $entry-size;
-  height: $entry-size;
+  justify-content: flex-start;
+  width: $entry-width;
+  height: $entry-height;
   margin: $entry-margin;
   user-select: none;
 
   @media (orientation: portrait) {
-    width: $entry-size-small;
-    height: $entry-size-small;
+    width: $entry-width-small;
+    height: $entry-height-small;
     margin: $entry-margin;
   }
 
@@ -42,6 +44,7 @@ $icon-size-small: 60px;
   }
 
   .title {
+    margin-top: 8px;
     color: white;
   }
 }
