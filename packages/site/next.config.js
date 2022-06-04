@@ -44,7 +44,7 @@ module.exports = {
     // 支持 import 媒体文件
     // 参考：https://github.com/vercel/next.js/issues/1935
     config.module.rules.push({
-      test: /\.(png|jpe?g|gif|svg|mp3)$/i,
+      test: /\.(png|jpe?g|gif|svg|webp|mp3)$/i,
       loader: 'file-loader',
       options: {
         name: '[path][name].[hash:hex:8].[ext]',

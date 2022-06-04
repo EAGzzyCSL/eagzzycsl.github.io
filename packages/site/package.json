@@ -48,7 +48,8 @@
     "rehype-raw": "^6.1.0",
     "rehype-sanitize": "^5.0.0",
     "remark-gfm": "^3.0.1",
-    "swiper": "^8.1.4"
+    "swiper": "^8.1.4",
+    "three": "^0.141.0"
   },
   "devDependencies": {
     "@babel/core": "^7.18.0",
@@ -59,6 +60,7 @@
     "@types/pinyin": "^2.10.0",
     "@types/react": "^17.0.13",
     "@types/react-test-renderer": "^17.0.1",
+    "@types/three": "^0.141.0",
     "chalk": "^5.0.0",
     "cross-env": "^7.0.3",
     "file-loader": "^6.2.0",

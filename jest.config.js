@@ -27,7 +27,7 @@ module.exports = {
   },
 
   moduleNameMapper: {
-    '\\.(css|scss|svg|jpg|jpeg|png|gif)$': 'identity-obj-proxy',
+    '\\.(css|scss|svg|jpg|jpeg|png|gif|webp)$': 'identity-obj-proxy',
     '^@/(.*)$': '<rootDir>/packages/site//$1',
   },
 

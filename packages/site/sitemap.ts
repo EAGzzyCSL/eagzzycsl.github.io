@@ -15,6 +15,7 @@ import LittleCousinSpeakTheTruth from '@/apps/LittleCousinSpeakTheTruth/manifest
 import Painter from '@/apps/Painter/manifest'
 import Template from '@/apps/Template/manifest'
 import UtilityApps from '@/apps/UtilityApps/manifest'
+import ViewInEarth from '@/apps/ViewInEarth/manifest'
 import WinterNine from '@/apps/WinterNine/manifest'
 
 import { registerApps } from './utils/app'
@@ -32,4 +33,5 @@ export default registerApps({
   Template,
   UtilityApps,
   Booklet,
+  ViewInEarth,
 })

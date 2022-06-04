@@ -30,6 +30,7 @@ const Logger = {
   discussion: new LoggerFor('discussion', true),
   bookletFull: new LoggerFor('bookletFull', true),
   storage: new LoggerFor('storage', true),
+  earth: new LoggerFor('earth', true),
 }
 
 export default Logger

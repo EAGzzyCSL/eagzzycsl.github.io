@@ -58,5 +58,10 @@
     "appId": "Booklet",
     "shortId": "booklet",
     "title": "篇册"
+  },
+  {
+    "appId": "ViewInEarth",
+    "shortId": "earth",
+    "title": "如果地球是向内的"
   }
 ]
