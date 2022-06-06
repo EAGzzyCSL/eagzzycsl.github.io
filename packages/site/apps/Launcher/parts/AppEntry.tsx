@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Typography, Paper } from '@mui/material'
+import { Typography, Paper, ButtonBase } from '@mui/material'
 
 import { useMyRouter } from '@/router'
 import { AppDescribe } from '@/types/app'
@@ -18,9 +18,15 @@ const AppEntry = ({ app }: AppEntryInterface): JSX.Element => {
   }
 
   return (
-    <div className={styles.appEntry} onClick={handleNav}>
+    <div className={styles.appEntry}>
       <Paper className={styles.iconWrapper} elevation={3}>
-        <img className={styles.iconImg} src={app.icon} draggable='false' />
+        <ButtonBase
+          className={styles.buttonBase}
+          sx={{
+            backgroundImage: `url(${app.icon})`,
+          }}
+          onClick={handleNav}
+        />
       </Paper>
       <Typography
         className={styles.title}
