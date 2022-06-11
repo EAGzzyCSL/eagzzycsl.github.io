@@ -57,6 +57,8 @@ const DesktopTable = (props: DesktopTableProps): JSX.Element => {
         }}
         allowSlidePrev={!shellMaskVisible}
         allowSlideNext={!shellMaskVisible}
+        // 规避bug：右边点一下再鼠标快速到左边点一下导致slide翻页
+        threshold={10}
       >
         {tables.map((table, index) => (
           // eslint-disable-next-line react/no-array-index-key
