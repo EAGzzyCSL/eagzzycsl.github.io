@@ -27,9 +27,8 @@ module.exports = {
   },
 
   moduleNameMapper: {
+    '\\.(css|scss|svg|jpg|jpeg|png|gif)$': 'identity-obj-proxy',
     '^@/(.*)$': '<rootDir>/packages/site//$1',
-    '\\.(css|scss|svg)$': 'identity-obj-proxy',
-    '\\.(jpg|jpeg|png|gif|svg)$': '<rootDir>/scripts/fileMock.js',
   },
 
   transform: {
