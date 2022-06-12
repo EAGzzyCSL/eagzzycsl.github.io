@@ -10083,6 +10083,13 @@ react-dom@^18.1.0:
     loose-envify "^1.1.0"
     scheduler "^0.22.0"
 
+react-image-crop@^10.0.0:
+  version "10.0.1"
+  resolved "https://registry.npmmirror.com/react-image-crop/-/react-image-crop-10.0.1.tgz#5fd96c5ff359d3d5d64c7b407b11cf9b1b88c28f"
+  integrity sha512-tKnTF5c91BHjmp00Ga81W9Y/QkODLZeJkPtJwNKyM7cg9wsDwbA6tQxNu7alYkXZB5VvOBdKfqjqAoeqS+l5CQ==
+  dependencies:
+    clsx "^1.1.1"
+
 "react-is@^16.12.0 || ^17.0.0 || ^18.0.0", react-is@^18.0.0, react-is@^18.1.0:
   version "18.1.0"
   resolved "https://registry.npmmirror.com/react-is/-/react-is-18.1.0.tgz#61aaed3096d30eacf2a2127118b5b41387d32a67"

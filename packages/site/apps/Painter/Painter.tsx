@@ -10,6 +10,7 @@ import SimpleAppBar from '@/shell/SimpleAppBar'
 import { getHashContent } from '@/utils'
 
 import styles from './Painter.module.scss'
+import PanelCampNineSquare from './panels/CampNineSquare'
 import PanelDictionary from './panels/Dictionary'
 import PanelImpossibleTrinity from './panels/ImpossibleTrinity'
 import PanelWordInWord from './panels/WordInWord'
@@ -30,6 +31,11 @@ const panels = [
     id: 'impossible-trinity',
     title: '不可能三角',
     component: PanelImpossibleTrinity,
+  },
+  {
+    id: 'camp-nine-square',
+    title: '阵营九宫格',
+    component: PanelCampNineSquare,
   },
 ]
 

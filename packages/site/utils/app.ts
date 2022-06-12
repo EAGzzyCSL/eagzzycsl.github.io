@@ -16,6 +16,24 @@ export class Manifest {
     }
   }
 
+  public static acknowledgeBatch(
+    list: [keyword: string, image: string, url?: string][],
+    options: {
+      type: IAcknowledgementItem['type']
+      titleFn: (keyword: string) => string
+      urlFn: (keyword: string) => string
+      briefFn: (keyword: string) => string
+    },
+  ): IAcknowledgementItem[] {
+    return list.map(([keyword, image, url]) => ({
+      type: options.type,
+      title: options.titleFn(keyword),
+      image,
+      url: url || options.urlFn(keyword),
+      brief: options.briefFn(keyword),
+    }))
+  }
+
   public static create<ROUTES extends string>(
     options: IManifest<ROUTES>,
   ): IManifest<ROUTES> {

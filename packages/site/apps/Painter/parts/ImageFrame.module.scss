@@ -1,0 +1,82 @@
+$frame-size: 120px;
+
+.image-frame {
+  position: relative;
+  display: block;
+  width: $frame-size;
+  height: $frame-size;
+
+  .image-container {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    .image-show {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  .upload-button {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    &.always-border {
+      border: dashed 4px lightgray;
+
+      &:hover {
+        border: dashed 4px gray;
+      }
+    }
+
+    .input {
+      position: absolute;
+      top: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+
+    .icon-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 110px;
+      height: 60px;
+      margin: auto;
+      opacity: 0;
+      transition: opacity ease-in-out 0.1s;
+    }
+
+    &:hover {
+      background-color: rgb(255 255 255 / 80%);
+      border: dashed 4px lightgray;
+
+      .icon-container {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.crop-dialog {
+  .image-to-crop {
+    display: block;
+    min-width: 30vw;
+    max-width: 60vw;
+    min-height: 50vh;
+    max-height: 80vh;
+  }
+}
