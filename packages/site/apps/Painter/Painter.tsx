@@ -4,6 +4,7 @@ import { GetStaticPropsResult } from 'next'
 import dynamic from 'next/dynamic'
 
 import { useHashChange } from '@/hooks'
+import PanelSwitcher from '@/share/PanelSwitcher'
 import AppBarTabs from '@/shell/AppBarTabs'
 import AppPage from '@/shell/AppPage'
 import SimpleAppBar from '@/shell/SimpleAppBar'
@@ -60,8 +61,6 @@ const Painter = (): JSX.Element => {
     document.location.hash = panels[activeTabIndex].id
   }
 
-  const ActivePanel = panels[activeTabIndex].component
-
   return (
     <AppPage title='出图' theme={theme} fullHeight>
       <section className={styles.painter}>
@@ -73,8 +72,7 @@ const Painter = (): JSX.Element => {
           />
         </SimpleAppBar>
         <div className={styles.panel}>
-          {/* FIXME: 需要保留面板状态 */}
-          <ActivePanel />
+          <PanelSwitcher panels={panels} selectedPanelIndex={activeTabIndex} />
         </div>
       </section>
     </AppPage>
