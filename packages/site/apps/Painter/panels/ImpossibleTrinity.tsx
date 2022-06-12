@@ -38,6 +38,7 @@ const ImpossibleTrinity = (): JSX.Element => {
   return (
     <section className={styles.impossibleTrinity}>
       <PanelContainer
+        size='large'
         board={
           <Saver saveAction='shotAndSave' fileName={fileName}>
             <div className={styles.board}>

@@ -26,6 +26,7 @@ const Dictionary = (): JSX.Element => {
   return (
     <section className={styles.dictionary}>
       <PanelContainer
+        size='small'
         board={
           <Saver saveAction='shotAndSave' fileName={word}>
             <div className={styles.card}>

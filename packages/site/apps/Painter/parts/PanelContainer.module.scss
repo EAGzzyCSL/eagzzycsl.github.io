@@ -19,8 +19,20 @@
 
     .board {
       @media (orientation: landscape) {
-        width: 700px;
-        height: 500px;
+        &.small {
+          width: 600px;
+          height: 400px;
+        }
+
+        &.normal {
+          width: 700px;
+          height: 500px;
+        }
+
+        &.large {
+          width: 900px;
+          height: 650px;
+        }
       }
 
       @media (orientation: portrait) {
