@@ -4,6 +4,7 @@ import { GetStaticPropsResult } from 'next'
 import dynamic from 'next/dynamic'
 
 import { useHashChange } from '@/hooks'
+import PanelSwitcher from '@/share/PanelSwitcher'
 import AppBarTabs from '@/shell/AppBarTabs'
 import AppPage from '@/shell/AppPage'
 import SimpleAppBar from '@/shell/SimpleAppBar'
@@ -48,8 +49,6 @@ const Calculator = (): JSX.Element => {
     document.location.hash = panels[activeTabIndex].id
   }
 
-  const ActivePanel = panels[activeTabIndex].component
-
   return (
     <AppPage title='计算器' theme={theme} fullHeight>
       <section className={styles.calculator}>
@@ -61,8 +60,7 @@ const Calculator = (): JSX.Element => {
           />
         </SimpleAppBar>
         <div className={styles.panel}>
-          {/* FIXME: 需要保留面板状态 */}
-          <ActivePanel />
+          <PanelSwitcher panels={panels} selectedPanelIndex={activeTabIndex} />
         </div>
       </section>
     </AppPage>
