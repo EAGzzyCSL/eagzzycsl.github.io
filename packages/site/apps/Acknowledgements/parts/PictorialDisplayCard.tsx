@@ -57,19 +57,19 @@ const Media = ({ image }: MediaProps): JSX.Element => (
   />
 )
 
-interface PictorialCardProps {
+interface PictorialDisplayCardProps {
   data: PictorialDisplayItem
   landscape?: boolean
   fill?: boolean
 }
 
-const PictorialCard = ({
+const PictorialDisplayCard = ({
   data: { image, title, brief, url },
   landscape,
   fill,
-}: PictorialCardProps): JSX.Element => (
+}: PictorialDisplayCardProps): JSX.Element => (
   <Card
-    className={cx(styles.displayCard, {
+    className={cx(styles.pictorialDisplayCard, {
       [styles.landscape]: landscape,
       [styles.fill]: fill,
     })}
@@ -94,9 +94,9 @@ const PictorialCard = ({
   </Card>
 )
 
-PictorialCard.defaultProps = {
+PictorialDisplayCard.defaultProps = {
   landscape: false,
   fill: false,
 }
 
-export default PictorialCard
+export default PictorialDisplayCard
