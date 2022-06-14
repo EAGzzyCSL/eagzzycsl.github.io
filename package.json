@@ -41,6 +41,7 @@
     "@mine/commitlint-config": "^0.0.0",
     "@mine/eslint-config": "^0.0.0",
     "@mine/prettier-config": "^0.0.0",
+    "@mine/simple-jest-transform-yaml": "^0.0.0",
     "@mine/stylelint-config": "^0.0.0",
     "@swc/core": "^1.2.105",
     "@swc/jest": "^0.2.20",

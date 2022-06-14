@@ -34,10 +34,11 @@ module.exports = {
   transform: {
     ...defaults.transform,
     '^.+\\.(t|j)sx?$': '@swc/jest',
+    '\\.yaml$': '@mine/simple-jest-transform-yaml',
   },
 
   testEnvironment: 'jsdom',
-  testMatch: ['<rootDir>/**/*.test.{ts,tsx}'],
+  testMatch: ['<rootDir>/**/*.test.{ts,tsx,js}'],
 
   testPathIgnorePatterns: ['/node_modules/'],
 }

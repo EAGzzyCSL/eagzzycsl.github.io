@@ -1,0 +1,16 @@
+{
+  "name": "@mine/simple-jest-transform-yaml",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "lint:es": "eslint --ext .js,.ts,.tsx ./",
+    "lint:es-fix": "npm run lint:es -- --fix"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  },
+  "peerDependencies": {
+    "jest": "^28.1.0"
+  }
+}
