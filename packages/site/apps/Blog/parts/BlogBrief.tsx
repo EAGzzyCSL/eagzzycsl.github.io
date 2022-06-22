@@ -29,7 +29,9 @@ const BlogBrief = ({
 
   const handleNav = (event: React.MouseEvent): void => {
     event.preventDefault()
-    router.push('Blog', '/[postId]', postPath)
+    router.push('Blog', '/[postId]', {
+      pageAs: postPath,
+    })
   }
   return (
     <section className={styles.blogBrief}>

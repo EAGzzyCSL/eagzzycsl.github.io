@@ -52,28 +52,45 @@ export class MyRouter {
 
   /**
    *
-   * @param app 目标app
-   * @param page 目标app页面
-   * @param pageAs 目标页面真实路径（动态路由的情况）
+   * @param appName 目标app名
+   * @param pageName 目标app页面路由名（也就是路径，如果是动态路由的话就是[postId]这种）
+   * @param pageAs 目标页面真实路径（动态路由的情况下使用）
    */
   push<A extends keyof RouteMap>(
-    app: A,
-    page: RouteMap[A],
-    pageAs?: string,
+    appName: A,
+    pageName: RouteMap[A],
+    options?: {
+      pageAs?: string
+      newWindow?: boolean
+    },
   ): void {
     const { router } = this
 
-    const appPath = sitemap.appMap[app].root
-      ? sitemap.appMap[app].root
-      : `/${camel2kebab(app)}`
-    const realPage = pageAs ? `/${pageAs}` : page
+    // 如果 app 自定义了 root（启动器），以 app 自定义的 root 作为 appPath
+    const appPath = sitemap.appMap[appName].root
+      ? ''
+      : `/${camel2kebab(appName)}`
 
-    const url = appPath === '/' ? page : `${appPath}${page}`
-    const urlAs = appPath === '/' ? realPage : `${appPath}${realPage}`
+    // 如果是动态路由，以 pageAs 为准
+    const realPage = options?.pageAs ? `/${options.pageAs}` : pageName
 
-    Logger.myRouter.log('myRouter.push', { app, page, pageAs, url, urlAs })
+    // 拼接喂给 nextRouter 的 url 和 urlAs
+    const url = `${appPath}${String(pageName)}`
+    const urlAs = `${appPath}${realPage}`
 
-    router.push(url, urlAs)
+    Logger.myRouter.log('myRouter.push', {
+      app: appName,
+      pageName,
+      pageAs: options?.pageAs,
+      url,
+      urlAs,
+    })
+
+    if (options?.newWindow) {
+      window.open(document.location.origin + urlAs, '_blank')
+    } else {
+      router.push(url, urlAs)
+    }
   }
 
   /**

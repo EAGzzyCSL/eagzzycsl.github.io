@@ -15,7 +15,9 @@ const Booklet = (): JSX.Element => {
   const router = useMyRouter()
 
   const handleNav = (bookletFullPath: string): void => {
-    router.push('Booklet', '/[bookletId]', bookletFullPath)
+    router.push('Booklet', '/[bookletId]', {
+      pageAs: bookletFullPath,
+    })
   }
 
   return (
