@@ -1,0 +1,64 @@
+$edge-border: solid 3px black;
+
+.crossed-grid {
+  width: 100%;
+  height: 100%;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    .row {
+      display: flex;
+      flex: 1 0 0;
+
+      .left-top {
+        display: flex;
+        flex: 1 0 0;
+        align-items: center;
+        justify-content: center;
+        border-right: $edge-border;
+        border-bottom: $edge-border;
+      }
+
+      .right-top {
+        display: flex;
+        flex: 1 0 0;
+        align-items: center;
+        justify-content: center;
+        border-bottom: $edge-border;
+        border-left: $edge-border;
+      }
+
+      .left-bottom {
+        display: flex;
+        flex: 1 0 0;
+        align-items: center;
+        justify-content: center;
+        border-top: $edge-border;
+        border-right: $edge-border;
+      }
+
+      .right-bottom {
+        display: flex;
+        flex: 1 0 0;
+        align-items: center;
+        justify-content: center;
+        border-top: $edge-border;
+        border-left: $edge-border;
+      }
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+
+    .demo-button {
+      margin: 0 16px;
+      margin-top: 32px;
+    }
+  }
+}

@@ -6,6 +6,11 @@ $frame-size: 120px;
   width: $frame-size;
   height: $frame-size;
 
+  &.full-size {
+    width: 100%;
+    height: 100%;
+  }
+
   .image-container {
     position: absolute;
     top: 0;

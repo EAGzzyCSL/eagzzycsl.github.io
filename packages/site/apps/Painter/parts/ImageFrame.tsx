@@ -80,10 +80,11 @@ CropDialog.defaultProps = {
 
 interface ImageFrameProps {
   imgUrl?: string
+  fullSize?: boolean
 }
 
 const ImageFrame = (props: ImageFrameProps): JSX.Element => {
-  const { imgUrl } = props
+  const { imgUrl, fullSize } = props
 
   const [originImageUrl, setOriginImageUrl] = useState(imgUrl || '')
   const [croppedUrl, setCroppedUrl] = useState(originImageUrl)
@@ -104,7 +105,11 @@ const ImageFrame = (props: ImageFrameProps): JSX.Element => {
   }
 
   return (
-    <div className={styles.imageFrame}>
+    <div
+      className={cx(styles.imageFrame, {
+        [styles.fullSize]: fullSize,
+      })}
+    >
       {/* 使用背景图会导致html2canvas模糊
        * issue: https://github.com/niklasvh/html2canvas/issues/1464
        */}
@@ -176,6 +181,7 @@ const ImageFrame = (props: ImageFrameProps): JSX.Element => {
 
 ImageFrame.defaultProps = {
   imgUrl: '',
+  fullSize: false,
 }
 
 export default ImageFrame

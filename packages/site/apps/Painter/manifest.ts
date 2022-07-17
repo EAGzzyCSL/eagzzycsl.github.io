@@ -9,6 +9,9 @@ import dumplingImage23 from './assets/camp/dumpling/23.jpeg'
 import dumplingImage31 from './assets/camp/dumpling/31.jpeg'
 import dumplingImage32 from './assets/camp/dumpling/32.jpeg'
 import dumplingImage33 from './assets/camp/dumpling/33.jpeg'
+import imageButter from './assets/crossed/butter.jpeg'
+import imageButterfly from './assets/crossed/butterfly.png'
+import imageKongQin from './assets/crossed/kong_qin.jpeg'
 import pinyinImage from './assets/pinyin.png'
 import icon from './icon.png'
 
@@ -98,6 +101,31 @@ export default Manifest.create({
         titleFn: title => `阵营图${title}照片`,
         urlFn: () => '',
         briefFn: title => `阵营图${title}照片来自 wikipedia.org`,
+      },
+    ),
+    ...Manifest.acknowledgeBatch(
+      [
+        [
+          '黄油',
+          imageButter,
+          'https://zh.m.wikipedia.org/zh/%E9%BB%84%E6%B2%B9',
+        ],
+        [
+          '蝴蝶',
+          imageButterfly,
+          'https://pixabay.com/zh/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1295496',
+        ],
+        [
+          '空青',
+          imageKongQin,
+          'https://site.china.cn/kucunnongchanpin/4557849928.html',
+        ],
+      ],
+      {
+        type: 'image',
+        titleFn: title => `十字格${title}照片`,
+        urlFn: () => '',
+        briefFn: title => `十字格${title}照片来自 wikipedia.org`,
       },
     ),
   ],

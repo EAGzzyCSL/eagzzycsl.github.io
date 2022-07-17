@@ -12,6 +12,7 @@ import { getHashContent } from '@/utils'
 
 import styles from './Painter.module.scss'
 import PanelCampNineSquare from './panels/CampNineSquare'
+import CrossedGrid from './panels/CrossedGrid'
 import PanelDictionary from './panels/Dictionary'
 import PanelImpossibleTrinity from './panels/ImpossibleTrinity'
 import PanelWordInWord from './panels/WordInWord'
@@ -37,6 +38,11 @@ const panels = [
     id: 'camp-nine-square',
     title: '阵营九宫格',
     component: PanelCampNineSquare,
+  },
+  {
+    id: 'crossed-grid',
+    title: '十字格',
+    component: CrossedGrid,
   },
 ]
 
