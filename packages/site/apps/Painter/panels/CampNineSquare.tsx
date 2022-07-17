@@ -185,7 +185,6 @@ const CampNineSquare = (): JSX.Element => {
           <div className={styles.control}>
             <Button
               variant='contained'
-              size='small'
               color='secondary'
               className={styles.demoButton}
               onClick={() => {
@@ -196,7 +195,6 @@ const CampNineSquare = (): JSX.Element => {
             </Button>
             <Button
               variant='contained'
-              size='small'
               color='secondary'
               className={styles.demoButton}
               onClick={() => {
