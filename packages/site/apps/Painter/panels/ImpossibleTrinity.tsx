@@ -51,7 +51,6 @@ const ImpossibleTrinity = (): JSX.Element => {
                   >
                     <TextField
                       multiline
-                      maxRows={4}
                       inputProps={{ style: { textAlign: 'center' } }}
                     />
                   </HoverInput>
@@ -64,6 +63,7 @@ const ImpossibleTrinity = (): JSX.Element => {
                     placeholder={initTrinityData.beta}
                   >
                     <TextField
+                      multiline
                       inputProps={{ style: { textAlign: 'center' } }}
                     />
                   </HoverInput>
@@ -76,6 +76,7 @@ const ImpossibleTrinity = (): JSX.Element => {
                     placeholder={initTrinityData.gamma}
                   >
                     <TextField
+                      multiline
                       inputProps={{ style: { textAlign: 'center' } }}
                     />
                   </HoverInput>
@@ -87,7 +88,10 @@ const ImpossibleTrinity = (): JSX.Element => {
                   initValue={trinityData.alphaBeta}
                   placeholder={initTrinityData.alphaBeta}
                 >
-                  <TextField inputProps={{ style: { textAlign: 'center' } }} />
+                  <TextField
+                    multiline
+                    inputProps={{ style: { textAlign: 'center' } }}
+                  />
                 </HoverInput>
               </div>
               <div className={styles.betaGammaArea}>
@@ -95,7 +99,10 @@ const ImpossibleTrinity = (): JSX.Element => {
                   initValue={trinityData.betaGamma}
                   placeholder={initTrinityData.betaGamma}
                 >
-                  <TextField inputProps={{ style: { textAlign: 'center' } }} />
+                  <TextField
+                    multiline
+                    inputProps={{ style: { textAlign: 'center' } }}
+                  />
                 </HoverInput>
               </div>
               <div
@@ -103,7 +110,10 @@ const ImpossibleTrinity = (): JSX.Element => {
                 placeholder={initTrinityData.gammaAlpha}
               >
                 <HoverInput initValue={trinityData.gammaAlpha}>
-                  <TextField inputProps={{ style: { textAlign: 'center' } }} />
+                  <TextField
+                    multiline
+                    inputProps={{ style: { textAlign: 'center' } }}
+                  />
                 </HoverInput>
               </div>
               {/* 中心部分 */}
@@ -112,7 +122,10 @@ const ImpossibleTrinity = (): JSX.Element => {
                 placeholder={initTrinityData.center}
               >
                 <HoverInput initValue={trinityData.center}>
-                  <TextField inputProps={{ style: { textAlign: 'center' } }} />
+                  <TextField
+                    multiline
+                    inputProps={{ style: { textAlign: 'center' } }}
+                  />
                 </HoverInput>
               </div>
             </div>
@@ -132,7 +145,6 @@ const ImpossibleTrinity = (): JSX.Element => {
             />
             <Button
               variant='contained'
-              size='small'
               color='secondary'
               className={styles.demoButton}
               onClick={() => {
@@ -152,7 +164,6 @@ const ImpossibleTrinity = (): JSX.Element => {
             </Button>
             <Button
               variant='contained'
-              size='small'
               color='secondary'
               className={styles.demoButton}
               onClick={() => {
