@@ -1,6 +1,10 @@
 {
   "editor.formatOnSave": true,
   "[yaml]": {
-    "editor.quickSuggestions": true
+    "editor.quickSuggestions": {
+      "comments": "on",
+      "strings": "on",
+      "other": "on"
+    }
   }
 }
