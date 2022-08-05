@@ -11093,10 +11093,10 @@ stylelint-scss@^4.1.0:
     postcss-selector-parser "^6.0.6"
     postcss-value-parser "^4.1.0"
 
-stylelint-use-nesting@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.npmmirror.com/stylelint-use-nesting/download/stylelint-use-nesting-3.0.0.tgz#3215e3a2d4578b68331d5e250a63610604d02eac"
-  integrity sha1-MhXjotRXi2gzHV4lCmNhBgTQLqw=
+stylelint-use-nesting@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npmmirror.com/stylelint-use-nesting/-/stylelint-use-nesting-4.0.0.tgz#6641f3acb3875a0d70efe46df9b9f20e47993bf0"
+  integrity sha512-v1DG1GsV2Ojy8y/yoWZGLxeZSLNenrpEGtFY6qq921G8ABni9XbBJRbD9jDQAsPPhOnLz7Cy9B2DfNk05IOKIw==
 
 stylelint@^14.8.0:
   version "14.8.0"
