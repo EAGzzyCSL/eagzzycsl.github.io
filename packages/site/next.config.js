@@ -9,8 +9,9 @@ const baseUrl = isLocal ? '/eagzzycsl.github.io' : ''
 
 module.exports = {
   // 配置本地部署路径
-  assetPrefix: baseUrl,
-  basePath: baseUrl,
+  // 配置为 '' 的话 next 的校验会报错
+  assetPrefix: baseUrl || undefined,
+  basePath: baseUrl || undefined,
   // 导出路径添加index.html避免刷新后404问题
   trailingSlash: true,
   // TODO: 开启next对eslint的集成
@@ -82,5 +83,4 @@ module.exports = {
     })
     return config
   },
-  autoprefixer: false,
 }
