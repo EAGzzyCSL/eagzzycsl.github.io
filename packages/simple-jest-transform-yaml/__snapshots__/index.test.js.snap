@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`transform-yaml 1`] = `
-Object {
-  "fruits": Array [
+{
+  "fruits": [
     "apple",
     "banana",
     "cherry",

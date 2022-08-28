@@ -10,7 +10,7 @@ exports[`render NotFound 1`] = `
     data-testid="SentimentDissatisfiedRoundedIcon"
     focusable="false"
     style={
-      Object {
+      {
         "fontSize": "80px",
         "fontWeight": "lighter",
       }
