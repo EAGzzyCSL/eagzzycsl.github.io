@@ -1,3 +1,4 @@
+import { CHINESE_DIGIT_CHAR } from '@/share/constants'
 import { Tuple } from '@/types/utility'
 
 import { Point, PointTrack, XYTuple } from './type'
@@ -33,9 +34,7 @@ export const smoothPoints = (
   return result
 }
 
-const chars = ['〇', '一', '二', '三', '四', '五', '六', '七', '八', '九']
-
-export const numberToChar = (num: number): string => chars[num]
+export const numberToChar = (num: number): string => CHINESE_DIGIT_CHAR[num]
 
 /**
  * 根据与冬至的日期差值，获取描述文字
