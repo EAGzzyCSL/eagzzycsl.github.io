@@ -20,6 +20,12 @@ export default Manifest.create({
       url: 'https://www.photophoto.cn/sucai/38019572.html',
       brief: '数九梅花图参考了图行天下提供的共享授权图片',
     },
+    {
+      type: 'project',
+      title: '国字标准字体笔顺学习网',
+      url: 'https://stroke-order.learningweb.moe.edu.tw/',
+      brief: '台湾省教育部门维护的汉字笔顺教学资源',
+    },
   ],
   changelog: [
     {

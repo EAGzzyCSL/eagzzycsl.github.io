@@ -24,11 +24,5 @@ export default Manifest.create({
       url: 'https://github.com/DavidAnson/markdownlint',
       brief: '适用于 Markdown 文件的 lint 工具',
     },
-    {
-      type: 'project',
-      title: '国字标准字体笔顺学习网',
-      url: 'https://stroke-order.learningweb.moe.edu.tw/',
-      brief: '台湾省教育部门维护的汉字笔顺教学资源',
-    },
   ],
 })
