@@ -10,10 +10,5 @@ export default Manifest.create({
     '/': 'Acknowledgements.tsx',
   },
   tableIndex: 0,
-  acknowledgements: [
-    Manifest.acknowledgeIcon8icon(
-      icon,
-      'https://icons8.cn/icons/set/hearts--v2',
-    ),
-  ],
+  acknowledgements: [Manifest.acknowledgeIcon8icon(icon)],
 })

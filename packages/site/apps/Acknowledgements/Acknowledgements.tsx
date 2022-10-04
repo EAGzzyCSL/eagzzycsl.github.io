@@ -12,6 +12,7 @@ import SimpleAppBar from '@/shell/SimpleAppBar'
 import styles from './Acknowledgements.module.scss'
 import dataOfResources from './data'
 import BasicDisplayCard from './parts/BasicDisplayCard'
+import Icon8DisplayCard from './parts/Icon8DisplayCard'
 import IconDisplayCard from './parts/IconDisplayCard'
 import PictorialDisplayCard from './parts/PictorialDisplayCard'
 import { DisplayData, PictorialDisplayItem } from './type'
@@ -49,7 +50,7 @@ interface AcknowledgementsProps {
 const Acknowledgements = ({
   resources = dataOfResources,
 }: AcknowledgementsProps): JSX.Element => (
-  <AppPage title='版权与致谢' theme={theme}>
+  <AppPage title='版权与致谢' theme={theme} hideCornerFooter>
     <section className={styles.acknowledgements}>
       <SimpleAppBar title='版权与致谢' sticky />
       <div className={styles.declare}>
@@ -101,12 +102,20 @@ const Acknowledgements = ({
             ),
           )}
         </Block>
-        <Block title='icon'>
-          {resources.icons.map((item, index) => (
+        <Block title='icon8-icon'>
+          {resources.icon8Icons.map((item, index) => (
             // eslint-disable-next-line react/no-array-index-key
-            <IconDisplayCard key={index} data={item} />
+            <Icon8DisplayCard key={index} data={item} />
           ))}
         </Block>
+        {!!resources.icons.length && (
+          <Block title='icon'>
+            {resources.icons.map((item, index) => (
+              // eslint-disable-next-line react/no-array-index-key
+              <IconDisplayCard key={index} data={item} />
+            ))}
+          </Block>
+        )}
         <Block title='图片'>
           {resources.images.map((item, index) => (
             // eslint-disable-next-line react/no-array-index-key

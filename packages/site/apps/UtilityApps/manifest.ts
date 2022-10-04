@@ -21,19 +21,19 @@ export default Manifest.create({
   },
   tableIndex: 0,
   acknowledgements: [
-    ...[
-      [icon, 'https://icons8.cn/icon/7A7GlAAGCbaU/web-apps'],
-      [iconForAD, 'https://icons8.cn/icons/set/billboard'],
-      [iconForAndroid],
-      [iconForLinux, 'https://icons8.com/icons/set/linux'],
-      [iconForWeb],
-      [iconForIOS],
-      [iconForLimitedFree, 'https://icons8.com/icons/set/buy-upgrade--v1'],
-      [iconForMac],
-      [iconForOpenSource],
-      [iconForPay, 'https://icons8.cn/icons/set/cheap-2--v1'],
-      [iconForWindows],
-    ].map(([image, url]) => Manifest.acknowledgeIcon8icon(image, url)),
+    ...Manifest.acknowledgeIcon8iconBatch([
+      icon,
+      iconForAD,
+      iconForAndroid,
+      iconForLinux,
+      iconForWeb,
+      iconForIOS,
+      iconForLimitedFree,
+      iconForMac,
+      iconForOpenSource,
+      iconForPay,
+      iconForWindows,
+    ]),
   ],
   changelog: [
     {

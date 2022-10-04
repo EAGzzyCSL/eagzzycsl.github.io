@@ -9,10 +9,5 @@ export default Manifest.create({
     '/': 'Template.tsx',
   },
   tableIndex: 1,
-  acknowledgements: [
-    Manifest.acknowledgeIcon8icon(
-      icon,
-      'https://icons8.cn/icon/64874/open-box',
-    ),
-  ],
+  acknowledgements: [Manifest.acknowledgeIcon8icon(icon)],
 })

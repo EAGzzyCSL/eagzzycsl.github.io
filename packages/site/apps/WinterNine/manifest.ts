@@ -12,7 +12,7 @@ export default Manifest.create({
   },
   tableIndex: 0,
   acknowledgements: [
-    Manifest.acknowledgeIcon8icon(icon, 'https://icons8.com/icon/67935/雪人'),
+    Manifest.acknowledgeIcon8icon(icon),
     {
       type: 'image',
       title: '数九梅花图',

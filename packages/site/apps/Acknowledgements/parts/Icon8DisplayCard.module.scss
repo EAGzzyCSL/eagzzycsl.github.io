@@ -1,0 +1,23 @@
+@import './DisplayCard.scss';
+
+.icon8-display-card {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  margin: $display-card-margin;
+
+  .left {
+    display: flex;
+    flex: 0 1 auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .media {
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+}

@@ -6,7 +6,7 @@ import { NextRouter, useRouter as useNextRouter } from 'next/router'
 
 import { AppDescribe } from '@/types/app'
 import Logger from '@/utils/logger'
-import { camel2kebab } from '@/utils/string'
+import { camel2kebab, kebab2Pascal } from '@/utils/string'
 
 import sitemap from '../sitemap'
 
@@ -25,6 +25,20 @@ type RouteMap = {
  */
 export const getParentAppPath = (route: string): string =>
   path.resolve('/', route, '../')
+
+/**
+ * 根据路由获取 appName
+ * 详见 ut
+ */
+export const getAppName = (route: string): string => {
+  if (route === '/') {
+    return 'Launcher'
+  }
+  if (route === '/404') {
+    return 'NotFound'
+  }
+  return kebab2Pascal(route.split('/')[1])
+}
 
 const HistoryRecordOfRouteContext: Record<string, boolean> = Object.create({})
 
@@ -151,6 +165,10 @@ export class MyRouter {
       'historyRecordOfRouteAfterRecordRouteLoaded',
       this.historyRecordOfRoute,
     )
+  }
+
+  getAppName(): keyof RouteMap {
+    return getAppName(this.router.route) as keyof RouteMap
   }
 }
 

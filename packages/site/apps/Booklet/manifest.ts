@@ -10,12 +10,7 @@ export default Manifest.create({
     '/[bookletId]': 'BookletFull.tsx',
   },
   tableIndex: 0,
-  acknowledgements: [
-    Manifest.acknowledgeIcon8icon(
-      icon,
-      'https://icons8.cn/icon/95131/literature',
-    ),
-  ],
+  acknowledgements: [Manifest.acknowledgeIcon8icon(icon)],
   changelog: [
     {
       date: '2022-03-01',

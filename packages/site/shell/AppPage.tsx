@@ -6,12 +6,14 @@ import cx from 'classnames'
 import Head from 'next/head'
 
 import styles from './AppPage.module.scss'
+import CornerFooter from './CornerFooter'
 
 interface AppPageProps {
   title: string
   theme?: Theme
   fullHeight?: boolean
   children: JSX.Element
+  hideCornerFooter?: boolean
 }
 
 export const defaultTheme = createTheme({
@@ -30,6 +32,7 @@ const AppPage = ({
   children,
   fullHeight,
   theme = defaultTheme,
+  hideCornerFooter,
 }: AppPageProps): JSX.Element => (
   <main
     className={cx(styles.appPage, {
@@ -39,13 +42,17 @@ const AppPage = ({
     <Head>
       <title>芹也·{title}</title>
     </Head>
-    <ThemeProvider theme={theme}>{children}</ThemeProvider>
+    <ThemeProvider theme={theme}>
+      {children}
+      {!hideCornerFooter && <CornerFooter />}
+    </ThemeProvider>
   </main>
 )
 
 AppPage.defaultProps = {
   theme: defaultTheme,
   fullHeight: false,
+  hideCornerFooter: false,
 }
 
 export default AppPage

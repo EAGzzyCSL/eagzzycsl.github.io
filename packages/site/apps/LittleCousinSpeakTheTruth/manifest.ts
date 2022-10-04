@@ -12,10 +12,7 @@ export default Manifest.create({
   },
   tableIndex: 1,
   acknowledgements: [
-    Manifest.acknowledgeIcon8icon(
-      icon,
-      'https://icons8.cn/icons/set/christmas-boy--v1',
-    ),
+    Manifest.acknowledgeIcon8icon(icon),
     {
       type: 'image',
       title: '课堂插图',

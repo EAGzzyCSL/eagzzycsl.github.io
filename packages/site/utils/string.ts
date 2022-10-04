@@ -15,3 +15,11 @@ export const snake2camel = (str: string): string =>
 
 export const kebab2camel = (str: string): string =>
   str.replace(/(-[a-z])/g, k => k[1].toUpperCase())
+
+export const kebab2Pascal = (str: string): string =>
+  str
+    .split('-')
+    .map(item =>
+      item.length ? `${item[0].toUpperCase()}${item.slice(1)}` : item,
+    )
+    .join('')

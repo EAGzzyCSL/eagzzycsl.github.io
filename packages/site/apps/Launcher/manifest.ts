@@ -14,12 +14,7 @@ export default Manifest.create({
   },
   tableIndex: 0,
   acknowledgements: [
-    {
-      type: 'icon',
-      title: '',
-      image: icon,
-      url: 'https://icons8.cn/icons/set/rocket',
-    },
+    Manifest.acknowledgeIcon8icon(icon),
     {
       type: 'image',
       title: '桌面壁纸',

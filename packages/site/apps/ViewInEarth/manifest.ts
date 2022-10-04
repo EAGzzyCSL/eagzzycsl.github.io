@@ -14,10 +14,7 @@ export default Manifest.create({
   },
   tableIndex: 1,
   acknowledgements: [
-    Manifest.acknowledgeIcon8icon(
-      icon,
-      'https://icons8.com/icon/nwRBNExj5TVz/地球行星',
-    ),
+    Manifest.acknowledgeIcon8icon(icon),
     {
       type: 'image',
       image: cylindricalProjectionDark,

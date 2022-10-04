@@ -9,7 +9,5 @@ export default Manifest.create({
     '/': 'Changelog.tsx',
   },
   tableIndex: 1,
-  acknowledgements: [
-    Manifest.acknowledgeIcon8icon(icon, 'https://icons8.cn/icon/81967/cinema'),
-  ],
+  acknowledgements: [Manifest.acknowledgeIcon8icon(icon)],
 })

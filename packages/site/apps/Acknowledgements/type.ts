@@ -13,6 +13,7 @@ export type DisplayItem = BasicDisplayItem | PictorialDisplayItem
 
 export interface DisplayData {
   icons: PictorialDisplayItem[]
+  icon8Icons: PictorialDisplayItem[]
   images: PictorialDisplayItem[]
   projects: DisplayItem[]
   openSources: DisplayItem[]

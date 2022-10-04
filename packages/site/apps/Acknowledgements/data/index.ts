@@ -1,27 +1,8 @@
+import globalAcknowledgementItems from '@/constants/globalAcknowledge'
 import sitemap from '@/sitemap'
 import { IAcknowledgementItem } from '@/types/app'
 
 import { DisplayData } from '../type'
-
-import projectMaterialUi from './images/material-ui.svg'
-import projectNext from './images/next.svg'
-
-const globalAcknowledgementItems: IAcknowledgementItem[] = [
-  {
-    type: 'openSource',
-    title: 'NEXT',
-    image: projectNext,
-    url: 'https://nextjs.org/',
-    brief: '基于 React 的前端框架',
-  },
-  {
-    type: 'openSource',
-    title: 'MATERIAL-UI',
-    image: projectMaterialUi,
-    url: 'https://material-ui.com/',
-    brief: '基于 React 与 Material Design 的 UI 库',
-  },
-]
 
 /**
  * 汇总致谢名单并按类型分类导出
@@ -36,4 +17,5 @@ export default {
   images: acknowledgementItems.filter(item => item.type === 'image'),
   openSources: acknowledgementItems.filter(item => item.type === 'openSource'),
   projects: acknowledgementItems.filter(item => item.type === 'project'),
+  icon8Icons: acknowledgementItems.filter(item => item.type === 'icon8-icon'),
 } as DisplayData

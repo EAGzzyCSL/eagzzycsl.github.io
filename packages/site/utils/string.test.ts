@@ -1,4 +1,10 @@
-import { camel2snake, camel2kebab, snake2camel, kebab2camel } from './string'
+import {
+  camel2snake,
+  camel2kebab,
+  snake2camel,
+  kebab2camel,
+  kebab2Pascal,
+} from './string'
 
 test('camel2snake', () => {
   expect(camel2snake('')).toBe('')
@@ -18,4 +24,9 @@ test('snake2camel', () => {
 test('kebab2camel', () => {
   expect(kebab2camel('')).toBe('')
   expect(kebab2camel('kebab-case')).toBe('kebabCase')
+})
+
+test('kebab2Pascal', () => {
+  expect(kebab2Pascal('')).toBe('')
+  expect(kebab2Pascal('kebab-case')).toBe('KebabCase')
 })

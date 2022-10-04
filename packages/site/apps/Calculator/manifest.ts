@@ -10,10 +10,5 @@ export default Manifest.create({
   },
   shortId: 'calc',
   tableIndex: 1,
-  acknowledgements: [
-    Manifest.acknowledgeIcon8icon(
-      icon,
-      'https://icons8.cn/icons/set/pincode-keyboard',
-    ),
-  ],
+  acknowledgements: [Manifest.acknowledgeIcon8icon(icon)],
 })

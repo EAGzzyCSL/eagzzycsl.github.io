@@ -11,10 +11,7 @@ export default Manifest.create({
   },
   tableIndex: 0,
   acknowledgements: [
-    Manifest.acknowledgeIcon8icon(
-      icon,
-      'https://icons8.cn/icons/set/quill-pen',
-    ),
+    Manifest.acknowledgeIcon8icon(icon),
     {
       type: 'openSource',
       title: 'highlight.js',

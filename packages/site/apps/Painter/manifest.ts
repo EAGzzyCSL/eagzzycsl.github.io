@@ -23,10 +23,7 @@ export default Manifest.create({
   },
   tableIndex: 1,
   acknowledgements: [
-    Manifest.acknowledgeIcon8icon(
-      icon,
-      'https://icons8.cn/icons/set/border-color',
-    ),
+    Manifest.acknowledgeIcon8icon(icon),
     {
       type: 'openSource',
       url: 'https://pinyin.js.org/',

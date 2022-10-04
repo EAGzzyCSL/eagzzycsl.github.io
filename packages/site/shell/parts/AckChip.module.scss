@@ -1,0 +1,31 @@
+$height: 32px;
+$padding: 10px;
+
+.ack-chip {
+  display: flex;
+  align-items: center;
+  height: $height;
+  padding-right: $padding;
+  margin: 4px;
+  background-color: rgb(0 0 0 / 8%);
+  border-radius: $height;
+
+  &.left-padding {
+    padding-left: $padding;
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: $padding - 2px;
+    margin-right: $padding;
+    background-color: white;
+    border-radius: $height;
+
+    .image {
+      height: 100%;
+    }
+  }
+}

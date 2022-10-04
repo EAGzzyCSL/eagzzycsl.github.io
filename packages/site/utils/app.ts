@@ -3,17 +3,20 @@ import { IManifest, IAcknowledgementItem, AppDescribe } from '@/types/app'
 import { camel2kebab } from './string'
 
 export class Manifest {
-  public static acknowledgeIcon8icon(
-    image: string,
-    url = '',
-  ): IAcknowledgementItem {
+  public static acknowledgeIcon8icon(image: string): IAcknowledgementItem {
     return {
-      type: 'icon',
+      type: 'icon8-icon',
       image,
-      title: 'from icon8',
+      title: '',
       // next不允许undefined作为props
-      url,
+      url: '',
     }
+  }
+
+  public static acknowledgeIcon8iconBatch(
+    images: string[],
+  ): IAcknowledgementItem[] {
+    return images.map(item => Manifest.acknowledgeIcon8icon(item))
   }
 
   public static acknowledgeBatch(

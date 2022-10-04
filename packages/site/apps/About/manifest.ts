@@ -9,10 +9,5 @@ export default Manifest.create({
     '/': 'About.tsx',
   },
   tableIndex: 0,
-  acknowledgements: [
-    Manifest.acknowledgeIcon8icon(
-      icon,
-      'https://icons8.cn/icons/set/glasses--v4',
-    ),
-  ],
+  acknowledgements: [Manifest.acknowledgeIcon8icon(icon)],
 })
