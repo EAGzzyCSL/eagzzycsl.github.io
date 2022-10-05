@@ -49,3 +49,9 @@ export const getRestrictValue = (
   input: number,
   max: number,
 ): number => Math.max(min, Math.min(input, max))
+
+/**
+ * 从数组中随机取一个元素
+ */
+export const randomPick = <T>(array: T[]): T =>
+  array[Math.floor(array.length * Math.random())]

@@ -1,0 +1,66 @@
+$avatar-size: 48px;
+
+.bullet-player {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  background-color: black;
+
+  .line {
+    position: absolute;
+    width: 100%;
+    animation-name: fly;
+    // 播放完了状态保留，避免清理不及时导致露馅
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    will-change: transform;
+
+    .bullet {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      .avatar {
+        z-index: 2;
+        width: $avatar-size;
+        height: $avatar-size;
+        background-color: white;
+        border: solid 4px white;
+        border-radius: 100%;
+      }
+
+      .text {
+        display: flex;
+        align-items: center;
+        height: 36px;
+        padding: 0 10px 0 24px;
+        font-weight: bold;
+        color: white;
+        border-radius: 30px;
+        // transform: translateX(-20px);
+        transform: translate3d(-20px, 0, 0);
+      }
+    }
+  }
+}
+
+// @keyframes fly {
+//   0% {
+//     transform: translateX(100%);
+//   }
+
+//   100% {
+//     transform: translateX(-100%);
+//   }
+// }
+
+@keyframes fly {
+  0% {
+    transform: translate3d(100%, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}

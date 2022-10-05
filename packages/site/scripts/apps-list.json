@@ -73,5 +73,10 @@
     "appId": "MetroConstellation",
     "shortId": "metro",
     "title": "地铁星座"
+  },
+  {
+    "appId": "BulletChat",
+    "shortId": "bullet",
+    "title": "弹幕 demo"
   }
 ]

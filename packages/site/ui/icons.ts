@@ -46,3 +46,4 @@ export { default as ArrowForwardRoundedIcon } from '@mui/icons-material/ArrowFor
 export { default as ArrowBackRoundedIcon } from '@mui/icons-material/ArrowBackRounded'
 export { default as Grid3x3RoundedIcon } from '@mui/icons-material/Grid3x3Rounded'
 export { default as ContentPasteGoRoundedIcon } from '@mui/icons-material/ContentPasteGoRounded'
+export { default as SendRoundedIcon } from '@mui/icons-material/SendRounded'
