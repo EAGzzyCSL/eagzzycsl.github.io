@@ -81,12 +81,7 @@ const Post = (props: PostProps): JSX.Element => {
                 天前，其中所描述的信息可能已发生改变，请谨慎参考。
               </Alert>
             )}
-            <Typography
-              component='p'
-              variant='subtitle1'
-              color='textSecondary'
-              gutterBottom
-            >
+            <Typography variant='caption' color='textSecondary' gutterBottom>
               {PostContent.introduction}
             </Typography>
             <ArticleDisplay markdown={PostContent.content} />
