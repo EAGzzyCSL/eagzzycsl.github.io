@@ -21,7 +21,12 @@ inquirer
   .prompt([
     {
       name: 'appId',
-      message: '输入 app 文件夹名：',
+      message: '输入 app 文件夹名：（Pascal 风格）',
+    },
+    {
+      name: 'shortId',
+      message:
+        '输入 app 的 shortId：（用作 commit msg 的 scope，如为空则默认使用 appId）',
     },
     {
       name: 'appTitle',
@@ -29,7 +34,7 @@ inquirer
     },
   ])
   .then(answers => {
-    const { appId, appTitle } = answers
+    const { appId, appTitle, shortId } = answers
     const appDir = path.resolve(`./apps/${appId}`)
     if (fsExtra.existsSync(appDir)) {
       console.log(logSymbols.error, chalk.red(`app「${appId}」已存在！`))
@@ -60,12 +65,15 @@ inquirer
         .replace(/template/g, kebab(appId)),
     )
 
+    const finalShortId = shortId || lowerCaseFirstChar(appId)
+
     fsExtra.writeFileSync(
       manifestPath,
       fsExtra
         .readFileSync(manifestPath)
         .toString()
         .replace(/Template/g, appId)
+        .replace(/template/g, finalShortId)
         .replace(/模板/g, appTitle),
     )
 
