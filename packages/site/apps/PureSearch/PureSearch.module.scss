@@ -1,0 +1,49 @@
+.pure-search {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  .content {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .title-bar {
+        display: flex;
+        align-items: center;
+        margin-bottom: 32px;
+
+        .logo {
+          width: 88px;
+          height: 88px;
+          margin-right: 16px;
+        }
+
+        .right {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+
+      .input {
+        display: flex;
+        flex-direction: column;
+        min-width: 320px;
+      }
+
+      .buttons {
+        margin: 32px 0 16px;
+      }
+    }
+  }
+}

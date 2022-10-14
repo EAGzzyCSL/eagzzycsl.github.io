@@ -13,6 +13,7 @@ import Changelog from '@/apps/Changelog/manifest'
 import Launcher from '@/apps/Launcher/manifest'
 import LittleCousinSpeakTheTruth from '@/apps/LittleCousinSpeakTheTruth/manifest'
 import Painter from '@/apps/Painter/manifest'
+import PureSearch from '@/apps/PureSearch/manifest'
 import Template from '@/apps/Template/manifest'
 import UtilityApps from '@/apps/UtilityApps/manifest'
 import ViewInEarth from '@/apps/ViewInEarth/manifest'
@@ -34,4 +35,5 @@ export default registerApps({
   UtilityApps,
   Booklet,
   ViewInEarth,
+  PureSearch,
 })
