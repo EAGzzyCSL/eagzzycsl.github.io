@@ -24,7 +24,6 @@ const BookletCard = (props: IBookletCard): JSX.Element => {
         square
         className={styles.paper}
         style={{
-          // stylelint-disable-next-line csstree/validator
           backgroundColor: theme.palette.primary.main,
         }}
       >

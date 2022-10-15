@@ -1,6 +1,5 @@
 @mixin line-clamp($lines) {
   -webkit-line-clamp: $lines;
-  /* stylelint-disable-next-line value-no-vendor-prefix */
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;

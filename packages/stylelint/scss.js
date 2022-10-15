@@ -13,5 +13,8 @@ module.exports = {
     'csstree/validator': {
       syntaxExtensions: ['sass'],
     },
+    // https://sass-lang.com/documentation/at-rules/import#plain-css-imports
+    // scss 设定 url() 的引用会被识别为 css 语法的 import
+    'import-notation': 'string',
   },
 }
