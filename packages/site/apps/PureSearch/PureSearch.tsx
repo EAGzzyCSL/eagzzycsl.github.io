@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 
+import { CloseRounded as CloseRoundedIcon } from '@mui/icons-material'
 import {
   ButtonGroup,
   Button,
@@ -7,6 +8,8 @@ import {
   Checkbox,
   OutlinedInput,
   Typography,
+  InputAdornment,
+  IconButton,
 } from '@mui/material'
 import { GetStaticPropsResult } from 'next'
 
@@ -44,21 +47,44 @@ const SearchEngineers: ISearchEngineer[] = [
 const PureSearch = (): JSX.Element => {
   const [keyword, setKeyword] = useState('')
   const [openInNewTab, setOpenInNewTab] = useState(true)
-  const handleSearch = (buttonItem: ISearchEngineer): void => {
-    const url = `${buttonItem.url}${encodeURIComponent(keyword)}`
-    if (openInNewTab) {
-      window.open(url, '_blank')
-    } else {
-      document.location.href = url
-    }
+
+  const inputRef = useRef<HTMLElement>(null)
+
+  const handleClear = (): void => {
+    setKeyword('')
+    const input =
+      inputRef.current?.querySelector<HTMLInputElement>('input[type=search]')
+    input?.focus()
   }
+
+  const handleSearch = useCallback(
+    (buttonItem: ISearchEngineer): void => {
+      const url = `${buttonItem.url}${encodeURIComponent(keyword)}`
+      if (openInNewTab) {
+        window.open(url, '_blank')
+      } else {
+        document.location.href = url
+      }
+    },
+    [keyword, openInNewTab],
+  )
+
   const handleButtonClick = (buttonItem: ISearchEngineer): void => {
     handleSearch(buttonItem)
   }
 
-  const handleEnter = (): void => {
+  const handleDefaultSearch = useCallback((): void => {
     handleSearch(SearchEngineers[0])
-  }
+  }, [handleSearch])
+
+  useEffect(() => {
+    // search 事件不是标准事件，所以手动绑定一下
+    const input = inputRef.current?.querySelector('input[type=search]')
+    input?.addEventListener('search', handleDefaultSearch)
+    return () => {
+      input?.removeEventListener('search', handleDefaultSearch)
+    }
+  }, [handleDefaultSearch])
 
   return (
     <AppPage title='纯粹搜索' theme={theme} fullHeight>
@@ -85,14 +111,25 @@ const PureSearch = (): JSX.Element => {
             </div>
             <div className={styles.input}>
               <OutlinedInput
+                ref={inputRef}
                 placeholder=''
+                type='search'
                 value={keyword}
                 onChange={e => {
                   setKeyword(e.target.value)
                 }}
+                endAdornment={
+                  keyword.length ? (
+                    <InputAdornment position='end'>
+                      <IconButton onClick={handleClear} edge='end'>
+                        <CloseRoundedIcon />
+                      </IconButton>
+                    </InputAdornment>
+                  ) : undefined
+                }
                 onKeyDown={e => {
                   if (e.code === 'Enter') {
-                    handleEnter()
+                    handleDefaultSearch()
                   }
                 }}
               />
