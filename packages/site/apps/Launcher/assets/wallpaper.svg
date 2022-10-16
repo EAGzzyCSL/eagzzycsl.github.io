@@ -4,15 +4,12 @@
   <defs>
     <!-- 三种层级的阴影 -->
     <linearGradient id="grad-left">
-      <stop offset="0%" style="stop-color: rgb(0, 0, 0); stop-opacity: 0;" />
-      <stop
-        offset="100%"
-        style="stop-color: rgb(0, 0, 0); stop-opacity: 0.8;"
-      />
+      <stop offset="0%" style="stop-color: rgb(0, 0, 0); stop-opacity: 0" />
+      <stop offset="100%" style="stop-color: rgb(0, 0, 0); stop-opacity: 0.8" />
     </linearGradient>
     <linearGradient id="grad-right">
-      <stop offset="0%" style="stop-color: rgb(0, 0, 0); stop-opacity: 0.8;" />
-      <stop offset="100%" style="stop-color: rgb(0, 0, 0); stop-opacity: 0;" />
+      <stop offset="0%" style="stop-color: rgb(0, 0, 0); stop-opacity: 0.8" />
+      <stop offset="100%" style="stop-color: rgb(0, 0, 0); stop-opacity: 0" />
     </linearGradient>
     <!-- 超出边界裁切 -->
     <clipPath id="clip">

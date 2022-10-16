@@ -15,4 +15,12 @@ module.exports = {
   proseWrap: 'never',
   htmlWhitespaceSensitivity: 'strict',
   endOfLine: 'lf',
+  overrides: [
+    {
+      files: '*.svg',
+      options: {
+        parser: 'html',
+      },
+    },
+  ],
 }
