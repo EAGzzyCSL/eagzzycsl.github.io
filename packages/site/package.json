@@ -12,6 +12,7 @@
     "export:local": "cross-env DEPLOY_ENV=local npm run build && next export -o ../../local-export/",
     "route": "webpack-node ./scripts/route.ts ./scripts/tsconfig.route.json",
     "create-app": "node ./scripts/create-app.mjs",
+    "qr": "ts-node ./scripts/qr.mjs",
     "serve": "next start",
     "ts:check": "tsc --noEmit"
   },
@@ -66,7 +67,9 @@
     "file-loader": "^6.2.0",
     "fs-extra": "^10.1.0",
     "inquirer": "^9.0.0",
+    "internal-ip": "^7.0.0",
     "log-symbols": "^5.1.0",
+    "qrcode-terminal": "^0.12.0",
     "react-test-renderer": "^18.1.0",
     "sass": "^1.49.9",
     "tslib": "^2.4.0",
