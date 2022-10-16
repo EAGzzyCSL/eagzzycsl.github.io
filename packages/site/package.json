@@ -13,6 +13,7 @@
     "route": "webpack-node ./scripts/route.ts ./scripts/tsconfig.route.json",
     "create-app": "node ./scripts/create-app.mjs",
     "qr": "ts-node ./scripts/qr.mjs",
+    "file-type": "ts-node ./scripts/file-type.mjs",
     "serve": "next start",
     "ts:check": "tsc --noEmit"
   },

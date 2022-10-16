@@ -25,6 +25,7 @@
     "site:serve": "yarn workspace @mine/site run serve",
     "site:route": "yarn workspace @mine/site run route",
     "site:qr": "yarn workspace @mine/site run qr",
+    "site:file-type": "yarn workspace @mine/site run file-type",
     "site:create-app": "yarn workspace @mine/site run create-app",
     "test": "jest",
     "test:ci": "jest --coverage",
