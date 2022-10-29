@@ -51,7 +51,7 @@
     "rehype-sanitize": "^5.0.0",
     "remark-gfm": "^3.0.1",
     "swiper": "^8.1.4",
-    "three": "^0.144.0"
+    "three": "^0.146.0"
   },
   "devDependencies": {
     "@babel/core": "^7.18.0",
