@@ -32,7 +32,7 @@ const theme = createTheme({
   },
 })
 
-const WINTER_SOLSTICE_DATE = '2021-12-21'
+const WINTER_SOLSTICE_DATE = '2022-12-22'
 
 const AnimationTimeConfig = {
   // 等待文字开始动画的时间

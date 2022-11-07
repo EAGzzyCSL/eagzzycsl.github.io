@@ -29,6 +29,10 @@ export default Manifest.create({
   ],
   changelog: [
     {
+      date: '2022-11-07',
+      content: '立冬，「管城春满」更新今年冬至日',
+    },
+    {
       date: '2021-12-06',
       content: '大雪，为「管城春满」添加梅花',
     },
