@@ -7,7 +7,7 @@ import TimelineDot from '@mui/lab/TimelineDot'
 import TimelineItem from '@mui/lab/TimelineItem'
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent'
 import TimelineSeparator from '@mui/lab/TimelineSeparator'
-import { Typography } from '@mui/material'
+import { Avatar, Icon, Typography } from '@mui/material'
 import { brown as colorBrown, pink as colorPink } from '@mui/material/colors'
 import { createTheme } from '@mui/material/styles'
 import { GetStaticPropsResult } from 'next'
@@ -42,10 +42,13 @@ const Changelog = (): JSX.Element => (
               </TimelineOppositeContent>
               <TimelineSeparator>
                 <TimelineDot
+                  className={styles.dot}
                   style={{
-                    backgroundColor: item.color,
+                    borderColor: item.color,
                   }}
-                />
+                >
+                  <img className={styles.appIcon} src={item.icon} />
+                </TimelineDot>
                 <TimelineConnector />
               </TimelineSeparator>
               <TimelineContent>
