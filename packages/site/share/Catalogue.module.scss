@@ -11,6 +11,7 @@
 
   .content {
     flex: 0 1 auto;
+    max-height: 80vh;
     overflow-y: auto;
 
     .list {
