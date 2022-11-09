@@ -50,7 +50,7 @@
     "rehype-raw": "^6.1.0",
     "rehype-sanitize": "^5.0.0",
     "remark-gfm": "^3.0.1",
-    "swiper": "^8.1.4",
+    "swiper": "^8.4.4",
     "three": "^0.146.0"
   },
   "devDependencies": {
