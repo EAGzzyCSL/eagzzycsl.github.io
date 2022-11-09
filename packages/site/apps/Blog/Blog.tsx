@@ -100,16 +100,18 @@ const Blog = ({ posts = dataOfPosts }: BlogProps): JSX.Element => {
               </Typography>
             </Box>
             {/* TODO: 实现标签与归档查看 */}
-            <Tabs
-              orientation='vertical'
-              value={0}
-              textColor='primary'
-              indicatorColor='primary'
-            >
-              <Tab label='首页' />
-              <Tab label='标签' />
-              <Tab label='归档' />
-            </Tabs>
+            {store.focusOnLeft && (
+              <Tabs
+                orientation='vertical'
+                value={0}
+                textColor='primary'
+                indicatorColor='primary'
+              >
+                <Tab label='首页' />
+                <Tab label='标签' />
+                <Tab label='归档' />
+              </Tabs>
+            )}
           </Box>
         </Box>
         <Box className={styles.rightSide}>
