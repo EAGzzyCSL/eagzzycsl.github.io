@@ -63,6 +63,7 @@
     "@types/react": "^18.0.12",
     "@types/react-test-renderer": "^18.0.0",
     "@types/three": "^0.146.0",
+    "browserslist": "^4.21.4",
     "chalk": "^5.0.0",
     "cross-env": "^7.0.3",
     "file-loader": "^6.2.0",
