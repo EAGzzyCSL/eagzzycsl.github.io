@@ -4,9 +4,9 @@
   "private": true,
   "main": "lib/index.js",
   "scripts": {
+    "build": "rm -rf ./lib && tsc -p ./tsconfig.json",
     "lint:es": "eslint --ext .js,.ts,.tsx ./",
     "lint:es-fix": "npm run lint:es -- --fix",
-    "build": "rm -rf ./lib && tsc -p ./tsconfig.json",
     "ts:check": "tsc -p ./tsconfig.json --noEmit"
   },
   "dependencies": {
