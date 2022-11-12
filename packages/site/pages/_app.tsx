@@ -54,8 +54,10 @@ const MyApp = ({
         <link rel='icon' href={favicon} />
       </Head>
       <CssBaseline />
-      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-      <Component {...pageProps} />
+      <React.StrictMode>
+        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+        <Component {...pageProps} />
+      </React.StrictMode>
     </>
   )
 }
