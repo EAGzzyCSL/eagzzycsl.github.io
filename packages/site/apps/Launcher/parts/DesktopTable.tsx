@@ -29,7 +29,7 @@ const DesktopTable = (props: DesktopTableProps): JSX.Element => {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null)
 
   useEffect(() => {
-    swiper?.slideTo(desktopCurrentTableIndex)
+    swiper?.slideTo(desktopCurrentTableIndex, 0)
   }, [swiper, desktopCurrentTableIndex])
 
   return (

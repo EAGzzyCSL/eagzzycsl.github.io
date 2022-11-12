@@ -7,7 +7,3 @@ export interface INotification {
   content: string
   onClick: (ctx: { router: MyRouter }) => void
 }
-
-export interface INotificationWithId extends INotification {
-  id: number
-}

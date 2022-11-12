@@ -1,17 +1,18 @@
-import { INotification, INotificationWithId } from '../types'
+import { INotification } from '../types'
+
+export enum ENotificationId {
+  welcome = 'welcome',
+}
+
+export interface INotificationWithId extends INotification {
+  id: ENotificationId
+}
 
 class NotificationManager {
   private notificationsMap: Record<string, INotificationWithId> = {}
 
-  private idIndex = 0
-
-  registerNotification(n: INotification): void {
-    this.idIndex += 1
-    const id = this.idIndex
-    this.notificationsMap[id] = {
-      id,
-      ...n,
-    }
+  registerNotification(n: INotificationWithId): void {
+    this.notificationsMap[n.id] = n
   }
 
   getAllNotification(): INotificationWithId[] {

@@ -11,7 +11,9 @@ import AvatarPng from '@/assets/avatar.png'
 import { useMyRouter } from '@/router'
 import { dayjs } from '@/utils/date'
 
-import notificationManager from '../service/NotificationManager'
+import notificationManager, {
+  ENotificationId,
+} from '../service/NotificationManager'
 import { localStorageManager } from '../service/StorageManager'
 
 import styles from './LockScreen.module.scss'
@@ -110,6 +112,7 @@ const LockScreen = ({
   useEffect(() => {
     if (!localStorageManager.getBooleanItem('hasShowWelcomeNotification')) {
       notificationManager.registerNotification({
+        id: ENotificationId.welcome,
         icon: <ComputerRoundedIcon fontSize='small' />,
         header: '芹也',
         title: '欢迎访问',
@@ -124,7 +127,7 @@ const LockScreen = ({
   }, [])
 
   return (
-    <Slide in={locked} timeout={locked ? 0 : undefined}>
+    <Slide in={locked} timeout={locked ? 0 : undefined} appear={false}>
       <section className={styles.lockScreen} onWheel={handleScreenWheel}>
         <div className={styles.header}>
           <img src={AvatarPng} className={styles.avatar} draggable='false' />

@@ -70,6 +70,7 @@ const SearchBar = ({ onSearch, apps }: SearchBarProps): JSX.Element => {
   const handleClickAppItem = (index: number): void => {
     setSelectedAppIndex(index)
     handleNavToApp(appsInList[index])
+    handleCloseSearchResult()
   }
 
   const handleClickBackdrop = (): void => {
