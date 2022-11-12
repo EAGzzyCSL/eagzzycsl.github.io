@@ -22,6 +22,7 @@
     "site:dev": "yarn workspace @mine/site run dev",
     "site:domain": "yarn workspace @mine/site run export:domain",
     "site:local": "yarn workspace @mine/site run export:local && du -sh ./local-export",
+    "site:analyze": "yarn workspace @mine/site run export:analyze && du -sh ./local-export",
     "site:serve": "yarn workspace @mine/site run serve",
     "site:route": "yarn workspace @mine/site run route",
     "site:qr": "yarn workspace @mine/site run qr",

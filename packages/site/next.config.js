@@ -2,12 +2,16 @@
  * next会把pages下面所有js都编译，包括test.js，很蠢，好心人给出了两个方法
  * https://github.com/vercel/next.js/issues/3728
  */
+// eslint-disable-next-line import/no-extraneous-dependencies
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
 
 const isLocal = process.env.DEPLOY_ENV === 'local'
 
 const baseUrl = isLocal ? '/eagzzycsl.github.io' : ''
 
-module.exports = {
+module.exports = withBundleAnalyzer({
   // 配置本地部署路径
   // 配置为 '' 的话 next 的校验会报错
   assetPrefix: baseUrl || undefined,
@@ -83,4 +87,4 @@ module.exports = {
     })
     return config
   },
-}
+})
