@@ -2,6 +2,8 @@
  * next会把pages下面所有js都编译，包括test.js，很蠢，好心人给出了两个方法
  * https://github.com/vercel/next.js/issues/3728
  */
+const { execSync } = require('child_process')
+
 // eslint-disable-next-line import/no-extraneous-dependencies
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
@@ -28,8 +30,19 @@ module.exports = withBundleAnalyzer({
   images: {
     disableStaticImages: true,
   },
+  generateBuildId: () => {
+    const revision = execSync('git rev-parse --short HEAD')
+    const date = new Date().toString()
+    return `${revision} ${date}`
+  },
   // 魔改 webpackConfig
-  webpack: config => {
+  webpack: (config, { webpack, buildId }) => {
+    // 注入 buildId
+    config.plugins.push(
+      new webpack.DefinePlugin({
+        'process.env.SITE_BUILD_ID': JSON.stringify(buildId),
+      }),
+    )
     // 支持 css modules 驼峰化
     config.module.rules
       .filter(_ => _.oneOf)

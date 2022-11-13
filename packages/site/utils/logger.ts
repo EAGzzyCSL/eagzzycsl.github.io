@@ -31,6 +31,7 @@ const Logger = {
   bookletFull: new LoggerFor('bookletFull', true),
   storage: new LoggerFor('storage', true),
   earth: new LoggerFor('earth', true),
+  base: new LoggerFor('base', true),
 }
 
 export default Logger

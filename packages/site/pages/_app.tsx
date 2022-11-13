@@ -6,8 +6,11 @@ import { useRouter } from 'next/router'
 
 import favicon from '@/assets/favicon.png'
 import { useMyRouter } from '@/router'
+import logger from '@/utils/logger'
 
 import './app.scss'
+
+logger.base.log('buildId', process.env.SITE_BUILD_ID)
 
 const MyApp = ({
   Component,
