@@ -13,14 +13,6 @@ declare module '*.webp'
 
 declare module '*.mp3'
 
-/**
- * markdown 模块
- */
-interface TocItem {
-  title: string
-  level: number
-}
-
 declare module '*.md' {
   export default unknown
 }
