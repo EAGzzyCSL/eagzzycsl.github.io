@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   root: true,
   extends: ['@mine/eslint-config/node'],
@@ -6,21 +8,9 @@ module.exports = {
       files: ['packages/**/*.tsx', 'packages/**/*.ts'],
       extends: ['@mine/eslint-config/typescript'],
       parserOptions: {
-        project: './tsconfig.json',
+        project: path.resolve(__dirname, './tsconfig.json'),
       },
       overrides: [
-        {
-          files: ['packages/**/*.tsx'],
-          extends: ['@mine/eslint-config/react'],
-          rules: {
-            'react/jsx-filename-extension': [
-              'error',
-              {
-                extensions: ['.tsx'],
-              },
-            ],
-          },
-        },
         {
           files: [
             'packages/**/*.test.js',
@@ -38,30 +28,6 @@ module.exports = {
           },
         },
       ],
-    },
-    {
-      files: ['packages/site/**/*.tsx', 'packages/site/**/*.ts'],
-      settings: {
-        'import/resolver': {
-          typescript: {
-            project: require.resolve('./packages/site/tsconfig.json'),
-          },
-        },
-      },
-      rules: {
-        '@typescript-eslint/no-restricted-imports': [
-          'error',
-          {
-            paths: [
-              {
-                name: 'dayjs',
-                message: 'Please use @/utils/date instead.',
-                allowTypeImports: false,
-              },
-            ],
-          },
-        ],
-      },
     },
   ],
 }
