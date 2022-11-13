@@ -5,7 +5,7 @@ import {
   CircularProgress,
   Dialog,
   DialogContent,
-} from '@mui/material'
+} from '@/ui/material'
 
 import styles from './SimpleLoading.module.scss'
 

@@ -1,9 +1,9 @@
 import React, { useRef, useState } from 'react'
 
 import { CameraEnhanceRounded as CameraEnhanceRoundedIcon } from '@mui/icons-material/'
-import { Fab, Paper } from '@mui/material'
 import html2canvas from 'html2canvas'
 
+import { Fab, Paper } from '@/ui/material'
 import { triggerDownload } from '@/utils'
 import { dayjs } from '@/utils/date'
 

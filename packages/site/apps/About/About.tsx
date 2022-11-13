@@ -1,19 +1,5 @@
 import React from 'react'
 
-import {
-  ExpandMoreRounded as ExpandMoreRoundedIcon,
-  GitHub as GitHubIcon,
-  Telegram as TelegramIcon,
-} from '@mui/icons-material'
-import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
-  Box,
-  Button,
-  Paper,
-  Typography,
-} from '@mui/material'
 import { blue as colorBlue, red as colorRed } from '@mui/material/colors'
 import { createTheme } from '@mui/material/styles'
 import { GetStaticPropsResult } from 'next'
@@ -22,6 +8,16 @@ import avatarPng from '@/assets/avatar.png'
 import AppPage from '@/shell/AppPage'
 import Discussion from '@/shell/Discussion'
 import SimpleAppBar from '@/shell/SimpleAppBar'
+import { ExpandMoreRoundedIcon, GitHubIcon, TelegramIcon } from '@/ui/icons'
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Box,
+  Button,
+  Paper,
+  Typography,
+} from '@/ui/material'
 
 import styles from './About.module.scss'
 import dataOfInfo, { Info } from './data'

@@ -1,13 +1,13 @@
 import React, { ReactNode } from 'react'
 
-import { GitHub as GitHubIcon } from '@mui/icons-material'
-import { Link, Typography } from '@mui/material'
 import { pink as colorPink } from '@mui/material/colors'
 import { createTheme } from '@mui/material/styles'
 import { GetStaticPropsResult } from 'next'
 
 import AppPage from '@/shell/AppPage'
 import SimpleAppBar from '@/shell/SimpleAppBar'
+import { GitHubIcon } from '@/ui/icons'
+import { Link, Typography } from '@/ui/material'
 
 import styles from './Acknowledgements.module.scss'
 import dataOfResources from './data'

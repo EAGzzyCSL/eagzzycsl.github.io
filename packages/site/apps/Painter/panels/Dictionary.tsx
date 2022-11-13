@@ -6,7 +6,7 @@ import {
   FormControlLabel,
   TextField,
   Link,
-} from '@mui/material'
+} from '@/ui/material'
 
 import MiSquares from '../parts/MiSquares'
 import PanelContainer from '../parts/PanelContainer'

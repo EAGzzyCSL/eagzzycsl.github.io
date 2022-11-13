@@ -1,8 +1,7 @@
 import React from 'react'
 
-import { Link, Typography } from '@mui/material'
-
 import { useMyRouter } from '@/router'
+import { Link, Typography } from '@/ui/material'
 import { dayjs } from '@/utils/date'
 
 import styles from './BlogBrief.module.scss'

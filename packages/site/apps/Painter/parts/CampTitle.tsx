@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { TextField } from '@mui/material'
+import { TextField } from '@/ui/material'
 
 import styles from './CampTitle.module.scss'
 import HoverInput from './HoverInput'

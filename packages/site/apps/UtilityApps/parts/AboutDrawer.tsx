@@ -1,8 +1,7 @@
 import React from 'react'
 
-import { Typography } from '@mui/material'
-
 import Discussion from '@/shell/Discussion'
+import { Typography } from '@/ui/material'
 
 import { LAST_UPDATED } from '../data'
 import { TraitSpecifications } from '../data/specifications'

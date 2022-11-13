@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 
-import { QuestionMarkRounded as QuestionMarkRoundedIcon } from '@mui/icons-material'
+import cx from 'classnames'
+
+import { QuestionMarkRoundedIcon } from '@/ui/icons'
 import {
   TextField,
   Button,
@@ -8,8 +10,7 @@ import {
   Paper,
   Link,
   Typography,
-} from '@mui/material'
-import cx from 'classnames'
+} from '@/ui/material'
 
 import CampCell from '../parts/CampCell'
 import CampTitle from '../parts/CampTitle'

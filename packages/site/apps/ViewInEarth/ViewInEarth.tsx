@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
-import { ToggleButtonGroup, ToggleButton } from '@mui/material'
 import { GetStaticPropsResult } from 'next'
 
 import AppPage from '@/shell/AppPage'
 import SimpleAppBar from '@/shell/SimpleAppBar'
+import { ToggleButtonGroup, ToggleButton } from '@/ui/material'
 
 import Earth from './parts/Earth'
 import theme from './theme'

@@ -1,10 +1,17 @@
 import React, { useState, useRef } from 'react'
 
+import { grey as colorGrey } from '@mui/material/colors'
+import { createTheme } from '@mui/material/styles'
+import { GetStaticPropsResult } from 'next'
+
+import AppBarHomeButton from '@/shell/AppBarHomeButton'
+import AppPage from '@/shell/AppPage'
+import SimpleAppBar from '@/shell/SimpleAppBar'
 import {
-  ArrowBackRounded as ArrowBackRoundedIcon,
-  MoreHorizRounded as MoreHorizRoundedIcon,
-  MoreVertRounded as MoreVertRoundedIcon,
-} from '@mui/icons-material'
+  ArrowBackRoundedIcon,
+  MoreHorizRoundedIcon,
+  MoreVertRoundedIcon,
+} from '@/ui/icons'
 import {
   AppBar,
   Drawer,
@@ -14,14 +21,7 @@ import {
   Paper,
   Toolbar,
   Typography,
-} from '@mui/material'
-import { grey as colorGrey } from '@mui/material/colors'
-import { createTheme } from '@mui/material/styles'
-import { GetStaticPropsResult } from 'next'
-
-import AppBarHomeButton from '@/shell/AppBarHomeButton'
-import AppPage from '@/shell/AppPage'
-import SimpleAppBar from '@/shell/SimpleAppBar'
+} from '@/ui/material'
 
 import dataOfChats from './data/chats'
 import styles from './LittleCousinSpeakTheTruth.module.scss'

@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
 import {
-  AddCircleOutlineRounded as AddCircleOutlineRoundedIcon,
-  InsertEmoticonRounded as InsertEmoticonRoundedIcon,
-  Mic as MicIcon,
-} from '@mui/icons-material'
+  AddCircleOutlineRoundedIcon,
+  InsertEmoticonRoundedIcon,
+  MicIcon,
+} from '@/ui/icons'
 
 import { Chats } from '../type'
 

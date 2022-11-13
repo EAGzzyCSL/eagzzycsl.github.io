@@ -7,7 +7,7 @@ import {
   CardActions,
   CardContent,
   Typography,
-} from '@mui/material'
+} from '@/ui/material'
 
 import { BasicDisplayItem } from '../type'
 

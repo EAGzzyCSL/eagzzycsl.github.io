@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Card, CardActionArea, CardContent } from '@mui/material'
+import { Card, CardActionArea, CardContent } from '@/ui/material'
 
 import { BasicDisplayItem } from '../type'
 

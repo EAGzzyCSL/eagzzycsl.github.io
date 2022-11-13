@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
-import { Card } from '@mui/material'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 import { CalendarPicker } from '@mui/x-date-pickers/CalendarPicker'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
 
+import { Card } from '@/ui/material'
 import { dayjs } from '@/utils/date'
 
 import styles from './CalendarCard.module.scss'

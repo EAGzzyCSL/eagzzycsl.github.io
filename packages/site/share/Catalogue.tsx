@@ -4,7 +4,8 @@ import type {
   MarkdownArticleModule,
   NestedTocItem,
 } from '@mine/markdown-loader'
-import { Link, Typography } from '@mui/material'
+
+import { Link, Typography } from '@/ui/material'
 
 import styles from './Catalogue.module.scss'
 

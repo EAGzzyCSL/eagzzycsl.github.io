@@ -1,13 +1,13 @@
 import React, { ReactNode } from 'react'
 
-import { LinkRounded as LinkRoundedIcon } from '@mui/icons-material'
-import { Typography, Link } from '@mui/material'
 import ReactMarkdown, { Components } from 'react-markdown'
 import { ReactMarkdownProps } from 'react-markdown/lib/ast-to-react'
 import rehypeRaw from 'rehype-raw'
 import rehypeSanitize from 'rehype-sanitize'
 import remarkGfm from 'remark-gfm'
 
+import { LinkRoundedIcon } from '@/ui/icons'
+import { Typography, Link } from '@/ui/material'
 import Logger from '@/utils/logger'
 
 import styles from './BookletDisplay.module.scss'

@@ -1,9 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react'
 
-import {
-  PhotoCameraRounded as PhotoCameraIconRounded,
-  CropRounded as CropIconRounded,
-} from '@mui/icons-material'
+import cx from 'classnames'
+import ReactCrop, { Crop, PixelCrop } from 'react-image-crop'
+import 'react-image-crop/dist/ReactCrop.css'
+
+import { PhotoCameraIconRounded, CropIconRounded } from '@/ui/icons'
 import {
   Dialog,
   DialogTitle,
@@ -12,10 +13,7 @@ import {
   Button,
   IconButton,
   Tooltip,
-} from '@mui/material'
-import cx from 'classnames'
-import ReactCrop, { Crop, PixelCrop } from 'react-image-crop'
-import 'react-image-crop/dist/ReactCrop.css'
+} from '@/ui/material'
 
 import { createImageDataUrlFromCrop } from '../utils/crop'
 

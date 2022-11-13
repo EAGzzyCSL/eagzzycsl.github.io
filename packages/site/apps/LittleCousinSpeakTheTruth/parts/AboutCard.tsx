@@ -6,7 +6,7 @@ import {
   CardContent,
   CardMedia,
   Typography,
-} from '@mui/material'
+} from '@/ui/material'
 
 import AboutCardHeaderImage from '../assets/about-header.png'
 

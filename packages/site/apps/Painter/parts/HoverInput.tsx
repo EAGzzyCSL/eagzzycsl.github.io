@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 
-import { Typography, TypographyProps } from '@mui/material'
 import cx from 'classnames'
+
+import { Typography, TypographyProps } from '@/ui/material'
 
 import styles from './HoverInput.module.scss'
 

@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 
-import { MenuRounded as MenuRoundedIcon } from '@mui/icons-material'
+import cx from 'classnames'
+
+import { useMyRouter } from '@/router'
+import { MenuRoundedIcon } from '@/ui/icons'
 import {
   AppBar,
   IconButton,
@@ -9,10 +12,7 @@ import {
   Menu,
   MenuItem,
   Tooltip,
-} from '@mui/material'
-import cx from 'classnames'
-
-import { useMyRouter } from '@/router'
+} from '@/ui/material'
 
 import AppBarHomeButton from './AppBarHomeButton'
 import styles from './SimpleAppBar.module.scss'

@@ -1,9 +1,8 @@
 import React from 'react'
 
-import { Typography, Paper, ButtonBase } from '@mui/material'
-
 import { useMyRouter } from '@/router'
 import { AppDescribe } from '@/types/app'
+import { Typography, Paper, ButtonBase } from '@/ui/material'
 
 import styles from './AppEntry.module.scss'
 

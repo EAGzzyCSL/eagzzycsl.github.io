@@ -1,12 +1,5 @@
 import React, { useState } from 'react'
 
-import {
-  Subject as SubjectIcon,
-  ShortText as ShortTextIcon,
-  ViewSidebarRounded as ViewSidebarRoundedIcon,
-  PrintRounded as PrintRoundedIcon,
-} from '@mui/icons-material'
-import { Drawer, Typography } from '@mui/material'
 import { GetStaticPropsResult } from 'next'
 
 import Catalogue from '@/share/Catalogue'
@@ -14,6 +7,13 @@ import AppPage from '@/shell/AppPage'
 import Discussion from '@/shell/Discussion'
 import SimpleAppBar from '@/shell/SimpleAppBar'
 import { StaticPathsResponse, StaticPath } from '@/types/app'
+import {
+  SubjectIcon,
+  ShortTextIcon,
+  ViewSidebarRoundedIcon,
+  PrintRoundedIcon,
+} from '@/ui/icons'
+import { Drawer, Typography } from '@/ui/material'
 
 import styles from './BookletFull.module.scss'
 import _exportedBooklets from './data'

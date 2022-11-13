@@ -1,5 +1,7 @@
 import React from 'react'
 
+import cx from 'classnames'
+
 import {
   Button,
   Card,
@@ -7,8 +9,7 @@ import {
   CardActions,
   CardContent,
   Typography,
-} from '@mui/material'
-import cx from 'classnames'
+} from '@/ui/material'
 
 import { PictorialDisplayItem } from '../type'
 

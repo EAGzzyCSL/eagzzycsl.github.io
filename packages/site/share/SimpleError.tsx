@@ -7,7 +7,7 @@ import {
   DialogContentText,
   DialogTitle,
   Button,
-} from '@mui/material'
+} from '@/ui/material'
 
 import styles from './SimpleError.module.scss'
 

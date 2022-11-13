@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { TextField, Button } from '@mui/material'
+import { TextField, Button } from '@/ui/material'
 
 import imageBlank from '../assets/crossed/blank.jpg'
 import imageButter from '../assets/crossed/butter.jpeg'

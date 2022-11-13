@@ -1,6 +1,12 @@
 import React, { ReactNode } from 'react'
 
-import { LinkRounded as LinkRoundedIcon } from '@mui/icons-material'
+import ReactMarkdown, { Components } from 'react-markdown'
+import { ReactMarkdownProps } from 'react-markdown/lib/ast-to-react'
+import rehypeRaw from 'rehype-raw'
+import rehypeSanitize from 'rehype-sanitize'
+import remarkGfm from 'remark-gfm'
+
+import { LinkRoundedIcon } from '@/ui/icons'
 import {
   Typography,
   Link,
@@ -10,12 +16,7 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-} from '@mui/material'
-import ReactMarkdown, { Components } from 'react-markdown'
-import { ReactMarkdownProps } from 'react-markdown/lib/ast-to-react'
-import rehypeRaw from 'rehype-raw'
-import rehypeSanitize from 'rehype-sanitize'
-import remarkGfm from 'remark-gfm'
+} from '@/ui/material'
 
 import styles from './ArticleDisplay.module.scss'
 import CodeView, { InlineCodeView } from './CodeView'

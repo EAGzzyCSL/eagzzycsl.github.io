@@ -1,16 +1,16 @@
 import React, { useMemo, useState } from 'react'
 
-import {
-  LaunchRounded as LaunchRoundedIcon,
-  CloseRounded as CloseRoundedIcon,
-  MinimizeRounded as MinimizeRoundedIcon,
-} from '@mui/icons-material'
-import { Paper, IconButton, Tooltip, Button, Typography } from '@mui/material'
 import cx from 'classnames'
 
 import globalAcknowledgementItems from '@/constants/globalAcknowledge'
 import { useMyRouter } from '@/router'
 import sitemap from '@/sitemap'
+import {
+  LaunchRoundedIcon,
+  CloseRoundedIcon,
+  MinimizeRoundedIcon,
+} from '@/ui/icons'
+import { Paper, IconButton, Tooltip, Button, Typography } from '@/ui/material'
 
 import styles from './CornerFooter.module.scss'
 import AckChip from './parts/AckChip'

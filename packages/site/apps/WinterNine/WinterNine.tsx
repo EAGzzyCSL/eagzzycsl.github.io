@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 
-import { Typography, Slide, Fade } from '@mui/material'
 import { green as colorAmber, red as colorRed } from '@mui/material/colors'
 import { createTheme } from '@mui/material/styles'
 import { GetStaticPropsResult } from 'next'
@@ -9,6 +8,7 @@ import dynamic from 'next/dynamic'
 import { transparentBase64 } from '@/constants/style'
 import AppPage from '@/shell/AppPage'
 import SimpleAppBar from '@/shell/SimpleAppBar'
+import { Typography, Slide, Fade } from '@/ui/material'
 import { getHashContent } from '@/utils'
 import { dayjs } from '@/utils/date'
 

@@ -1,6 +1,10 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 
-import { CloseRounded as CloseRoundedIcon } from '@mui/icons-material'
+import { GetStaticPropsResult } from 'next'
+
+import AppPage from '@/shell/AppPage'
+import SimpleAppBar from '@/shell/SimpleAppBar'
+import { CloseRoundedIcon } from '@/ui/icons'
 import {
   ButtonGroup,
   Button,
@@ -10,11 +14,7 @@ import {
   Typography,
   InputAdornment,
   IconButton,
-} from '@mui/material'
-import { GetStaticPropsResult } from 'next'
-
-import AppPage from '@/shell/AppPage'
-import SimpleAppBar from '@/shell/SimpleAppBar'
+} from '@/ui/material'
 
 import icon from './icon.png'
 import styles from './PureSearch.module.scss'

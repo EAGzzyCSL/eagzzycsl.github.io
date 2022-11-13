@@ -1,7 +1,8 @@
 import React from 'react'
 
-import { Typography, Paper, ButtonBase } from '@mui/material'
 import { blueGrey as colorBlueGrey } from '@mui/material/colors'
+
+import { Typography, Paper, ButtonBase } from '@/ui/material'
 
 import { INotification } from '../types'
 

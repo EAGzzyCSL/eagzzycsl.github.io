@@ -1,11 +1,9 @@
 import React from 'react'
 
-import {
-  ClearAllRounded as ClearAllRoundedIcon,
-  DoubleArrowRounded as DoubleArrowRoundedIcon,
-} from '@mui/icons-material'
-import { Backdrop } from '@mui/material'
 import { observer } from 'mobx-react-lite'
+
+import { ClearAllRoundedIcon, DoubleArrowRoundedIcon } from '@/ui/icons'
+import { Backdrop } from '@/ui/material'
 
 import useStore from '../store'
 

@@ -1,7 +1,8 @@
 import React, { useState, useImperativeHandle, Ref, useRef } from 'react'
 
-import { TextField, Typography, Button } from '@mui/material'
 import cx from 'classnames'
+
+import { TextField, Typography, Button } from '@/ui/material'
 
 import theme from '../theme'
 import { TFormula } from '../types/expression'

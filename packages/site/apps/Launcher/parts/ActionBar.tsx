@@ -1,12 +1,13 @@
 import React from 'react'
 
-import {
-  NavigateBeforeRounded as NavigateBeforeRoundedIcon,
-  NavigateNextRounded as NavigateNextRoundedIcon,
-  StopRounded as StopRoundedIcon,
-} from '@mui/icons-material'
-import { Backdrop, Button } from '@mui/material'
 import { observer } from 'mobx-react-lite'
+
+import {
+  NavigateBeforeRoundedIcon,
+  NavigateNextRoundedIcon,
+  StopRoundedIcon,
+} from '@/ui/icons'
+import { Backdrop, Button } from '@/ui/material'
 
 import useStore from '../store'
 

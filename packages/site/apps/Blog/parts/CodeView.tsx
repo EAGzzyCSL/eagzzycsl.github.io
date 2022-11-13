@@ -1,8 +1,9 @@
 import React from 'react'
 
-import { Typography } from '@mui/material'
 import cx from 'classnames'
 import hljs from 'highlight.js/lib/core'
+
+import { Typography } from '@/ui/material'
 
 import styles from './CodeView.module.scss'
 import './highlightConfig'

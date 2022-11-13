@@ -1,10 +1,16 @@
 import React, { useState } from 'react'
 
+import cx from 'classnames'
+import { observer } from 'mobx-react-lite'
+import { GetStaticPropsResult } from 'next'
+
+import AppPage from '@/shell/AppPage'
+import SimpleAppBar from '@/shell/SimpleAppBar'
 import {
-  KeyboardArrowLeftRounded as KeyboardArrowLeftRoundedIcon,
-  KeyboardArrowRightRounded as KeyboardArrowRightRoundedIcon,
-  SearchRounded as SearchRoundedIcon,
-} from '@mui/icons-material'
+  KeyboardArrowLeftRoundedIcon,
+  KeyboardArrowRightRoundedIcon,
+  SearchRoundedIcon,
+} from '@/ui/icons'
 import {
   Box,
   Fab,
@@ -13,13 +19,7 @@ import {
   Typography,
   Zoom,
   Pagination,
-} from '@mui/material'
-import cx from 'classnames'
-import { observer } from 'mobx-react-lite'
-import { GetStaticPropsResult } from 'next'
-
-import AppPage from '@/shell/AppPage'
-import SimpleAppBar from '@/shell/SimpleAppBar'
+} from '@/ui/material'
 
 import styles from './Blog.module.scss'
 import _exportedPosts from './data/index'

@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
 import {
-  CloseRounded as CloseRoundedIcon,
-  DeleteOutlineRounded as DeleteOutlineRoundedIcon,
-  EditRounded as EditRoundedIcon,
-} from '@mui/icons-material'
+  CloseRoundedIcon,
+  DeleteOutlineRoundedIcon,
+  EditRoundedIcon,
+} from '@/ui/icons'
 import {
   Button,
   IconButton,
@@ -16,7 +16,7 @@ import {
   TableHead,
   TableRow,
   Typography,
-} from '@mui/material'
+} from '@/ui/material'
 
 import { IHistoryItem } from '../types/history'
 

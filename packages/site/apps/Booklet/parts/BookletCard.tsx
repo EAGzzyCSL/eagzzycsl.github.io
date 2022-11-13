@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Paper, Typography } from '@mui/material'
+import { Paper, Typography } from '@/ui/material'
 
 import theme from '../theme'
 

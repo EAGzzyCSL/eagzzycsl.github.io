@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { QuestionMarkRounded as QuestionMarkRoundedIcon } from '@mui/icons-material'
+import { QuestionMarkRoundedIcon } from '@/ui/icons'
 import {
   IconButton,
   Paper,
@@ -12,7 +12,7 @@ import {
   TableRow,
   TableCell,
   Link,
-} from '@mui/material'
+} from '@/ui/material'
 
 import theme from '../theme'
 

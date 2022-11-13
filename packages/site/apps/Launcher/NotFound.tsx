@@ -1,8 +1,9 @@
 import React from 'react'
 
-import { SentimentDissatisfiedRounded as SentimentDissatisfiedRoundedIcon } from '@mui/icons-material'
-import { Typography } from '@mui/material'
 import { GetStaticPropsResult } from 'next'
+
+import { SentimentDissatisfiedRoundedIcon } from '@/ui/icons'
+import { Typography } from '@/ui/material'
 
 import styles from './NotFound.module.scss'
 

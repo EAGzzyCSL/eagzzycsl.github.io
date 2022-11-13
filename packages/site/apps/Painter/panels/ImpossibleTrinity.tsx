@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 
-import { TextField, Button } from '@mui/material'
 import cx from 'classnames'
+
+import { TextField, Button } from '@/ui/material'
 
 import HoverInput from '../parts/HoverInput'
 import PanelContainer from '../parts/PanelContainer'

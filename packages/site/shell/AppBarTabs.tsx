@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Tab, Tabs, Select, MenuItem, FormControl } from '@mui/material'
+import { Tab, Tabs, Select, MenuItem, FormControl } from '@/ui/material'
 
 import styles from './AppBarTabs.module.scss'
 

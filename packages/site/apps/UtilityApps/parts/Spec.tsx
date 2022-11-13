@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { IconButton, Tooltip, Typography } from '@mui/material'
+import { IconButton, Tooltip, Typography } from '@/ui/material'
 
 import { Specification } from '../type'
 

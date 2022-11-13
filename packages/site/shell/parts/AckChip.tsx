@@ -1,7 +1,8 @@
 import React from 'react'
 
-import { Button, Link } from '@mui/material'
 import cx from 'classnames'
+
+import { Button, Link } from '@/ui/material'
 
 import styles from './AckChip.module.scss'
 

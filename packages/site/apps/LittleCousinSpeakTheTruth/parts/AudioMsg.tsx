@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 
-import { RecordVoiceOverRounded as RecordVoiceOverRoundedIcon } from '@mui/icons-material'
+import { RecordVoiceOverRoundedIcon } from '@/ui/icons'
 
 import styles from './AudioMsg.module.scss'
 

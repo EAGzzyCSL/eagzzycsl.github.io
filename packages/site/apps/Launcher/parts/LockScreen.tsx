@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react'
 
-import {
-  LockOpenRounded as LockOpenRoundedIcon,
-  LockRounded as LockRoundedIcon,
-  ComputerRounded as ComputerRoundedIcon,
-} from '@mui/icons-material'
-import { Typography, Slide, IconButton } from '@mui/material'
-
 import AvatarPng from '@/assets/avatar.png'
 import { useMyRouter } from '@/router'
+import {
+  LockOpenRoundedIcon,
+  LockRoundedIcon,
+  ComputerRoundedIcon,
+} from '@/ui/icons'
+import { Typography, Slide, IconButton } from '@/ui/material'
 import { dayjs } from '@/utils/date'
 
 import notificationManager, {
