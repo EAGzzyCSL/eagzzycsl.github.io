@@ -40,7 +40,8 @@ const AppPage = ({
     })}
   >
     <Head>
-      <title>芹也·{title}</title>
+      {/* issue：https://github.com/vercel/next.js/discussions/38256 */}
+      <title>{`芹也·${title}`}</title>
     </Head>
     <ThemeProvider theme={theme}>
       {children}
