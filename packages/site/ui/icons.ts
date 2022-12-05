@@ -36,3 +36,4 @@ export { default as LockOpenRoundedIcon } from '@mui/icons-material/LockOpenRoun
 export { default as LockRoundedIcon } from '@mui/icons-material/LockRounded'
 export { default as ComputerRoundedIcon } from '@mui/icons-material/ComputerRounded'
 export { default as StopRoundedIcon } from '@mui/icons-material/StopRounded'
+export { default as CameraEnhanceRoundedIcon } from '@mui/icons-material/CameraEnhanceRounded'

@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 
-import { QuestionMarkRounded as QuestionMarkRoundedIcon } from '@mui/icons-material/'
 import { teal as colorTeal, red as colorRed } from '@mui/material/colors'
 import { createTheme } from '@mui/material/styles'
 import { GetStaticPropsResult } from 'next'
 
 import AppPage from '@/shell/AppPage'
 import SimpleAppBar from '@/shell/SimpleAppBar'
+import { QuestionMarkRoundedIcon } from '@/ui/icons'
 import {
   Typography,
   Drawer,
