@@ -8,6 +8,7 @@ const { execSync } = require('child_process')
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
+const dayjs = require('dayjs')
 
 const isLocal = process.env.DEPLOY_ENV === 'local'
 
@@ -31,9 +32,9 @@ module.exports = withBundleAnalyzer({
     disableStaticImages: true,
   },
   generateBuildId: () => {
-    const revision = execSync('git rev-parse --short HEAD')
-    const date = new Date().toString()
-    return `${revision} ${date}`
+    const revision = execSync('git rev-parse --short HEAD').toString().trim()
+    const date = dayjs().format('YYYYMMDD-HHmmss')
+    return `${revision}-${date}`
   },
   // 魔改 webpackConfig
   webpack: (config, { webpack, buildId }) => {
