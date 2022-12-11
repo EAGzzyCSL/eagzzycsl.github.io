@@ -1,0 +1,26 @@
+.legend-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .line {
+      width: 28px;
+      height: 4px;
+      margin-right: 12px;
+    }
+
+    .name {
+      margin-right: 4px;
+    }
+
+    .options {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

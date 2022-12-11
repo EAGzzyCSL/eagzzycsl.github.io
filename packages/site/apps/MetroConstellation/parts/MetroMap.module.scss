@@ -1,0 +1,141 @@
+$color-base: #bbb;
+$color-line-light: #ddd;
+$color-light: white;
+$line-width: 3px;
+$star-size-small: 9px;
+$star-size-mid: 11px;
+$star-size-big: 16px;
+$shadow-big: 0 0 30px 6px $color-light;
+$shadow-small: 0 0 20px 4px $color-light;
+
+.metro-map {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  .container {
+    position: relative;
+    margin: 0 auto;
+
+    // 绘制连接线
+    // 连接线分为两种：
+    // - 水平或垂直：直接用 bg + border 实现，可以方便通过 css 控制粗细和颜色
+    // - 倾斜：使用渐变背景实现，需要使用行内样式
+    .line {
+      position: absolute;
+
+      &.along-axis {
+        // 为了实现粗细由 border 控制，需要使用 content-box
+        box-sizing: content-box;
+        background: $color-base;
+        border-color: $color-base;
+
+        &.along-x {
+          border-top-style: solid;
+          border-top-width: calc(($line-width - 1px) / 2);
+          border-bottom-style: solid;
+          border-bottom-width: calc(($line-width - 1px) / 2);
+          // 粗细由 border 控制后，需要和 star 一样有 transform 的逻辑
+          transform: translate(0, calc((1px - 100%) / 2));
+
+          &.active {
+            background: $color-line-light;
+            border-color: $color-line-light;
+            border-top-width: calc(($line-width - 1px));
+            border-bottom-width: calc(($line-width - 1px));
+          }
+        }
+
+        &.along-y {
+          border-right-style: solid;
+          border-right-width: calc(($line-width - 1px) / 2);
+          border-left-style: solid;
+          border-left-width: calc(($line-width - 1px) / 2);
+          transform: translate(calc((1px - 100%) / 2), 0);
+
+          &.active {
+            background: $color-line-light;
+            border-color: $color-line-light;
+            border-right-width: calc(($line-width - 1px));
+            border-left-width: calc(($line-width - 1px));
+          }
+        }
+      }
+    }
+
+    // 绘制 star
+    // star 有大中小三种规格
+    .star {
+      position: absolute;
+      background-color: $color-base;
+      border-radius: 100%;
+      // 通过 transform 让星星永远以 position 为中心绘制，中心占一个像素点
+      transform: translate(calc((1px - 100%) / 2), calc((1px - 100%) / 2));
+      animation-duration: 2.4s;
+      animation-timing-function: ease;
+      animation-iteration-count: infinite;
+
+      &.big {
+        width: $star-size-big;
+        height: $star-size-big;
+
+        &.active {
+          animation-name: blink;
+        }
+      }
+
+      &.mid {
+        width: $star-size-mid;
+        height: $star-size-mid;
+
+        &.active {
+          animation-name: blink-less;
+        }
+      }
+
+      &.small {
+        width: $star-size-small;
+        height: $star-size-small;
+
+        &.active {
+          animation-name: blink-less;
+        }
+      }
+    }
+  }
+}
+
+@keyframes blink {
+  0% {
+    background-color: $color-light;
+    box-shadow: $shadow-big;
+  }
+
+  50% {
+    background-color: $color-base;
+    box-shadow: none;
+  }
+
+  100% {
+    background-color: $color-light;
+    box-shadow: $shadow-big;
+  }
+}
+
+@keyframes blink-less {
+  0% {
+    background-color: $color-base;
+    box-shadow: none;
+  }
+
+  50% {
+    background-color: $color-light;
+    box-shadow: $shadow-small;
+  }
+
+  100% {
+    background-color: $color-base;
+    box-shadow: none;
+  }
+}

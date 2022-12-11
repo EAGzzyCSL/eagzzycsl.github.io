@@ -12,6 +12,7 @@ import Calculator from '@/apps/Calculator/manifest'
 import Changelog from '@/apps/Changelog/manifest'
 import Launcher from '@/apps/Launcher/manifest'
 import LittleCousinSpeakTheTruth from '@/apps/LittleCousinSpeakTheTruth/manifest'
+import MetroConstellation from '@/apps/MetroConstellation/manifest'
 import Painter from '@/apps/Painter/manifest'
 import PureSearch from '@/apps/PureSearch/manifest'
 import Template from '@/apps/Template/manifest'
@@ -36,4 +37,5 @@ export default registerApps({
   Booklet,
   ViewInEarth,
   PureSearch,
+  MetroConstellation,
 })

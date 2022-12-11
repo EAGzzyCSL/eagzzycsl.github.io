@@ -68,5 +68,10 @@
     "appId": "PureSearch",
     "shortId": "search",
     "title": "纯粹搜索"
+  },
+  {
+    "appId": "MetroConstellation",
+    "shortId": "metro",
+    "title": "地铁星座"
   }
 ]
