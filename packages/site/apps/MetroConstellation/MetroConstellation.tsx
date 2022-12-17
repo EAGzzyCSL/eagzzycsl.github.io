@@ -33,14 +33,14 @@ const MetroConstellation = (): JSX.Element => {
 
   const updateMetroLine = useCallback(
     (no: string, metroLine: IMetroLine): void => {
-      setMetroLinesMap({
-        ...metroLinesMap,
+      setMetroLinesMap(preState => ({
+        ...preState,
         [no]: {
           ...metroLine,
         },
-      })
+      }))
     },
-    [metroLinesMap, setMetroLinesMap],
+    [setMetroLinesMap],
   )
 
   const [enableAdjust, setEnableAdjust] = useState(false)

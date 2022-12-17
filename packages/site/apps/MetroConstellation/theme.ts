@@ -1,6 +1,6 @@
 import {
   deepOrange as colorDeepOrange,
-  pink as colorPink,
+  blue as colorBlue,
 } from '@mui/material/colors'
 import { createTheme } from '@mui/material/styles'
 
@@ -10,7 +10,7 @@ export default createTheme({
       main: colorDeepOrange[500],
     },
     secondary: {
-      main: colorPink[600],
+      main: colorBlue[500],
     },
   },
 })

@@ -23,24 +23,67 @@ const LegendPanel = (props: LegendPanelProps): JSX.Element => {
   const { metroLinesMap, updateMetroLine, enableAdjust, setEnableAdjust } =
     props
 
-  const metroLines = useMemo(
+  const metroLines: IMetroLine[] = useMemo(
     () => Object.values(metroLinesMap),
     [metroLinesMap],
   )
 
+  const allActive = metroLines.every(line => line.active)
+  const allColorful = metroLines.every(line => line.colorful)
+
   return (
     <section className={styles.legendPanel}>
-      {metroLines.map(line => (
-        <div className={styles.row} key={line.no}>
-          <div
-            className={styles.line}
-            style={{
-              backgroundColor: line.color,
+      <div className={styles.all}>
+        <div className={styles.label}>
+          <Typography className={styles.name} variant='button'>
+            全部线路
+          </Typography>
+        </div>
+        <div className={styles.options}>
+          <FormControlLabel
+            control={<Checkbox size='small' />}
+            checked={allActive}
+            label='active'
+            labelPlacement='start'
+            onChange={(_event, checked) => {
+              metroLines.forEach(l => {
+                updateMetroLine(l.no, {
+                  ...l,
+                  active: checked,
+                })
+              })
             }}
           />
-          <Typography className={styles.name} variant='button'>
-            {line.no.length > 2 ? line.no : `${line.no} 号线`}
-          </Typography>
+          <FormControlLabel
+            control={<Checkbox size='small' color='secondary' />}
+            checked={allColorful}
+            label='colorful'
+            labelPlacement='start'
+            onChange={(_event, checked) => {
+              metroLines.forEach(l => {
+                updateMetroLine(l.no, {
+                  ...l,
+                  colorful: checked,
+                })
+              })
+            }}
+          />
+        </div>
+      </div>
+
+      {metroLines.map(line => (
+        <div className={styles.row} key={line.no}>
+          <div className={styles.label}>
+            <div
+              className={styles.line}
+              style={{
+                backgroundColor: line.color,
+              }}
+            />
+            <Typography className={styles.name} variant='button'>
+              {line.no.length > 2 ? line.no : `${line.no} 号线`}
+            </Typography>
+          </div>
           <div className={styles.options}>
             <FormControlLabel
               control={<Checkbox size='small' />}
@@ -55,7 +98,7 @@ const LegendPanel = (props: LegendPanelProps): JSX.Element => {
               }}
             />
             <FormControlLabel
-              control={<Checkbox size='small' color='info' />}
+              control={<Checkbox size='small' color='secondary' />}
               checked={line.colorful}
               label='colorful'
               labelPlacement='start'
