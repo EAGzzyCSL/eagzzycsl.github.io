@@ -2119,10 +2119,10 @@
     prop-types "^15.8.1"
     react-is "^18.2.0"
 
-"@mui/base@5.0.0-alpha.112":
-  version "5.0.0-alpha.112"
-  resolved "https://registry.npmmirror.com/@mui/base/-/base-5.0.0-alpha.112.tgz#80e815430c5df0316e0a549d34628d54215e05f1"
-  integrity sha512-KPwb1iYPXsV/P8uu0SNQrj7v7YU6wdN4Eccc2lZQyRDW+f6PJYjHBuFUTYKc408B98Jvs1XbC/z5MN45a2DWrQ==
+"@mui/base@5.0.0-alpha.114":
+  version "5.0.0-alpha.114"
+  resolved "https://registry.npmmirror.com/@mui/base/-/base-5.0.0-alpha.114.tgz#19125f28b7d09d1cc60550872440ecba699d8374"
+  integrity sha512-ZpsG2I+zTOAnVTj3Un7TxD2zKRA2OhEPGMcWs/9ylPlS6VuGQSXowPooZiqarjT7TZ0+1bOe8titk/t8dLFiGw==
   dependencies:
     "@babel/runtime" "^7.20.7"
     "@emotion/is-prop-valid" "^1.2.0"
@@ -2145,14 +2145,14 @@
   dependencies:
     "@babel/runtime" "^7.17.2"
 
-"@mui/lab@^5.0.0-alpha.114":
-  version "5.0.0-alpha.114"
-  resolved "https://registry.npmmirror.com/@mui/lab/-/lab-5.0.0-alpha.114.tgz#af4a1893a66bd1b99e8c4f15e51e8db51c094826"
-  integrity sha512-tChDoLaJ3qcYk37GIwBL1KrCiW0gpmEY//D5z5nHWnO/mzx3axjRJZpBOBeGEvhuoO/Y3QzMz4rhTvqbGNkW0w==
+"@mui/lab@^5.0.0-alpha.116":
+  version "5.0.0-alpha.116"
+  resolved "https://registry.npmmirror.com/@mui/lab/-/lab-5.0.0-alpha.116.tgz#d18a1662d830d77a5b0bb5ad039614595fc2b459"
+  integrity sha512-TJHXYuJnZWzHNtQ8VlFIbRB2ZrhOkc1N5yBANKn9UvT0ktpCgtnfkLsY5ckDE/PX54L0mg3kaZ6An5j4mvEzkQ==
   dependencies:
     "@babel/runtime" "^7.20.7"
-    "@mui/base" "5.0.0-alpha.112"
-    "@mui/system" "^5.11.2"
+    "@mui/base" "5.0.0-alpha.114"
+    "@mui/system" "^5.11.5"
     "@mui/types" "^7.2.3"
     "@mui/utils" "^5.11.2"
     clsx "^1.2.1"
@@ -2247,10 +2247,10 @@
     csstype "^3.1.1"
     prop-types "^15.8.1"
 
-"@mui/system@^5.11.2":
-  version "5.11.2"
-  resolved "https://registry.npmmirror.com/@mui/system/-/system-5.11.2.tgz#a5a5865dda0f5f360eed8cdc1ab399a493dbd361"
-  integrity sha512-PPkYhrcP2MkhscX6SauIl0wPgra0w1LGPtll+hIKc2Z2JbGRSrUCFif93kxejB7I1cAoCay9jWW4mnNhsOqF/g==
+"@mui/system@^5.11.5":
+  version "5.11.5"
+  resolved "https://registry.npmmirror.com/@mui/system/-/system-5.11.5.tgz#c880199634708c866063396f88d3fdd4c1dfcb48"
+  integrity sha512-KNVsJ0sgRRp2XBqhh4wPS5aacteqjwxgiYTVwVnll2fgkgunZKo3DsDiGMrFlCg25ZHA3Ax58txWGE9w58zp0w==
   dependencies:
     "@babel/runtime" "^7.20.7"
     "@mui/private-theming" "^5.11.2"
