@@ -5229,13 +5229,6 @@ dom-helpers@^5.0.1:
     "@babel/runtime" "^7.8.7"
     csstype "^3.0.2"
 
-dom7@^4.0.4:
-  version "4.0.4"
-  resolved "https://registry.npmmirror.com/dom7/-/dom7-4.0.4.tgz#8b68c5d8e5e2ed0fddb1cb93e433bc9060c8f3fb"
-  integrity sha512-DSSgBzQ4rJWQp1u6o+3FVwMNnT5bzQbMb+o31TjYYeRi05uAcpF8koxdfzeoe5ElzPmua7W7N28YJhF7iEKqIw==
-  dependencies:
-    ssr-window "^4.0.0"
-
 domexception@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmmirror.com/domexception/-/domexception-4.0.0.tgz#4ad1be56ccadc86fc76d033353999a8037d03673"
@@ -11405,7 +11398,7 @@ sprintf-js@~1.0.2:
   resolved "https://registry.npmmirror.com/sprintf-js/download/sprintf-js-1.0.3.tgz?cache=0&sync_timestamp=1618847174560&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fsprintf-js%2Fdownload%2Fsprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
   integrity sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
 
-ssr-window@^4.0.0, ssr-window@^4.0.2:
+ssr-window@^4.0.2:
   version "4.0.2"
   resolved "https://registry.npmmirror.com/ssr-window/-/ssr-window-4.0.2.tgz#dc6b3ee37be86ac0e3ddc60030f7b3bc9b8553be"
   integrity sha512-ISv/Ch+ig7SOtw7G2+qkwfVASzazUnvlDTwypdLoPoySv+6MqlOV10VwPSE6EWkGjhW50lUmghPmpYZXMu/+AQ==
@@ -11798,12 +11791,11 @@ svg-tags@^1.0.0:
   resolved "https://registry.npmmirror.com/svg-tags/download/svg-tags-1.0.0.tgz#58f71cee3bd519b59d4b2a843b6c7de64ac04764"
   integrity sha1-WPcc7jvVGbWdSyqEO2x95krAR2Q=
 
-swiper@^8.4.4:
-  version "8.4.4"
-  resolved "https://registry.npmmirror.com/swiper/-/swiper-8.4.4.tgz#868ccad5384624e84143b469c75bc54ba004e668"
-  integrity sha512-jA/8BfOZwT8PqPSnMX0TENZYitXEhNa7ZSNj1Diqh5LZyUJoBQaZcqAiPQ/PIg1+IPaRn/V8ZYVb0nxHMh51yw==
+swiper@^9.0.2:
+  version "9.0.2"
+  resolved "https://registry.npmmirror.com/swiper/-/swiper-9.0.2.tgz#7acad3a875e415f2265aa8bb5786455917472bb1"
+  integrity sha512-6iGqr9OeEMU7KVfGxXNW+xhVWmqvVhtt+1nnqbZ0a0i1p/S1rXgr9cPD55k7DFxeOojVHkiEqmsubaP3NgWwUQ==
   dependencies:
-    dom7 "^4.0.4"
     ssr-window "^4.0.2"
 
 symbol-tree@^3.2.4:
