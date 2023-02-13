@@ -4,7 +4,11 @@ import cx from 'classnames'
 import ReactCrop, { Crop, PixelCrop } from 'react-image-crop'
 import 'react-image-crop/dist/ReactCrop.css'
 
-import { PhotoCameraIconRounded, CropIconRounded } from '@/ui/icons'
+import {
+  PhotoCameraIconRounded,
+  CropIconRounded,
+  ContentPasteGoRoundedIcon,
+} from '@/ui/icons'
 import {
   Dialog,
   DialogTitle,
@@ -76,6 +80,48 @@ CropDialog.defaultProps = {
   crop: undefined,
 }
 
+export const getImageFromClipboard = async (): Promise<{
+  errorMsg: string
+  img: string
+}> => {
+  try {
+    const permission = await window.navigator.permissions.query({
+      name: 'clipboard-read' as PermissionName,
+    })
+    if (permission.state === 'denied') {
+      return {
+        errorMsg: '未授予粘贴板权限',
+        img: '',
+      }
+    }
+    const clipboardContents = await navigator.clipboard.read()
+    if (
+      clipboardContents.length &&
+      clipboardContents[0].types.includes('image/png')
+    ) {
+      const blob = await clipboardContents[0].getType('image/png')
+      const img = await new Promise<string>(resolve => {
+        const reader = new FileReader()
+        reader.onloadend = () => resolve(reader.result?.toString() || '')
+        reader.readAsDataURL(blob)
+      })
+      return {
+        errorMsg: '',
+        img,
+      }
+    }
+    return {
+      errorMsg: '粘贴板中不存在图片',
+      img: '',
+    }
+  } catch (error) {
+    return {
+      errorMsg: (error as Error).message,
+      img: '',
+    }
+  }
+}
+
 interface ImageFrameProps {
   imgUrl?: string
   fullSize?: boolean
@@ -98,6 +144,17 @@ const ImageFrame = (props: ImageFrameProps): JSX.Element => {
 
   const [dialogOpen, setDialogOpen] = useState(false)
 
+  const handleImportFromClipboard = async (): Promise<void> => {
+    const { errorMsg, img } = await getImageFromClipboard()
+    if (img) {
+      setOriginImageUrl(img)
+      setCroppedUrl(img)
+      setDialogOpen(true)
+    } else {
+      // eslint-disable-next-line no-alert
+      alert(errorMsg)
+    }
+  }
   const handleStartCrop = (): void => {
     setDialogOpen(true)
   }
@@ -149,15 +206,22 @@ const ImageFrame = (props: ImageFrameProps): JSX.Element => {
           }}
         />
         <div className={styles.iconContainer}>
-          <Tooltip title={originImageUrl ? '重选图片' : '选择图片'}>
-            <IconButton onClick={() => inputRef.current?.click()}>
-              <PhotoCameraIconRounded fontSize='large' color='secondary' />
-            </IconButton>
-          </Tooltip>
+          <div className={styles.import}>
+            <Tooltip title={originImageUrl ? '重选图片' : '选择图片'}>
+              <IconButton onClick={() => inputRef.current?.click()}>
+                <PhotoCameraIconRounded color='secondary' />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title='粘贴板导入'>
+              <IconButton onClick={handleImportFromClipboard}>
+                <ContentPasteGoRoundedIcon color='secondary' />
+              </IconButton>
+            </Tooltip>
+          </div>
           {originImageUrl && (
             <Tooltip title='重新裁剪'>
               <IconButton onClick={handleStartCrop}>
-                <CropIconRounded fontSize='large' color='secondary' />
+                <CropIconRounded color='secondary' />
               </IconButton>
             </Tooltip>
           )}

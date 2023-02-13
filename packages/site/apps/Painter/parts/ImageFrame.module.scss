@@ -59,10 +59,14 @@ $frame-size: 120px;
       align-items: center;
       justify-content: center;
       width: 110px;
-      height: 60px;
       margin: auto;
       opacity: 0;
       transition: opacity ease-in-out 0.1s;
+
+      .import {
+        display: flex;
+        flex-direction: column;
+      }
     }
 
     &:hover {
