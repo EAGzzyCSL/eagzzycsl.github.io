@@ -1,9 +1,5 @@
 module.exports = {
-  extends: [
-    'stylelint-config-standard',
-    'stylelint-config-recess-order',
-    'stylelint-config-prettier',
-  ],
+  extends: ['stylelint-config-standard', 'stylelint-config-recess-order'],
   plugins: ['stylelint-csstree-validator'],
   rules: {
     'no-empty-source': true,

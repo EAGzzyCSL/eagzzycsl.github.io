@@ -1,6 +1,6 @@
 module.exports = {
   customSyntax: 'postcss-scss',
-  extends: ['./css.js', 'stylelint-config-prettier'],
+  extends: ['./css.js'],
   plugins: ['stylelint-scss', 'stylelint-use-nesting'],
   rules: {
     'at-rule-no-unknown': null,
