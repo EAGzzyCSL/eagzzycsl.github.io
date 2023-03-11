@@ -7,7 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
+
+      - name: NodeVersion
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
 
       - name: Install
         run: npm run setup
@@ -16,7 +21,10 @@ jobs:
         run: npm run verify
 
       - name: Build
-        run: npm run site:domain && echo '' > domain-export/.nojekyll
+        run: |
+          node -v &&
+          npm run site:domain &&
+          echo '' > domain-export/.nojekyll
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
