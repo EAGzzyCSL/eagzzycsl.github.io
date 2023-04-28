@@ -13,7 +13,7 @@
   "dependencies": {
     "memfs": "^3.4.1",
     "null-loader": "^4.0.1",
-    "ts-loader": "^9.4.1",
+    "ts-loader": "^9.4.2",
     "tsconfig-paths-webpack-plugin": "^4.0.0",
     "typescript": "^4.8.4",
     "webpack": "^5.74.0"
