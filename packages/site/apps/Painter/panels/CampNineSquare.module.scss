@@ -52,7 +52,7 @@ $border-size: 2px;
       display: none;
     }
 
-    @media (max-width: 1000px) {
+    @media (width <= 1000px) {
       .card {
         display: none;
       }
