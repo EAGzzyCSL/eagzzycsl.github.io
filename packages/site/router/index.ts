@@ -11,7 +11,7 @@ import { camel2kebab, kebab2Pascal } from '@/utils/string'
 import sitemap from '../sitemap'
 
 type RouteMap = {
-  [K in keyof typeof sitemap.appMap]: keyof typeof sitemap.appMap[K]['router']
+  [K in keyof typeof sitemap.appMap]: keyof (typeof sitemap.appMap)[K]['router']
 }
 
 /**
