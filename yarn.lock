@@ -11988,10 +11988,10 @@ text-table@^0.2.0:
   resolved "https://registry.npmmirror.com/text-table/download/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
-three@^0.151.0:
-  version "0.151.0"
-  resolved "https://registry.npmmirror.com/three/-/three-0.151.0.tgz#05b21fe1d97448916942b31658865b6adc666b48"
-  integrity sha512-ZvjJbNhZ/t0L8I36tc1I1ZP9j1q42ANE9WTlR+P3lZfOzlSfNa5VfR1rZRHNyjn/ZPP4kU7xGI1v8QSJOpxE4w==
+three@^0.152.0:
+  version "0.152.0"
+  resolved "https://registry.npmmirror.com/three/-/three-0.152.0.tgz#a50034af675c636322135b6bb829d6e7e3a6213d"
+  integrity sha512-uvKoYo4b2bnqzsR4RJFuWecxwMKcgT1nFNmiWooCNr6AxZLCtfkj/xcfFgoi5mFopSVorh7bnvTHPfeW8DINGg==
 
 through2@^2.0.0:
   version "2.0.5"
