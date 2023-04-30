@@ -56,7 +56,6 @@
     "three": "^0.152.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.0",
     "@mine/markdown-loader": "^0.0.0",
     "@mine/webpack-node": "^0.0.0",
     "@next/bundle-analyzer": "^13.3.1",
