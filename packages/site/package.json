@@ -43,7 +43,7 @@
     "lodash": "^4.17.21",
     "mobx": "^6.9.0",
     "mobx-react-lite": "3.4.3",
-    "next": "^13.4.1",
+    "next": "^13.4.6",
     "pinyin": "^2.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -58,7 +58,7 @@
   "devDependencies": {
     "@mine/markdown-loader": "^0.0.0",
     "@mine/webpack-node": "^0.0.0",
-    "@next/bundle-analyzer": "^13.4.1",
+    "@next/bundle-analyzer": "^13.4.6",
     "@types/classnames": "^2.3.1",
     "@types/lodash": "^4.14.178",
     "@types/pinyin": "^2.10.0",
