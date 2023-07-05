@@ -52,7 +52,7 @@
     "rehype-raw": "^6.1.0",
     "rehype-sanitize": "^5.0.0",
     "remark-gfm": "^3.0.1",
-    "swiper": "^9.4.1",
+    "swiper": "^10.0.3",
     "three": "^0.152.0"
   },
   "devDependencies": {

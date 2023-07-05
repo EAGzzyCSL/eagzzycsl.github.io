@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
 
 import { observer } from 'mobx-react-lite'
-import SwiperClass, { Pagination, Keyboard, Mousewheel } from 'swiper'
+import SwiperClass from 'swiper'
 // eslint-disable-next-line import/no-unresolved
 import 'swiper/css'
 // eslint-disable-next-line import/no-unresolved
 import 'swiper/css/pagination'
 // eslint-disable-next-line import/no-unresolved
+import { Pagination, Keyboard, Mousewheel } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import useStore from '../store'
