@@ -60,11 +60,14 @@ export const generateAppsList = (
   appsListData: AppInfoItemRaw[],
 ): AppInfoItem[][] =>
   Object.values(
-    appsListData.map(parseAppInfoItemRaw).reduce((acc, item) => {
-      acc[item.domain] = acc[item.domain] || []
-      acc[item.domain].push(item)
-      return acc
-    }, {} as Record<string, AppInfoItem[]>),
+    appsListData.map(parseAppInfoItemRaw).reduce(
+      (acc, item) => {
+        acc[item.domain] = acc[item.domain] || []
+        acc[item.domain].push(item)
+        return acc
+      },
+      {} as Record<string, AppInfoItem[]>,
+    ),
   )
 
 /**
