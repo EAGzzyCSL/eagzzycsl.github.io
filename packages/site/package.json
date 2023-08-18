@@ -42,7 +42,7 @@
     "html2canvas": "^1.4.0",
     "lodash": "^4.17.21",
     "mobx": "^6.10.0",
-    "mobx-react-lite": "3.4.3",
+    "mobx-react-lite": "4.0.3",
     "next": "^13.4.6",
     "pinyin": "^2.11.0",
     "react": "^18.2.0",
