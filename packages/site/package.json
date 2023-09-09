@@ -34,7 +34,7 @@
     "@mui/lab": "^5.0.0-alpha.140",
     "@mui/material": "^5.14.3",
     "@mui/system": "^5.14.3",
-    "@mui/x-date-pickers": "^6.11.0",
+    "@mui/x-date-pickers": "^6.13.0",
     "classnames": "^2.3.1",
     "dayjs": "^1.11.0",
     "disqus-react": "^1.1.3",
