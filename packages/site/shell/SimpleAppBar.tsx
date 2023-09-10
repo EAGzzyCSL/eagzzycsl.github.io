@@ -13,6 +13,7 @@ import {
   MenuItem,
   Tooltip,
 } from '@/ui/material'
+import Logger from '@/utils/logger'
 
 import AppBarHomeButton from './AppBarHomeButton'
 import styles from './SimpleAppBar.module.scss'
@@ -131,7 +132,9 @@ const SimpleAppBar = ({
         >
           <MenuItem
             onClick={() => {
-              router.push('About', '/')
+              router.push('About', '/').catch(e => {
+                Logger.myRouter.error('跳转失败', e)
+              })
               handleCloseMenu()
             }}
           >
@@ -139,7 +142,9 @@ const SimpleAppBar = ({
           </MenuItem>
           <MenuItem
             onClick={() => {
-              router.push('Acknowledgements', '/')
+              router.push('Acknowledgements', '/').catch(e => {
+                Logger.myRouter.error('跳转失败', e)
+              })
               handleCloseMenu()
             }}
           >
@@ -147,7 +152,9 @@ const SimpleAppBar = ({
           </MenuItem>
           <MenuItem
             onClick={() => {
-              router.push('Launcher', '/')
+              router.push('Launcher', '/').catch(e => {
+                Logger.myRouter.error('跳转失败', e)
+              })
               handleCloseMenu()
             }}
           >

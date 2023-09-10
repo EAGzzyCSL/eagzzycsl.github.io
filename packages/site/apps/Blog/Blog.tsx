@@ -139,7 +139,9 @@ const Blog = ({ posts = dataOfPosts }: BlogProps): JSX.Element => {
           <Fab
             color='primary'
             className={cx(styles.switchFab, styles.left)}
-            onClick={() => store.enableFocusOnLeft()}
+            onClick={() => {
+              store.enableFocusOnLeft()
+            }}
           >
             <KeyboardArrowLeftRoundedIcon />
           </Fab>
@@ -148,7 +150,9 @@ const Blog = ({ posts = dataOfPosts }: BlogProps): JSX.Element => {
           <Fab
             color='primary'
             className={cx(styles.switchFab, styles.right)}
-            onClick={() => store.disableFocusOnLeft()}
+            onClick={() => {
+              store.disableFocusOnLeft()
+            }}
           >
             <KeyboardArrowRightRoundedIcon />
           </Fab>

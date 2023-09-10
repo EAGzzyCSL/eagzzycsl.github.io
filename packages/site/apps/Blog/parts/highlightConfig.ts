@@ -51,6 +51,6 @@ const languages = {
   yaml,
 }
 
-Object.entries(languages).forEach(([name, fn]) =>
-  hljs.registerLanguage(name, fn),
-)
+Object.entries(languages).forEach(([name, fn]) => {
+  hljs.registerLanguage(name, fn)
+})

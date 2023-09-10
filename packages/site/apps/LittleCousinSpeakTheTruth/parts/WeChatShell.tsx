@@ -47,7 +47,9 @@ const WeChatShell = ({ chats }: WeChatShellProps): JSX.Element => {
       </section>
       {imageViewerVisible && (
         <section
-          onClick={() => handleToggleImageViewer('')}
+          onClick={() => {
+            handleToggleImageViewer('')
+          }}
           className={styles.imageViewer}
         >
           <img className={styles.image} src={imageViewerUrl} />

@@ -3,9 +3,7 @@
  * 这样实现出来的计时相当于渲染计时，可以用来实现对动画元素的安全清除
  * 不会出现页面放后台后再切前台，计时已经到期但动画元素还未完成
  */
-interface ITimeFn {
-  (callback: () => void, interval: number): () => void
-}
+type ITimeFn = (callback: () => void, interval: number) => () => void
 
 export const createFrameTimeout: ITimeFn = (
   callback: () => void,
@@ -31,6 +29,7 @@ export const createFrameTimeout: ITimeFn = (
   const visibilityChangeListener = (): void => {
     if (document.visibilityState === 'hidden') {
       hiddenStart = performance.now()
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     } else if (document.visibilityState === 'visible') {
       hiddenCost += performance.now() - hiddenStart
     }
@@ -49,7 +48,7 @@ export const createFrameInterval: ITimeFn = (
   callback: () => void,
   interval: number,
 ) => {
-  let clear = (): void => {}
+  let clear: () => void
   const intervalFn = (): void => {
     callback()
     clear = createFrameTimeout(intervalFn, interval)
@@ -58,5 +57,7 @@ export const createFrameInterval: ITimeFn = (
   // 返回一个函数，而不是直接返回 clear
   // 这样可以避免 useEffect 对返回的函数使用新的变量保存（永远指向了最初的 clear）
   // 从而导致而在清理副作用时使用了过期的 clear
-  return () => clear()
+  return () => {
+    clear()
+  }
 }

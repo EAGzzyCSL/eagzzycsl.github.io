@@ -11,6 +11,7 @@ import {
   MinimizeRoundedIcon,
 } from '@/ui/icons'
 import { Paper, IconButton, Tooltip, Button, Typography } from '@/ui/material'
+import Logger from '@/utils/logger'
 
 import styles from './CornerFooter.module.scss'
 import AckChip from './parts/AckChip'
@@ -29,18 +30,18 @@ const CornerFooter = (): JSX.Element => {
   >((): ISimpleAcknowledge[] => {
     const app = sitemap.appMap[router.getAppName()]
 
-    const appAcknowledgements = app ? app.acknowledgements || [] : []
+    const appAcknowledgements = app.acknowledgements
     return [
       ...globalAcknowledgementItems.map(item => ({
-        image: item.image || '',
-        url: item.url || '',
+        image: item.image ?? '',
+        url: item.url ?? '',
         label: item.title,
       })),
-      ...appAcknowledgements
+      ...(appAcknowledgements ?? [])
         .filter(item => item.type !== 'icon8-icon')
         .map(item => ({
-          image: item.image || '',
-          url: item.url || '',
+          image: item.image ?? '',
+          url: item.url ?? '',
           label: item.title,
         })),
     ]
@@ -99,7 +100,9 @@ const CornerFooter = (): JSX.Element => {
             variant='text'
             color='inherit'
             onClick={() => {
-              router.push('Acknowledgements', '/')
+              router.push('Acknowledgements', '/').catch(e => {
+                Logger.myRouter.error('跳转失败', e)
+              })
             }}
           >
             全部致谢
@@ -108,7 +111,9 @@ const CornerFooter = (): JSX.Element => {
             variant='text'
             color='inherit'
             onClick={() => {
-              router.push('Launcher', '/')
+              router.push('Launcher', '/').catch(e => {
+                Logger.myRouter.error('跳转失败', e)
+              })
             }}
           >
             回首页
@@ -117,7 +122,9 @@ const CornerFooter = (): JSX.Element => {
             variant='text'
             color='inherit'
             onClick={() => {
-              router.push('About', '/')
+              router.push('About', '/').catch(e => {
+                Logger.myRouter.error('跳转失败', e)
+              })
             }}
           >
             关于

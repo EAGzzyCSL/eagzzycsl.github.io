@@ -27,7 +27,7 @@ test('处理结构完整的markdown', () => {
 })
 
 test('处理空markdown', () => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-argument
   expect(articleProcessor({} as any, '')).toStrictEqual({
     title: '',
     createdAt: '',

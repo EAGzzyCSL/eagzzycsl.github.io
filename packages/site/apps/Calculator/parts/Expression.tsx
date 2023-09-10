@@ -122,7 +122,7 @@ export const ExpressionFiled = <Formula extends TFormula>(
     }),
   )
 
-  const theValidator = validator || defaultNumberValidator
+  const theValidator = validator ?? defaultNumberValidator
 
   const handleChange = (value: string): void => {
     const { validateMsg } = theValidator(value)

@@ -232,6 +232,7 @@ class PlumPainter {
     const { canvasContext: ctx } = this
 
     const outlines = createThePlumOutline({ x, y }, size)
+    // eslint-disable-next-line @typescript-eslint/prefer-for-of
     for (let i = 0; i < outlines.length; i++) {
       if (this.petalHasDraw >= this.petalCount) {
         return
@@ -333,9 +334,11 @@ const PlumPainting = ({ petalCount }: PlumPaintingProps): JSX.Element => {
 
   useEffect(() => {
     if (!board.current) {
+      // eslint-disable-next-line @typescript-eslint/no-empty-function
       return () => {}
     }
     if (petalCount === 0) {
+      // eslint-disable-next-line @typescript-eslint/no-empty-function
       return () => {}
     }
     const { offsetHeight, offsetWidth } = board.current
@@ -345,7 +348,9 @@ const PlumPainting = ({ petalCount }: PlumPaintingProps): JSX.Element => {
     const plumPainter = new PlumPainter(board.current, petalCount)
     setTimeout(() => {
       // destroy后要等Promise结束才restore，所以这里等一下避免restore的干扰
-      plumPainter.draw()
+      plumPainter.draw().catch(() => {
+        //
+      })
     }, 0)
     return () => {
       plumPainter.destroy()

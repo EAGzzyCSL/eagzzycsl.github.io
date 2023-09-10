@@ -63,11 +63,12 @@ const Earth = (props: EarthProps): JSX.Element => {
           setTextureLoading(false)
           setLoadingError('')
         },
+        // eslint-disable-next-line @typescript-eslint/no-empty-function
         () => {},
         error => {
           logger.earth.error('加载贴图出错', error)
           setTextureLoading(false)
-          setLoadingError(error.message || '贴图加载失败')
+          setLoadingError((error as Error).message || '贴图加载失败')
         },
       )
     }
@@ -125,9 +126,11 @@ const Earth = (props: EarthProps): JSX.Element => {
    */
   useEffect(() => {
     if (!canvasRef.current) {
+      // eslint-disable-next-line @typescript-eslint/no-empty-function
       return () => {}
     }
     if (scene.children.length === 0) {
+      // eslint-disable-next-line @typescript-eslint/no-empty-function
       return () => {}
     }
     /**

@@ -73,7 +73,9 @@ class BulletPlayer extends React.Component<unknown, BulletPlayerState> {
   }
 
   componentWillUnmount(): void {
-    this.timers.forEach(item => item())
+    this.timers.forEach(item => {
+      item()
+    })
     window.removeEventListener('resize', this.resizeHandler)
   }
 

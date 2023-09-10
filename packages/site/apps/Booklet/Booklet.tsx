@@ -5,6 +5,7 @@ import { GetStaticPropsResult } from 'next'
 import { useMyRouter } from '@/router'
 import AppPage from '@/shell/AppPage'
 import SimpleAppBar from '@/shell/SimpleAppBar'
+import Logger from '@/utils/logger'
 
 import styles from './Booklet.module.scss'
 import data from './data/index'
@@ -15,9 +16,13 @@ const Booklet = (): JSX.Element => {
   const router = useMyRouter()
 
   const handleNav = (bookletFullPath: string): void => {
-    router.push('Booklet', '/[bookletId]', {
-      pageAs: bookletFullPath,
-    })
+    router
+      .push('Booklet', '/[bookletId]', {
+        pageAs: bookletFullPath,
+      })
+      .catch(e => {
+        Logger.myRouter.error('跳转失败', e)
+      })
   }
 
   return (
@@ -28,7 +33,12 @@ const Booklet = (): JSX.Element => {
           <div className={styles.bookletList}>
             {data.map(b => (
               <div key={b.path} className={styles.bookletCardWrapper}>
-                <BookletCard name={b.title} onNav={() => handleNav(b.path)} />
+                <BookletCard
+                  name={b.title}
+                  onNav={() => {
+                    handleNav(b.path)
+                  }}
+                />
               </div>
             ))}
           </div>

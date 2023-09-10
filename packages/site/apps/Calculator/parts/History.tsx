@@ -62,9 +62,7 @@ const History = ({
     itemOriginalIndex: number,
     historyItem: IHistoryItem,
   ): void => {
-    if (historyItem) {
-      onRepealItemDelete(itemOriginalIndex, historyItem)
-    }
+    onRepealItemDelete(itemOriginalIndex, historyItem)
   }
 
   const handleRemoveItem = (itemIndex: number): void => {
@@ -110,11 +108,18 @@ const History = ({
                   </TableCell>
                 ))}
                 <TableCell align='center'>
-                  <IconButton onClick={() => onReuseItem(index)} size='large'>
+                  <IconButton
+                    onClick={() => {
+                      onReuseItem(index)
+                    }}
+                    size='large'
+                  >
                     <EditRoundedIcon />
                   </IconButton>
                   <IconButton
-                    onClick={() => handleRemoveItem(index)}
+                    onClick={() => {
+                      handleRemoveItem(index)
+                    }}
                     size='large'
                   >
                     <DeleteOutlineRoundedIcon />
@@ -140,12 +145,12 @@ const History = ({
               <Button
                 color='secondary'
                 size='small'
-                onClick={() =>
+                onClick={() => {
                   handleRepealItemDelete(
                     recentRemovedItemIndex,
                     recentRemovedItem,
                   )
-                }
+                }}
               >
                 撤销
               </Button>

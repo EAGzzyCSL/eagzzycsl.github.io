@@ -40,7 +40,9 @@ export const getAppName = (route: string): string => {
   return kebab2Pascal(route.split('/')[1])
 }
 
-const HistoryRecordOfRouteContext: Record<string, boolean> = Object.create({})
+const HistoryRecordOfRouteContext: Record<string, boolean> = Object.create(
+  null,
+) as Record<string, boolean>
 
 export class MyRouter {
   private router: NextRouter
@@ -58,9 +60,9 @@ export class MyRouter {
   /**
    * 跳转到App
    */
-  navToApp(app: AppDescribe): void {
+  async navToApp(app: AppDescribe): Promise<void> {
     if (app.root !== '/') {
-      this.router.push(app.root)
+      await this.router.push(app.root)
     }
   }
 
@@ -70,14 +72,14 @@ export class MyRouter {
    * @param pageName 目标app页面路由名（也就是路径，如果是动态路由的话就是[postId]这种）
    * @param pageAs 目标页面真实路径（动态路由的情况下使用）
    */
-  push<A extends keyof RouteMap>(
+  async push<A extends keyof RouteMap>(
     appName: A,
     pageName: RouteMap[A],
     options?: {
       pageAs?: string
       newWindow?: boolean
     },
-  ): void {
+  ): Promise<void> {
     const { router } = this
 
     // 如果 app 自定义了 root（启动器），以 app 自定义的 root 作为 appPath
@@ -103,7 +105,7 @@ export class MyRouter {
     if (options?.newWindow) {
       window.open(document.location.origin + urlAs, '_blank')
     } else {
-      router.push(url, urlAs)
+      await router.push(url, urlAs)
     }
   }
 
@@ -112,7 +114,7 @@ export class MyRouter {
    * 如果上级页面在history中存在，那么直接go到对应history
    * 否则使用replace跳到上级页面
    */
-  backToParent(): void {
+  async backToParent(): Promise<void> {
     // 如果父页面在历史中有记录，那就正常返回，如果父页面在历史中没记录，那就直接push，这样才符合浏览器的习惯
     // blog目录的问题另外解决
     const { router } = this
@@ -126,7 +128,7 @@ export class MyRouter {
     if (this.couldBack()) {
       router.back()
     } else {
-      router.replace(parentAppPath)
+      await router.replace(parentAppPath)
     }
   }
 

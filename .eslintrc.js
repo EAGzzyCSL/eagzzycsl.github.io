@@ -1,5 +1,3 @@
-const path = require('path')
-
 module.exports = {
   root: true,
   extends: ['@mine/eslint-config/node'],
@@ -8,7 +6,7 @@ module.exports = {
       files: ['packages/**/*.tsx', 'packages/**/*.ts'],
       extends: ['@mine/eslint-config/typescript'],
       parserOptions: {
-        project: path.resolve(__dirname, './tsconfig.json'),
+        project: true,
       },
       overrides: [
         {

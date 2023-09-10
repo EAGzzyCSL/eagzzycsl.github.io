@@ -79,6 +79,7 @@ const LeftContent = (props: LeftContentProps): JSX.Element => {
 
 LeftContent.defaultProps = {
   useCustomBack: false,
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   onTapBack: () => {},
 }
 interface RightContentProps {
@@ -232,27 +233,45 @@ const LittleCousinSpeakTheTruth = ({
           >
             <CenterContent
               chats={chats}
-              onTapAbout={() => setAboutVisible(true)}
-              onTapReference={() => setReferenceVisible(true)}
+              onTapAbout={() => {
+                setAboutVisible(true)
+              }}
+              onTapReference={() => {
+                setReferenceVisible(true)
+              }}
             />
           </Paper>
         </div>
         <div className={styles.rightPanel}>
+          {/* eslint-disable-next-line @typescript-eslint/no-empty-function */}
           <RightContent onTapBack={() => {}} />
         </div>
         <Drawer
           anchor='right'
           open={aboutVisible}
-          onClose={() => setAboutVisible(false)}
+          onClose={() => {
+            setAboutVisible(false)
+          }}
         >
-          <LeftContent useCustomBack onTapBack={() => setAboutVisible(false)} />
+          <LeftContent
+            useCustomBack
+            onTapBack={() => {
+              setAboutVisible(false)
+            }}
+          />
         </Drawer>
         <Drawer
           anchor='right'
           open={referenceVisible}
-          onClose={() => setReferenceVisible(false)}
+          onClose={() => {
+            setReferenceVisible(false)
+          }}
         >
-          <RightContent onTapBack={() => setReferenceVisible(false)} />
+          <RightContent
+            onTapBack={() => {
+              setReferenceVisible(false)
+            }}
+          />
         </Drawer>
       </section>
     </AppPage>

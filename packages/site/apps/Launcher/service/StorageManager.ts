@@ -14,11 +14,11 @@ class StorageManager<
   }
 
   getStringItem(key: StringKey): string {
-    return this.storage.getItem(key) || ''
+    return this.storage.getItem(key) ?? ''
   }
 
   setStringItem(key: StringKey, value: string): void {
-    return this.storage.setItem(key, value)
+    this.storage.setItem(key, value)
   }
 
   getBooleanItem(key: BooleanKey): boolean {

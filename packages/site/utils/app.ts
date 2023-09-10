@@ -2,6 +2,7 @@ import { IManifest, IAcknowledgementItem, AppDescribe } from '@/types/app'
 
 import { camel2kebab } from './string'
 
+// eslint-disable-next-line @typescript-eslint/no-extraneous-class
 export class Manifest {
   public static acknowledgeIcon8icon(image: string): IAcknowledgementItem {
     return {
@@ -32,7 +33,7 @@ export class Manifest {
       type: options.type,
       title: options.titleFn(keyword),
       image,
-      url: url || options.urlFn(keyword),
+      url: url ?? options.urlFn(keyword),
       brief: options.briefFn(keyword),
     }))
   }
@@ -60,9 +61,9 @@ export const registerApps = <M extends Record<string, IManifest<string>>>(
       // appId就是apps下的目录名
       appId: key,
       // 如果未声明root则使用appId作为root，且app的root均以/开头
-      root: app.root || `/${appId}`,
+      root: app.root ?? `/${appId}`,
       // 如果未声明shortId则使用appId作为替代
-      shortId: app.shortId || appId || '#cannot-generate-shortId#',
+      shortId: (app.shortId ?? appId) || '#cannot-generate-shortId#',
     }
   }),
 })

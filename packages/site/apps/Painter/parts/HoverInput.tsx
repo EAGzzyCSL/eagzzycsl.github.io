@@ -61,7 +61,7 @@ const HoverInput = (props: HoverInputProps): JSX.Element => {
             variant={displayVariant}
             className={styles.display}
           >
-            {(value || placeholder || '')
+            {((value || placeholder) ?? '')
               .split('\n')
               .map((s: string, index: number) => (
                 // eslint-disable-next-line react/no-array-index-key

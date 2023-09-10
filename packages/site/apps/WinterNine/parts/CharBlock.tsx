@@ -12,7 +12,7 @@ import char柳 from '../data/柳.json'
 import char珍 from '../data/珍.json'
 import char重 from '../data/重.json'
 import char風 from '../data/風.json'
-import { PointLineTo, PointMoveTo, PointQuadTo, CharDescription } from '../type'
+import { CharDescription } from '../type'
 import { smoothPoints } from '../utils'
 
 import styles from './CharBlock.module.scss'
@@ -82,13 +82,14 @@ class CharWriter {
     this.canvasContext.strokeStyle = isTrans ? 'transparent' : colorPlaceholder
     this.char.strokes[strokeIndex].outline.forEach(point => {
       if (point.type === 'M') {
-        const { x, y } = point as PointMoveTo
+        const { x, y } = point
         this.canvasContext.moveTo(x * this.scaleRatio, y * this.scaleRatio)
       } else if (point.type === 'L') {
-        const { x, y } = point as PointLineTo
+        const { x, y } = point
         this.canvasContext.lineTo(x * this.scaleRatio, y * this.scaleRatio)
+        // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
       } else if (point.type === 'Q') {
-        const { cp1x, cp1y, x, y } = point as PointQuadTo
+        const { cp1x, cp1y, x, y } = point
         this.canvasContext.quadraticCurveTo(
           cp1x * this.scaleRatio,
           cp1y * this.scaleRatio,
@@ -222,6 +223,7 @@ const CharBlock = ({
 
   useEffect(() => {
     if (!tablet.current) {
+      // eslint-disable-next-line @typescript-eslint/no-empty-function
       return () => {}
     }
     const { offsetHeight, offsetWidth } = tablet.current
@@ -232,9 +234,15 @@ const CharBlock = ({
     if (animateLastStroke) {
       charWriter.writeFirstXStrokes(currentStroke - 1)
       // 有动画的一画延迟一点出来避免没有重点
-      sleep(lastAnimateStrokeTimeout).then(() => {
-        charWriter.writeNext()
-      })
+      sleep(lastAnimateStrokeTimeout)
+        .then(() => {
+          charWriter.writeNext().catch(() => {
+            //
+          })
+        })
+        .catch(() => {
+          //
+        })
     } else {
       charWriter.writeFirstXStrokes(currentStroke)
     }

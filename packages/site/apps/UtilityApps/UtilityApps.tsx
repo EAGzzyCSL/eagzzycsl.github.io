@@ -129,7 +129,9 @@ const UtilityApps = (): JSX.Element => {
               visible: 'always',
               component: <QuestionMarkRoundedIcon />,
               tooltip: '关于此页',
-              onClick: () => setAboutVisible(true),
+              onClick: () => {
+                setAboutVisible(true)
+              },
             },
           ]}
         />
@@ -137,7 +139,9 @@ const UtilityApps = (): JSX.Element => {
         <Drawer
           anchor='right'
           open={aboutVisible}
-          onClose={() => setAboutVisible(false)}
+          onClose={() => {
+            setAboutVisible(false)
+          }}
         >
           <AboutDrawer />
         </Drawer>

@@ -23,13 +23,23 @@ const ActionBar = (props: ActionBarProps): JSX.Element => {
   const { shellMaskVisible } = useStore()
   return (
     <div className={styles.actionBar}>
-      <Button className={styles.navButton} onClick={() => onTablePrevious()}>
+      <Button
+        className={styles.navButton}
+        onClick={() => {
+          onTablePrevious()
+        }}
+      >
         <NavigateBeforeRoundedIcon fontSize='large' />
       </Button>
       <Button className={styles.navButton}>
         <StopRoundedIcon fontSize='large' />
       </Button>
-      <Button className={styles.navButton} onClick={() => onTableNext()}>
+      <Button
+        className={styles.navButton}
+        onClick={() => {
+          onTableNext()
+        }}
+      >
         <NavigateNextRoundedIcon fontSize='large' />
       </Button>
       <Backdrop open={shellMaskVisible} />

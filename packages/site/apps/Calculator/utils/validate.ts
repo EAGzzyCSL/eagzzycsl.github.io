@@ -1,11 +1,9 @@
 /**
  * 校验器
  */
-export interface IValidator {
-  (numberString: string): {
-    numberValue: number
-    validateMsg: string
-  }
+export type IValidator = (numberString: string) => {
+  numberValue: number
+  validateMsg: string
 }
 
 export const isNumberString = (s: string): boolean =>

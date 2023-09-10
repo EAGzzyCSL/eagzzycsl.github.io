@@ -41,8 +41,8 @@ const SearchBar = ({ onSearch, apps }: SearchBarProps): JSX.Element => {
   }
 
   const handleNavToApp = useCallback(
-    (app: AppDescribe): void => {
-      router.navToApp(app)
+    async (app: AppDescribe): Promise<void> => {
+      await router.navToApp(app)
     },
     [router],
   )
@@ -67,9 +67,9 @@ const SearchBar = ({ onSearch, apps }: SearchBarProps): JSX.Element => {
     setSearchVisible(true)
   }
 
-  const handleClickAppItem = (index: number): void => {
+  const handleClickAppItem = async (index: number): Promise<void> => {
     setSelectedAppIndex(index)
-    handleNavToApp(appsInList[index])
+    await handleNavToApp(appsInList[index])
     handleCloseSearchResult()
   }
 
@@ -119,9 +119,8 @@ const SearchBar = ({ onSearch, apps }: SearchBarProps): JSX.Element => {
         }
         case 'Enter': {
           const selectedApp = appsInList[selectedAppIndex]
-          if (selectedApp) {
-            handleNavToApp(selectedApp)
-          }
+          // eslint-disable-next-line @typescript-eslint/no-floating-promises
+          handleNavToApp(selectedApp)
           break
         }
         default:
@@ -192,7 +191,10 @@ const SearchBar = ({ onSearch, apps }: SearchBarProps): JSX.Element => {
                   <ListItem disablePadding>
                     <ListItemButton
                       selected={index === selectedAppIndex}
-                      onClick={() => handleClickAppItem(index)}
+                      onClick={() => {
+                        // eslint-disable-next-line @typescript-eslint/no-floating-promises
+                        handleClickAppItem(index)
+                      }}
                     >
                       <ListItemIcon>
                         <img src={app.icon} className={styles.appIcon} />

@@ -51,7 +51,9 @@ const CropDialog = (props: CropDialogProps): JSX.Element => {
   }
   return (
     <Dialog
-      onClose={() => onClose(false)}
+      onClose={() => {
+        onClose(false)
+      }}
       open={open}
       className={styles.cropDialog}
     >
@@ -60,9 +62,13 @@ const CropDialog = (props: CropDialogProps): JSX.Element => {
         <ReactCrop
           crop={crop}
           // 拖拽中
-          onChange={c => onCropChange(c)}
+          onChange={c => {
+            onCropChange(c)
+          }}
           // 拖拽完
-          onComplete={c => setCompletedCrop(c)}
+          onComplete={c => {
+            setCompletedCrop(c)
+          }}
         >
           <img ref={imageRef} src={imgUrl} className={styles.imageToCrop} />
         </ReactCrop>
@@ -102,7 +108,9 @@ export const getImageFromClipboard = async (): Promise<{
       const blob = await clipboardContents[0].getType('image/png')
       const img = await new Promise<string>(resolve => {
         const reader = new FileReader()
-        reader.onloadend = () => resolve(reader.result?.toString() || '')
+        reader.onloadend = () => {
+          resolve(reader.result?.toString() ?? '')
+        }
         reader.readAsDataURL(blob)
       })
       return {
@@ -130,12 +138,12 @@ interface ImageFrameProps {
 const ImageFrame = (props: ImageFrameProps): JSX.Element => {
   const { imgUrl, fullSize } = props
 
-  const [originImageUrl, setOriginImageUrl] = useState(imgUrl || '')
+  const [originImageUrl, setOriginImageUrl] = useState(imgUrl ?? '')
   const [croppedUrl, setCroppedUrl] = useState(originImageUrl)
 
   useEffect(() => {
-    setOriginImageUrl(imgUrl || '')
-    setCroppedUrl(imgUrl || '')
+    setOriginImageUrl(imgUrl ?? '')
+    setCroppedUrl(imgUrl ?? '')
   }, [imgUrl])
 
   const inputRef = useRef<HTMLInputElement>(null)
@@ -190,6 +198,7 @@ const ImageFrame = (props: ImageFrameProps): JSX.Element => {
               const reader = new FileReader()
               reader.addEventListener('load', () => {
                 if (reader.result) {
+                  // eslint-disable-next-line @typescript-eslint/no-base-to-string
                   const selectedImage = reader.result.toString()
                   setOriginImageUrl(selectedImage)
                   setCroppedUrl(selectedImage)
@@ -213,6 +222,7 @@ const ImageFrame = (props: ImageFrameProps): JSX.Element => {
               </IconButton>
             </Tooltip>
             <Tooltip title='粘贴板导入'>
+              {/* eslint-disable-next-line @typescript-eslint/no-misused-promises */}
               <IconButton onClick={handleImportFromClipboard}>
                 <ContentPasteGoRoundedIcon color='secondary' />
               </IconButton>

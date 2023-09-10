@@ -33,6 +33,7 @@ const BulletChat = (): JSX.Element => {
         )
       }, 1000)
     }
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
     return () => {}
   }, [enablePreset])
 

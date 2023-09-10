@@ -68,6 +68,7 @@ const CatalogueStratum = ({
 )
 
 CatalogueStratum.defaultProps = {
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   onItemClick: () => {},
   noLevelId: false,
 }
@@ -110,6 +111,7 @@ const Catalogue = ({
 
 Catalogue.defaultProps = {
   noLevelId: false,
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   onItemClick: () => {},
 }
 

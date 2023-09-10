@@ -11,7 +11,7 @@ import { Toc, NestedTocItem } from '../type'
 export const extractToc = (markdownContent: string): Toc => {
   const tocList = markdownToc(markdownContent).json
 
-  const scoreboard = Array(7).fill(0)
+  const scoreboard: number[] = Array<number>(7).fill(0)
 
   const tocNested: NestedTocItem[] = []
 

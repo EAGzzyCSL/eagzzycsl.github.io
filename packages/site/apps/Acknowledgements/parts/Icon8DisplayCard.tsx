@@ -25,7 +25,7 @@ const Icon8DisplayCard = ({
   <Card className={styles.icon8DisplayCard}>
     <CardActionArea className={styles.left}>
       <CardContent>
-        <Media image={image || ''} />
+        <Media image={image ?? ''} />
       </CardContent>
     </CardActionArea>
   </Card>

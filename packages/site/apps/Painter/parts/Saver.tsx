@@ -69,6 +69,7 @@ const Saver = (props: SaverProps): JSX.Element => {
         className={styles.fab}
         variant='extended'
         onClick={() => {
+          // eslint-disable-next-line @typescript-eslint/no-floating-promises
           handleShot()
         }}
       >

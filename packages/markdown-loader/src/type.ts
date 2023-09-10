@@ -1,7 +1,5 @@
-export type MatterData<
-  S extends string | never,
-  B extends string | never,
-> = Record<S, string> & Record<B, boolean>
+export type MatterData<S extends string, B extends string> = Record<S, string> &
+  Record<B, boolean>
 
 /**
  * Normal类型

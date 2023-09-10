@@ -7,6 +7,7 @@ import React from 'react'
 import { useMyRouter } from '@/router'
 import { ArrowBackRoundedIcon, HomeRoundedIcon } from '@/ui/icons'
 import { IconButton } from '@/ui/material'
+import Logger from '@/utils/logger'
 
 interface AppBarHomeButtonProps {
   inverse?: boolean
@@ -18,7 +19,9 @@ const AppBarHomeButton = (props: AppBarHomeButtonProps): JSX.Element => {
   const router = useMyRouter()
 
   const handleBack = (): void => {
-    router.backToParent()
+    router.backToParent().catch(e => {
+      Logger.myRouter.error('跳转失败', e)
+    })
   }
 
   return (

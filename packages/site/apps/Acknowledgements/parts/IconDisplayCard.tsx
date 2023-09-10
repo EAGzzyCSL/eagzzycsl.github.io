@@ -36,7 +36,7 @@ const IconDisplayCard = ({
     <Card className={styles.iconDisplayCard}>
       <CardActionArea className={styles.left}>
         <CardContent>
-          <Media image={image || ''} />
+          <Media image={image ?? ''} />
         </CardContent>
       </CardActionArea>
       <CardActions className={styles.actions}>

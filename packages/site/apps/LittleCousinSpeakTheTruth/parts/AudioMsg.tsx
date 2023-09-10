@@ -19,6 +19,7 @@ const AudioMsg = ({ audioUrl, length }: AudioMsgProps): JSX.Element => {
       return
     }
     if (player.paused) {
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
       player.play()
     } else {
       player.pause()

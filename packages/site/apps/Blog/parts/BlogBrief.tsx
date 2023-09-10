@@ -3,6 +3,7 @@ import React from 'react'
 import { useMyRouter } from '@/router'
 import { Link, Typography } from '@/ui/material'
 import { dayjs } from '@/utils/date'
+import Logger from '@/utils/logger'
 
 import styles from './BlogBrief.module.scss'
 import BlogTags from './BlogTags'
@@ -28,9 +29,13 @@ const BlogBrief = ({
 
   const handleNav = (event: React.MouseEvent): void => {
     event.preventDefault()
-    router.push('Blog', '/[postId]', {
-      pageAs: postPath,
-    })
+    router
+      .push('Blog', '/[postId]', {
+        pageAs: postPath,
+      })
+      .catch(e => {
+        Logger.myRouter.error('跳转失败', e)
+      })
   }
   return (
     <section className={styles.blogBrief}>

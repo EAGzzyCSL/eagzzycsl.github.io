@@ -23,7 +23,9 @@ const CalendarCard = (): JSX.Element => {
               styles.calendarPickerViewTransitionContainer,
           }}
           value={date}
-          onChange={newDate => setDate(newDate)}
+          onChange={newDate => {
+            setDate(newDate)
+          }}
         />
       </LocalizationProvider>
     </Card>

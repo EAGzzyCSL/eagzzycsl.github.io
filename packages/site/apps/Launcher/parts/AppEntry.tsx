@@ -3,6 +3,7 @@ import React from 'react'
 import { useMyRouter } from '@/router'
 import { AppDescribe } from '@/types/app'
 import { Typography, Paper, ButtonBase } from '@/ui/material'
+import Logger from '@/utils/logger'
 
 import styles from './AppEntry.module.scss'
 
@@ -13,7 +14,9 @@ interface AppEntryInterface {
 const AppEntry = ({ app }: AppEntryInterface): JSX.Element => {
   const router = useMyRouter()
   const handleNav = (): void => {
-    router.navToApp(app)
+    router.navToApp(app).catch(e => {
+      Logger.myRouter.error('跳转失败', e)
+    })
   }
 
   return (

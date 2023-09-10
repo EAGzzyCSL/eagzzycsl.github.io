@@ -9,6 +9,7 @@ import {
 } from '@/ui/icons'
 import { Typography, Slide, IconButton } from '@/ui/material'
 import { dayjs } from '@/utils/date'
+import Logger from '@/utils/logger'
 
 import notificationManager, {
   ENotificationId,
@@ -118,7 +119,9 @@ const LockScreen = ({
         content: '查看网站介绍',
         onClick: ({ router }) => {
           localStorageManager.setBooleanItem('hasShowWelcomeNotification', true)
-          router.push('About', '/')
+          router.push('About', '/').catch(e => {
+            Logger.myRouter.error('跳转失败', e)
+          })
         },
       })
       setNotifications(notificationManager.getAllNotification())

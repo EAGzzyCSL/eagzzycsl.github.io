@@ -43,8 +43,10 @@ export const calcLineProps = (
   height: number
 } => {
   const [startX, startY] =
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     stationPositionOverrides[startStation.name] || startStation.pos
   const [endX, endY] =
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     stationPositionOverrides[endStation.name] || endStation.pos
 
   const top = Math.min(startY, endY)
@@ -165,7 +167,7 @@ const MetroMap = (props: MetroMapProps): JSX.Element => {
 
   const lineNodes: ILineNode[] = useMemo(
     () =>
-      Object.values(metroLinesMap).reduce((acc, line) => {
+      Object.values(metroLinesMap).reduce<ILineNode[]>((acc, line) => {
         line.sections.forEach(section => {
           for (let i = 0; i < section.line.length - 1; i += 1) {
             acc.push({
@@ -185,7 +187,7 @@ const MetroMap = (props: MetroMapProps): JSX.Element => {
           }
         })
         return acc
-      }, [] as ILineNode[]),
+      }, []),
     [metroLinesMap, stationMap],
   )
 
@@ -239,6 +241,7 @@ const MetroMap = (props: MetroMapProps): JSX.Element => {
         {/* 站点部分 */}
         {metroStations.map(station => {
           const { level, pos } = station
+          // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
           const [x, y] = stationPositionOverrides[station.name] || pos
           return (
             <Tooltip

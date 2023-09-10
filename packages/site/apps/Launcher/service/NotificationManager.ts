@@ -20,6 +20,7 @@ class NotificationManager {
   }
 
   unRegisterNotification(n: INotificationWithId): void {
+    // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
     delete this.notificationsMap[n.id]
   }
 }

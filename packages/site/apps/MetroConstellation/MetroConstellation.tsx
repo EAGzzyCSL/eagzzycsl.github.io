@@ -57,7 +57,9 @@ const MetroConstellation = (): JSX.Element => {
               visible: 'always',
               component: <Grid3x3RoundedIcon />,
               tooltip: '控制面板',
-              onClick: () => setPanelVisible(true),
+              onClick: () => {
+                setPanelVisible(true)
+              },
             },
           ]}
         />
@@ -70,7 +72,9 @@ const MetroConstellation = (): JSX.Element => {
         <Drawer
           anchor='right'
           open={panelVisible}
-          onClose={() => setPanelVisible(false)}
+          onClose={() => {
+            setPanelVisible(false)
+          }}
         >
           <LegendPanel
             metroLinesMap={metroLinesMap}

@@ -40,7 +40,7 @@ const ChatHistory = ({
               <div className={styles.contentVoice}>
                 <AudioMsg
                   audioUrl={msgItem.content}
-                  length={msgItem.voiceLength || ''}
+                  length={msgItem.voiceLength ?? ''}
                 />
               </div>
             )}
@@ -52,7 +52,9 @@ const ChatHistory = ({
               <img
                 className={styles.msgImage}
                 src={msgItem.content}
-                onClick={() => onViewImage(msgItem.content)}
+                onClick={() => {
+                  onViewImage(msgItem.content)
+                }}
               />
             )}
             {msgItem.type === MsgType.meme && (

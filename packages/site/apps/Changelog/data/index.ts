@@ -32,7 +32,7 @@ export default sitemap.appList
   .reduce<IChangelogItemWithIcon[]>(
     (r, app) => [
       ...r,
-      ...(app.changelog || []).map(item => ({ ...item, icon: app.icon })),
+      ...(app.changelog ?? []).map(item => ({ ...item, icon: app.icon })),
     ],
     globalChangelog,
   )

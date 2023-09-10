@@ -30,7 +30,7 @@ const ViewInEarth = (): JSX.Element => {
                 value={mode}
                 onChange={(e, newValue) => {
                   if (newValue) {
-                    setMode(newValue)
+                    setMode(newValue as TMode)
                   }
                 }}
               >

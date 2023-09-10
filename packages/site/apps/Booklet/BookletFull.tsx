@@ -103,7 +103,9 @@ const BookletFull = (props: BookletFullProps): JSX.Element => {
           <Drawer
             anchor='right'
             open={catalogueSideVisible}
-            onClose={() => setCatalogueSideVisible(false)}
+            onClose={() => {
+              setCatalogueSideVisible(false)
+            }}
           >
             <div className={styles.drawerCatalogueContainer}>
               <Catalogue

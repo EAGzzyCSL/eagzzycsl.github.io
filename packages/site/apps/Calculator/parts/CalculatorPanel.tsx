@@ -79,7 +79,9 @@ const CalculatorPanel = <Formula extends TFormula>({
           head={historyHead}
           list={historyList}
           onRemoveItem={handleRemoveHistoryItem}
-          onReUseItem={itemIndex => handleReuseHistoryItem(itemIndex)}
+          onReUseItem={itemIndex => {
+            handleReuseHistoryItem(itemIndex)
+          }}
           onRepealItemDelete={handleRepealItemDelete}
         />
       </div>
