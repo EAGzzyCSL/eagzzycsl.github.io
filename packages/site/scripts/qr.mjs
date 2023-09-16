@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-/* eslint-disable import/no-extraneous-dependencies */
 import { internalIpV4Sync } from 'internal-ip'
 import qrcode from 'qrcode-terminal'
 

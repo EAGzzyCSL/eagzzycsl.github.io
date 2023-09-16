@@ -39,7 +39,7 @@
       "path": "cz-customizable"
     }
   },
-  "devDependencies": {
+  "dependencies": {
     "@commitlint/cli": "^17.6.5",
     "@mine/commitlint-config": "^0.0.0",
     "@mine/eslint-config": "^0.0.0",

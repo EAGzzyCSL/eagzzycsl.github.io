@@ -4,7 +4,6 @@
  */
 const { execSync } = require('child_process')
 
-// eslint-disable-next-line import/no-extraneous-dependencies
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })

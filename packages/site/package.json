@@ -53,9 +53,7 @@
     "rehype-sanitize": "^5.0.0",
     "remark-gfm": "^3.0.1",
     "swiper": "^10.2.0",
-    "three": "^0.156.1"
-  },
-  "devDependencies": {
+    "three": "^0.156.1",
     "@mine/markdown-loader": "^0.0.0",
     "@mine/webpack-node": "^0.0.0",
     "@next/bundle-analyzer": "^13.4.6",
