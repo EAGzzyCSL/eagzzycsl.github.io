@@ -12,7 +12,7 @@
     "export:domain": "cross-env DEPLOY_ENV=domain npm run build && next export -o ../../domain-export/",
     "export:local": "cross-env DEPLOY_ENV=local npm run build && next export -o ../../local-export/",
     "file-type": "ts-node ./scripts/file-type.mjs",
-    "lint:es": "eslint --ext .js,.ts,.tsx ./",
+    "lint:es": "eslint --ext .js,.mjs,.ts,.tsx ./",
     "lint:es-fix": "npm run lint:es -- --fix",
     "qr": "ts-node ./scripts/qr.mjs",
     "route": "webpack-node ./scripts/route.ts ./scripts/tsconfig.route.json",

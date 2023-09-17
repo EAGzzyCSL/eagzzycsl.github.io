@@ -1,6 +1,6 @@
-const jsYaml = require('js-yaml')
+import jsYaml from 'js-yaml'
 
-module.exports = {
+export default {
   process(sourceText) {
     return {
       code: `module.exports = ${JSON.stringify(jsYaml.load(sourceText))};`,

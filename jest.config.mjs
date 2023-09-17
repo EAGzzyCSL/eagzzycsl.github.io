@@ -1,6 +1,6 @@
-const { defaults } = require('jest-config')
+import { defaults } from 'jest-config'
 
-module.exports = {
+export default {
   clearMocks: true,
 
   collectCoverage: false,

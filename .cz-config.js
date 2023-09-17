@@ -1,4 +1,4 @@
-const appsList = require('./commit-scope-list')
+const appsList = require('./commit-scope-list.cjs')
 
 module.exports = {
   // copied from commitlint rules

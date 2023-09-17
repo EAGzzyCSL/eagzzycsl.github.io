@@ -7,7 +7,7 @@
     "webpack-node": "bin.js"
   },
   "scripts": {
-    "lint:es": "eslint --ext .js,.ts,.tsx ./",
+    "lint:es": "eslint --ext .js,.mjs,.ts,.tsx ./",
     "lint:es-fix": "npm run lint:es -- --fix"
   },
   "dependencies": {

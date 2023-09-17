@@ -2,9 +2,10 @@
   "name": "@mine/prettier-config",
   "version": "0.0.0",
   "private": true,
-  "main": "index.js",
+  "main": "index.mjs",
+  "type": "module",
   "scripts": {
-    "lint:es": "eslint --ext .js,.ts,.tsx ./",
+    "lint:es": "eslint --ext .js,.mjs,.ts,.tsx ./",
     "lint:es-fix": "npm run lint:es -- --fix"
   },
   "dependencies": {

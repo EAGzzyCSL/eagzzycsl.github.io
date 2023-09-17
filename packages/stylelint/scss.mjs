@@ -1,6 +1,6 @@
-module.exports = {
+export default {
   customSyntax: 'postcss-scss',
-  extends: ['./css.js'],
+  extends: ['./css.mjs'],
   plugins: ['stylelint-scss', 'stylelint-use-nesting'],
   rules: {
     'at-rule-no-unknown': null,

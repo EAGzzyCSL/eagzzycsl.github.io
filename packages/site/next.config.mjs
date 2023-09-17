@@ -2,18 +2,23 @@
  * next会把pages下面所有js都编译，包括test.js，很蠢，好心人给出了两个方法
  * https://github.com/vercel/next.js/issues/3728
  */
-const { execSync } = require('child_process')
+import { execSync } from 'child_process'
 
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
+import NextBundleAnalyzer from '@next/bundle-analyzer'
+import dayjs from 'dayjs'
+
+const withBundleAnalyzer = NextBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 })
-const dayjs = require('dayjs')
 
 const isLocal = process.env.DEPLOY_ENV === 'local'
 
 const baseUrl = isLocal ? '/eagzzycsl.github.io' : ''
 
-module.exports = withBundleAnalyzer({
+/**
+ * @type {import('next').NextConfig}
+ */
+const nextConfig = {
   // 配置本地部署路径
   // 配置为 '' 的话 next 的校验会报错
   assetPrefix: baseUrl || undefined,
@@ -54,8 +59,10 @@ module.exports = withBundleAnalyzer({
               .filter(___ => ___.loader)
               .filter(___ => ___.loader.includes('/css-loader/'))
               .forEach(___ => {
-                // eslint-disable-next-line no-param-reassign
-                ___.options.modules.exportLocalsConvention = 'camelCaseOnly'
+                if (typeof ___.options.modules === 'object') {
+                  // eslint-disable-next-line no-param-reassign
+                  ___.options.modules.exportLocalsConvention = 'camelCaseOnly'
+                }
               }),
           ),
       )
@@ -76,14 +83,14 @@ module.exports = withBundleAnalyzer({
       oneOf: [
         {
           test: /apps\/Blog\/data\/.*\.md$/,
-          use: require.resolve('@mine/markdown-loader/lib/article.js'),
+          use: '@mine/markdown-loader/lib/article.js',
         },
         {
           test: /apps\/Booklet\/data\/.*\.md$/,
-          use: require.resolve('@mine/markdown-loader/lib/booklet.js'),
+          use: '@mine/markdown-loader/lib/booklet.js',
         },
         {
-          use: require.resolve('@mine/markdown-loader/lib/normal.js'),
+          use: '@mine/markdown-loader/lib/normal.js',
         },
       ],
     })
@@ -100,4 +107,5 @@ module.exports = withBundleAnalyzer({
     })
     return config
   },
-})
+}
+export default withBundleAnalyzer(nextConfig)

@@ -8,8 +8,8 @@
   "scripts": {
     "cloc": "cloc --vcs git",
     "lint:commit": "commitlint --from `git rev-list --max-parents=0 HEAD` --to HEAD",
-    "lint:es": "eslint ./*.js && eslint ./.*.js && lerna run lint:es",
-    "lint:es-fix": "eslint ./*.js --fix && eslint ./.*.js --fix && lerna run lint:es-fix",
+    "lint:es": "eslint \"./{*.js,*.mjs,.*.js,.*.mjs}\" && lerna run lint:es",
+    "lint:es-fix": "eslint \"./{*.js,*.mjs,.*.js,.*.mjs}\" --fix && lerna run lint:es-fix",
     "lint:md": "markdownlint '**/*.md' --ignore-path .gitignore",
     "lint:style": "stylelint './packages/**/*.scss'",
     "lint:style-fix": "npm run lint:style -- --fix",
