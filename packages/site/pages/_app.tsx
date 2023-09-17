@@ -34,15 +34,10 @@ const MyApp = ({
       )
     }
     router.events.on('routeChangeComplete', handleRouteChange)
-
-    const handleWindowFirstLoad = (): void => {
-      myRouter.recordRouteLoaded(router.route, 'windowLoad')
-    }
-    window.addEventListener('load', handleWindowFirstLoad)
+    myRouter.recordRouteLoaded(router.route, 'windowLoad')
 
     return () => {
       router.events.off('routeChangeStart', handleRouteChange)
-      window.removeEventListener('load', handleWindowFirstLoad)
     }
   })
   return (
