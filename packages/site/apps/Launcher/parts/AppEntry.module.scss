@@ -1,11 +1,11 @@
 @import '@/share/mixin.scss';
 
 $entry-width: 118px;
-$entry-height: 118px + 28px;
+$entry-height: 118px + 20px;
 $entry-width-small: 88px;
-$entry-height-small: 88px + 28px;
+$entry-height-small: 88px + 20px;
 
-$entry-margin: 12px;
+$entry-margin: 8px;
 
 $icon-size: 88px;
 $icon-size-small: 60px;
@@ -53,7 +53,7 @@ $icon-size-small: 60px;
   .title {
     @include line-clamp(2);
 
-    margin-top: 8px;
+    margin-top: 4px;
     color: white;
   }
 }
