@@ -68,8 +68,8 @@ export const calcLineProps = (
       ? 'y'
       : 'x'
     : (endY - startY) / (endX - startX) > 0
-    ? 'y=x'
-    : 'y=-x'
+      ? 'y=x'
+      : 'y=-x'
 
   return {
     alongAxis,
@@ -130,8 +130,8 @@ const MetroMap = (props: MetroMapProps): JSX.Element => {
           station.lines.length > 2
             ? BlinkLevel.big
             : station.lines.length === 1
-            ? BlinkLevel.small
-            : BlinkLevel.mid,
+              ? BlinkLevel.small
+              : BlinkLevel.mid,
         active: station.lines.some(line => metroLinesMap[line].active),
         colorful: station.lines.some(line => metroLinesMap[line].colorful),
       })),
