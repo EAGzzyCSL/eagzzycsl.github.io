@@ -5100,12 +5100,12 @@ eslint-module-utils@^2.7.4, eslint-module-utils@^2.8.0:
   dependencies:
     debug "^3.2.7"
 
-eslint-plugin-css-modules@^2.11.0:
-  version "2.11.0"
-  resolved "https://registry.npmmirror.com/eslint-plugin-css-modules/download/eslint-plugin-css-modules-2.11.0.tgz#8de4d01d523a2d51c03043fa8004aab6b6cf3b1a"
-  integrity sha1-jeTQHVI6LVHAMEP6gASqtrbPOxo=
+eslint-plugin-css-modules@^2.12.0:
+  version "2.12.0"
+  resolved "https://registry.npmmirror.com/eslint-plugin-css-modules/-/eslint-plugin-css-modules-2.12.0.tgz#c4102c390c7efd68c4d53677c5e763971699322c"
+  integrity sha512-ruFBdad69ABrbCDCh5mXj7UzNmrvytfzPACjyvZWIAjFZAG8BXpYSbqmE8gU5wF+pIzV3jU2CWhLvfekXT/IgQ==
   dependencies:
-    gonzales-pe "^4.0.3"
+    gonzales-pe "^4.3.0"
     lodash "^4.17.2"
 
 eslint-plugin-import@^2.28.1:
@@ -6203,10 +6203,10 @@ globrex@^0.1.2:
   resolved "https://registry.npmmirror.com/globrex/-/globrex-0.1.2.tgz#dd5d9ec826232730cd6793a5e33a9302985e6098"
   integrity sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==
 
-gonzales-pe@^4.0.3:
+gonzales-pe@^4.3.0:
   version "4.3.0"
-  resolved "https://registry.npmmirror.com/gonzales-pe/download/gonzales-pe-4.3.0.tgz#fe9dec5f3c557eead09ff868c65826be54d067b3"
-  integrity sha1-/p3sXzxVfurQn/hoxlgmvlTQZ7M=
+  resolved "https://registry.npmmirror.com/gonzales-pe/-/gonzales-pe-4.3.0.tgz#fe9dec5f3c557eead09ff868c65826be54d067b3"
+  integrity sha512-otgSPpUmdWJ43VXyiNgEYE4luzHCL2pz4wQ0OnDluC6Eg4Ko3Vexy/SrSynglw/eR+OhkzmqFCZa/OFa/RgAOQ==
   dependencies:
     minimist "^1.2.5"
 
