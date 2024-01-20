@@ -49,7 +49,7 @@ sitemap.appList.forEach(app => {
       fs.mkdirSync(appDir)
     }
     // 如果路径是 / 则页面文件名为 index，否则为router中定义的 match
-    const targetFileName = page.match === '/' ? 'index' : `${page.match}`
+    const targetFileName = page.match === '/' ? 'index' : page.match
     // 写入对应的页面文件
     fs.writeFileSync(
       path.resolve(appDir, `./${targetFileName}.tsx`),

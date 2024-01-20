@@ -70,7 +70,7 @@ const BMIExpression: IExpressionFC<BMIFormula> = (
 
     const newerFormula = {
       ...formula,
-      bmi: `${calBMI(parseFloat(weight), parseFloat(height))}`,
+      bmi: calBMI(parseFloat(weight), parseFloat(height)),
     }
 
     setFormula(newerFormula)
@@ -138,11 +138,7 @@ const BMI = (): JSX.Element => (
         weight,
         height,
         bmi,
-      }: BMIFormula): IHistoryItemContent => [
-        `${weight}`,
-        `${height}`,
-        `${bmi}`,
-      ],
+      }: BMIFormula): IHistoryItemContent => [weight, height, bmi],
       historyItem2formula: (historyItem: IHistoryItem): BMIFormula => ({
         [BMIFormulaField.weight]: historyItem.content[0],
         [BMIFormulaField.height]: historyItem.content[1],

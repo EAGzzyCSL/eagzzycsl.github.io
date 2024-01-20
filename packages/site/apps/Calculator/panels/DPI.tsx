@@ -171,10 +171,10 @@ const DPI = (): JSX.Element => (
         diagonalInch,
         dpi,
       }: DPIFormula): IHistoryItemContent => [
-        `${widthPx}`,
-        `${heightPx}`,
-        `${diagonalInch}`,
-        `${dpi}`,
+        widthPx,
+        heightPx,
+        diagonalInch,
+        dpi,
       ],
       historyItem2formula: (historyItem: IHistoryItem): DPIFormula => ({
         widthPx: historyItem.content[0],

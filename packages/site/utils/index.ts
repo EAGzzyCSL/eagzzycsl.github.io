@@ -10,8 +10,9 @@ const loadImg = (imgUrl: string): Promise<void> =>
     img.onload = () => {
       resolve()
     }
-    img.onerror = () => {
-      reject()
+    img.onerror = e => {
+      // eslint-disable-next-line @typescript-eslint/prefer-promise-reject-errors
+      reject(e)
     }
   })
 
