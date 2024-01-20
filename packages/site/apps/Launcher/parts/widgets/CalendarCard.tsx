@@ -10,7 +10,7 @@ import { dayjs } from '@/utils/date'
 import styles from './CalendarCard.module.scss'
 
 const CalendarCard = (): JSX.Element => {
-  const [date, setDate] = useState<dayjs.Dayjs | null>(dayjs())
+  const [date] = useState<dayjs.Dayjs | null>(dayjs())
 
   return (
     <Card className={styles.calendarCard}>
@@ -23,9 +23,6 @@ const CalendarCard = (): JSX.Element => {
               styles.calendarPickerViewTransitionContainer,
           }}
           value={date}
-          onChange={newDate => {
-            setDate(newDate)
-          }}
         />
       </LocalizationProvider>
     </Card>
