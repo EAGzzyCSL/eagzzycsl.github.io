@@ -71,7 +71,7 @@
     "rehype-raw": "^6.1.0",
     "rehype-sanitize": "^5.0.0",
     "remark-gfm": "^3.0.1",
-    "sass": "^1.66.1",
+    "sass": "^1.70.0",
     "swiper": "^11.0.5",
     "three": "^0.157.0",
     "tslib": "^2.6.2",
