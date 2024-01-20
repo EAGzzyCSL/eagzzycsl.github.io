@@ -59,9 +59,11 @@ const Earth = (props: EarthProps): JSX.Element => {
       setTextureLoading(true)
       return new THREE.TextureLoader().load(
         currentModeConfig.projection,
-        () => {
-          setTextureLoading(false)
-          setLoadingError('')
+        t => {
+          if (t === texture) {
+            setTextureLoading(false)
+            setLoadingError('')
+          }
         },
         // eslint-disable-next-line @typescript-eslint/no-empty-function
         () => {},
