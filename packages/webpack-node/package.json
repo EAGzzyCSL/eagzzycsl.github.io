@@ -15,10 +15,10 @@
     "null-loader": "^4.0.1",
     "ts-loader": "^9.4.2",
     "tsconfig-paths-webpack-plugin": "^4.1.0",
-    "typescript": "^5.2.2",
+    "typescript": "^5.3.3",
     "webpack": "^5.89.0"
   },
   "peerDependencies": {
-    "typescript": "^5.0.4"
+    "typescript": "^5.3.3"
   }
 }
