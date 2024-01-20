@@ -6,7 +6,7 @@
     "declaration": true,
     "declarationDir": "./lib",
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
   },
-  "exclude": ["./lib"]
+  "exclude": ["./lib"],
 }

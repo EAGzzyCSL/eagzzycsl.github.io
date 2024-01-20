@@ -10,8 +10,8 @@
       "  platform: mac、win、linux、android、ios、web$5",
       "  remarks:",
       "    - $6",
-      ""
+      "",
     ],
-    "description": "工具应用新建Item"
-  }
+    "description": "工具应用新建Item",
+  },
 }
