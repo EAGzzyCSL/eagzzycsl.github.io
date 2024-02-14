@@ -33,7 +33,7 @@
     "@mine/markdown-loader": "^0.0.0",
     "@mine/webpack-node": "^0.0.0",
     "@mui/icons-material": "^5.15.5",
-    "@mui/lab": "^5.0.0-alpha.161",
+    "@mui/lab": "^5.0.0-alpha.165",
     "@mui/material": "^5.15.5",
     "@mui/system": "^5.15.5",
     "@mui/x-date-pickers": "^6.19.0",
