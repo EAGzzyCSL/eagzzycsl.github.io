@@ -2402,10 +2402,10 @@
   resolved "https://registry.npmmirror.com/@types/stats.js/-/stats.js-0.17.0.tgz#0ed81d48e03b590c24da85540c1d952077a9fe20"
   integrity sha512-9w+a7bR8PeB0dCT/HBULU2fMqf6BAzvKbxFboYhmDtDkKPiyXYbjoe2auwsXlEFI7CFNMF1dCv3dFH5Poy9R1w==
 
-"@types/three@^0.160.0":
-  version "0.160.0"
-  resolved "https://registry.npmmirror.com/@types/three/-/three-0.160.0.tgz#7915a97e0a14ccaa9ccbb9f190c5730b04a23075"
-  integrity sha512-jWlbUBovicUKaOYxzgkLlhkiEQJkhCVvg4W2IYD2trqD2om3VK4DGLpHH5zQHNr7RweZK/5re/4IVhbhvxbV9w==
+"@types/three@^0.161.2":
+  version "0.161.2"
+  resolved "https://registry.npmmirror.com/@types/three/-/three-0.161.2.tgz#3c7e3f40869ad52970f517583cc200472e8918bf"
+  integrity sha512-DazpZ+cIfBzbW/p0zm6G8CS03HBMd748A3R1ZOXHpqaXZLv2I5zNgQUrRG//UfJ6zYFp2cUoCQaOLaz8ubH07w==
   dependencies:
     "@types/stats.js" "*"
     "@types/webxr" "*"
@@ -12229,10 +12229,10 @@ text-table@^0.2.0:
   resolved "https://registry.npmmirror.com/text-table/download/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
-three@^0.160.0:
-  version "0.160.0"
-  resolved "https://registry.npmmirror.com/three/-/three-0.160.0.tgz#cd1e4dbd01aee0719280a9086d75545db52b7a8f"
-  integrity sha512-DLU8lc0zNIPkM7rH5/e1Ks1Z8tWCGRq6g8mPowdDJpw1CFBJMU7UoJjC6PefXW7z//SSl0b2+GCw14LB+uDhng==
+three@^0.161.0:
+  version "0.161.0"
+  resolved "https://registry.npmmirror.com/three/-/three-0.161.0.tgz#38aafaa82fe5467fde2e33933515d1b6beb17d91"
+  integrity sha512-LC28VFtjbOyEu5b93K0bNRLw1rQlMJ85lilKsYj6dgTu+7i17W+JCCEbvrpmNHF1F3NAUqDSWq50UD7w9H2xQw==
 
 through2@^2.0.0:
   version "2.0.5"
