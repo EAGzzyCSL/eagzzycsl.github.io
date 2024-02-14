@@ -46,7 +46,7 @@
     "@mine/prettier-config": "^0.0.0",
     "@mine/simple-jest-transform-yaml": "^0.0.0",
     "@mine/stylelint-config": "^0.0.0",
-    "@swc/core": "^1.3.55",
+    "@swc/core": "^1.4.1",
     "@swc/jest": "^0.2.26",
     "@types/jest": "^29.5.1",
     "@types/node": "^20.11.5",
