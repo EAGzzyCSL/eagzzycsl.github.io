@@ -13,6 +13,7 @@ export default [
   'emperor-alias',
   'satirical-poetry',
   '2024-cctv-gala',
+  'misleading-matrix-multiplication',
 ].map(fileName => {
   // eslint-disable-next-line import/no-dynamic-require, @typescript-eslint/no-var-requires, global-require, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
   const markdownModule = require(`./${fileName}.md`).default
