@@ -13,12 +13,21 @@ const withBundleAnalyzer = NextBundleAnalyzer({
 
 const isLocal = process.env.DEPLOY_ENV === 'local'
 
+const isExport = process.env.DEPLOY_MODE === 'export' ? 'export' : undefined
+
+const exportDir =
+  process.env.DEPLOY_ENV === 'local'
+    ? '../../local-export/'
+    : '../../domain-export/'
+
 const baseUrl = isLocal ? '/eagzzycsl.github.io' : ''
 
 /**
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
+  output: isExport,
+  distDir: isExport ? exportDir : undefined,
   // 配置本地部署路径
   // 配置为 '' 的话 next 的校验会报错
   assetPrefix: baseUrl || undefined,
