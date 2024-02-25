@@ -52,7 +52,7 @@ const demo: Record<'square' | 'jsTruthy', ICamp> = {
     mainTitle: '饺子阵营图',
     ht1: '形式纯粹主义',
     hst1: '必须使用面皮包起来',
-    ht2: '形式兼容主义',
+    ht2: '形式中立主义',
     hst2: '使用什么包起来都行',
     ht3: '形式自由主义',
     hst3: '为什么一定要包起来',
