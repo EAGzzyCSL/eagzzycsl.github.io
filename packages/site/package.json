@@ -17,7 +17,9 @@
     "qr": "ts-node ./scripts/qr.mjs",
     "route": "webpack-node ./scripts/route.ts ./scripts/tsconfig.route.json",
     "serve": "next start",
-    "ts:check": "tsc --noEmit"
+    "storybook": "storybook dev -p 6006",
+    "ts:check": "tsc --noEmit",
+    "build-storybook": "storybook build"
   },
   "browserslist": {
     "production": [
@@ -38,6 +40,7 @@
     "@mui/system": "^5.15.5",
     "@mui/x-date-pickers": "^6.19.0",
     "@next/bundle-analyzer": "^14.1.0",
+    "@storybook/nextjs": "^8.0.0",
     "@types/classnames": "^2.3.1",
     "@types/lodash": "^4.14.178",
     "@types/pinyin": "^2.10.0",
@@ -72,11 +75,21 @@
     "rehype-sanitize": "^5.0.0",
     "remark-gfm": "^3.0.1",
     "sass": "^1.70.0",
+    "storybook": "^8.0.0",
     "swiper": "^11.0.5",
     "three": "^0.161.0",
     "tslib": "^2.6.2",
     "typescript": "^5.3.3",
     "webpack": "^5.89.0",
-    "yaml-loader": "^0.8.0"
+    "yaml-loader": "^0.8.0",
+    "@chromatic-com/storybook": "^1.2.22",
+    "@storybook/addon-essentials": "^8.0.0",
+    "@storybook/addon-interactions": "^8.0.0",
+    "@storybook/addon-links": "^8.0.0",
+    "@storybook/addon-onboarding": "^8.0.0",
+    "@storybook/blocks": "^8.0.0",
+    "@storybook/react": "^8.0.0",
+    "@storybook/test": "^8.0.0",
+    "eslint-plugin-storybook": "^0.8.0"
   }
 }
