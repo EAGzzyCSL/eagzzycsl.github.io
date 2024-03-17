@@ -1,0 +1,19 @@
+{
+  "name": "@mine/rollup-node",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "rollup-node": "bin.js"
+  },
+  "scripts": {
+    "lint:es": "eslint --ext .js,.ts,.tsx ./",
+    "lint:es-fix": "npm run lint:es -- --fix"
+  },
+  "dependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "rollup": "^4.13.0",
+    "typescript": "^5.1.3"
+  }
+}
