@@ -81,7 +81,7 @@ const nextConfig = {
       test: /\.(png|jpe?g|gif|svg|webp|mp3)$/i,
       loader: 'file-loader',
       options: {
-        name: '[path][name].[hash:hex:8].[ext]',
+        name: '[path][name].[md5:hash:hex:8].[ext]',
         outputPath: '../public/static',
         publicPath: `${baseUrl}/static`,
       },
