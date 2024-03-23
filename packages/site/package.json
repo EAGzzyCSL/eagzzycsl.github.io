@@ -88,7 +88,7 @@
     "swiper": "^11.0.5",
     "three": "^0.161.0",
     "tslib": "^2.6.2",
-    "typescript": "^5.3.3",
+    "typescript": "^5.4.3",
     "vitest": "^1.4.0",
     "webpack": "^5.89.0",
     "yaml-loader": "^0.8.0"
