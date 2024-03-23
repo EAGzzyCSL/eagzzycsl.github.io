@@ -39,7 +39,7 @@
     "@mui/lab": "^5.0.0-alpha.165",
     "@mui/material": "^5.15.5",
     "@mui/system": "^5.15.5",
-    "@mui/x-date-pickers": "^6.19.0",
+    "@mui/x-date-pickers": "^7.0.0",
     "@next/bundle-analyzer": "^14.1.0",
     "@storybook/addon-essentials": "^8.0.0",
     "@storybook/addon-interactions": "^8.0.0",
