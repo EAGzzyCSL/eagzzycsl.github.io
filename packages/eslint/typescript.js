@@ -11,5 +11,12 @@ module.exports = {
   rules: {
     'no-shadow': 'off',
     'no-use-before-define': 'off',
+    '@typescript-eslint/restrict-template-expressions': [
+      'error',
+      {
+        allowNumber: true,
+      },
+    ],
+    '@typescript-eslint/use-unknown-in-catch-callback-variable': 'off',
   },
 }

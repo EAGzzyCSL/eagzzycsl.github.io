@@ -208,7 +208,7 @@ const createRenderer = (): Components => {
    * 某级标题计数器+1后，其后所有的子标题计数器都应当重新开始计数（即置0）
    * 为减少运算量，在该级标题计数器为0时子标题计数器也一定为0所以无需重置
    */
-  const scoreboard = Array(7).fill(0)
+  const scoreboard = Array<number>(7).fill(0)
   const HeadingRenderer = ({ children, level }: HeadingType): JSX.Element => {
     if (scoreboard[level] !== 0) {
       scoreboard.fill(0, level + 1)
