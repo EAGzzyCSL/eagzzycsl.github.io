@@ -90,7 +90,7 @@
     "tslib": "^2.6.2",
     "typescript": "^5.4.3",
     "vitest": "^1.4.0",
-    "webpack": "^5.89.0",
+    "webpack": "^5.91.0",
     "yaml-loader": "^0.8.0"
   }
 }
