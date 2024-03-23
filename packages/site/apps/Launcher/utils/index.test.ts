@@ -1,3 +1,5 @@
+import { test, expect } from 'vitest'
+
 import { jointGoogleSearchUrl } from './index'
 
 test('jointGoogleSearchUrl', () => {

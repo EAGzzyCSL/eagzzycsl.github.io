@@ -1,6 +1,7 @@
 import React from 'react'
 
 import * as renderer from 'react-test-renderer'
+import { test, expect } from 'vitest'
 
 import NotFound from './NotFound'
 

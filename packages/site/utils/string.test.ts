@@ -1,3 +1,5 @@
+import { test, expect } from 'vitest'
+
 import {
   camel2snake,
   camel2kebab,

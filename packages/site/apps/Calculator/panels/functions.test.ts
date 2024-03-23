@@ -1,3 +1,5 @@
+import { describe, test, expect } from 'vitest'
+
 import { getBMIString, calBMIValue, calDPI, ceilFixed } from './functions'
 
 test('DPI计算', () => {

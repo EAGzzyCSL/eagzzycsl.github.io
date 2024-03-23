@@ -1,3 +1,5 @@
+import { describe, test, expect } from 'vitest'
+
 import { getParentAppPath, getAppName } from './index'
 
 describe('使用getParentAppPath获取路由父级页面', () => {
@@ -10,6 +12,7 @@ describe('使用getParentAppPath获取路由父级页面', () => {
     expect(getParentAppPath(route)).toBe(parent)
   })
 })
+
 describe('使用getAppName获取页面的 appName', () => {
   test.each([
     ['launch首页', '/', 'Launcher'],

@@ -15,7 +15,7 @@ module.exports = {
             'packages/**/*.test.ts',
             'packages/**/*.test.tsx',
           ],
-          extends: ['@mine/eslint-config/jest'],
+          extends: ['@mine/eslint-config/vitest'],
           rules: {
             'import/no-extraneous-dependencies': [
               'error',

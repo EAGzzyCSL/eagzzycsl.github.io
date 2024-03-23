@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`render NotFound 1`] = `
 <section
-  className="notFound"
+  className="_notFound_e679f1"
 >
   <svg
     aria-hidden={true}

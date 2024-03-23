@@ -1,3 +1,5 @@
+import { describe, test, expect } from 'vitest'
+
 import { IMetroStation } from '../type'
 
 import { calcLineProps, calcBackground } from './MetroMap'

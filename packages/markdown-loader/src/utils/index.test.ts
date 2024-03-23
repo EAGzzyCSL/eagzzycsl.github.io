@@ -1,3 +1,5 @@
+import { test, expect } from 'vitest'
+
 import { createLoader } from './index'
 
 test('loader工作情况', () => {

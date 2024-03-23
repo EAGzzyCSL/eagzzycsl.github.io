@@ -1,3 +1,5 @@
+import { test, expect } from 'vitest'
+
 import { articleProcessor } from './article'
 
 test('处理结构完整的markdown', () => {

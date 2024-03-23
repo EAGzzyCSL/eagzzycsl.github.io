@@ -1,3 +1,5 @@
+import { describe, test, expect } from 'vitest'
+
 import { extractToc } from './toc'
 
 describe('从markdown content解析目录', () => {
