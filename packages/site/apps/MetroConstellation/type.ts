@@ -25,6 +25,7 @@ export interface IMetroLine extends IMetroLineRaw {
   no: string
   colorful: boolean
   active: boolean
+  lineate: boolean
 }
 export type IMetroLinesMap = Record<string, IMetroLine>
 

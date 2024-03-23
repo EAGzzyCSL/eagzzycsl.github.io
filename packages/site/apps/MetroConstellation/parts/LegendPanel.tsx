@@ -28,6 +28,7 @@ const LegendPanel = (props: LegendPanelProps): JSX.Element => {
     [metroLinesMap],
   )
 
+  const allLineate = metroLines.every(line => line.lineate)
   const allActive = metroLines.every(line => line.active)
   const allColorful = metroLines.every(line => line.colorful)
 
@@ -40,6 +41,20 @@ const LegendPanel = (props: LegendPanelProps): JSX.Element => {
           </Typography>
         </div>
         <div className={styles.options}>
+          <FormControlLabel
+            control={<Checkbox size='small' />}
+            checked={allLineate}
+            label='lineate'
+            labelPlacement='start'
+            onChange={(_event, checked) => {
+              metroLines.forEach(l => {
+                updateMetroLine(l.no, {
+                  ...l,
+                  lineate: checked,
+                })
+              })
+            }}
+          />
           <FormControlLabel
             control={<Checkbox size='small' />}
             checked={allActive}
@@ -85,6 +100,18 @@ const LegendPanel = (props: LegendPanelProps): JSX.Element => {
             </Typography>
           </div>
           <div className={styles.options}>
+            <FormControlLabel
+              control={<Checkbox size='small' />}
+              checked={line.lineate}
+              label='lineate'
+              labelPlacement='start'
+              onChange={(_event, checked) => {
+                updateMetroLine(line.no, {
+                  ...line,
+                  lineate: checked,
+                })
+              }}
+            />
             <FormControlLabel
               control={<Checkbox size='small' />}
               checked={line.active}

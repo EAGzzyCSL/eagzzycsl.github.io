@@ -25,6 +25,11 @@ $shadow-small: 0 0 20px 4px $color-light;
     .line {
       position: absolute;
 
+      &.none-lineate {
+        background: none !important;
+        border: none !important;
+      }
+
       &.along-axis {
         // 为了实现粗细由 border 控制，需要使用 content-box
         box-sizing: content-box;

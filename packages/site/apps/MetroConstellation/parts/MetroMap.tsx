@@ -134,6 +134,7 @@ const MetroMap = (props: MetroMapProps): JSX.Element => {
               : BlinkLevel.mid,
         active: station.lines.some(line => metroLinesMap[line].active),
         colorful: station.lines.some(line => metroLinesMap[line].colorful),
+        lineate: station.lines.some(line => metroLinesMap[line].lineate),
       })),
     [metroStationsRaw, metroLinesMap],
   )
@@ -202,7 +203,7 @@ const MetroMap = (props: MetroMapProps): JSX.Element => {
       >
         {/* 线路部分 */}
         {lineNodes.map((line, index) => {
-          const { active } = metroLinesMap[line.no]
+          const { active, lineate } = metroLinesMap[line.no]
 
           const { alongAxis, direction, top, width, height, left } =
             calcLineProps(
@@ -219,6 +220,7 @@ const MetroMap = (props: MetroMapProps): JSX.Element => {
                 [styles.alongY]: direction === 'y',
                 [styles.alongX]: direction === 'x',
                 [styles.active]: active,
+                [styles.noneLineate]: !lineate,
               })}
               // eslint-disable-next-line react/no-array-index-key
               key={index}

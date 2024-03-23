@@ -26,6 +26,7 @@ const MetroConstellation = (): JSX.Element => {
           no,
           colorful: false,
           active: false,
+          lineate: true,
         },
       ]),
     ),
