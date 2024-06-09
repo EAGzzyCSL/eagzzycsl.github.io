@@ -36,7 +36,7 @@
     "@mine/markdown-loader": "^0.0.0",
     "@mine/rollup-node": "^0.0.0",
     "@mui/icons-material": "^5.15.14",
-    "@mui/lab": "^5.0.0-alpha.169",
+    "@mui/lab": "^5.0.0-alpha.170",
     "@mui/material": "^5.15.14",
     "@mui/system": "^5.15.14",
     "@mui/x-date-pickers": "^7.0.0",
