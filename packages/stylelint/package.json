@@ -9,7 +9,7 @@
     "lint:es-fix": "npm run lint:es -- --fix"
   },
   "dependencies": {
-    "postcss-scss": "^4.0.2",
+    "postcss-scss": "^4.0.9",
     "stylelint-config-recess-order": "^4.4.0",
     "stylelint-config-standard": "^34.0.0",
     "stylelint-csstree-validator": "^3.0.0",

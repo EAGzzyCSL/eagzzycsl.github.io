@@ -14087,10 +14087,10 @@ postcss-safe-parser@^6.0.0:
   resolved "https://registry.npmmirror.com/postcss-safe-parser/download/postcss-safe-parser-6.0.0.tgz?cache=0&sync_timestamp=1632754382511&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fpostcss-safe-parser%2Fdownload%2Fpostcss-safe-parser-6.0.0.tgz#bb4c29894171a94bc5c996b9a30317ef402adaa1"
   integrity sha1-u0wpiUFxqUvFyZa5owMX70Aq2qE=
 
-postcss-scss@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.npmmirror.com/postcss-scss/download/postcss-scss-4.0.2.tgz?cache=0&sync_timestamp=1635496135012&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fpostcss-scss%2Fdownload%2Fpostcss-scss-4.0.2.tgz#39ddcc0ab32f155d5ab328ee91353d67a52d537b"
-  integrity sha1-Od3MCrMvFV1asyjukTU9Z6UtU3s=
+postcss-scss@^4.0.9:
+  version "4.0.9"
+  resolved "https://registry.npmmirror.com/postcss-scss/-/postcss-scss-4.0.9.tgz#a03c773cd4c9623cb04ce142a52afcec74806685"
+  integrity sha512-AjKOeiwAitL/MXxQW2DliT28EKukvvbEWx3LBmJIRN8KfBGZbRTxNYW0kSqi1COiTZ57nZ9NW06S6ux//N1c9A==
 
 postcss-selector-parser@^6.0.13:
   version "6.0.13"
