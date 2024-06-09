@@ -31,8 +31,8 @@
   },
   "dependencies": {
     "@chromatic-com/storybook": "^1.2.22",
-    "@emotion/react": "^11.11.0",
-    "@emotion/styled": "^11.11.0",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "@mine/markdown-loader": "^0.0.0",
     "@mine/rollup-node": "^0.0.0",
     "@mui/icons-material": "^5.15.14",
