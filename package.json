@@ -47,7 +47,7 @@
     "@mine/prettier-config": "^0.0.0",
     "@mine/stylelint-config": "^0.0.0",
     "@types/js-yaml": "^4.0.9",
-    "@types/node": "^20.11.5",
+    "@types/node": "^20.14.2",
     "cloc": "^2.9.0",
     "commitizen": "^4.3.0",
     "cz-customizable": "^7.0.0",
