@@ -106,10 +106,7 @@ const ImpossibleTrinity = (): JSX.Element => {
                   />
                 </HoverInput>
               </div>
-              <div
-                className={styles.gammaAlphaArea}
-                placeholder={initTrinityData.gammaAlpha}
-              >
+              <div className={styles.gammaAlphaArea}>
                 <HoverInput initValue={trinityData.gammaAlpha}>
                   <TextField
                     multiline
@@ -118,10 +115,7 @@ const ImpossibleTrinity = (): JSX.Element => {
                 </HoverInput>
               </div>
               {/* 中心部分 */}
-              <div
-                className={styles.center}
-                placeholder={initTrinityData.center}
-              >
+              <div className={styles.center}>
                 <HoverInput initValue={trinityData.center}>
                   <TextField
                     multiline
