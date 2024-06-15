@@ -33,12 +33,10 @@
         display: flex;
         flex: 14 0 0;
         flex-wrap: wrap;
-        align-content: flex-start;
-        justify-content: flex-start;
+        place-content: flex-start flex-start;
 
         @media (orientation: portrait) {
-          align-content: flex-start;
-          justify-content: space-around;
+          place-content: flex-start space-around;
         }
       }
     }
@@ -54,12 +52,10 @@
     .entry-area-second {
       display: flex;
       flex-wrap: wrap;
-      align-content: flex-start;
-      justify-content: flex-start;
+      place-content: flex-start flex-start;
 
       @media (orientation: portrait) {
-        align-content: flex-start;
-        justify-content: space-around;
+        place-content: flex-start space-around;
         width: 100%;
       }
     }

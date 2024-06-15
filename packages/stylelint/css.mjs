@@ -1,6 +1,8 @@
 export default {
   extends: ['stylelint-config-standard', 'stylelint-config-recess-order'],
-  plugins: ['stylelint-csstree-validator'],
+  // stylelint-csstree-validator 一直不支持 stylelint 16，使用别人 fork 的代替
+  // https://github.com/csstree/stylelint-validator/issues/58
+  plugins: ['@carlosjeurissen/stylelint-csstree-validator'],
   rules: {
     'no-empty-source': true,
     'selector-max-type': 0,
