@@ -12,6 +12,6 @@
   "dependencies": {
     "gray-matter": "^4.0.3",
     "markdown-toc": "^1.2.0",
-    "vitest": "^1.6.0"
+    "vitest": "^2.1.4"
   }
 }
