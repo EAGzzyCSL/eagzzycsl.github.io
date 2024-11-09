@@ -16874,10 +16874,10 @@ stylelint-scss@^6.3.1:
     postcss-selector-parser "^6.1.0"
     postcss-value-parser "^4.2.0"
 
-stylelint-use-nesting@^5.1.1:
-  version "5.1.1"
-  resolved "https://registry.npmmirror.com/stylelint-use-nesting/-/stylelint-use-nesting-5.1.1.tgz#74f1d768a0f0fb7a180d0e55b1be5cd4e8ae9f1d"
-  integrity sha512-CMPN52zWGqogls7i6u0jCjOU7jb6/3r+1/VWkuSoA6KAATgHEvGe6xc9PcLMBKYLtTS1tblEyIUW8fiU36D5GQ==
+stylelint-use-nesting@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.npmmirror.com/stylelint-use-nesting/-/stylelint-use-nesting-6.0.0.tgz#e096e895502d63ce4ee83d183ab12a0cd90cdd14"
+  integrity sha512-5/Icok0O35pU3DpHRmISTsElba2btHpPlNcbVrwy6AhapIPKE1QqaMslYhI0Cjt5/w4ALS4iICde9BhVq7HYKA==
 
 stylelint@^16.10.0:
   version "16.10.0"
