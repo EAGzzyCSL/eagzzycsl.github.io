@@ -12,7 +12,9 @@ jobs:
       - name: NodeVersion
         uses: actions/setup-node@v3
         with:
-          node-version: latest
+          # 指定 node 版本解决构建时无产物问题
+          # issue：https://github.com/vercel/next.js/issues/47394
+          node-version: 22
 
       - name: Install
         run: npm run setup
