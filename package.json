@@ -63,7 +63,7 @@
     "postcss": "^8.4.38",
     "postcss-scss": "^4.0.9",
     "prettier": "^3.3.1",
-    "stylelint": "^16.6.1",
+    "stylelint": "^16.10.0",
     "typescript": "^5.4.3",
     "vitest": "^2.1.4"
   }
