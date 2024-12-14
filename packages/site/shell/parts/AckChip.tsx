@@ -30,7 +30,13 @@ const AckChip = (props: AckChipProps): JSX.Element => {
           <img className={styles.image} src={icon} />
         </Button>
       )}
-      <Link href='url' variant='caption' underline='hover' color='CaptionText'>
+      <Link
+        href={url}
+        variant='caption'
+        underline='hover'
+        color='CaptionText'
+        target='_blank'
+      >
         {label}
       </Link>
     </div>
