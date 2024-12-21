@@ -1,0 +1,84 @@
+.mi-square {
+  --mi-color: #dd443f;
+  --dash-width: 1px;
+  --border-width: 2px;
+
+  width: 100%;
+  height: 100%;
+  border: solid var(--border-width) var(--mi-color);
+
+  &.no-border-top {
+    border-top: none;
+  }
+
+  &.no-border-right {
+    border-right: none;
+  }
+
+  &.no-border-bottom {
+    border-bottom: none;
+  }
+
+  &.no-border-left {
+    border-left: none;
+  }
+
+  .square {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    .bg {
+      position: absolute;
+      display: flex;
+      width: 100%;
+      height: 100%;
+
+      .line-horizontal {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0;
+        margin: auto;
+        border-top: dashed var(--dash-width) var(--mi-color);
+      }
+
+      .line-vertical {
+        position: absolute;
+        right: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        margin: auto;
+        border-left: dashed var(--dash-width) var(--mi-color);
+      }
+
+      .line-lt2rb {
+        position: absolute;
+        left: 0;
+        width: 142%;
+        border-top: dashed var(--dash-width) var(--mi-color);
+        transform: translateY(-50%) rotate(45deg);
+        transform-origin: left center;
+      }
+
+      .line-rt2lb {
+        position: absolute;
+        right: 0;
+        width: 142%;
+        border-top: dashed var(--dash-width) var(--mi-color);
+        transform: translateY(-50%) rotate(-45deg);
+        transform-origin: right center;
+      }
+    }
+  }
+
+  .children {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

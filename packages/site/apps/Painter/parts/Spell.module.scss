@@ -1,0 +1,27 @@
+@font-face {
+  font-family: founder-kai;
+  src: url('../assets/founder-kai.ttf');
+}
+
+$square-size: 60px;
+
+.spell {
+  display: flex;
+
+  .block {
+    width: $square-size;
+    height: $square-size;
+  }
+
+  .char {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+    font-family: founder-kai;
+    font-size: $square-size * 0.7;
+    line-height: 1;
+  }
+}

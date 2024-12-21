@@ -8,10 +8,9 @@ import {
   Link,
 } from '@/ui/material'
 
-import MiSquares from '../parts/MiSquares'
 import PanelContainer from '../parts/PanelContainer'
-import PinyinRow from '../parts/PinyinRow'
 import Saver from '../parts/Saver'
+import Spell from '../parts/Spell'
 
 import styles from './Dictionary.module.scss'
 
@@ -31,8 +30,7 @@ const Dictionary = (): JSX.Element => {
           <Saver saveAction='shotAndSave' fileName={word}>
             <div className={styles.card}>
               <div className={styles.word}>
-                <PinyinRow text={word || ''} />
-                <MiSquares text={word || ''} />
+                <Spell text={word || ''} />
               </div>
               {definition && (
                 <div className={styles.definitionBlock}>
