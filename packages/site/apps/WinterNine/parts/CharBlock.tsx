@@ -1,6 +1,7 @@
 /* eslint-disable import/extensions */
 import React, { useRef, useEffect } from 'react'
 
+import MiSquare from '@/share/MiSquare'
 import { sleep } from '@/utils'
 
 import char亭 from '../data/亭.json'
@@ -35,7 +36,7 @@ const TRACK_STROKE_SIZE = 200
 /**
  * chrome的clip没有抗锯齿，因此使用红色和灰色模糊边缘的锯齿（目前的组合效果便不错）
  */
-const colorPlaceholder = '#bbb'
+const colorPlaceholder = '#E5DEC6'
 const colorFill = '#c33'
 
 class CharWriter {
@@ -253,7 +254,9 @@ const CharBlock = ({
   })
   return (
     <section className={styles.charBlock}>
-      <canvas ref={tablet} className={styles.canvas} />
+      <MiSquare noBorderTop={charIndex > 2} noBorderLeft={charIndex % 3 !== 0}>
+        <canvas ref={tablet} className={styles.canvas} />
+      </MiSquare>
     </section>
   )
 }
