@@ -65,6 +65,6 @@
     "prettier": "^3.3.1",
     "stylelint": "^16.10.0",
     "typescript": "^5.4.3",
-    "vitest": "^2.1.4"
+    "vitest": "^3.0.2"
   }
 }
