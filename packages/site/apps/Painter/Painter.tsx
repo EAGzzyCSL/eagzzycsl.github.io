@@ -15,6 +15,7 @@ import PanelCampNineSquare from './panels/CampNineSquare'
 import CrossedGrid from './panels/CrossedGrid'
 import PanelDictionary from './panels/Dictionary'
 import PanelImpossibleTrinity from './panels/ImpossibleTrinity'
+import RubikCubePhoto from './panels/RubikCubePhoto'
 import PanelWordInWord from './panels/WordInWord'
 import theme from './theme'
 
@@ -43,6 +44,11 @@ const panels = [
     id: 'crossed-grid',
     title: '十字格',
     component: CrossedGrid,
+  },
+  {
+    id: 'rubik-cube-photo',
+    title: '照片魔方',
+    component: RubikCubePhoto,
   },
 ]
 

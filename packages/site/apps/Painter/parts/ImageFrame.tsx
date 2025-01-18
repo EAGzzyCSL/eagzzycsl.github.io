@@ -24,6 +24,7 @@ import { createImageDataUrlFromCrop } from '../utils/crop'
 import styles from './ImageFrame.module.scss'
 
 export interface CropDialogProps {
+  aspect?: number | undefined
   open: boolean
   onClose: (withConfirm: boolean) => void
   imgUrl: string
@@ -33,7 +34,8 @@ export interface CropDialogProps {
 }
 
 const CropDialog = (props: CropDialogProps): JSX.Element => {
-  const { open, onClose, imgUrl, crop, onCropChange, onCropDone } = props
+  const { open, onClose, imgUrl, crop, onCropChange, onCropDone, aspect } =
+    props
 
   const [completedCrop, setCompletedCrop] = useState<PixelCrop>()
 
@@ -61,6 +63,7 @@ const CropDialog = (props: CropDialogProps): JSX.Element => {
       <DialogContent>
         <ReactCrop
           crop={crop}
+          aspect={aspect}
           // 拖拽中
           onChange={c => {
             onCropChange(c)
@@ -84,6 +87,7 @@ const CropDialog = (props: CropDialogProps): JSX.Element => {
 
 CropDialog.defaultProps = {
   crop: undefined,
+  aspect: undefined,
 }
 
 export const getImageFromClipboard = async (): Promise<{
@@ -132,14 +136,23 @@ export const getImageFromClipboard = async (): Promise<{
 
 interface ImageFrameProps {
   imgUrl?: string
+  aspect?: number | undefined
   fullSize?: boolean
+  onImageChanged?: (imgUrl: string) => void
 }
 
 const ImageFrame = (props: ImageFrameProps): JSX.Element => {
-  const { imgUrl, fullSize } = props
+  const { imgUrl, fullSize, onImageChanged, aspect } = props
 
   const [originImageUrl, setOriginImageUrl] = useState(imgUrl ?? '')
   const [croppedUrl, setCroppedUrl] = useState(originImageUrl)
+
+  const updateImage = (imgUrl: string) => {
+    if (onImageChanged) {
+      onImageChanged(imgUrl)
+    }
+    setCroppedUrl(imgUrl)
+  }
 
   useEffect(() => {
     setOriginImageUrl(imgUrl ?? '')
@@ -156,7 +169,7 @@ const ImageFrame = (props: ImageFrameProps): JSX.Element => {
     const { errorMsg, img } = await getImageFromClipboard()
     if (img) {
       setOriginImageUrl(img)
-      setCroppedUrl(img)
+      updateImage(img)
       setDialogOpen(true)
     } else {
       // eslint-disable-next-line no-alert
@@ -201,7 +214,7 @@ const ImageFrame = (props: ImageFrameProps): JSX.Element => {
                   // eslint-disable-next-line @typescript-eslint/no-base-to-string
                   const selectedImage = reader.result.toString()
                   setOriginImageUrl(selectedImage)
-                  setCroppedUrl(selectedImage)
+                  updateImage(selectedImage)
                   setDialogOpen(true)
                 } else {
                   // eslint-disable-next-line no-alert
@@ -240,12 +253,13 @@ const ImageFrame = (props: ImageFrameProps): JSX.Element => {
       <CropDialog
         open={dialogOpen}
         imgUrl={originImageUrl}
+        aspect={aspect}
         crop={crop}
         onCropChange={setCrop}
         onClose={() => {
           setDialogOpen(false)
         }}
-        onCropDone={setCroppedUrl}
+        onCropDone={updateImage}
       />
     </div>
   )
@@ -254,6 +268,9 @@ const ImageFrame = (props: ImageFrameProps): JSX.Element => {
 ImageFrame.defaultProps = {
   imgUrl: '',
   fullSize: false,
+  aspect: undefined,
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  onImageChanged: () => {},
 }
 
 export default ImageFrame

@@ -4557,6 +4557,11 @@
   resolved "https://registry.npmmirror.com/@types/doctrine/-/doctrine-0.0.9.tgz#d86a5f452a15e3e3113b99e39616a9baa0f9863f"
   integrity sha512-eOIHzCUSH7SMfonMG1LsC2f8vxBFtho6NGBznK41R84YzPuvSBzrhEps33IsQiOW9+VL6NQ9DbjQJznk/S4uRA==
 
+"@types/draco3d@^1.4.0":
+  version "1.4.10"
+  resolved "https://registry.npmmirror.com/@types/draco3d/-/draco3d-1.4.10.tgz#63ec0ba78b30bd58203ec031f4e4f0198c596dca"
+  integrity sha512-AX22jp8Y7wwaBgAixaSvkoG4M/+PlAcm3Qs4OW8yT9DM4xUpWKeFhLueTAyZF39pviAdcDdeJoACapiAceqNcw==
+
 "@types/ejs@^3.1.1":
   version "3.1.5"
   resolved "https://registry.npmmirror.com/@types/ejs/-/ejs-3.1.5.tgz#49d738257cc73bafe45c13cb8ff240683b4d5117"
@@ -4755,6 +4760,11 @@
   resolved "https://registry.npmmirror.com/@types/normalize-package-data/download/@types/normalize-package-data-2.4.0.tgz#e486d0d97396d79beedd0a6e33f4534ff6b4973e"
   integrity sha1-5IbQ2XOW15vu3QpuM/RTT/a0lz4=
 
+"@types/offscreencanvas@^2019.6.4":
+  version "2019.7.3"
+  resolved "https://registry.npmmirror.com/@types/offscreencanvas/-/offscreencanvas-2019.7.3.tgz#90267db13f64d6e9ccb5ae3eac92786a7c77a516"
+  integrity sha512-ieXiYmgSRXUDeOntE1InxjWyvEelZGP63M+cGuquuRLuIKKT1osnkXjxev9B7d1nXSug5vpunx+gNlbVxMlC9A==
+
 "@types/parse-json@^4.0.0":
   version "4.0.0"
   resolved "https://registry.npmmirror.com/@types/parse-json/download/@types/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
@@ -4912,6 +4922,11 @@
   version "0.4.0"
   resolved "https://registry.npmmirror.com/@types/webxr/-/webxr-0.4.0.tgz#ad06c96a324293e0d5175d13dd5ded5931f90ba3"
   integrity sha512-LQvrACV3Pj17GpkwHwXuTd733gfY+D7b9mKdrTmLdO7vo7P/o6209Qqtk63y/FCv/lspdmi0pWz6Qe/ull9kQg==
+
+"@types/webxr@^0.5.2":
+  version "0.5.20"
+  resolved "https://registry.npmmirror.com/@types/webxr/-/webxr-0.5.20.tgz#b16b681af314ec011b2e8221b0a072d691c04953"
+  integrity sha512-JGpU6qiIJQKUuVSKx1GtQnHJGxRjtfGIhzO2ilq43VZZS//f1h1Sgexbdk+Lq+7569a6EYhOWrUpIruR/1Enmg==
 
 "@typescript-eslint/eslint-plugin@^7.13.0":
   version "7.13.0"
@@ -8085,6 +8100,11 @@ dotenv@~16.3.1:
   resolved "https://registry.npmmirror.com/dotenv/-/dotenv-16.3.1.tgz#369034de7d7e5b120972693352a3bf112172cc3e"
   integrity sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==
 
+draco3d@^1.4.1:
+  version "1.5.7"
+  resolved "https://registry.npmmirror.com/draco3d/-/draco3d-1.5.7.tgz#94f9bce293eb8920c159dc91a4ce9124a9e899e0"
+  integrity sha512-m6WCKt/erDXcw+70IJXnG7M3awwQPAsZvJGX5zY7beBqpELw6RDGkYVU0W43AFxye4pDZ5i2Lbyc/NNGqwjUVQ==
+
 duplexer@^0.1.1, duplexer@^0.1.2:
   version "0.1.2"
   resolved "https://registry.npmmirror.com/duplexer/download/duplexer-0.1.2.tgz#3abe43aef3835f8ae077d136ddce0f276b0400e6"
@@ -9198,7 +9218,7 @@ fetch-retry@^5.0.2:
   resolved "https://registry.npmmirror.com/fetch-retry/-/fetch-retry-5.0.6.tgz#17d0bc90423405b7a88b74355bf364acd2a7fa56"
   integrity sha512-3yurQZ2hD9VISAhJJP9bpYFNQrHHBXE2JxxjY5aLEcDi46RmAzJE2OC9FAde0yis5ElW0jTTzs0zfg/Cca4XqQ==
 
-fflate@~0.6.10:
+fflate@^0.6.9, fflate@~0.6.10:
   version "0.6.10"
   resolved "https://registry.npmmirror.com/fflate/-/fflate-0.6.10.tgz#5f40f9659205936a2d18abf88b2e7781662b6d43"
   integrity sha512-IQrh3lEPM93wVCEczc9SaAOvkmcoQn/G8Bo1e8ZPlY3X3bnAxWaBdvTdvM1hP62iZp0BXWDy4vTAy4fF0+Dlpg==
@@ -14801,6 +14821,11 @@ postcss@^8.4.47:
     picocolors "^1.1.0"
     source-map-js "^1.2.1"
 
+potpack@^1.0.1:
+  version "1.0.2"
+  resolved "https://registry.npmmirror.com/potpack/-/potpack-1.0.2.tgz#23b99e64eb74f5741ffe7656b5b5c4ddce8dfc14"
+  integrity sha512-choctRBIV9EMT9WGAZHn3V7t0Z2pMQyl0EZE6pFc/6ml3ssw7Dlf/oAOvFwjm1HVsqfQN8GfeFyJ+d8tRzqueQ==
+
 prelude-ls@^1.2.1:
   version "1.2.1"
   resolved "https://registry.npmmirror.com/prelude-ls/download/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
@@ -17242,6 +17267,18 @@ text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.npmmirror.com/text-table/download/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
+
+three-stdlib@^2.34.0:
+  version "2.34.0"
+  resolved "https://registry.npmmirror.com/three-stdlib/-/three-stdlib-2.34.0.tgz#bc191d92037ddcc3e4d5a4ae1bd46a199a857b5b"
+  integrity sha512-U5qJYWgUKBFJqr1coMSbczA964uvouzBjQbtJlaI9LfMwy7hr+kc1Mfh0gqi/2872KmGu9utgff6lj8Oti8+VQ==
+  dependencies:
+    "@types/draco3d" "^1.4.0"
+    "@types/offscreencanvas" "^2019.6.4"
+    "@types/webxr" "^0.5.2"
+    draco3d "^1.4.1"
+    fflate "^0.6.9"
+    potpack "^1.0.1"
 
 three@^0.161.0:
   version "0.161.0"
