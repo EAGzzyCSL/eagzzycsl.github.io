@@ -55,7 +55,7 @@
     "husky": "^9.0.10",
     "identity-obj-proxy": "^3.0.0",
     "js-yaml": "^4.1.0",
-    "jsdom": "^25.0.1",
+    "jsdom": "^26.0.0",
     "lerna": "^8.1.2",
     "markdownlint": "^0.37.4",
     "markdownlint-cli": "^0.43.0",
