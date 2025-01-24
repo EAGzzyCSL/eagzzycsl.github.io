@@ -11,7 +11,7 @@
   "dependencies": {
     "@carlosjeurissen/stylelint-csstree-validator": "^3.1.0",
     "postcss-scss": "^4.0.9",
-    "stylelint-config-recess-order": "^5.0.1",
+    "stylelint-config-recess-order": "^6.0.0",
     "stylelint-config-standard": "^36.0.0",
     "stylelint-scss": "^6.3.1",
     "stylelint-use-nesting": "^6.0.0"

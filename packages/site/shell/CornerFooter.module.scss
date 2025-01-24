@@ -17,8 +17,8 @@ $highIndex: 10000;
   padding: 14px;
   background-color: $bgColor !important;
   border-radius: 100% !important;
-  transition: transform ease 0.1s !important;
   transform: translate3d(-50%, 50%, 0) scale3d($cornerScale, $cornerScale, 1);
+  transition: transform ease 0.1s !important;
 
   .expand-button {
     display: none;
@@ -52,8 +52,8 @@ $highIndex: 10000;
   width: 100%;
   height: 180px;
   padding: 12px 4px 4px 16px;
-  clip-path: circle(($cornerSize * $cornerScale / 2) at 0% 100%);
   background-color: $bgColor;
+  clip-path: circle(($cornerSize * $cornerScale / 2) at 0% 100%);
   transition: clip-path ease-in-out 0.3s;
 
   &.expand {

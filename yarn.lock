@@ -15447,10 +15447,10 @@ styled-jsx@^5.1.6:
   dependencies:
     client-only "0.0.1"
 
-stylelint-config-recess-order@^5.0.1:
-  version "5.0.1"
-  resolved "https://registry.npmmirror.com/stylelint-config-recess-order/-/stylelint-config-recess-order-5.0.1.tgz#d4c9469936de20737c0ecd5815b85c5dc7923c49"
-  integrity sha512-rKbGkoa3h0rINrGln9TFVowvSCLgPJC5O0EuPiqlqWcJMb1lImEtXktcjFCVz+hwtSUiHD3ijJc3vP9muFOgJg==
+stylelint-config-recess-order@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.npmmirror.com/stylelint-config-recess-order/-/stylelint-config-recess-order-6.0.0.tgz#5954333b0fa992a4218c6636c66186983a1051d9"
+  integrity sha512-1KqrttqpIrCYFAVQ1/bbgXo7EvvcjmkxxmnzVr+U66Xr2OlrNZqQ5+44Tmct6grCWY6wGTIBh2tSANqcmwIM2g==
   dependencies:
     stylelint-order "^6.0.4"
 

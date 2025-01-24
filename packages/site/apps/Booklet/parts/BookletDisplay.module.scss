@@ -22,8 +22,8 @@
 
   .anchor-symbol {
     .anchor {
-      margin-top: -125px;
       visibility: hidden;
+      margin-top: -125px;
     }
 
     .anchor-icon {
@@ -37,8 +37,8 @@
       text-decoration: none;
       cursor: pointer;
       opacity: 0;
-      transition: opacity ease-in-out 0.2s;
       transform: translateX(-1.5em);
+      transition: opacity ease-in-out 0.2s;
     }
   }
 

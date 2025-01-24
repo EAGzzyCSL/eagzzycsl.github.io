@@ -49,8 +49,8 @@ $list-height: 260px;
         height: 100%;
         font-size: 18px;
         text-align: center;
-        border: none;
         outline: none;
+        border: none;
       }
     }
 
@@ -63,20 +63,20 @@ $list-height: 260px;
   .search-result {
     position: absolute;
     top: $search-bar-height;
+    visibility: hidden;
     width: 100%;
     height: $list-height;
     margin-top: 2px;
     overflow: auto;
-    clip-path: circle(0% at 50% 20%);
-    visibility: hidden;
     background-color: white;
     border-radius: 4px;
+    clip-path: circle(0% at 50% 20%);
     transition: all ease-out 0.3s;
 
     &.expand {
       display: block;
-      clip-path: circle(100% at 50% 20%);
       visibility: visible;
+      clip-path: circle(100% at 50% 20%);
       transition: clip-path 0.3s ease-in-out;
     }
 

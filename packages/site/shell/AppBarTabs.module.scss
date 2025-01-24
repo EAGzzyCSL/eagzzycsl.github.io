@@ -17,10 +17,10 @@
 
   @media (orientation: portrait) {
     .tabs {
+      visibility: hidden;
       // 使用display none 控制台会有报错
       height: 0;
       overflow: hidden;
-      visibility: hidden;
     }
   }
 }
