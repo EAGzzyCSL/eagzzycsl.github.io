@@ -23,7 +23,7 @@ const MyApp = ({
   const myRouter = useMyRouter()
   useEffect(() => {
     /**
-     * 监听路由变化，记录路由加载时history的length，方便做返回按钮
+     * 监听路由变化，记录访问过的路由，方便做返回按钮
      */
     const handleRouteChange = (url: string): void => {
       // 这里传入的url是带basePath的真实path部分，不带query
@@ -37,9 +37,9 @@ const MyApp = ({
     myRouter.recordRouteLoaded(router.route, 'windowLoad')
 
     return () => {
-      router.events.off('routeChangeStart', handleRouteChange)
+      router.events.off('routeChangeComplete', handleRouteChange)
     }
-  })
+  }, [router.events, router.basePath, router.route, myRouter])
   return (
     <>
       <Head>
