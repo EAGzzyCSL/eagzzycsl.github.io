@@ -13,6 +13,7 @@ lerna-debug.log*
 
 # next.js
 .next/
+/packages/site/next-env.d.ts
 /packages/site/public/static
 /local-export
 /domain-export
