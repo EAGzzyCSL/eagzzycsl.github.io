@@ -26,6 +26,7 @@ const baseUrl = isLocal ? '/eagzzycsl.github.io' : ''
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
+  agentRules: false,
   output: isExport,
   distDir: isExport ? exportDir : undefined,
   // 配置本地部署路径
@@ -34,11 +35,6 @@ const nextConfig = {
   basePath: baseUrl || undefined,
   // 导出路径添加index.html避免刷新后404问题
   trailingSlash: true,
-  // TODO: 开启next对eslint的集成
-  // https://nextjs.org/docs/basic-features/eslint
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   // TODO: 启用next的Image组件
   // https://nextjs.org/docs/basic-features/image-optimization
   images: {

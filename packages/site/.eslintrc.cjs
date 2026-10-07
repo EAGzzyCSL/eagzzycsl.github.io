@@ -1,6 +1,7 @@
 const path = require('path')
 
 module.exports = {
+  ignorePatterns: ['next-env.d.ts'],
   overrides: [
     {
       files: ['**/*.tsx'],
