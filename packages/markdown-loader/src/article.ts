@@ -3,11 +3,7 @@ import { createLoader, CustomerProcessor } from './utils'
 import { extractToc } from './utils/toc'
 
 type MatterStringKey =
-  | 'title'
-  | 'createdAt'
-  | 'updatedAt'
-  | 'introduction'
-  | 'tags'
+  'title' | 'createdAt' | 'updatedAt' | 'introduction' | 'tags'
 
 export const articleProcessor: CustomerProcessor<
   MarkdownArticleModule,
