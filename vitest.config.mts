@@ -3,6 +3,9 @@ import * as path from 'path'
 import * as jsYaml from 'js-yaml'
 
 export default defineConfig({
+  oxc: {
+    jsx: { runtime: 'classic' },
+  },
   test: {
     include: ['**/*.test.{ts,tsx,js}'],
     exclude: ['node_modules', 'packages/site/.next/**'],
@@ -10,7 +13,7 @@ export default defineConfig({
       reporter: ['text', 'text-summary'],
     },
     alias: {
-      '@': path.resolve(__dirname, './packages/site'),
+      '@': path.resolve(import.meta.dirname, './packages/site'),
     },
     environment: 'jsdom',
   },

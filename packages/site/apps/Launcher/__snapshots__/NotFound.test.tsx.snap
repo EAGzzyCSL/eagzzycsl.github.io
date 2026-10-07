@@ -2,7 +2,7 @@
 
 exports[`render NotFound 1`] = `
 <section
-  className="_notFound_e679f1"
+  className="_notFound_81e52d"
 >
   <svg
     aria-hidden={true}
