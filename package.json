@@ -41,7 +41,7 @@
     "@mine/eslint-config": "^0.0.0",
     "@mine/prettier-config": "^0.0.0",
     "@mine/stylelint-config": "^0.0.0",
-    "@types/node": "^22.9.0",
+    "@types/node": "^26.6.4",
     "@vitest/coverage-v8": "^5.0.3",
     "cloc": "^2.9.0",
     "commitizen": "^4.3.0",
