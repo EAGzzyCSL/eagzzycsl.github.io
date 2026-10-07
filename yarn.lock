@@ -2268,10 +2268,10 @@
   resolved "https://registry.npmmirror.com/@inquirer/ansi/-/ansi-1.0.2.tgz#674a4c4d81ad460695cb2a1fc69d78cd187f337e"
   integrity sha512-S8qNSZiYzFd0wAcyG5AXCvUHC5Sr7xpZ9wZ2py9XR88jUz8wooStVx5M6dRzczbBWjic9NP7+rY0Xi7qqK/aMQ==
 
-"@inquirer/ansi@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.npmmirror.com/@inquirer/ansi/-/ansi-2.0.1.tgz#dc0fbb650d025786951f547cfc49a4d2ee77e69a"
-  integrity sha512-QAZUk6BBncv/XmSEZTscd8qazzjV3E0leUMrEPjxCd51QBgCKmprUGLex5DTsNtURm7LMzv+CLcd6S86xvBfYg==
+"@inquirer/ansi@^2.0.9":
+  version "2.0.9"
+  resolved "https://registry.npmmirror.com/@inquirer/ansi/-/ansi-2.0.9.tgz#eab42401397dae36e760ac08a6b8774994194d83"
+  integrity sha512-0Ywt3S8tqM6TWUcsRlBFQ1x+X3/o8kktX0ZiKAnByYb9GFDknnOhse1PVtfiD2BXPI8ar+BWx9PV9R0lQIcygw==
 
 "@inquirer/checkbox@^4.3.2":
   version "4.3.2"
@@ -2284,15 +2284,15 @@
     "@inquirer/type" "^3.0.10"
     yoctocolors-cjs "^2.1.3"
 
-"@inquirer/checkbox@^5.0.1":
-  version "5.0.1"
-  resolved "https://registry.npmmirror.com/@inquirer/checkbox/-/checkbox-5.0.1.tgz#fdaa04731bde60035e81343d5f0d0236e87ed9eb"
-  integrity sha512-5VPFBK8jKdsjMK3DTFOlbR0+Kkd4q0AWB7VhWQn6ppv44dr3b7PU8wSJQTC5oA0f/aGW7v/ZozQJAY9zx6PKig==
+"@inquirer/checkbox@^5.2.6":
+  version "5.2.6"
+  resolved "https://registry.npmmirror.com/@inquirer/checkbox/-/checkbox-5.2.6.tgz#d8462d4f21c3de0ff487e278ca02899d50359630"
+  integrity sha512-XkOardciF3tow2NUlY6/Qjk1QqYa+6WpmVLTpxXl97Uv4erczDEZ+xg1j6LqBf0ekcRSUiICQA4nQXHHkVKQ9w==
   dependencies:
-    "@inquirer/ansi" "^2.0.1"
-    "@inquirer/core" "^11.0.1"
-    "@inquirer/figures" "^2.0.1"
-    "@inquirer/type" "^4.0.1"
+    "@inquirer/ansi" "^2.0.9"
+    "@inquirer/core" "^12.0.4"
+    "@inquirer/figures" "^2.0.9"
+    "@inquirer/type" "4.2.0"
 
 "@inquirer/confirm@^5.1.21":
   version "5.1.21"
@@ -2302,13 +2302,13 @@
     "@inquirer/core" "^10.3.2"
     "@inquirer/type" "^3.0.10"
 
-"@inquirer/confirm@^6.0.1":
-  version "6.0.1"
-  resolved "https://registry.npmmirror.com/@inquirer/confirm/-/confirm-6.0.1.tgz#e1009c5d2e2a11bf865f729bc3936deb47ce51bd"
-  integrity sha512-wD+pM7IxLn1TdcQN12Q6wcFe5VpyCuh/I2sSmqO5KjWH2R4v+GkUToHb+PsDGobOe1MtAlXMwGNkZUPc2+L6NA==
+"@inquirer/confirm@^6.3.3":
+  version "6.3.3"
+  resolved "https://registry.npmmirror.com/@inquirer/confirm/-/confirm-6.3.3.tgz#95397513769802cfc377a5f90936a105c34da83b"
+  integrity sha512-ImOBgpl/sJTFp8naeSkNu4S0Sf8F8pxv3/CUx+LoBAdQvCVqFz6rSB2A/oZYsJge3+yphbEDxEkfaRNYq1OU0A==
   dependencies:
-    "@inquirer/core" "^11.0.1"
-    "@inquirer/type" "^4.0.1"
+    "@inquirer/core" "^12.0.4"
+    "@inquirer/type" "4.2.0"
 
 "@inquirer/core@^10.2.2", "@inquirer/core@^10.3.2":
   version "10.3.2"
@@ -2324,18 +2324,18 @@
     wrap-ansi "^6.2.0"
     yoctocolors-cjs "^2.1.3"
 
-"@inquirer/core@^11.0.1":
-  version "11.0.1"
-  resolved "https://registry.npmmirror.com/@inquirer/core/-/core-11.0.1.tgz#ba9b6dfbac183aa62992cc38f8d2e1dce69f77b5"
-  integrity sha512-Tpf49h50e4KYffVUCXzkx4gWMafUi3aDQDwfVAAGBNnVcXiwJIj4m2bKlZ7Kgyf6wjt1eyXH1wDGXcAokm4Ssw==
+"@inquirer/core@^12.0.4":
+  version "12.0.4"
+  resolved "https://registry.npmmirror.com/@inquirer/core/-/core-12.0.4.tgz#ef34d27faf6c31b95dbd5a2687df456f30f0e4e9"
+  integrity sha512-M5fB67y7jPObI45vhD82RskWwCSm0scOvenV/I6K8tIi2gfr9DXqQqJ+iw+Wi6SgapikdOiJibYzz1gW47fsDg==
   dependencies:
-    "@inquirer/ansi" "^2.0.1"
-    "@inquirer/figures" "^2.0.1"
-    "@inquirer/type" "^4.0.1"
+    "@inquirer/ansi" "^2.0.9"
+    "@inquirer/figures" "^2.0.9"
+    "@inquirer/type" "4.2.0"
     cli-width "^4.1.0"
+    fast-wrap-ansi "^0.2.0"
     mute-stream "^3.0.0"
     signal-exit "^4.1.0"
-    wrap-ansi "^9.0.2"
 
 "@inquirer/editor@^4.2.23":
   version "4.2.23"
@@ -2346,14 +2346,14 @@
     "@inquirer/external-editor" "^1.0.3"
     "@inquirer/type" "^3.0.10"
 
-"@inquirer/editor@^5.0.1":
-  version "5.0.1"
-  resolved "https://registry.npmmirror.com/@inquirer/editor/-/editor-5.0.1.tgz#8b061648c719bd6c5be330cf93090fc761166b3f"
-  integrity sha512-zDKobHI7Ry++4noiV9Z5VfYgSVpPZoMApviIuGwLOMciQaP+dGzCO+1fcwI441riklRiZg4yURWyEoX0Zy2zZw==
+"@inquirer/editor@^5.3.4":
+  version "5.3.4"
+  resolved "https://registry.npmmirror.com/@inquirer/editor/-/editor-5.3.4.tgz#1c3df4db508f75d7081be13cf70a14fd388d8c0b"
+  integrity sha512-imzxQDfw26NpcJAubMj/dE5RjU9Mp80IcT+FzsD6YoxXmL8L1QYnAFdCNv7ccGWh//73+0YP+1kfhwnExdl2VQ==
   dependencies:
-    "@inquirer/core" "^11.0.1"
-    "@inquirer/external-editor" "^2.0.1"
-    "@inquirer/type" "^4.0.1"
+    "@inquirer/core" "^12.0.4"
+    "@inquirer/external-editor" "^3.0.6"
+    "@inquirer/type" "4.2.0"
 
 "@inquirer/expand@^4.0.23":
   version "4.0.23"
@@ -2364,13 +2364,13 @@
     "@inquirer/type" "^3.0.10"
     yoctocolors-cjs "^2.1.3"
 
-"@inquirer/expand@^5.0.1":
-  version "5.0.1"
-  resolved "https://registry.npmmirror.com/@inquirer/expand/-/expand-5.0.1.tgz#b6b802729f03b97c586284695737a8c1a91b5034"
-  integrity sha512-TBrTpAB6uZNnGQHtSEkbvJZIQ3dXZOrwqQSO9uUbwct3G2LitwBCE5YZj98MbQ5nzihzs5pRjY1K9RRLH4WgoA==
+"@inquirer/expand@^5.1.6":
+  version "5.1.6"
+  resolved "https://registry.npmmirror.com/@inquirer/expand/-/expand-5.1.6.tgz#21fbc35fb81e2413bfd6d2168d35cea6aaa87beb"
+  integrity sha512-JfiLKi7qGuHmcQO/DqR10UFEp054Y1FXZaszP5ZEfHhgHeuFoT5nNFQIXFhed/5/p07SbsV2tIJFwG/dg5+NmQ==
   dependencies:
-    "@inquirer/core" "^11.0.1"
-    "@inquirer/type" "^4.0.1"
+    "@inquirer/core" "^12.0.4"
+    "@inquirer/type" "4.2.0"
 
 "@inquirer/external-editor@^1.0.3":
   version "1.0.3"
@@ -2380,23 +2380,23 @@
     chardet "^2.1.1"
     iconv-lite "^0.7.0"
 
-"@inquirer/external-editor@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.npmmirror.com/@inquirer/external-editor/-/external-editor-2.0.1.tgz#14fd7f74ba38f5b620a7725aa8dc406453cf7a97"
-  integrity sha512-BPYWJXCAK9w6R+pb2s3WyxUz9ts9SP/LDOUwA9fu7LeuyYgojz83i0DSRwezu736BgMwz14G63Xwj70hSzHohQ==
+"@inquirer/external-editor@^3.0.6":
+  version "3.0.6"
+  resolved "https://registry.npmmirror.com/@inquirer/external-editor/-/external-editor-3.0.6.tgz#f7b8a7034613a95768f8cba302f6e42e291fa94f"
+  integrity sha512-rWmw6WG8JZ7LMn/srXEylYGhL6EXXJeROE7/4x4GREh6NgzqJBDbIgpNGsYoLPfobeb4VZtEYzPGnT5EFNYhiQ==
   dependencies:
     chardet "^2.1.1"
-    iconv-lite "^0.7.0"
+    iconv-lite "^0.7.2"
 
 "@inquirer/figures@^1.0.15":
   version "1.0.15"
   resolved "https://registry.npmmirror.com/@inquirer/figures/-/figures-1.0.15.tgz#dbb49ed80df11df74268023b496ac5d9acd22b3a"
   integrity sha512-t2IEY+unGHOzAaVM5Xx6DEWKeXlDDcNPeDyUpsRc6CUhBfU3VQOEl+Vssh7VNp1dR8MdUJBWhuObjXCsVpjN5g==
 
-"@inquirer/figures@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.npmmirror.com/@inquirer/figures/-/figures-2.0.1.tgz#1489db3620c63b120ee3c370ebc7948c4d7b68af"
-  integrity sha512-KtMxyjLCuDFqAWHmCY9qMtsZ09HnjMsm8H3OvpSIpfhHdfw3/AiGWHNrfRwbyvHPtOJpumm8wGn5fkhtvkWRsg==
+"@inquirer/figures@^2.0.9":
+  version "2.0.9"
+  resolved "https://registry.npmmirror.com/@inquirer/figures/-/figures-2.0.9.tgz#8c04fdba3a78af0e57c0b3127cbd319ce604b1c1"
+  integrity sha512-EAWgUTGQ/Umgga51dE3B2PUHbufuXarDfg86uVgoSgNHNNQnyFKcOrQLWVqYMghuSyHh8+2HUH0Js9cTC1WAdg==
 
 "@inquirer/input@^4.3.1":
   version "4.3.1"
@@ -2406,13 +2406,13 @@
     "@inquirer/core" "^10.3.2"
     "@inquirer/type" "^3.0.10"
 
-"@inquirer/input@^5.0.1":
-  version "5.0.1"
-  resolved "https://registry.npmmirror.com/@inquirer/input/-/input-5.0.1.tgz#f2cce69e60f53c3375ce3ca5ef19f489b8588816"
-  integrity sha512-cEhEUohCpE2BCuLKtFFZGp4Ief05SEcqeAOq9NxzN5ThOQP8Rl5N/Nt9VEDORK1bRb2Sk/zoOyQYfysPQwyQtA==
+"@inquirer/input@^5.1.7":
+  version "5.1.7"
+  resolved "https://registry.npmmirror.com/@inquirer/input/-/input-5.1.7.tgz#004258671416fecdc507a0d369672595bdd48a2e"
+  integrity sha512-Icrs9tuMBCxGI+lFYNO71VFOnqGO8IIrLIGqnTGh07X8jZ2la9QLAYxXcikHZQjjVhIZUtU2xyH89DVN/pPhVg==
   dependencies:
-    "@inquirer/core" "^11.0.1"
-    "@inquirer/type" "^4.0.1"
+    "@inquirer/core" "^12.0.4"
+    "@inquirer/type" "4.2.0"
 
 "@inquirer/number@^3.0.23":
   version "3.0.23"
@@ -2422,13 +2422,13 @@
     "@inquirer/core" "^10.3.2"
     "@inquirer/type" "^3.0.10"
 
-"@inquirer/number@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.npmmirror.com/@inquirer/number/-/number-4.0.1.tgz#2f9c10547e2b125027cb9bc04aebe54bcdfef605"
-  integrity sha512-4//zgBGHe8Q/FfCoUXZUrUHyK/q5dyqiwsePz3oSSPSmw1Ijo35ZkjaftnxroygcUlLYfXqm+0q08lnB5hd49A==
+"@inquirer/number@^4.2.4":
+  version "4.2.4"
+  resolved "https://registry.npmmirror.com/@inquirer/number/-/number-4.2.4.tgz#24723de9046f53c4120f7a486e7c551cfcfa257a"
+  integrity sha512-C6g80U4U2+w2Vxa1CB0MN3a2WnQIfzLSUG0lduO3Au9GsirJsKATZkOwZPK+vZ1BlAlz+/Z5ParfQCS9E0svmg==
   dependencies:
-    "@inquirer/core" "^11.0.1"
-    "@inquirer/type" "^4.0.1"
+    "@inquirer/core" "^12.0.4"
+    "@inquirer/type" "4.2.0"
 
 "@inquirer/password@^4.0.23":
   version "4.0.23"
@@ -2439,14 +2439,14 @@
     "@inquirer/core" "^10.3.2"
     "@inquirer/type" "^3.0.10"
 
-"@inquirer/password@^5.0.1":
-  version "5.0.1"
-  resolved "https://registry.npmmirror.com/@inquirer/password/-/password-5.0.1.tgz#5557c2172ea4eb7cd334b695e5db56ae63e25a98"
-  integrity sha512-UJudHpd7Ia30Q+x+ctYqI9Nh6SyEkaBscpa7J6Ts38oc1CNSws0I1hJEdxbQBlxQd65z5GEJPM4EtNf6tzfWaQ==
+"@inquirer/password@^5.2.3":
+  version "5.2.3"
+  resolved "https://registry.npmmirror.com/@inquirer/password/-/password-5.2.3.tgz#cbe39dfbff0e2714f100f0b87a726fb5e9130404"
+  integrity sha512-1Uo2qfI2K3wXbfunMpvwAzoZPIUf5iEETwDGqRVbswoorXGqYQJ/bfIJFeLj+pxjq+e2UFPNOmx+fsIl4Urigw==
   dependencies:
-    "@inquirer/ansi" "^2.0.1"
-    "@inquirer/core" "^11.0.1"
-    "@inquirer/type" "^4.0.1"
+    "@inquirer/ansi" "^2.0.9"
+    "@inquirer/core" "^12.0.4"
+    "@inquirer/type" "4.2.0"
 
 "@inquirer/prompts@^7.8.6":
   version "7.10.1"
@@ -2464,21 +2464,21 @@
     "@inquirer/search" "^3.2.2"
     "@inquirer/select" "^4.4.2"
 
-"@inquirer/prompts@^8.0.1":
-  version "8.0.1"
-  resolved "https://registry.npmmirror.com/@inquirer/prompts/-/prompts-8.0.1.tgz#92d2fdc82c52b9d2446b1a3a38b0eca71d6ca464"
-  integrity sha512-MURRu/cyvLm9vchDDaVZ9u4p+ADnY0Mz3LQr0KTgihrrvuKZlqcWwlBC4lkOMvd0KKX4Wz7Ww9+uA7qEpQaqjg==
+"@inquirer/prompts@^8.7.3":
+  version "8.7.3"
+  resolved "https://registry.npmmirror.com/@inquirer/prompts/-/prompts-8.7.3.tgz#6ce4983574b86000558555d78fd475efd1546d66"
+  integrity sha512-DHK20kO+H5k/XcJQpHQUpVQbMYHHhZchlGWhZVMUV4WIuRuBW5744hipOtriE1vMqPLgnIyXFMHWKkIbTepa4Q==
   dependencies:
-    "@inquirer/checkbox" "^5.0.1"
-    "@inquirer/confirm" "^6.0.1"
-    "@inquirer/editor" "^5.0.1"
-    "@inquirer/expand" "^5.0.1"
-    "@inquirer/input" "^5.0.1"
-    "@inquirer/number" "^4.0.1"
-    "@inquirer/password" "^5.0.1"
-    "@inquirer/rawlist" "^5.0.1"
-    "@inquirer/search" "^4.0.1"
-    "@inquirer/select" "^5.0.1"
+    "@inquirer/checkbox" "^5.2.6"
+    "@inquirer/confirm" "^6.3.3"
+    "@inquirer/editor" "^5.3.4"
+    "@inquirer/expand" "^5.1.6"
+    "@inquirer/input" "^5.1.7"
+    "@inquirer/number" "^4.2.4"
+    "@inquirer/password" "^5.2.3"
+    "@inquirer/rawlist" "^5.3.6"
+    "@inquirer/search" "^4.3.4"
+    "@inquirer/select" "^5.2.6"
 
 "@inquirer/rawlist@^4.1.11":
   version "4.1.11"
@@ -2489,13 +2489,13 @@
     "@inquirer/type" "^3.0.10"
     yoctocolors-cjs "^2.1.3"
 
-"@inquirer/rawlist@^5.0.1":
-  version "5.0.1"
-  resolved "https://registry.npmmirror.com/@inquirer/rawlist/-/rawlist-5.0.1.tgz#a9b1c7177434d5c5be9ed25d09c77e5650140039"
-  integrity sha512-vVfVHKUgH6rZmMlyd0jOuGZo0Fw1jfcOqZF96lMwlgavx7g0x7MICe316bV01EEoI+c68vMdbkTTawuw3O+Fgw==
+"@inquirer/rawlist@^5.3.6":
+  version "5.3.6"
+  resolved "https://registry.npmmirror.com/@inquirer/rawlist/-/rawlist-5.3.6.tgz#76fb7efe84715c876c0cf0904122947e6e330e0c"
+  integrity sha512-2exExhQ5xTBqfN/rRlZkvM1Gm3b0eiLcWe2NqxWxe7qYmnU4M3j/n9TwzfPUb+Q7dAAz9TmBtDWWdF3jbp4ZLA==
   dependencies:
-    "@inquirer/core" "^11.0.1"
-    "@inquirer/type" "^4.0.1"
+    "@inquirer/core" "^12.0.4"
+    "@inquirer/type" "4.2.0"
 
 "@inquirer/search@^3.2.2":
   version "3.2.2"
@@ -2507,14 +2507,14 @@
     "@inquirer/type" "^3.0.10"
     yoctocolors-cjs "^2.1.3"
 
-"@inquirer/search@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.npmmirror.com/@inquirer/search/-/search-4.0.1.tgz#5c7165506f0913a0ffa2b858ea63f4292af7988f"
-  integrity sha512-XwiaK5xBvr31STX6Ji8iS3HCRysBXfL/jUbTzufdWTS6LTGtvDQA50oVETt1BJgjKyQBp9vt0VU6AmU/AnOaGA==
+"@inquirer/search@^4.3.4":
+  version "4.3.4"
+  resolved "https://registry.npmmirror.com/@inquirer/search/-/search-4.3.4.tgz#318ec97abb31fcd78901a553daab0d52b714153d"
+  integrity sha512-xsk0UeFP04jsbEeFMzghjUaH2aHXyt+WykSajQzq/8qyBNHsgGYHea/sFwv5T08kW7Sp+KDX8aF124zPUIs1Ww==
   dependencies:
-    "@inquirer/core" "^11.0.1"
-    "@inquirer/figures" "^2.0.1"
-    "@inquirer/type" "^4.0.1"
+    "@inquirer/core" "^12.0.4"
+    "@inquirer/figures" "^2.0.9"
+    "@inquirer/type" "4.2.0"
 
 "@inquirer/select@^4.4.2":
   version "4.4.2"
@@ -2527,25 +2527,25 @@
     "@inquirer/type" "^3.0.10"
     yoctocolors-cjs "^2.1.3"
 
-"@inquirer/select@^5.0.1":
-  version "5.0.1"
-  resolved "https://registry.npmmirror.com/@inquirer/select/-/select-5.0.1.tgz#44d59f639545cbfa532689c74577341179e91ebb"
-  integrity sha512-gPByrgYoezGyKMq5KjV7Tuy1JU2ArIy6/sI8sprw0OpXope3VGQwP5FK1KD4eFFqEhKu470Dwe6/AyDPmGRA0Q==
+"@inquirer/select@^5.2.6":
+  version "5.2.6"
+  resolved "https://registry.npmmirror.com/@inquirer/select/-/select-5.2.6.tgz#50b9adda69a9f49676fd64d267f6b332db98d6a2"
+  integrity sha512-jFu7CFghlr0vpi/326a4wz6BGkJH9X3H/iIu+ahyV2Ja52ktqQE3fC9BYP47JKeSPQYGUv5xquE2Vp9PbepZ3g==
   dependencies:
-    "@inquirer/ansi" "^2.0.1"
-    "@inquirer/core" "^11.0.1"
-    "@inquirer/figures" "^2.0.1"
-    "@inquirer/type" "^4.0.1"
+    "@inquirer/ansi" "^2.0.9"
+    "@inquirer/core" "^12.0.4"
+    "@inquirer/figures" "^2.0.9"
+    "@inquirer/type" "4.2.0"
+
+"@inquirer/type@4.2.0":
+  version "4.2.0"
+  resolved "https://registry.npmmirror.com/@inquirer/type/-/type-4.2.0.tgz#e7cdfa8f663b263c7d7b392f85d40413a028cb9a"
+  integrity sha512-2rnHX8RPo4glJYqnFc/v3nQeIhDcjyRRyaT7MGcfL/8xv/8K03SXYoA2tX06WVSKywWOE/ncbG3dtuzLjR5TCQ==
 
 "@inquirer/type@^3.0.10", "@inquirer/type@^3.0.8":
   version "3.0.10"
   resolved "https://registry.npmmirror.com/@inquirer/type/-/type-3.0.10.tgz#11ed564ec78432a200ea2601a212d24af8150d50"
   integrity sha512-BvziSRxfz5Ov8ch0z/n3oijRSEcEsHnhggm4xFZe93DHcUCTlutlq9Ox4SVENAfcRD22UQq7T/atg9Wr3k09eA==
-
-"@inquirer/type@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.npmmirror.com/@inquirer/type/-/type-4.0.1.tgz#0910102cb7d35c56dbcf7a926711e5ee02d96ff9"
-  integrity sha512-odO8YwoQAw/eVu/PSPsDDVPmqO77r/Mq7zcoF5VduVqIu2wSRWUgmYb5K9WH1no0SjLnOe8MDKtDL++z6mfo2g==
 
 "@isaacs/balanced-match@^4.0.1":
   version "4.0.1"
@@ -5132,11 +5132,6 @@ ansi-styles@^6.1.0:
   resolved "https://registry.npmmirror.com/ansi-styles/-/ansi-styles-6.1.0.tgz#87313c102b8118abd57371afab34618bf7350ed3"
   integrity sha512-VbqNsoz55SYGczauuup0MFUyXNQviSpFTj1RQtFzmQLk18qbVSpTFFGMT293rmDaQuKCT6InmbuEyUne4mTuxQ==
 
-ansi-styles@^6.2.1:
-  version "6.2.3"
-  resolved "https://registry.npmmirror.com/ansi-styles/-/ansi-styles-6.2.3.tgz#c044d5dcc521a076413472597a1acb1f103c4041"
-  integrity sha512-4Dj6M28JB+oAH8kFkTLUo+a2jwOFkuqb3yucU0CANcRRUbxS0cP0nZYCGjcc3BNXwRIsUVmDGgzawme7zvJHvg==
-
 ansi-wrap@0.1.0:
   version "0.1.0"
   resolved "https://registry.npmmirror.com/ansi-wrap/download/ansi-wrap-0.1.0.tgz#a82250ddb0015e9a27ca82e82ea603bbfa45efaf"
@@ -7333,11 +7328,6 @@ emoji-regex@8.0.0, emoji-regex@^8.0.0:
   resolved "https://registry.npmmirror.com/emoji-regex/download/emoji-regex-8.0.0.tgz#e818fd69ce5ccfcb404594f842963bf53164cc37"
   integrity sha1-6Bj9ac5cz8tARZT4QpY79TFkzDc=
 
-emoji-regex@^10.3.0:
-  version "10.6.0"
-  resolved "https://registry.npmmirror.com/emoji-regex/-/emoji-regex-10.6.0.tgz#bf3d6e8f7f8fd22a65d9703475bc0147357a6b0d"
-  integrity sha512-toUI84YS5YmxW219erniWD0CIVOo46xGKColeNQRgOzDorgBi1v4D71/OFzgD9GO2UGKIv1C3Sp8DAn0+j5w7A==
-
 emoji-regex@^9.2.2:
   version "9.2.2"
   resolved "https://registry.npmmirror.com/emoji-regex/download/emoji-regex-9.2.2.tgz#840c8803b0d8047f4ff0cf963176b32d4ef3ed72"
@@ -8752,11 +8742,6 @@ get-caller-file@2.0.5, get-caller-file@^2.0.5:
   resolved "https://registry.npmmirror.com/get-caller-file/download/get-caller-file-2.0.5.tgz#4f94412a82db32f36e3b0b9741f8a97feb031f7e"
   integrity sha1-T5RBKoLbMvNuOwuXQfipf+sDH34=
 
-get-east-asian-width@^1.0.0:
-  version "1.4.0"
-  resolved "https://registry.npmmirror.com/get-east-asian-width/-/get-east-asian-width-1.4.0.tgz#9bc4caa131702b4b61729cb7e42735bc550c9ee6"
-  integrity sha512-QZjmEOC+IT1uk6Rx0sX22V6uHWVwbdbxf1faPqJ1QhLdGgsRGCZoyaQBm/piRdJy/D2um6hM1UP7ZEeQ4EkP+Q==
-
 get-func-name@^2.0.1:
   version "2.0.2"
   resolved "https://registry.npmmirror.com/get-func-name/-/get-func-name-2.0.2.tgz#0d7cf20cd13fda808669ffa88f4ffc7a3943fc41"
@@ -9602,6 +9587,13 @@ iconv-lite@^0.7.0:
   dependencies:
     safer-buffer ">= 2.1.2 < 3.0.0"
 
+iconv-lite@^0.7.2:
+  version "0.7.3"
+  resolved "https://registry.npmmirror.com/iconv-lite/-/iconv-lite-0.7.3.tgz#84ee12f963e7de50bc01a13e160a078b3b0f415f"
+  integrity sha512-IKXpvIzjnC9XTAUbVBcMfGS0EPaIXtW6v+zr+RRp+hqULEpo0owZax6wyRwPOJbWbzjYspQwusTsfVr0ifh4uQ==
+  dependencies:
+    safer-buffer ">= 2.1.2 < 3.0.0"
+
 icss-utils@^5.0.0, icss-utils@^5.1.0:
   version "5.1.0"
   resolved "https://registry.npmmirror.com/icss-utils/-/icss-utils-5.1.0.tgz#c6be6858abd013d768e98366ae47e25d5887b1ae"
@@ -9798,18 +9790,17 @@ inquirer@8.2.5:
     through "^2.3.6"
     wrap-ansi "^7.0.0"
 
-inquirer@^13.0.1:
-  version "13.0.1"
-  resolved "https://registry.npmmirror.com/inquirer/-/inquirer-13.0.1.tgz#50223213e87c13edf88cb6ab98b823002cd6f00e"
-  integrity sha512-+Qob/OSCmHIgyFKa4S+bDk36Nudwt+zpUBGZaSttGMnvsrzbIqtNFS9RutEPc2QAzpQxBP0cV3wmY/c5Vy73qg==
+inquirer@^14.2.3:
+  version "14.2.3"
+  resolved "https://registry.npmmirror.com/inquirer/-/inquirer-14.2.3.tgz#660892e2d5c833870db8cf414a21dfcf6c28038f"
+  integrity sha512-eKUcE0H/iewXjEPNvIDXYp6xcgFPyUdk3My/HWQgL8WF7jLCJEdQUsQ+5WvXQs8Fj4iH3mJCzLX1JbsoJSliUw==
   dependencies:
-    "@inquirer/ansi" "^2.0.1"
-    "@inquirer/core" "^11.0.1"
-    "@inquirer/prompts" "^8.0.1"
-    "@inquirer/type" "^4.0.1"
+    "@inquirer/ansi" "^2.0.9"
+    "@inquirer/core" "^12.0.4"
+    "@inquirer/prompts" "^8.7.3"
+    "@inquirer/type" "4.2.0"
     mute-stream "^3.0.0"
     run-async "^4.0.6"
-    rxjs "^7.8.2"
 
 internal-ip@^8.0.0:
   version "8.0.0"
@@ -15156,15 +15147,6 @@ string-width@^5.0.1, string-width@^5.1.2:
     emoji-regex "^9.2.2"
     strip-ansi "^7.0.1"
 
-string-width@^7.0.0:
-  version "7.2.0"
-  resolved "https://registry.npmmirror.com/string-width/-/string-width-7.2.0.tgz#b5bb8e2165ce275d4d43476dd2700ad9091db6dc"
-  integrity sha512-tsaTIkKW9b4N+AEj+SVA+WhJzV7/zMhcSu78mLKWSk7cXMOSHsBKFWUs0fWwq8QyK3MgJBQRX6Gbi4kYbdvGkQ==
-  dependencies:
-    emoji-regex "^10.3.0"
-    get-east-asian-width "^1.0.0"
-    strip-ansi "^7.1.0"
-
 string.prototype.matchall@^4.0.11:
   version "4.0.11"
   resolved "https://registry.npmmirror.com/string.prototype.matchall/-/string.prototype.matchall-4.0.11.tgz#1092a72c59268d2abaad76582dccc687c0297e0a"
@@ -16872,15 +16854,6 @@ wrap-ansi@^8.1.0:
     ansi-styles "^6.1.0"
     string-width "^5.0.1"
     strip-ansi "^7.0.1"
-
-wrap-ansi@^9.0.2:
-  version "9.0.2"
-  resolved "https://registry.npmmirror.com/wrap-ansi/-/wrap-ansi-9.0.2.tgz#956832dea9494306e6d209eb871643bb873d7c98"
-  integrity sha512-42AtmgqjV+X1VpdOfyTGOYRi0/zsoLqtXQckTmqTeybT+BDIbM/Guxo7x3pE2vtpr1ok6xRqM9OpBe+Jyoqyww==
-  dependencies:
-    ansi-styles "^6.2.1"
-    string-width "^7.0.0"
-    strip-ansi "^7.1.0"
 
 wrappy@1, wrappy@1.0.2:
   version "1.0.2"

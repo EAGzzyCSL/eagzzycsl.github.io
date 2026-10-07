@@ -65,7 +65,7 @@
     "fs-extra": "^11.1.0",
     "highlight.js": "^11.8.0",
     "html2canvas": "^1.4.0",
-    "inquirer": "^13.0.1",
+    "inquirer": "^14.2.3",
     "internal-ip": "^8.0.0",
     "lodash": "^4.17.21",
     "log-symbols": "^7.0.0",
