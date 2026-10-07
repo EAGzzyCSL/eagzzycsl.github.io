@@ -11984,17 +11984,15 @@ mkdirp@^0.5.1:
   dependencies:
     minimist "^1.2.5"
 
-mobx-react-lite@4.0.7:
-  version "4.0.7"
-  resolved "https://registry.npmmirror.com/mobx-react-lite/-/mobx-react-lite-4.0.7.tgz#f4e21e18d05c811010dcb1d3007e797924c4d90b"
-  integrity sha512-RjwdseshK9Mg8On5tyJZHtGD+J78ZnCnRaxeQDSiciKVQDUbfZcXhmld0VMxAwvcTnPEHZySGGewm467Fcpreg==
-  dependencies:
-    use-sync-external-store "^1.2.0"
+mobx-react-lite@5.1.0:
+  version "5.1.0"
+  resolved "https://registry.npmmirror.com/mobx-react-lite/-/mobx-react-lite-5.1.0.tgz#90ff78031ad36c97b980ae7e708db90656c20e2c"
+  integrity sha512-++LQTCRr4FJCWuaEvYl5gCtGBwOpOwrnWjm9uhCUDI5nmkzLR8eT1jgMeYfJ8wc88YOYyC/ygjw2KpYPBYGsww==
 
-mobx@^6.12.3:
-  version "6.12.3"
-  resolved "https://registry.npmmirror.com/mobx/-/mobx-6.12.3.tgz#b6a0fde4268116be602d50bffb32f1b90a8fb077"
-  integrity sha512-c8NKkO4R2lShkSXZ2Ongj1ycjugjzFFo/UswHBnS62y07DMcTc9Rvo03/3nRyszIvwPNljlkd4S828zIBv/piw==
+mobx@^7.0.6:
+  version "7.0.6"
+  resolved "https://registry.npmmirror.com/mobx/-/mobx-7.0.6.tgz#0fbf76274138284b77b9e15f2f89ca5d8fbbdb7c"
+  integrity sha512-VJwjVS5K/rojqPSOoDYlXaYl38Lj+gDfLOFeJ/3Pbdh5ITbAO4ks9RgL0TeRI0bydRZ7b/7WrtPPb9Onuj/pcA==
 
 mri@^1.1.0:
   version "1.2.0"
@@ -16033,11 +16031,6 @@ url@^0.11.0:
   dependencies:
     punycode "^1.4.1"
     qs "^6.11.2"
-
-use-sync-external-store@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.npmmirror.com/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz#7dbefd6ef3fe4e767a0cf5d7287aacfb5846928a"
-  integrity sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==
 
 user-home@^2.0.0:
   version "2.0.0"
