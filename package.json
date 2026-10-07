@@ -35,11 +35,6 @@
     "ts:check": "lerna run ts:check",
     "verify": "npm-run-all prettier lint:md lint:style lint:es test ts:check lint:commit"
   },
-  "config": {
-    "commitizen": {
-      "path": "cz-customizable"
-    }
-  },
   "dependencies": {
     "@commitlint/cli": "^20.1.0",
     "@mine/commitlint-config": "^0.0.0",
