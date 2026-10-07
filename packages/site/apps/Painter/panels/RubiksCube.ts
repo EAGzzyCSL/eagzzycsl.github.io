@@ -45,7 +45,7 @@ const generateCubeCluster = (materials: THREE.MeshBasicMaterial[]) => {
 export class RubikCube {
   private camera: THREE.PerspectiveCamera
 
-  private renderer: THREE.Renderer
+  private renderer: THREE.WebGLRenderer
 
   private scene: THREE.Scene
 
