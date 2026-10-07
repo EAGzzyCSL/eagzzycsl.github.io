@@ -36,7 +36,7 @@
     "verify": "npm-run-all prettier lint:md lint:style lint:es test ts:check lint:commit"
   },
   "dependencies": {
-    "@commitlint/cli": "^20.1.0",
+    "@commitlint/cli": "^21.2.3",
     "@mine/commitlint-config": "^0.0.0",
     "@mine/eslint-config": "^0.0.0",
     "@mine/prettier-config": "^0.0.0",
