@@ -38,7 +38,6 @@ class PlumPainter {
     | 'stroke'
     | 'restore'
     | 'closePath'
-    | 'clip'
     | 'fill'
     | 'fillStyle'
     | 'moveTo'
@@ -50,13 +49,35 @@ class PlumPainter {
 
   private canvas: HTMLCanvasElement
 
+  private output: CanvasRenderingContext2D
+
+  private mask: CanvasRenderingContext2D
+
+  private brush: CanvasRenderingContext2D
+
+  private frame: CanvasRenderingContext2D
+
+  private background: CanvasRenderingContext2D
+
   constructor(canvas: HTMLCanvasElement, petalCount: number) {
     this.scaleRatio = canvas.width / PAINTER_ORIGIN_SIZE
     this.canvas = canvas
     this.petalCount = petalCount
 
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    const ctx = canvas.getContext('2d')!
+    this.output = canvas.getContext('2d')!
+    const createLayer = (): CanvasRenderingContext2D => {
+      const layer = document.createElement('canvas')
+      layer.width = canvas.width
+      layer.height = canvas.height
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      return layer.getContext('2d')!
+    }
+    this.mask = createLayer()
+    this.brush = createLayer()
+    this.frame = createLayer()
+    this.background = createLayer()
+    const ctx = this.mask
     this.canvasContext = {
       save: ctx.save.bind(ctx),
       clearRect: ctx.clearRect.bind(ctx),
@@ -64,7 +85,6 @@ class PlumPainter {
       stroke: ctx.stroke.bind(ctx),
       restore: ctx.restore.bind(ctx),
       closePath: ctx.closePath.bind(ctx),
-      clip: ctx.clip.bind(ctx),
       fill: ctx.fill.bind(ctx),
       set fillStyle(value) {
         ctx.fillStyle = value
@@ -110,11 +130,46 @@ class PlumPainter {
     }
   }
 
+  /** 保存已完成的图案，当前图案的笔迹在独立图层累积。 */
+  private beginShape(): void {
+    const { width, height } = this.canvas
+    this.background.clearRect(0, 0, width, height)
+    this.background.drawImage(this.canvas, 0, 0)
+    this.mask.clearRect(0, 0, width, height)
+    this.brush.clearRect(0, 0, width, height)
+  }
+
+  private paintDot(x: number, y: number, radius: number, color: string): void {
+    const { brush, frame, output, scaleRatio } = this
+    const { width, height } = this.canvas
+    brush.beginPath()
+    brush.arc(
+      x * scaleRatio,
+      y * scaleRatio,
+      radius * scaleRatio,
+      0,
+      2 * Math.PI,
+    )
+    brush.fillStyle = color
+    brush.fill()
+
+    // 每帧从未裁剪的笔迹重新合成，轮廓的抗锯齿透明度只应用一次。
+    frame.clearRect(0, 0, width, height)
+    frame.drawImage(brush.canvas, 0, 0)
+    frame.globalCompositeOperation = 'destination-in'
+    frame.drawImage(this.mask.canvas, 0, 0)
+    frame.globalCompositeOperation = 'source-over'
+
+    output.clearRect(0, 0, width, height)
+    output.drawImage(this.background.canvas, 0, 0)
+    output.drawImage(frame.canvas, 0, 0)
+  }
+
   /**
    * 清空画布
    */
   public clearCanvas(): void {
-    this.canvasContext.clearRect(0, 0, this.canvas.width, this.canvas.height)
+    this.output.clearRect(0, 0, this.canvas.width, this.canvas.height)
   }
 
   /**
@@ -132,6 +187,7 @@ class PlumPainter {
       ctx.lineTo(points[i][0], points[i][1])
     }
     ctx.stroke()
+    this.output.drawImage(this.mask.canvas, 0, 0)
 
     ctx.restore()
   }
@@ -145,6 +201,7 @@ class PlumPainter {
   ): Promise<void> {
     const { canvasContext: ctx } = this
 
+    this.beginShape()
     ctx.save()
 
     ctx.fillStyle = branchColor
@@ -162,17 +219,19 @@ class PlumPainter {
     }
 
     /**
-     * 完成路径绘制后开始将其作为一个裁剪路径，开始后面的填充
+     * 轮廓只栅格化一次，作为动画笔迹的透明度蒙版
      */
     ctx.closePath()
-    ctx.clip()
 
     if (fastForDebug) {
       // 调试看效果时只描个轮廓即可
       ctx.stroke()
+      this.output.drawImage(this.mask.canvas, 0, 0)
       ctx.restore()
       return
     }
+
+    ctx.fill()
 
     /**
      * 根据控制点生成绘制轨迹，调用requestAnimationFrame完整路径的填充
@@ -189,10 +248,7 @@ class PlumPainter {
         }
         const { x, y } = track[frameIndex]
         frameIndex += 1
-        ctx.beginPath()
-        ctx.arc(x, y, width * 1.414, 0, 2 * Math.PI)
-        ctx.closePath()
-        ctx.fill()
+        this.paintDot(x, y, width * 1.414, branchColor)
 
         if (frameIndex < track.length) {
           requestAnimationFrame(() => {
@@ -243,6 +299,7 @@ class PlumPainter {
       }
 
       const outline = outlines[i]
+      this.beginShape()
       ctx.save()
       ctx.beginPath()
       ctx.moveTo(...flattenTrack<2>(outline.moveTo))
@@ -254,11 +311,13 @@ class PlumPainter {
       if (fastForDebug) {
         // 调试时只绘制轮廓
         ctx.stroke()
+        this.output.drawImage(this.mask.canvas, 0, 0)
         ctx.restore()
         // eslint-disable-next-line no-continue
         continue
       }
-      ctx.clip()
+      ctx.fillStyle = flowerColor
+      ctx.fill()
 
       await new Promise<void>(resolve => {
         const track = outline.fillTrack
@@ -272,11 +331,7 @@ class PlumPainter {
           }
           const { x, y, size } = track[frameIndex]
           frameIndex += 1
-          ctx.beginPath()
-          ctx.arc(x, y, size, 0, 2 * Math.PI)
-          ctx.closePath()
-          ctx.fillStyle = flowerColor
-          ctx.fill()
+          this.paintDot(x, y, size, flowerColor)
 
           if (frameIndex < track.length) {
             requestAnimationFrame(() => {
