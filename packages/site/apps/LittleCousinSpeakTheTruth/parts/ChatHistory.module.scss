@@ -42,7 +42,7 @@ $avatar-size: 35px;
     .msg-bubble {
       display: flex;
       flex: 0 1 auto;
-      word-break: break-word;
+      overflow-wrap: anywhere;
 
       .content-text,
       .content-voice {

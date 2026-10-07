@@ -57,7 +57,7 @@ $highIndex: 10000;
   transition: clip-path ease-in-out 0.3s;
 
   &.expand {
-    clip-path: circle(100% at 50% 100%);
+    clip-path: circle(calc(100%) at 50% 100%);
   }
 
   .content {

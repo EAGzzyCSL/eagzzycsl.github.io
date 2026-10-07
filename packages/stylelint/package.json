@@ -9,15 +9,16 @@
     "lint:es-fix": "npm run lint:es -- --fix"
   },
   "dependencies": {
-    "@carlosjeurissen/stylelint-csstree-validator": "^3.1.0",
     "postcss-scss": "^4.0.9",
-    "stylelint-config-recess-order": "^6.0.0",
-    "stylelint-config-standard": "^36.0.0",
-    "stylelint-scss": "^6.10.1",
-    "stylelint-use-nesting": "^6.0.0"
+    "stylelint-config-recess-order": "^7.8.0",
+    "stylelint-config-standard": "^40.0.0",
+    "stylelint-csstree-validator": "^4.0.0",
+    "stylelint-order": "^8.1.1",
+    "stylelint-scss": "^7.3.0",
+    "stylelint-use-nesting": "^6.0.2"
   },
   "peerDependencies": {
     "postcss-scss": "^4.0.2",
-    "stylelint": "^16.6.1"
+    "stylelint": "^17.16.0"
   }
 }

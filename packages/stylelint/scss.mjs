@@ -3,6 +3,17 @@ export default {
   extends: ['./css.mjs'],
   plugins: ['stylelint-scss', 'stylelint-use-nesting'],
   rules: {
+    'at-rule-prelude-no-invalid': [
+      true,
+      { ignoreAtRules: ['mixin', 'function'] },
+    ],
+    'declaration-property-value-no-unknown': null,
+    'scss/declaration-property-value-no-unknown': true,
+    'selector-class-pattern': null,
+    'scss/selector-class-pattern': [
+      '^([a-z][a-z0-9]*)(-[a-z0-9]+)*$',
+      { resolveNestedSelectors: true },
+    ],
     'at-rule-no-unknown': null,
     'scss/at-rule-no-unknown': true,
     'scss/no-duplicate-dollar-variables': true,

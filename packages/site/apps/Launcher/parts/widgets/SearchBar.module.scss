@@ -70,13 +70,13 @@ $list-height: 260px;
     overflow: auto;
     background-color: white;
     border-radius: 4px;
-    clip-path: circle(0% at 50% 20%);
+    clip-path: circle(calc(0%) at 50% 20%);
     transition: all ease-out 0.3s;
 
     &.expand {
       display: block;
       visibility: visible;
-      clip-path: circle(100% at 50% 20%);
+      clip-path: circle(calc(100%) at 50% 20%);
       transition: clip-path 0.3s ease-in-out;
     }
 

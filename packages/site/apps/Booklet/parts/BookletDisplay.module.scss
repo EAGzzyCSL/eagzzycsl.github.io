@@ -75,6 +75,6 @@
   .original-view,
   .annotation-view,
   .comment-view {
-    page-break-inside: avoid;
+    break-inside: avoid;
   }
 }
