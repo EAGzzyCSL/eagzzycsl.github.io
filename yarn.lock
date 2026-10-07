@@ -15289,10 +15289,10 @@ svg-tags@^1.0.0:
   resolved "https://registry.npmmirror.com/svg-tags/download/svg-tags-1.0.0.tgz#58f71cee3bd519b59d4b2a843b6c7de64ac04764"
   integrity sha1-WPcc7jvVGbWdSyqEO2x95krAR2Q=
 
-swiper@^11.1.4:
-  version "11.1.4"
-  resolved "https://registry.npmmirror.com/swiper/-/swiper-11.1.4.tgz#2f8e303e8bf9e5bc40a3885fc637ae60ff27996c"
-  integrity sha512-1n7kbYJB2dFEpUHRFszq7gys/ofIBrMNibwTiMvPHwneKND/t9kImnHt6CfGPScMHgI+dWMbGTycCKGMoOO1KA==
+swiper@^14.3.0:
+  version "14.3.0"
+  resolved "https://registry.npmmirror.com/swiper/-/swiper-14.3.0.tgz#fa6cc16df408e2838979ebb4ea3a41b3b7987339"
+  integrity sha512-qw0Xv1+sylM8KCQxWxV2iYAK2G6XjFGPZ/8F1baEsY8DK4A3sTnLx6jUJ0G71rDbVQ05JHMWkcWmJ5NvlxZO0w==
 
 table@^6.9.0:
   version "6.9.0"

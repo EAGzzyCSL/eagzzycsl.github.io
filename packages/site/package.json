@@ -83,7 +83,7 @@
     "remark-gfm": "^3.0.1",
     "sass": "^1.77.4",
     "storybook": "^8.5.0",
-    "swiper": "^11.1.4",
+    "swiper": "^14.3.0",
     "three": "^0.186.1",
     "three-stdlib": "^2.36.1",
     "tslib": "^2.6.2",
