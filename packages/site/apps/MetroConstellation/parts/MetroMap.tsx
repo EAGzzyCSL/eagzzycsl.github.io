@@ -118,7 +118,7 @@ interface MetroMapProps {
   enableAdjust: boolean
 }
 
-const MetroMap = (props: MetroMapProps): JSX.Element => {
+const MetroMap = (props: MetroMapProps): React.JSX.Element => {
   const { metroLinesMap, metroStationsRaw, metroSize, enableAdjust } = props
 
   const metroStations: IMetroStation[] = useMemo(

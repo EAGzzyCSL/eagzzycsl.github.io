@@ -329,7 +329,7 @@ export interface PlumPaintingProps {
   petalCount: number
 }
 
-const PlumPainting = ({ petalCount }: PlumPaintingProps): JSX.Element => {
+const PlumPainting = ({ petalCount }: PlumPaintingProps): React.JSX.Element => {
   const board = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {

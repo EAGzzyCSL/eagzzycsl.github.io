@@ -12,7 +12,7 @@ interface AppPageProps {
   title: string
   theme?: Theme
   fullHeight?: boolean
-  children: JSX.Element
+  children: React.JSX.Element
   hideCornerFooter?: boolean
 }
 
@@ -30,10 +30,10 @@ export const defaultTheme = createTheme({
 const AppPage = ({
   title,
   children,
-  fullHeight,
+  fullHeight = false,
   theme = defaultTheme,
-  hideCornerFooter,
-}: AppPageProps): JSX.Element => (
+  hideCornerFooter = false,
+}: AppPageProps): React.JSX.Element => (
   <main
     className={cx(styles.appPage, {
       [styles.fullHeight]: fullHeight,
@@ -49,11 +49,5 @@ const AppPage = ({
     </ThemeProvider>
   </main>
 )
-
-AppPage.defaultProps = {
-  theme: defaultTheme,
-  fullHeight: false,
-  hideCornerFooter: false,
-}
 
 export default AppPage

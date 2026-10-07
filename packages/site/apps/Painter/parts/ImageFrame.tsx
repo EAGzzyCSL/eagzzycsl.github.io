@@ -33,7 +33,7 @@ export interface CropDialogProps {
   onCropDone: (imgUrl: string) => void
 }
 
-const CropDialog = (props: CropDialogProps): JSX.Element => {
+const CropDialog = (props: CropDialogProps): React.JSX.Element => {
   const { open, onClose, imgUrl, crop, onCropChange, onCropDone, aspect } =
     props
 
@@ -83,11 +83,6 @@ const CropDialog = (props: CropDialogProps): JSX.Element => {
       </DialogActions>
     </Dialog>
   )
-}
-
-CropDialog.defaultProps = {
-  crop: undefined,
-  aspect: undefined,
 }
 
 export const getImageFromClipboard = async (): Promise<{
@@ -141,22 +136,25 @@ interface ImageFrameProps {
   onImageChanged?: (imgUrl: string) => void
 }
 
-const ImageFrame = (props: ImageFrameProps): JSX.Element => {
-  const { imgUrl, fullSize, onImageChanged, aspect } = props
+const ImageFrame = (props: ImageFrameProps): React.JSX.Element => {
+  const {
+    imgUrl = '',
+    fullSize = false,
+    onImageChanged = () => undefined,
+    aspect,
+  } = props
 
-  const [originImageUrl, setOriginImageUrl] = useState(imgUrl ?? '')
+  const [originImageUrl, setOriginImageUrl] = useState(imgUrl)
   const [croppedUrl, setCroppedUrl] = useState(originImageUrl)
 
   const updateImage = (imgUrl: string) => {
-    if (onImageChanged) {
-      onImageChanged(imgUrl)
-    }
+    onImageChanged(imgUrl)
     setCroppedUrl(imgUrl)
   }
 
   useEffect(() => {
-    setOriginImageUrl(imgUrl ?? '')
-    setCroppedUrl(imgUrl ?? '')
+    setOriginImageUrl(imgUrl)
+    setCroppedUrl(imgUrl)
   }, [imgUrl])
 
   const inputRef = useRef<HTMLInputElement>(null)
@@ -263,14 +261,6 @@ const ImageFrame = (props: ImageFrameProps): JSX.Element => {
       />
     </div>
   )
-}
-
-ImageFrame.defaultProps = {
-  imgUrl: '',
-  fullSize: false,
-  aspect: undefined,
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  onImageChanged: () => {},
 }
 
 export default ImageFrame

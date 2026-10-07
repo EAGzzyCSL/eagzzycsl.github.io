@@ -30,7 +30,7 @@ const initTrinityData = {
   center: 'impossible',
 }
 
-const ImpossibleTrinity = (): JSX.Element => {
+const ImpossibleTrinity = (): React.JSX.Element => {
   const [trinityData, setTrinityData] =
     useState<IImpossibleTrinityData>(initTrinityData)
 

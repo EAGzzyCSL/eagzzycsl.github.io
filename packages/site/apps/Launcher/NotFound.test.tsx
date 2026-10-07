@@ -1,11 +1,13 @@
 import React from 'react'
 
-import * as renderer from 'react-test-renderer'
-import { test, expect } from 'vitest'
+import { cleanup, render } from '@testing-library/react'
+import { afterEach, test, expect } from 'vitest'
 
 import NotFound from './NotFound'
 
+afterEach(cleanup)
+
 test('render NotFound', () => {
-  const tree = renderer.create(<NotFound />).toJSON()
-  expect(tree).toMatchSnapshot()
+  const { asFragment } = render(<NotFound />)
+  expect(asFragment()).toMatchSnapshot()
 })

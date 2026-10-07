@@ -6,7 +6,7 @@ import { Specification } from '../type'
 
 import styles from './Spec.module.scss'
 
-export const SpecIcon = ({ icon }: { icon: string }): JSX.Element => (
+export const SpecIcon = ({ icon }: { icon: string }): React.JSX.Element => (
   <IconButton size='small'>
     <img className={styles.specIcon} src={icon} />
   </IconButton>
@@ -16,7 +16,7 @@ export const SpecIcons = ({
   specs,
 }: {
   specs: Specification[]
-}): JSX.Element => (
+}): React.JSX.Element => (
   <div className={styles.infoIcons}>
     {specs.length ? (
       specs.map(spec => (

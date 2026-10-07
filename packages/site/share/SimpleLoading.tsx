@@ -13,7 +13,7 @@ interface SimpleLoadingProps {
   title: string
 }
 
-const SimpleLoading = ({ title }: SimpleLoadingProps): JSX.Element => (
+const SimpleLoading = ({ title }: SimpleLoadingProps): React.JSX.Element => (
   <Dialog open className={styles.simpleLoading}>
     <DialogContent>
       <div className={styles.content}>

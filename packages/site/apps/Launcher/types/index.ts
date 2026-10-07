@@ -1,7 +1,7 @@
 import { MyRouter } from '@/router'
 
 export interface INotification {
-  icon: JSX.Element
+  icon: React.JSX.Element
   header: string
   title: string
   content: string

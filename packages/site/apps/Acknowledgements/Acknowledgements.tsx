@@ -31,7 +31,7 @@ const Block = ({
 }: {
   title: string
   children: ReactNode
-}): JSX.Element => (
+}): React.JSX.Element => (
   <div className={styles.block}>
     <Typography component='h1' variant='h4' gutterBottom>
       <Typography component='span' color='primary' variant='inherit'>
@@ -49,7 +49,7 @@ interface AcknowledgementsProps {
 
 const Acknowledgements = ({
   resources = dataOfResources,
-}: AcknowledgementsProps): JSX.Element => (
+}: AcknowledgementsProps): React.JSX.Element => (
   <AppPage title='版权与致谢' theme={theme} hideCornerFooter>
     <section className={styles.acknowledgements}>
       <SimpleAppBar title='版权与致谢' sticky />
@@ -139,10 +139,6 @@ const Acknowledgements = ({
     </section>
   </AppPage>
 )
-
-Acknowledgements.defaultProps = {
-  resources: dataOfResources,
-}
 
 export default Acknowledgements
 

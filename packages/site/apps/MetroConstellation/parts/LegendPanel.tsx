@@ -19,7 +19,7 @@ interface LegendPanelProps {
   setEnableAdjust: (e: boolean) => void
 }
 
-const LegendPanel = (props: LegendPanelProps): JSX.Element => {
+const LegendPanel = (props: LegendPanelProps): React.JSX.Element => {
   const { metroLinesMap, updateMetroLine, enableAdjust, setEnableAdjust } =
     props
 

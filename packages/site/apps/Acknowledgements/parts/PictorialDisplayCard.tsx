@@ -21,7 +21,7 @@ const Content = ({
 }: {
   title: string
   brief: string
-}): JSX.Element => (
+}): React.JSX.Element => (
   <CardContent>
     <Typography gutterBottom variant='h5' component='h2'>
       {title}
@@ -32,7 +32,7 @@ const Content = ({
   </CardContent>
 )
 
-const Action = ({ url }: { url: string }): JSX.Element => {
+const Action = ({ url }: { url: string }): React.JSX.Element => {
   const handleVisit = (): void => {
     window.open(url)
   }
@@ -49,7 +49,7 @@ interface MediaProps {
   image: string
 }
 
-const Media = ({ image }: MediaProps): JSX.Element => (
+const Media = ({ image }: MediaProps): React.JSX.Element => (
   <div
     className={styles.media}
     style={{
@@ -66,9 +66,9 @@ interface PictorialDisplayCardProps {
 
 const PictorialDisplayCard = ({
   data: { image, title, brief, url },
-  landscape,
-  fill,
-}: PictorialDisplayCardProps): JSX.Element => (
+  landscape = false,
+  fill = false,
+}: PictorialDisplayCardProps): React.JSX.Element => (
   <Card
     className={cx(styles.pictorialDisplayCard, {
       [styles.landscape]: landscape,
@@ -94,10 +94,5 @@ const PictorialDisplayCard = ({
     )}
   </Card>
 )
-
-PictorialDisplayCard.defaultProps = {
-  landscape: false,
-  fill: false,
-}
 
 export default PictorialDisplayCard

@@ -4,7 +4,7 @@ import * as jsYaml from 'js-yaml'
 
 export default defineConfig({
   oxc: {
-    jsx: { runtime: 'classic' },
+    jsx: { runtime: 'automatic' },
   },
   test: {
     include: ['**/*.test.{ts,tsx,js}'],

@@ -29,7 +29,7 @@ const theme = createTheme({
   },
 })
 
-const Changelog = (): JSX.Element => (
+const Changelog = (): React.JSX.Element => (
   <AppPage title='更新记录' theme={theme}>
     <section className={styles.changelog}>
       <SimpleAppBar title='更新记录' inverse sticky whiteBg />

@@ -43,7 +43,7 @@ class BulletPlayer extends React.Component<unknown, BulletPlayerState> {
 
   resizeHandler: () => void
 
-  playerRef: React.RefObject<HTMLDivElement>
+  playerRef: React.RefObject<HTMLDivElement | null>
 
   constructor(props: unknown) {
     super(props)
@@ -114,7 +114,7 @@ class BulletPlayer extends React.Component<unknown, BulletPlayerState> {
     )
   }
 
-  render(): JSX.Element {
+  render(): React.JSX.Element {
     const { tracks, bulletDuration } = this.state
     return (
       <section className={styles.bulletPlayer} ref={this.playerRef}>

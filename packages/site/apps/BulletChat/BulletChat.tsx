@@ -18,7 +18,7 @@ import spring from './data/spring-river-flower-moon-night'
 import BulletPlayer from './parts/BulletPlayer'
 import theme from './theme'
 
-const BulletChat = (): JSX.Element => {
+const BulletChat = (): React.JSX.Element => {
   const sentenceCursor = useRef(0)
   const player = useRef<BulletPlayer>(null)
 

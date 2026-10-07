@@ -6,7 +6,11 @@ import theme from '../theme'
 
 import styles from './QuoteView.module.scss'
 
-const QuoteView = ({ children }: { children: ReactNode }): JSX.Element => (
+const QuoteView = ({
+  children,
+}: {
+  children: ReactNode
+}): React.JSX.Element => (
   <Typography
     component='blockquote'
     className={styles.quoteView}

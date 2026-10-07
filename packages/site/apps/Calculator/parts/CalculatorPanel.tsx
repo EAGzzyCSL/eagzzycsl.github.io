@@ -21,7 +21,7 @@ const CalculatorPanel = <Formula extends TFormula>({
   ExpressionFC,
   historyHead,
   adaptor,
-}: ICalculatorPanelProps<Formula>): JSX.Element => {
+}: ICalculatorPanelProps<Formula>): React.JSX.Element => {
   const ForwardRefExpressionFC = useMemo(
     () =>
       forwardRef<IExpressionHandler<Formula>, IExpressionProps<Formula>>(

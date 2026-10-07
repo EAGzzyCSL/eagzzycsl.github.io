@@ -9,7 +9,7 @@ interface AudioMsgProps {
   length: string
 }
 
-const AudioMsg = ({ audioUrl, length }: AudioMsgProps): JSX.Element => {
+const AudioMsg = ({ audioUrl, length }: AudioMsgProps): React.JSX.Element => {
   const audioPlayer = useRef<null | HTMLAudioElement>(null)
 
   const [audioAnimating, setAudioAnimating] = useState(false)

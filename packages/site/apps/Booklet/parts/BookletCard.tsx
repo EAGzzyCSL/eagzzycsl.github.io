@@ -11,7 +11,7 @@ interface IBookletCard {
   onNav: () => void
 }
 
-const BookletCard = (props: IBookletCard): JSX.Element => {
+const BookletCard = (props: IBookletCard): React.JSX.Element => {
   const { name, onNav } = props
   return (
     <section

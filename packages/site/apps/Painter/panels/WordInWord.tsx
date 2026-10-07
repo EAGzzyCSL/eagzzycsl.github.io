@@ -9,7 +9,7 @@ import Saver from '../parts/Saver'
 
 import styles from './WordInWord.module.scss'
 
-const WordInWord = (): JSX.Element => {
+const WordInWord = (): React.JSX.Element => {
   const [microText, setMicroText] = useState('话')
   const [macroText, setMacroText] = useState('话里有话')
   const mainCanvas = useRef<null | HTMLCanvasElement>(null)

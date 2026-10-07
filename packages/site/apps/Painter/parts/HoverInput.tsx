@@ -7,14 +7,14 @@ import { Typography, TypographyProps } from '@/ui/material'
 import styles from './HoverInput.module.scss'
 
 interface HoverInputProps {
-  children: JSX.Element
+  children: React.JSX.Element
   initValue: string
   placeholder?: string
   displayVariant?: TypographyProps['variant']
 }
 
-const HoverInput = (props: HoverInputProps): JSX.Element => {
-  const { children, initValue, placeholder, displayVariant } = props
+const HoverInput = (props: HoverInputProps): React.JSX.Element => {
+  const { children, initValue, placeholder = '', displayVariant = 'h6' } = props
   const [value, setValue] = useState(initValue)
 
   useEffect(() => {
@@ -61,7 +61,7 @@ const HoverInput = (props: HoverInputProps): JSX.Element => {
             variant={displayVariant}
             className={styles.display}
           >
-            {((value || placeholder) ?? '')
+            {(value || placeholder)
               .split('\n')
               .map((s: string, index: number) => (
                 // eslint-disable-next-line react/no-array-index-key
@@ -72,11 +72,6 @@ const HoverInput = (props: HoverInputProps): JSX.Element => {
       </div>
     </div>
   )
-}
-
-HoverInput.defaultProps = {
-  placeholder: '',
-  displayVariant: 'h6',
 }
 
 export default HoverInput

@@ -47,7 +47,7 @@ const BMIFormulaLabel = {
 const BMIExpression: IExpressionFC<BMIFormula> = (
   props: PropsWithChildren<IExpressionProps<BMIFormula>>,
   forwardedRef: ForwardedRef<IExpressionHandler<BMIFormula>>,
-): JSX.Element => {
+): React.JSX.Element => {
   const { onExecute } = props
 
   const [formula, setFormula] = useState<BMIFormula>({
@@ -125,7 +125,7 @@ const BMIExpression: IExpressionFC<BMIFormula> = (
   )
 }
 
-const BMI = (): JSX.Element => (
+const BMI = (): React.JSX.Element => (
   <CalculatorPanel<BMIFormula>
     ExpressionFC={BMIExpression}
     historyHead={[

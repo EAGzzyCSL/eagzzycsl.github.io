@@ -41,7 +41,7 @@ const theme = createTheme({
   },
 })
 
-const MainTable = (): JSX.Element => (
+const MainTable = (): React.JSX.Element => (
   <TableContainer>
     <Table stickyHeader>
       <TableHead>
@@ -114,7 +114,7 @@ const MainTable = (): JSX.Element => (
   </TableContainer>
 )
 
-const UtilityApps = (): JSX.Element => {
+const UtilityApps = (): React.JSX.Element => {
   const [aboutVisible, setAboutVisible] = useState(false)
   return (
     <AppPage title='工具应用集' theme={theme}>

@@ -19,10 +19,10 @@ interface CatalogueStratumProps {
 // 递归渲染目录层级
 const CatalogueStratum = ({
   nestedToc,
-  onItemClick,
+  onItemClick = () => undefined,
   parentIndexPrefix,
-  noLevelId,
-}: CatalogueStratumProps): JSX.Element => (
+  noLevelId = false,
+}: CatalogueStratumProps): React.JSX.Element => (
   <ol className={styles.list}>
     {nestedToc.map((h, hIndex) => (
       // eslint-disable-next-line react/no-array-index-key
@@ -46,9 +46,7 @@ const CatalogueStratum = ({
                 ? `#${h.title}`
                 : `#${parentIndexPrefix}${hIndex + 1}|${h.title}`,
             )
-            if (onItemClick) {
-              onItemClick()
-            }
+            onItemClick()
           }}
         >
           {h.title}
@@ -67,12 +65,6 @@ const CatalogueStratum = ({
   </ol>
 )
 
-CatalogueStratum.defaultProps = {
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  onItemClick: () => {},
-  noLevelId: false,
-}
-
 interface CatalogueProps {
   toc: MarkdownArticleModule['toc']
   onItemClick?: () => void
@@ -81,9 +73,9 @@ interface CatalogueProps {
 
 const Catalogue = ({
   toc: { nested },
-  noLevelId,
-  onItemClick,
-}: CatalogueProps): JSX.Element => (
+  noLevelId = false,
+  onItemClick = () => undefined,
+}: CatalogueProps): React.JSX.Element => (
   <Typography
     component='section'
     className={styles.catalogue}
@@ -108,11 +100,5 @@ const Catalogue = ({
     </div>
   </Typography>
 )
-
-Catalogue.defaultProps = {
-  noLevelId: false,
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  onItemClick: () => {},
-}
 
 export default Catalogue

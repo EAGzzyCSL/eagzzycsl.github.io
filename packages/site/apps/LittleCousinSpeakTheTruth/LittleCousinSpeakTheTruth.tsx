@@ -44,8 +44,8 @@ interface LeftContentProps {
   onTapBack?: () => void
 }
 
-const LeftContent = (props: LeftContentProps): JSX.Element => {
-  const { useCustomBack, onTapBack } = props
+const LeftContent = (props: LeftContentProps): React.JSX.Element => {
+  const { useCustomBack = false, onTapBack = () => undefined } = props
   return (
     <div className={styles.contentAbout}>
       <AppBar position='static'>
@@ -76,17 +76,11 @@ const LeftContent = (props: LeftContentProps): JSX.Element => {
     </div>
   )
 }
-
-LeftContent.defaultProps = {
-  useCustomBack: false,
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  onTapBack: () => {},
-}
 interface RightContentProps {
   onTapBack: () => void
 }
 
-const RightContent = ({ onTapBack }: RightContentProps): JSX.Element => (
+const RightContent = ({ onTapBack }: RightContentProps): React.JSX.Element => (
   <div className={styles.contentReference}>
     <AppBar position='static'>
       <Toolbar>
@@ -132,7 +126,7 @@ const CenterContent = ({
   chats,
   onTapAbout,
   onTapReference,
-}: CenterContentProps): JSX.Element => {
+}: CenterContentProps): React.JSX.Element => {
   const [menuAnchorEl, setMenuAnchorEl] = React.useState<null | HTMLElement>(
     null,
   )
@@ -213,7 +207,7 @@ interface LittleCousinSpeakTheTruthProps {
 
 const LittleCousinSpeakTheTruth = ({
   chats = dataOfChats,
-}: LittleCousinSpeakTheTruthProps): JSX.Element => {
+}: LittleCousinSpeakTheTruthProps): React.JSX.Element => {
   const [aboutVisible, setAboutVisible] = useState(false)
 
   const [referenceVisible, setReferenceVisible] = useState(false)
@@ -276,10 +270,6 @@ const LittleCousinSpeakTheTruth = ({
       </section>
     </AppPage>
   )
-}
-
-LittleCousinSpeakTheTruth.defaultProps = {
-  chats: dataOfChats,
 }
 export default LittleCousinSpeakTheTruth
 

@@ -11,7 +11,7 @@ import { Chats } from '../type'
 import ChatHistory from './ChatHistory'
 import styles from './WeChatShell.module.scss'
 
-const Footer = (): JSX.Element => (
+const Footer = (): React.JSX.Element => (
   <div className={styles.footer}>
     <MicIcon fontSize='large' />
 
@@ -26,7 +26,7 @@ interface WeChatShellProps {
   chats: Chats
 }
 
-const WeChatShell = ({ chats }: WeChatShellProps): JSX.Element => {
+const WeChatShell = ({ chats }: WeChatShellProps): React.JSX.Element => {
   const [imageViewerVisible, setImageViewerVisible] = useState(false)
   const [imageViewerUrl, setImageViewerUrl] = useState('')
   const handleToggleImageViewer = (url = ''): void => {

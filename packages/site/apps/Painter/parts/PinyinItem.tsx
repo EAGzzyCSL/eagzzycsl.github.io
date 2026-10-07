@@ -10,7 +10,7 @@ interface PinyinItemProps {
   pinyinOfChar: string[]
 }
 
-const PinyinItem = (props: PinyinItemProps): JSX.Element => {
+const PinyinItem = (props: PinyinItemProps): React.JSX.Element => {
   const { pinyinOfChar } = props
   return (
     <div className={styles.pinyinItem}>

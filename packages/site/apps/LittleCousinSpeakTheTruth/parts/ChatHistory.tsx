@@ -17,7 +17,7 @@ const ChatHistory = ({
   leftAvatar,
   rightAvatar,
   onViewImage,
-}: ChatHistoryProps): JSX.Element => (
+}: ChatHistoryProps): React.JSX.Element => (
   <section className={styles.chatHistory}>
     {history.map((msgItem, mIndex) => (
       <div

@@ -42,7 +42,7 @@ interface EarthProps {
   mode: TMode
 }
 
-const Earth = (props: EarthProps): JSX.Element => {
+const Earth = (props: EarthProps): React.JSX.Element => {
   const { mode } = props
 
   const canvasRef = useRef<HTMLCanvasElement>(null)

@@ -9,7 +9,7 @@ import { dayjs } from '@/utils/date'
 
 import styles from './CalendarCard.module.scss'
 
-const CalendarCard = (): JSX.Element => {
+const CalendarCard = (): React.JSX.Element => {
   const [date] = useState<dayjs.Dayjs | null>(dayjs())
 
   return (

@@ -2,7 +2,7 @@ import React from 'react'
 
 import styles from './BootLoading.module.scss'
 
-const BootLoading = (): JSX.Element => (
+const BootLoading = (): React.JSX.Element => (
   <div className={styles.bootLoading}>
     <div className={styles.logo}>芹也</div>
     <div className={styles.loading}>

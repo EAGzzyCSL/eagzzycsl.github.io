@@ -19,14 +19,14 @@ interface InvalidRendererProps {
 // 理论上不会出现的元素
 const InvalidRenderer = ({
   children,
-}: ReactMarkdownProps | InvalidRendererProps): JSX.Element => {
+}: ReactMarkdownProps | InvalidRendererProps): React.JSX.Element => {
   Logger.bookletFull.error('booklet渲染出错', '出现了不应该出现的元素')
   return <div className={styles.invalidElement}>{children}</div>
 }
 
 // 空Render
 // eslint-disable-next-line react/jsx-no-useless-fragment
-const NullRenderer = (): JSX.Element => <></>
+const NullRenderer = (): React.JSX.Element => <></>
 
 /**
  * 用列表来渲染注释
@@ -36,7 +36,7 @@ const AnnotationRenderer = ({
   ordered,
 }: ReactMarkdownProps & {
   ordered: boolean
-}): JSX.Element => (
+}): React.JSX.Element => (
   <Typography
     className={styles.annotationView}
     component={ordered ? 'ol' : 'ul'}
@@ -45,7 +45,9 @@ const AnnotationRenderer = ({
   </Typography>
 )
 
-const ListItemRenderer = ({ children }: ReactMarkdownProps): JSX.Element => (
+const ListItemRenderer = ({
+  children,
+}: ReactMarkdownProps): React.JSX.Element => (
   <Typography component='li' color='text.secondary' variant='body2'>
     {children}
   </Typography>
@@ -61,8 +63,8 @@ interface OriginalRendererProps {
 
 const OriginalRenderer = ({
   children,
-  inline,
-}: OriginalRendererProps): JSX.Element =>
+  inline = false,
+}: OriginalRendererProps): React.JSX.Element =>
   inline ? (
     <InvalidRenderer>{children}</InvalidRenderer>
   ) : (
@@ -75,10 +77,6 @@ const OriginalRenderer = ({
     </Typography>
   )
 
-OriginalRenderer.defaultProps = {
-  inline: false,
-}
-
 /**
  * 用引用来渲染评注
  */
@@ -86,7 +84,7 @@ const CommentRenderer = ({
   children,
 }: {
   children: ReactNode
-}): JSX.Element => (
+}): React.JSX.Element => (
   <Typography
     component='section'
     className={styles.commentView}
@@ -97,16 +95,16 @@ const CommentRenderer = ({
   </Typography>
 )
 
-const ParagraphRenderer = ({ children }: ReactMarkdownProps): JSX.Element => (
-  <p>{children}</p>
-)
+const ParagraphRenderer = ({
+  children,
+}: ReactMarkdownProps): React.JSX.Element => <p>{children}</p>
 
 const LinkRenderer = ({
   children,
-  href,
+  href = '',
 }: ReactMarkdownProps & {
   href?: string
-}): JSX.Element => (
+}): React.JSX.Element => (
   <Link
     className={styles.link}
     href={href}
@@ -120,16 +118,12 @@ const LinkRenderer = ({
   </Link>
 )
 
-LinkRenderer.defaultProps = {
-  href: '',
-}
-
 interface HeadingType {
   level: number
   children: ReactNode
 }
 
-const AnchorSymbol = ({ id }: { id: string }): JSX.Element => (
+const AnchorSymbol = ({ id }: { id: string }): React.JSX.Element => (
   <div className={styles.anchorSymbol}>
     <div id={id} className={styles.anchor} />
     <Typography
@@ -144,7 +138,10 @@ const AnchorSymbol = ({ id }: { id: string }): JSX.Element => (
   </div>
 )
 
-const HeadingRenderer = ({ children, level }: HeadingType): JSX.Element => {
+const HeadingRenderer = ({
+  children,
+  level,
+}: HeadingType): React.JSX.Element => {
   const h = `h${level}` as 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
   const variant = `h${Math.min(level, 4) + 2}` as 'h3' | 'h4' | 'h5' | 'h6'
 
@@ -209,7 +206,7 @@ interface BookletDisplayProps {
 const BookletDisplay = ({
   markdown,
   originalOnly,
-}: BookletDisplayProps): JSX.Element => (
+}: BookletDisplayProps): React.JSX.Element => (
   <article className={styles.bookletDisplay}>
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}

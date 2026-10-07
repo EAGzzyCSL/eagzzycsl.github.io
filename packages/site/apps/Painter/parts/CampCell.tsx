@@ -11,7 +11,7 @@ interface CampCellProps {
   description: string
 }
 
-const CampCell = (props: CampCellProps): JSX.Element => {
+const CampCell = (props: CampCellProps): React.JSX.Element => {
   const { imgUrl, description } = props
   return (
     <section className={styles.campCell}>

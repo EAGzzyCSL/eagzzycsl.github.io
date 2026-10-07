@@ -9,7 +9,10 @@ export interface ImageViewProps {
   alt?: string
 }
 
-const ImageView = ({ src, alt }: ImageViewProps): JSX.Element => {
+const ImageView = ({
+  src = '',
+  alt = '',
+}: ImageViewProps): React.JSX.Element => {
   /* eslint-disable-next-line global-require, @typescript-eslint/no-var-requires,import/no-dynamic-require, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access */
   const realSrc = require(`../data/images/${src}`).default as string
   return (
@@ -27,10 +30,6 @@ const ImageView = ({ src, alt }: ImageViewProps): JSX.Element => {
       )}
     </span>
   )
-}
-ImageView.defaultProps = {
-  src: '',
-  alt: '',
 }
 
 export default ImageView

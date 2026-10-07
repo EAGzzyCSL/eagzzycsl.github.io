@@ -24,7 +24,7 @@ interface PostProps {
   postId: string
 }
 
-const Post = (props: PostProps): JSX.Element => {
+const Post = (props: PostProps): React.JSX.Element => {
   const { postId: postIdFromProps } = props
   const router = useMyRouter()
 

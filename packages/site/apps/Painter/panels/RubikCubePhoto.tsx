@@ -16,9 +16,9 @@ import { mergeImages } from '../utils/merge'
 import styles from './RubikCubePhoto.module.scss'
 import { RubikCube } from './RubiksCube'
 
-const RubikCubePhoto = (): JSX.Element => {
+const RubikCubePhoto = (): React.JSX.Element => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  const rubikCubeRef = useRef<RubikCube>()
+  const rubikCubeRef = useRef<RubikCube | undefined>(undefined)
 
   const [mergeLoading, setMergeLoading] = useState(false)
   const [fileName, setFileName] = useState('照片魔方')

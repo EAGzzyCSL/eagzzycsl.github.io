@@ -11,7 +11,7 @@ import theme from './theme'
 import { TMode } from './type'
 import styles from './ViewInEarth.module.scss'
 
-const ViewInEarth = (): JSX.Element => {
+const ViewInEarth = (): React.JSX.Element => {
   const [mode, setMode] = useState<TMode>('light')
 
   return (

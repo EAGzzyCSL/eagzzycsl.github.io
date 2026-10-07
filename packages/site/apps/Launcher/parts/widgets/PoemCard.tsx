@@ -4,7 +4,7 @@ import { Card, CardContent, Typography } from '@/ui/material'
 
 import styles from './PoemCard.module.scss'
 
-const PoemCard = (): JSX.Element => (
+const PoemCard = (): React.JSX.Element => (
   <Card className={styles.poemCard}>
     <CardContent>
       <Typography variant='h4' color='primary' gutterBottom>

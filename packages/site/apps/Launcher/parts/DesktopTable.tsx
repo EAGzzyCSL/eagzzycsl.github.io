@@ -15,10 +15,10 @@ import useStore from '../store'
 import styles from './DesktopTable.module.scss'
 
 interface DesktopTableProps {
-  tables: JSX.Element[]
+  tables: React.JSX.Element[]
 }
 
-const DesktopTable = (props: DesktopTableProps): JSX.Element => {
+const DesktopTable = (props: DesktopTableProps): React.JSX.Element => {
   const { tables } = props
   const store = useStore()
   const { shellMaskVisible, desktopCurrentTableIndex } = store

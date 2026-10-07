@@ -18,7 +18,7 @@ interface PositionAdjusterProps {
   updatePosition: (x: number, y: number) => void
 }
 
-const PositionAdjuster = (props: PositionAdjusterProps): JSX.Element => {
+const PositionAdjuster = (props: PositionAdjusterProps): React.JSX.Element => {
   const { name, x, y, updatePosition, enableAdjust } = props
 
   return (

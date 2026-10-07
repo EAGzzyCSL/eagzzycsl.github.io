@@ -7,7 +7,7 @@ import { Typography } from '@/ui/material'
 
 import styles from './NotFound.module.scss'
 
-const NotFound = (): JSX.Element => (
+const NotFound = (): React.JSX.Element => (
   <section className={styles.notFound}>
     <SentimentDissatisfiedRoundedIcon
       style={{

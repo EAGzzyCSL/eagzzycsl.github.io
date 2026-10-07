@@ -21,7 +21,7 @@ import Saver from '../parts/Saver'
 import demo from './CampNineDemo'
 import styles from './CampNineSquare.module.scss'
 
-const CampNineSquare = (): JSX.Element => {
+const CampNineSquare = (): React.JSX.Element => {
   const [camp, setCamp] = useState({
     mainTitle: '',
     ht1: '',

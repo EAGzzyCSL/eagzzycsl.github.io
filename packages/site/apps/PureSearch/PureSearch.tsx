@@ -44,7 +44,7 @@ const SearchEngineers: ISearchEngineer[] = [
   },
 ]
 
-const PureSearch = (): JSX.Element => {
+const PureSearch = (): React.JSX.Element => {
   const [keyword, setKeyword] = useState('')
   const [openInNewTab, setOpenInNewTab] = useState(true)
 

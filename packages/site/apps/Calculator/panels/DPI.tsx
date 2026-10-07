@@ -51,7 +51,7 @@ const DPIFormulaLabel = {
 const DPIExpression: IExpressionFC<DPIFormula> = (
   props: PropsWithChildren<IExpressionProps<DPIFormula>>,
   forwardedRef: ForwardedRef<IExpressionHandler<DPIFormula>>,
-): JSX.Element => {
+): React.JSX.Element => {
   const { onExecute } = props
 
   const [formula, setFormula] = useState<DPIFormula>({
@@ -155,7 +155,7 @@ const DPIExpression: IExpressionFC<DPIFormula> = (
   )
 }
 
-const DPI = (): JSX.Element => (
+const DPI = (): React.JSX.Element => (
   <CalculatorPanel<DPIFormula>
     ExpressionFC={DPIExpression}
     historyHead={[

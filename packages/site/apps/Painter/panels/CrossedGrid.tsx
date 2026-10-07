@@ -47,7 +47,7 @@ const demos: IDemoItem[] = [
   },
 ]
 
-const CrossedGrid = (): JSX.Element => {
+const CrossedGrid = (): React.JSX.Element => {
   const [fileName, setFileName] = useState('')
 
   const [demo, setDemo] = useState<IDemoItem>({

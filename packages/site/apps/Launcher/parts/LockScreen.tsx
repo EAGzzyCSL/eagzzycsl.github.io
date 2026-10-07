@@ -32,7 +32,7 @@ interface LockScreenProps {
 const LockScreen = ({
   locked,
   onUnlockScreen,
-}: LockScreenProps): JSX.Element => {
+}: LockScreenProps): React.JSX.Element => {
   const [clock, setClock] = useState<Clock>({
     time: '',
     date: '',

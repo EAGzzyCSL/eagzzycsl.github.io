@@ -17,7 +17,7 @@ interface IconDisplayCardProps {
   data: BasicDisplayItem
 }
 
-const Media = ({ image }: { image: string }): JSX.Element => (
+const Media = ({ image }: { image: string }): React.JSX.Element => (
   <div
     className={styles.media}
     style={{
@@ -28,7 +28,7 @@ const Media = ({ image }: { image: string }): JSX.Element => (
 
 const IconDisplayCard = ({
   data: { url, image, title },
-}: IconDisplayCardProps): JSX.Element => {
+}: IconDisplayCardProps): React.JSX.Element => {
   const handleVisit = (): void => {
     window.open(url)
   }

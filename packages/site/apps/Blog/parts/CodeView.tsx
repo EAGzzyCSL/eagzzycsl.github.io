@@ -13,7 +13,10 @@ export interface CodeViewProps {
   language?: string
 }
 
-const CodeView = ({ children, language }: CodeViewProps): JSX.Element => {
+const CodeView = ({
+  children,
+  language = '',
+}: CodeViewProps): React.JSX.Element => {
   const hlResult = language
     ? hljs.highlight(children, {
         language,
@@ -32,15 +35,11 @@ const CodeView = ({ children, language }: CodeViewProps): JSX.Element => {
   )
 }
 
-CodeView.defaultProps = {
-  language: '',
-}
-
 export const InlineCodeView = ({
   children,
 }: {
   children: string
-}): JSX.Element => (
+}): React.JSX.Element => (
   <Typography
     component='code'
     color='secondary'

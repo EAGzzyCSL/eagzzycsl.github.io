@@ -12,7 +12,7 @@ import AboutCardHeaderImage from '../assets/about-header.png'
 
 import styles from './AboutCard.module.scss'
 
-const AboutCard = (): JSX.Element => (
+const AboutCard = (): React.JSX.Element => (
   <Card className={styles.aboutCard}>
     <CardActionArea>
       <CardMedia component='img' image={AboutCardHeaderImage} />

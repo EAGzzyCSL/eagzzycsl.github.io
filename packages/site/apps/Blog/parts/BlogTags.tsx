@@ -8,7 +8,7 @@ interface BlogTagsProps {
   tags: string[]
 }
 
-const BlogTags = ({ tags }: BlogTagsProps): JSX.Element => (
+const BlogTags = ({ tags }: BlogTagsProps): React.JSX.Element => (
   <div className={styles.blogTags}>
     {tags.map(tag => (
       <Typography

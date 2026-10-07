@@ -5,11 +5,11 @@ import cx from 'classnames'
 import styles from './PanelSwitcher.module.scss'
 
 interface PanelSwitcherProps {
-  panels: { id: string; component: () => JSX.Element }[]
+  panels: { id: string; component: () => React.JSX.Element }[]
   selectedPanelIndex: number
 }
 
-const PanelSwitcher = (props: PanelSwitcherProps): JSX.Element => {
+const PanelSwitcher = (props: PanelSwitcherProps): React.JSX.Element => {
   const { panels, selectedPanelIndex } = props
   return (
     <div className={styles.panelSwitcher}>

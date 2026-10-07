@@ -13,11 +13,11 @@ interface SaverProps {
   fileName: string
   saveAction: 'shotAndSave' | 'saveOnly'
   imgUrlGetter?: () => string
-  children: JSX.Element
+  children: React.JSX.Element
 }
 
-const Saver = (props: SaverProps): JSX.Element => {
-  const { children, fileName, saveAction, imgUrlGetter } = props
+const Saver = (props: SaverProps): React.JSX.Element => {
+  const { children, fileName, saveAction, imgUrlGetter = () => '' } = props
   const containerRef = useRef<null | HTMLDivElement>(null)
   const [isInShot, setIsInShot] = useState(false)
 
@@ -37,7 +37,7 @@ const Saver = (props: SaverProps): JSX.Element => {
         downloadUrl = result.toDataURL()
       }
     } else {
-      downloadUrl = imgUrlGetter ? imgUrlGetter() : ''
+      downloadUrl = imgUrlGetter()
     }
 
     if (downloadUrl) {
@@ -78,10 +78,6 @@ const Saver = (props: SaverProps): JSX.Element => {
       </Fab>
     </Paper>
   )
-}
-
-Saver.defaultProps = {
-  imgUrlGetter: () => '',
 }
 
 export default Saver

@@ -13,8 +13,8 @@ interface AppBarHomeButtonProps {
   inverse?: boolean
 }
 
-const AppBarHomeButton = (props: AppBarHomeButtonProps): JSX.Element => {
-  const { inverse } = props
+const AppBarHomeButton = (props: AppBarHomeButtonProps): React.JSX.Element => {
+  const { inverse = false } = props
 
   const router = useMyRouter()
 
@@ -33,9 +33,5 @@ const AppBarHomeButton = (props: AppBarHomeButtonProps): JSX.Element => {
       {router.couldBack() ? <ArrowBackRoundedIcon /> : <HomeRoundedIcon />}
     </IconButton>
   )
-}
-
-AppBarHomeButton.defaultProps = {
-  inverse: false,
 }
 export default AppBarHomeButton

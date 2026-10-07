@@ -12,7 +12,7 @@ import data from './data/index'
 import BookletCard from './parts/BookletCard'
 import theme from './theme'
 
-const Booklet = (): JSX.Element => {
+const Booklet = (): React.JSX.Element => {
   const router = useMyRouter()
 
   const handleNav = (bookletFullPath: string): void => {

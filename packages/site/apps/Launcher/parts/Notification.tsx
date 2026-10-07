@@ -14,7 +14,7 @@ interface NotificationProps extends INotification {
 
 const headerColor = colorBlueGrey[500]
 
-const Notification = (props: NotificationProps): JSX.Element => {
+const Notification = (props: NotificationProps): React.JSX.Element => {
   const { icon, header, title, content, onClick } = props
 
   return (

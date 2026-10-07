@@ -10,7 +10,7 @@ interface IconDisplayCardProps {
   data: BasicDisplayItem
 }
 
-const Media = ({ image }: { image: string }): JSX.Element => (
+const Media = ({ image }: { image: string }): React.JSX.Element => (
   <div
     className={styles.media}
     style={{
@@ -21,7 +21,7 @@ const Media = ({ image }: { image: string }): JSX.Element => (
 
 const Icon8DisplayCard = ({
   data: { image },
-}: IconDisplayCardProps): JSX.Element => (
+}: IconDisplayCardProps): React.JSX.Element => (
   <Card className={styles.icon8DisplayCard}>
     <CardActionArea className={styles.left}>
       <CardContent>

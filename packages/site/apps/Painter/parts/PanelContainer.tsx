@@ -5,13 +5,13 @@ import cx from 'classnames'
 import styles from './PanelContainer.module.scss'
 
 interface PanelContainerProps {
-  board: JSX.Element
-  control: JSX.Element
+  board: React.JSX.Element
+  control: React.JSX.Element
   size?: 'small' | 'normal' | 'large'
 }
 
-const PanelContainer = (props: PanelContainerProps): JSX.Element => {
-  const { board, control, size } = props
+const PanelContainer = (props: PanelContainerProps): React.JSX.Element => {
+  const { board, control, size = 'normal' } = props
   return (
     <div className={styles.panelContainer}>
       <div className={styles.content}>
@@ -28,10 +28,6 @@ const PanelContainer = (props: PanelContainerProps): JSX.Element => {
       </div>
     </div>
   )
-}
-
-PanelContainer.defaultProps = {
-  size: 'normal',
 }
 
 export default PanelContainer

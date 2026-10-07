@@ -22,7 +22,7 @@ const BlogBrief = ({
   introduction,
   updatedAt,
   tags,
-}: BlogBriefProps): JSX.Element => {
+}: BlogBriefProps): React.JSX.Element => {
   const router = useMyRouter()
 
   const date = dayjs(updatedAt).format('YYYY-MM-DD')

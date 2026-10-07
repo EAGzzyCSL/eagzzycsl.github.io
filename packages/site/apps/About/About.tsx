@@ -41,7 +41,7 @@ const ContactButton = ({
   icon: React.ReactNode
   title: string
   url: string
-}): JSX.Element => (
+}): React.JSX.Element => (
   <Button
     size='small'
     color='secondary'
@@ -58,7 +58,7 @@ interface AboutProps {
   info?: Info
 }
 
-const About = ({ info = dataOfInfo }: AboutProps): JSX.Element => (
+const About = ({ info = dataOfInfo }: AboutProps): React.JSX.Element => (
   <AppPage title='关于' theme={theme} fullHeight>
     <section className={styles.about}>
       <SimpleAppBar title='关于' inverse sticky whiteBg />
@@ -117,10 +117,6 @@ const About = ({ info = dataOfInfo }: AboutProps): JSX.Element => (
 )
 
 export default About
-
-About.defaultProps = {
-  info: dataOfInfo,
-}
 
 export const getStaticProps = (): GetStaticPropsResult<AboutProps> => ({
   props: {

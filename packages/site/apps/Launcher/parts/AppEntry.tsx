@@ -11,7 +11,7 @@ interface AppEntryInterface {
   app: AppDescribe
 }
 
-const AppEntry = ({ app }: AppEntryInterface): JSX.Element => {
+const AppEntry = ({ app }: AppEntryInterface): React.JSX.Element => {
   const router = useMyRouter()
   const handleNav = (): void => {
     router.navToApp(app).catch(e => {

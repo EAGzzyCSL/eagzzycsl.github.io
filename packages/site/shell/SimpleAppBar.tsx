@@ -25,25 +25,25 @@ interface SimpleAppBarProps {
   whiteBg?: boolean
   sticky?: boolean
   title?: string
-  children?: JSX.Element
+  children?: React.JSX.Element
   hideMenuIcon?: boolean
   extraIcons?: {
     visible?: 'always' | 'never' | 'portraitOnly'
-    component: JSX.Element
+    component: React.JSX.Element
     tooltip: string
     onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
   }[]
 }
 
 const SimpleAppBar = ({
-  title,
-  inverse,
-  whiteBg,
-  sticky,
+  title = '',
+  inverse = false,
+  whiteBg = false,
+  sticky = false,
   children,
-  hideMenuIcon,
-  extraIcons,
-}: SimpleAppBarProps): JSX.Element => {
+  hideMenuIcon = false,
+  extraIcons = [],
+}: SimpleAppBarProps): React.JSX.Element => {
   const router = useMyRouter()
 
   const [menuAnchor, setMenuAnchor] = useState<null | HTMLElement>(null)
@@ -85,7 +85,7 @@ const SimpleAppBar = ({
         {/* tail按钮 */}
         <div className={styles.extraIcons}>
           {extraIcons
-            ?.filter(item => item.visible !== 'never')
+            .filter(item => item.visible !== 'never')
             .map((ei, index) => (
               <Tooltip
                 // eslint-disable-next-line react/no-array-index-key
@@ -164,16 +164,6 @@ const SimpleAppBar = ({
       </Toolbar>
     </AppBar>
   )
-}
-
-SimpleAppBar.defaultProps = {
-  title: '',
-  inverse: false,
-  whiteBg: false,
-  sticky: false,
-  children: undefined,
-  hideMenuIcon: false,
-  extraIcons: [],
 }
 
 export default SimpleAppBar

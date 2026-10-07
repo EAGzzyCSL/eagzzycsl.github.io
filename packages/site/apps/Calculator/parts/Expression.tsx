@@ -14,15 +14,15 @@ import styles from './Expression.module.scss'
  * 表达式容器
  */
 interface ExpressionContainerProps {
-  children: JSX.Element
+  children: React.JSX.Element
   signEnable: boolean
   onEvaluate: () => void
-  result: JSX.Element
+  result: React.JSX.Element
 }
 
 export const ExpressionContainer = (
   props: ExpressionContainerProps,
-): JSX.Element => {
+): React.JSX.Element => {
   const { children, signEnable, onEvaluate: onEvaluateClick, result } = props
 
   return (
@@ -55,8 +55,15 @@ interface ExpressionSymbolProps {
   marginRight?: boolean
 }
 
-export const ExpressionSymbol = (props: ExpressionSymbolProps): JSX.Element => {
-  const { content, sup, marginLeft, marginRight } = props
+export const ExpressionSymbol = (
+  props: ExpressionSymbolProps,
+): React.JSX.Element => {
+  const {
+    content,
+    sup = false,
+    marginLeft = false,
+    marginRight = false,
+  } = props
   return (
     <Typography
       component={sup ? 'sup' : 'span'}
@@ -71,12 +78,6 @@ export const ExpressionSymbol = (props: ExpressionSymbolProps): JSX.Element => {
       {content}
     </Typography>
   )
-}
-
-ExpressionSymbol.defaultProps = {
-  sup: false,
-  marginLeft: false,
-  marginRight: false,
 }
 
 /**
@@ -100,8 +101,15 @@ interface ExpressionFiledProps<Formula extends TFormula> {
 
 export const ExpressionFiled = <Formula extends TFormula>(
   props: ExpressionFiledProps<Formula>,
-): JSX.Element => {
-  const { label, formula, fieldKey, setFormula, validator, myRef } = props
+): React.JSX.Element => {
+  const {
+    label,
+    formula,
+    fieldKey,
+    setFormula,
+    validator = defaultNumberValidator,
+    myRef,
+  } = props
 
   const fieldValue = formula[fieldKey]
 
@@ -122,7 +130,7 @@ export const ExpressionFiled = <Formula extends TFormula>(
     }),
   )
 
-  const theValidator = validator ?? defaultNumberValidator
+  const theValidator = validator
 
   const handleChange = (value: string): void => {
     const { validateMsg } = theValidator(value)
@@ -156,10 +164,6 @@ export const ExpressionFiled = <Formula extends TFormula>(
   )
 }
 
-ExpressionFiled.defaultProps = {
-  validator: defaultNumberValidator,
-}
-
 /**
  * 表达式的结果
  */
@@ -169,7 +173,9 @@ interface ExpressionResultProps {
   result: string
 }
 
-export const ExpressionResult = (props: ExpressionResultProps): JSX.Element => {
+export const ExpressionResult = (
+  props: ExpressionResultProps,
+): React.JSX.Element => {
   const { label, result } = props
 
   return (
@@ -191,12 +197,12 @@ export const ExpressionResult = (props: ExpressionResultProps): JSX.Element => {
  * 表达式中的括号
  */
 interface OperatorParenthesisProps {
-  children: JSX.Element
+  children: React.JSX.Element
 }
 
 export const OperatorParenthesis = (
   props: OperatorParenthesisProps,
-): JSX.Element => {
+): React.JSX.Element => {
   const { children } = props
   return (
     <div className={styles.operatorParenthesis}>
@@ -211,11 +217,11 @@ export const OperatorParenthesis = (
  * 表达式中的立方
  */
 interface OperatorPowerProps {
-  children: JSX.Element
+  children: React.JSX.Element
   power: string
 }
 
-export const OperatorPower = (props: OperatorPowerProps): JSX.Element => {
+export const OperatorPower = (props: OperatorPowerProps): React.JSX.Element => {
   const { children, power } = props
   return (
     <div className={styles.operatorPower}>
@@ -229,12 +235,14 @@ export const OperatorPower = (props: OperatorPowerProps): JSX.Element => {
  * 表达式中的双目运算符
  */
 interface OperatorBinaryProps {
-  left: JSX.Element
-  right: JSX.Element
+  left: React.JSX.Element
+  right: React.JSX.Element
   operator: string
 }
 
-export const OperatorBinary = (props: OperatorBinaryProps): JSX.Element => {
+export const OperatorBinary = (
+  props: OperatorBinaryProps,
+): React.JSX.Element => {
   const { left, operator, right } = props
   return (
     <div className={styles.operatorBinary}>
@@ -250,12 +258,14 @@ export const OperatorBinary = (props: OperatorBinaryProps): JSX.Element => {
  */
 interface OperatorFractionProps {
   alignStart?: boolean
-  molecule: JSX.Element
-  denominator: JSX.Element
+  molecule: React.JSX.Element
+  denominator: React.JSX.Element
 }
 
-export const OperatorFraction = (props: OperatorFractionProps): JSX.Element => {
-  const { molecule, denominator, alignStart } = props
+export const OperatorFraction = (
+  props: OperatorFractionProps,
+): React.JSX.Element => {
+  const { molecule, denominator, alignStart = false } = props
   return (
     <div
       className={cx(styles.operatorFraction, {
@@ -272,8 +282,4 @@ export const OperatorFraction = (props: OperatorFractionProps): JSX.Element => {
       <div className={styles.denominator}>{denominator}</div>
     </div>
   )
-}
-
-OperatorFraction.defaultProps = {
-  alignStart: false,
 }

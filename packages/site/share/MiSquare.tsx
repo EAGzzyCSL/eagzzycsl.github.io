@@ -5,7 +5,7 @@ import cx from 'classnames'
 import styles from './MiSquare.module.scss'
 
 interface MiSquareProps {
-  children: JSX.Element
+  children: React.JSX.Element
   noBorderTop?: boolean
   noBorderRight?: boolean
   noBorderBottom?: boolean
@@ -14,11 +14,11 @@ interface MiSquareProps {
 
 const MiSquare = ({
   children,
-  noBorderTop,
-  noBorderRight,
-  noBorderBottom,
-  noBorderLeft,
-}: MiSquareProps): JSX.Element => (
+  noBorderTop = false,
+  noBorderRight = false,
+  noBorderBottom = false,
+  noBorderLeft = false,
+}: MiSquareProps): React.JSX.Element => (
   <div
     className={cx(styles.miSquare, {
       [styles.noBorderTop]: noBorderTop,
@@ -38,12 +38,5 @@ const MiSquare = ({
     </div>
   </div>
 )
-
-MiSquare.defaultProps = {
-  noBorderTop: false,
-  noBorderRight: false,
-  noBorderBottom: false,
-  noBorderLeft: false,
-}
 
 export default MiSquare

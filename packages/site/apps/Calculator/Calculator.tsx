@@ -34,7 +34,7 @@ const getPanelIndexFromHash = (): number => {
   return matchedIndx >= 0 ? matchedIndx : 0
 }
 
-const Calculator = (): JSX.Element => {
+const Calculator = (): React.JSX.Element => {
   const [activeTabIndex, setActiveTabIndex] = React.useState(
     getPanelIndexFromHash(),
   )

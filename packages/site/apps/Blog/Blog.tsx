@@ -44,7 +44,7 @@ interface BlogProps {
   posts?: Article[]
 }
 
-const Blog = ({ posts = dataOfPosts }: BlogProps): JSX.Element => {
+const Blog = ({ posts = dataOfPosts }: BlogProps): React.JSX.Element => {
   const store = useStore()
 
   const [currentPage, setCurrentPage] = useState(1)
@@ -160,10 +160,6 @@ const Blog = ({ posts = dataOfPosts }: BlogProps): JSX.Element => {
       </section>
     </AppPage>
   )
-}
-
-Blog.defaultProps = {
-  posts: dataOfPosts,
 }
 
 export default observer(Blog)

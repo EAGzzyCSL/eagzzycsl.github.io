@@ -22,7 +22,7 @@ const imagesShouldPreLoad = [
   ...sitemap.appList.map(item => item.icon),
 ]
 
-const Launcher = (): JSX.Element => {
+const Launcher = (): React.JSX.Element => {
   const store = useStore()
 
   const handleUnlockScreen = (): void => {

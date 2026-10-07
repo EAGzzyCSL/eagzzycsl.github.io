@@ -13,7 +13,7 @@ interface AppBarTabsProps {
   handleSwitchTab: (activeTabIndex: number) => void
 }
 
-const AppBarTabs = (props: AppBarTabsProps): JSX.Element => {
+const AppBarTabs = (props: AppBarTabsProps): React.JSX.Element => {
   const { tabs, activeTabIndex, handleSwitchTab } = props
   return (
     <div className={styles.appBarTabs}>

@@ -16,7 +16,10 @@ interface SimpleErrorProps {
   onConfirm: () => void
 }
 
-const SimpleError = ({ message, onConfirm }: SimpleErrorProps): JSX.Element => (
+const SimpleError = ({
+  message,
+  onConfirm,
+}: SimpleErrorProps): React.JSX.Element => (
   <Dialog open className={styles.simpleError}>
     <DialogTitle>发生错误</DialogTitle>
     <DialogContent className={styles.content}>

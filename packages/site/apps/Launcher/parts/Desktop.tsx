@@ -15,7 +15,7 @@ interface DesktopProps {
   apps: AppDescribe[]
 }
 
-const Desktop = (props: DesktopProps): JSX.Element => {
+const Desktop = (props: DesktopProps): React.JSX.Element => {
   const { apps } = props
 
   const firstTableApps = apps.filter(app => app.tableIndex === 0)

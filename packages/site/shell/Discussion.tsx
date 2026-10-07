@@ -19,7 +19,7 @@ const isDev = process.env.NODE_ENV === 'development'
 const Discussion = ({
   title,
   sidesMargin = false,
-}: DiscussionProps): JSX.Element => {
+}: DiscussionProps): React.JSX.Element => {
   const router = useRouter()
 
   const routerPath = router.asPath.split('#')[0]
@@ -48,9 +48,5 @@ const Discussion = ({
       )}
     </div>
   )
-}
-
-Discussion.defaultProps = {
-  sidesMargin: false,
 }
 export default Discussion

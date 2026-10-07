@@ -45,7 +45,7 @@ const standard = {
   ],
 } as const
 
-const BMIStandard = (): JSX.Element => {
+const BMIStandard = (): React.JSX.Element => {
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null)
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>): void => {

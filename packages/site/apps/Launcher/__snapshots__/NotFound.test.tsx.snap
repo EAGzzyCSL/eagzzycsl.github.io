@@ -1,41 +1,37 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`render NotFound 1`] = `
-<section
-  className="_notFound_81e52d"
->
-  <svg
-    aria-hidden={true}
-    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-    data-testid="SentimentDissatisfiedRoundedIcon"
-    focusable="false"
-    style={
-      {
-        "fontSize": "80px",
-        "fontWeight": "lighter",
-      }
-    }
-    viewBox="0 0 24 24"
+<DocumentFragment>
+  <section
+    class="_notFound_81e52d"
   >
-    <circle
-      cx="15.5"
-      cy="9.5"
-      r="1.5"
-    />
-    <circle
-      cx="8.5"
-      cy="9.5"
-      r="1.5"
-    />
-    <path
-      d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2M12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8m0-6c-1.9 0-3.63.97-4.65 2.58-.22.35-.11.81.24 1.03s.81.11 1.03-.24c.74-1.18 2-1.88 3.38-1.88s2.64.7 3.38 1.88c.14.23.39.35.64.35.14 0 .27-.04.4-.11.35-.22.46-.68.24-1.03C15.63 14.96 13.9 14 12 14"
-    />
-  </svg>
-  <h1
-    className="MuiTypography-root MuiTypography-h2 css-o2za6n-MuiTypography-root"
-    style={{}}
-  >
-    404 Not Found
-  </h1>
-</section>
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+      data-testid="SentimentDissatisfiedRoundedIcon"
+      focusable="false"
+      style="font-weight: lighter; font-size: 80px;"
+      viewBox="0 0 24 24"
+    >
+      <circle
+        cx="15.5"
+        cy="9.5"
+        r="1.5"
+      />
+      <circle
+        cx="8.5"
+        cy="9.5"
+        r="1.5"
+      />
+      <path
+        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2M12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8m0-6c-1.9 0-3.63.97-4.65 2.58-.22.35-.11.81.24 1.03s.81.11 1.03-.24c.74-1.18 2-1.88 3.38-1.88s2.64.7 3.38 1.88c.14.23.39.35.64.35.14 0 .27-.04.4-.11.35-.22.46-.68.24-1.03C15.63 14.96 13.9 14 12 14"
+      />
+    </svg>
+    <h1
+      class="MuiTypography-root MuiTypography-h2 css-o2za6n-MuiTypography-root"
+    >
+      404 Not Found
+    </h1>
+  </section>
+</DocumentFragment>
 `;

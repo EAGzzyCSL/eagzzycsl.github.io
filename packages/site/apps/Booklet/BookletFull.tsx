@@ -25,7 +25,7 @@ interface BookletFullProps {
   bookletId: string
 }
 
-const BookletFull = (props: BookletFullProps): JSX.Element => {
+const BookletFull = (props: BookletFullProps): React.JSX.Element => {
   const { bookletId } = props
 
   // 假定一定可以查找到，如果找不到的话ssg也不会产生页面

@@ -27,7 +27,7 @@ interface SearchBarProps {
   apps: AppDescribe[]
 }
 
-const SearchBar = ({ onSearch, apps }: SearchBarProps): JSX.Element => {
+const SearchBar = ({ onSearch, apps }: SearchBarProps): React.JSX.Element => {
   const router = useMyRouter()
 
   const [inputValue, setInputValue] = useState('')

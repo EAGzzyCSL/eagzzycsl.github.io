@@ -12,7 +12,7 @@ interface AckChipProps {
   url: string
 }
 
-const AckChip = (props: AckChipProps): JSX.Element => {
+const AckChip = (props: AckChipProps): React.JSX.Element => {
   const { icon, label, url } = props
 
   const handleClick = (): void => {

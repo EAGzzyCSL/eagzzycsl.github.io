@@ -9,7 +9,7 @@ import useStore from '../store'
 
 import styles from './StatusBar.module.scss'
 
-const StatusBar = (): JSX.Element => {
+const StatusBar = (): React.JSX.Element => {
   const { shellMaskVisible } = useStore()
 
   return (

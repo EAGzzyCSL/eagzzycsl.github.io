@@ -18,7 +18,7 @@ interface ActionBarProps {
   onTableNext: () => void
 }
 
-const ActionBar = (props: ActionBarProps): JSX.Element => {
+const ActionBar = (props: ActionBarProps): React.JSX.Element => {
   const { onTablePrevious, onTableNext } = props
   const { shellMaskVisible } = useStore()
   return (

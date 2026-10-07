@@ -14,7 +14,7 @@ import MetroMap from './parts/MetroMap'
 import theme from './theme'
 import { IMetroLine, IMetroLinesMap } from './type'
 
-const MetroConstellation = (): JSX.Element => {
+const MetroConstellation = (): React.JSX.Element => {
   const [panelVisible, setPanelVisible] = useState(false)
 
   const [metroLinesMap, setMetroLinesMap] = useState<IMetroLinesMap>(() =>

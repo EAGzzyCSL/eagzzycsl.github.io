@@ -11,7 +11,7 @@ interface SpellProps {
   text: string
 }
 
-const Spell = ({ text }: SpellProps): JSX.Element => {
+const Spell = ({ text }: SpellProps): React.JSX.Element => {
   const pinyinList = useMemo(
     () =>
       // 应对可能要强行给字母加拼音的场景

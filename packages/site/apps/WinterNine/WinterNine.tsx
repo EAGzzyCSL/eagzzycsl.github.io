@@ -51,7 +51,7 @@ const AnimationTimeConfig = {
 const getSelectedDate = (): dayjs.Dayjs =>
   dayjs(dayjs(getHashContent() || undefined).format('YYYY-MM-DD'))
 
-const WinterNine = (): JSX.Element => {
+const WinterNine = (): React.JSX.Element => {
   const [selectedDate, setSelectedDate] = useState(() => getSelectedDate())
 
   const dayDiff = selectedDate.diff(WINTER_SOLSTICE_DATE, 'day')

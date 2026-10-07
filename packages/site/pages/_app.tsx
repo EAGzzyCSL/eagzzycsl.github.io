@@ -18,7 +18,7 @@ const MyApp = ({
 }: {
   Component: typeof React.Component
   pageProps: Record<string, unknown>
-}): JSX.Element => {
+}): React.JSX.Element => {
   const router = useRouter()
   const myRouter = useMyRouter()
   useEffect(() => {

@@ -217,9 +217,9 @@ interface CharBlockProps {
 const CharBlock = ({
   charIndex,
   currentStroke,
-  animateLastStroke,
+  animateLastStroke = false,
   lastAnimateStrokeTimeout,
-}: CharBlockProps): JSX.Element => {
+}: CharBlockProps): React.JSX.Element => {
   const tablet = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
@@ -259,10 +259,6 @@ const CharBlock = ({
       </MiSquare>
     </section>
   )
-}
-
-CharBlock.defaultProps = {
-  animateLastStroke: false,
 }
 
 export default CharBlock

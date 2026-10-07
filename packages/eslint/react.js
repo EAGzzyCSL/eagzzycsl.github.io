@@ -31,6 +31,7 @@ module.exports = {
   ],
   rules: {
     ...a11yOff,
+    'react/require-default-props': ['error', { functions: 'ignore' }],
     'css-modules/no-unused-class': ['error', { camelCase: true }],
     'css-modules/no-undef-class': ['error', { camelCase: true }],
     'react/function-component-definition': [

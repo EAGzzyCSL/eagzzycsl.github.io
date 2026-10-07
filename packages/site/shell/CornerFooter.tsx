@@ -22,7 +22,7 @@ interface ISimpleAcknowledge {
   label: string
 }
 
-const CornerFooter = (): JSX.Element => {
+const CornerFooter = (): React.JSX.Element => {
   const router = useMyRouter()
 
   const acknowledgements = useMemo<

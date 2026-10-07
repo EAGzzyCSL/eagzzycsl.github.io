@@ -18,7 +18,7 @@ interface BasicDisplayCardProps {
 }
 const BasicDisplayCard = ({
   data: { title, url, brief },
-}: BasicDisplayCardProps): JSX.Element => {
+}: BasicDisplayCardProps): React.JSX.Element => {
   const handleVisit = (): void => {
     window.open(url)
   }

@@ -10,7 +10,7 @@ interface TitleProps {
   subTitle: string
 }
 
-const CampTitle = ({ title, subTitle }: TitleProps): JSX.Element => (
+const CampTitle = ({ title, subTitle }: TitleProps): React.JSX.Element => (
   <section className={styles.campTitle}>
     <HoverInput initValue={title} displayVariant='h6'>
       <TextField inputProps={{ style: { textAlign: 'center' } }} />

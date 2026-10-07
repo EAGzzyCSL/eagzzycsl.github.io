@@ -14,7 +14,7 @@ import Spell from '../parts/Spell'
 
 import styles from './Dictionary.module.scss'
 
-const Dictionary = (): JSX.Element => {
+const Dictionary = (): React.JSX.Element => {
   const [word, setWord] = useState('自编字典')
   const [definition, setDefinitions] = useState(
     '指把自己生造的词做成字典的样子，让其更加具有可信度。',

@@ -12,7 +12,7 @@ interface NineProps {
 const Nine = ({
   dayIndex,
   lastAnimateStrokeTimeout,
-}: NineProps): JSX.Element => (
+}: NineProps): React.JSX.Element => (
   <section className={styles.nine}>
     <section className={styles.nineContainer}>
       {Array(9)

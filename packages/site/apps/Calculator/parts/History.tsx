@@ -39,7 +39,7 @@ const History = ({
   onRemoveItem,
   onReUseItem: onReuseItem,
   onRepealItemDelete,
-}: HistoryProps): JSX.Element => {
+}: HistoryProps): React.JSX.Element => {
   const headLabels = ['序号', ...head, '操作']
 
   const [snackBarVisible, setSnackBarVisible] = useState(false)

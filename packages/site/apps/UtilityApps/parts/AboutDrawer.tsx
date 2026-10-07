@@ -15,7 +15,7 @@ const NormalList = ({
 }: {
   title: string
   contents: string[]
-}): JSX.Element => (
+}): React.JSX.Element => (
   <div>
     <Typography variant='h5' gutterBottom color='secondary'>
       {title}
@@ -30,7 +30,7 @@ const NormalList = ({
   </div>
 )
 
-const TraitList = (): JSX.Element => (
+const TraitList = (): React.JSX.Element => (
   <div className={styles.traitList}>
     <Typography variant='h5' gutterBottom color='secondary'>
       图例
@@ -48,7 +48,7 @@ const TraitList = (): JSX.Element => (
   </div>
 )
 
-const AboutDrawer = (): JSX.Element => (
+const AboutDrawer = (): React.JSX.Element => (
   <section className={styles.aboutDrawer}>
     <Typography variant='h4' gutterBottom color='primary'>
       关于此页

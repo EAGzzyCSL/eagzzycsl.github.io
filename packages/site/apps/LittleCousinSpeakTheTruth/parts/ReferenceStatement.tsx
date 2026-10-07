@@ -23,7 +23,7 @@ const ReferenceStatement = ({
   content,
   linkTitle,
   href,
-}: ReferenceStatementProps): JSX.Element => (
+}: ReferenceStatementProps): React.JSX.Element => (
   <section className={styles.referenceStatement}>
     <Card>
       <CardActionArea>
