@@ -13031,7 +13031,7 @@ postcss@^8.4.38:
     picocolors "^1.0.0"
     source-map-js "^1.2.0"
 
-postcss@^8.4.40, postcss@^8.5.26, postcss@^8.5.28, postcss@^8.5.8:
+postcss@^8.4.40, postcss@^8.5.26, postcss@^8.5.28, postcss@^8.5.29, postcss@^8.5.8:
   version "8.5.29"
   resolved "https://registry.npmmirror.com/postcss/-/postcss-8.5.29.tgz#086a0ded2c0257c71efb8c68776b477774714b4a"
   integrity sha512-49cGhUbXj8Qenv0iTMxA1cFBzxXoctpC9Ujd77t1WcbJIr6nF/eI7g/8MgxrYldFRuAXvja7xQRwavoW7kgrxQ==
