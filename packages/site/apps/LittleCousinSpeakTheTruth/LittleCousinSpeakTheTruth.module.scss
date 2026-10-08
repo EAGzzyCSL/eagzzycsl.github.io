@@ -1,4 +1,4 @@
-@import './parts/weChat.scss';
+@use './parts/weChat.scss' as *;
 
 .little-cousin-speak-the-truth {
   display: flex;

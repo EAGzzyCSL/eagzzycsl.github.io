@@ -1,4 +1,4 @@
-@import './DisplayCard.scss';
+@use './DisplayCard.scss' as *;
 
 .icon-display-card {
   display: flex;

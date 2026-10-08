@@ -1,4 +1,4 @@
-@import '@/share/mixin.scss';
+@use '@/share/mixin.scss' as *;
 
 $entry-width: 118px;
 $entry-height: 118px + 20px;

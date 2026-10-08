@@ -1,4 +1,4 @@
-@import './DisplayCard.scss';
+@use './DisplayCard.scss' as *;
 
 .basic-display-card {
   display: flex;

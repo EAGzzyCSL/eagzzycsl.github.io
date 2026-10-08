@@ -53,7 +53,7 @@ $highIndex: 10000;
   height: 180px;
   padding: 12px 4px 4px 16px;
   background-color: $bgColor;
-  clip-path: circle(($cornerSize * $cornerScale / 2) at 0% 100%);
+  clip-path: circle(calc($cornerSize * $cornerScale / 2) at 0% 100%);
   transition: clip-path ease-in-out 0.3s;
 
   &.expand {
