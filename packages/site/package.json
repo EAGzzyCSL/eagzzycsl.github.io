@@ -59,7 +59,7 @@
     "disqus-react": "^1.1.7",
     "eslint-plugin-storybook": "^10.6.1",
     "file-loader": "^6.2.0",
-    "fs-extra": "^11.1.0",
+    "fs-extra": "^11.4.1",
     "highlight.js": "^11.8.0",
     "html2canvas": "^1.4.0",
     "inquirer": "^14.2.3",
