@@ -73,7 +73,7 @@ const AboutDrawer = (): React.JSX.Element => (
     <Typography
       className={styles.footer}
       variant='overline'
-      display='block'
+      sx={{ display: 'block' }}
       color='textSecondary'
     >
       lastUpdated: {LAST_UPDATED}

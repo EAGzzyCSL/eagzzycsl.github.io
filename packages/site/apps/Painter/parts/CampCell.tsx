@@ -18,7 +18,9 @@ const CampCell = (props: CampCellProps): React.JSX.Element => {
       <ImageFrame imgUrl={imgUrl} />
       <div className={styles.margin} />
       <HoverInput initValue={description} displayVariant='body2'>
-        <TextField inputProps={{ style: { textAlign: 'center' } }} />
+        <TextField
+          slotProps={{ htmlInput: { style: { textAlign: 'center' } } }}
+        />
       </HoverInput>
     </section>
   )

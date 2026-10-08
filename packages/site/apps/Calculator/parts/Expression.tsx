@@ -185,8 +185,10 @@ export const ExpressionResult = (
         size='small'
         label={label}
         value={result}
-        InputProps={{
-          readOnly: true,
+        slotProps={{
+          input: {
+            readOnly: true,
+          },
         }}
       />
     </div>

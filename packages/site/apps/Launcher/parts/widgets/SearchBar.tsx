@@ -196,7 +196,7 @@ const SearchBar = ({ onSearch, apps }: SearchBarProps): React.JSX.Element => {
                         handleClickAppItem(index)
                       }}
                     >
-                      <ListItemIcon>
+                      <ListItemIcon sx={{ minWidth: 56 }}>
                         <img src={app.icon} className={styles.appIcon} />
                       </ListItemIcon>
                       <ListItemText primary={app.title} />

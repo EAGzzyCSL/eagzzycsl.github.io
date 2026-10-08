@@ -87,7 +87,9 @@ const CampNineSquare = (): React.JSX.Element => {
                   <div className={cx(styles.columnItem)}>
                     <HoverInput initValue={camp.mainTitle} displayVariant='h6'>
                       <TextField
-                        inputProps={{ style: { textAlign: 'center' } }}
+                        slotProps={{
+                          htmlInput: { style: { textAlign: 'center' } },
+                        }}
                       />
                     </HoverInput>
                   </div>

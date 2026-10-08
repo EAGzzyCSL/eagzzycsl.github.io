@@ -23,7 +23,7 @@ const AppBarTabs = (props: AppBarTabsProps): React.JSX.Element => {
             disableUnderline
             value={activeTabIndex}
             onChange={e => {
-              handleSwitchTab(e.target.value as number)
+              handleSwitchTab(e.target.value)
             }}
             classes={{
               select: styles.muiSelect,

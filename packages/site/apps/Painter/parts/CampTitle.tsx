@@ -13,10 +13,15 @@ interface TitleProps {
 const CampTitle = ({ title, subTitle }: TitleProps): React.JSX.Element => (
   <section className={styles.campTitle}>
     <HoverInput initValue={title} displayVariant='h6'>
-      <TextField inputProps={{ style: { textAlign: 'center' } }} />
+      <TextField
+        slotProps={{ htmlInput: { style: { textAlign: 'center' } } }}
+      />
     </HoverInput>
     <HoverInput initValue={subTitle} displayVariant='subtitle1'>
-      <TextField inputProps={{ style: { textAlign: 'center' } }} size='small' />
+      <TextField
+        slotProps={{ htmlInput: { style: { textAlign: 'center' } } }}
+        size='small'
+      />
     </HoverInput>
   </section>
 )

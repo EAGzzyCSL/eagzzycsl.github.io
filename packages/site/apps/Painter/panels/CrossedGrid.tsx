@@ -70,7 +70,9 @@ const CrossedGrid = (): React.JSX.Element => {
                   <HoverInput displayVariant='h3' initValue={demo.text1}>
                     <TextField
                       multiline
-                      inputProps={{ style: { textAlign: 'center' } }}
+                      slotProps={{
+                        htmlInput: { style: { textAlign: 'center' } },
+                      }}
                     />
                   </HoverInput>
                 </div>
@@ -83,9 +85,11 @@ const CrossedGrid = (): React.JSX.Element => {
                   <HoverInput displayVariant='h3' initValue={demo.text2}>
                     <TextField
                       multiline
-                      inputProps={{
-                        style: {
-                          textAlign: 'center',
+                      slotProps={{
+                        htmlInput: {
+                          style: {
+                            textAlign: 'center',
+                          },
                         },
                       }}
                     />

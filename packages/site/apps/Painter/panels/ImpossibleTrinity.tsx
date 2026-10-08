@@ -52,7 +52,9 @@ const ImpossibleTrinity = (): React.JSX.Element => {
                   >
                     <TextField
                       multiline
-                      inputProps={{ style: { textAlign: 'center' } }}
+                      slotProps={{
+                        htmlInput: { style: { textAlign: 'center' } },
+                      }}
                     />
                   </HoverInput>
                 </div>
@@ -65,7 +67,9 @@ const ImpossibleTrinity = (): React.JSX.Element => {
                   >
                     <TextField
                       multiline
-                      inputProps={{ style: { textAlign: 'center' } }}
+                      slotProps={{
+                        htmlInput: { style: { textAlign: 'center' } },
+                      }}
                     />
                   </HoverInput>
                 </div>
@@ -78,7 +82,9 @@ const ImpossibleTrinity = (): React.JSX.Element => {
                   >
                     <TextField
                       multiline
-                      inputProps={{ style: { textAlign: 'center' } }}
+                      slotProps={{
+                        htmlInput: { style: { textAlign: 'center' } },
+                      }}
                     />
                   </HoverInput>
                 </div>
@@ -91,7 +97,9 @@ const ImpossibleTrinity = (): React.JSX.Element => {
                 >
                   <TextField
                     multiline
-                    inputProps={{ style: { textAlign: 'center' } }}
+                    slotProps={{
+                      htmlInput: { style: { textAlign: 'center' } },
+                    }}
                   />
                 </HoverInput>
               </div>
@@ -102,7 +110,9 @@ const ImpossibleTrinity = (): React.JSX.Element => {
                 >
                   <TextField
                     multiline
-                    inputProps={{ style: { textAlign: 'center' } }}
+                    slotProps={{
+                      htmlInput: { style: { textAlign: 'center' } },
+                    }}
                   />
                 </HoverInput>
               </div>
@@ -110,7 +120,9 @@ const ImpossibleTrinity = (): React.JSX.Element => {
                 <HoverInput initValue={trinityData.gammaAlpha}>
                   <TextField
                     multiline
-                    inputProps={{ style: { textAlign: 'center' } }}
+                    slotProps={{
+                      htmlInput: { style: { textAlign: 'center' } },
+                    }}
                   />
                 </HoverInput>
               </div>
@@ -119,7 +131,9 @@ const ImpossibleTrinity = (): React.JSX.Element => {
                 <HoverInput initValue={trinityData.center}>
                   <TextField
                     multiline
-                    inputProps={{ style: { textAlign: 'center' } }}
+                    slotProps={{
+                      htmlInput: { style: { textAlign: 'center' } },
+                    }}
                   />
                 </HoverInput>
               </div>
