@@ -1,7 +1,6 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode, PropsWithChildren } from 'react'
 
 import ReactMarkdown, { Components } from 'react-markdown'
-import { ReactMarkdownProps } from 'react-markdown/lib/ast-to-react'
 import rehypeRaw from 'rehype-raw'
 import rehypeSanitize from 'rehype-sanitize'
 import remarkGfm from 'remark-gfm'
@@ -25,13 +24,13 @@ import QuoteView from './QuoteView'
 
 const ParagraphRenderer = ({
   children,
-}: ReactMarkdownProps): React.JSX.Element => (
+}: PropsWithChildren): React.JSX.Element => (
   <Typography className={styles.paragraph} component='p'>
     {children}
   </Typography>
 )
 
-const TableRenderer = ({ children }: ReactMarkdownProps): React.JSX.Element => (
+const TableRenderer = ({ children }: PropsWithChildren): React.JSX.Element => (
   <TableContainer className={styles.tableContainer}>
     <Table>{children}</Table>
   </TableContainer>
@@ -39,26 +38,26 @@ const TableRenderer = ({ children }: ReactMarkdownProps): React.JSX.Element => (
 
 const TableHeadRenderer = ({
   children,
-}: ReactMarkdownProps): React.JSX.Element => <TableHead>{children}</TableHead>
+}: PropsWithChildren): React.JSX.Element => <TableHead>{children}</TableHead>
 
 const TableBodyRenderer = ({
   children,
-}: ReactMarkdownProps): React.JSX.Element => <TableBody>{children}</TableBody>
+}: PropsWithChildren): React.JSX.Element => <TableBody>{children}</TableBody>
 
 const TableRowRenderer = ({
   children,
-}: ReactMarkdownProps): React.JSX.Element => <TableRow>{children}</TableRow>
+}: PropsWithChildren): React.JSX.Element => <TableRow>{children}</TableRow>
 
 const TableCellRenderer = ({
   children,
-}: ReactMarkdownProps): React.JSX.Element => (
+}: PropsWithChildren): React.JSX.Element => (
   <TableCell align='center'>{children}</TableCell>
 )
 
 const ListRenderer = ({
   children,
   ordered,
-}: ReactMarkdownProps & {
+}: PropsWithChildren & {
   ordered: boolean
 }): React.JSX.Element => (
   <Typography className={styles.list} component={ordered ? 'ol' : 'ul'}>
@@ -68,44 +67,50 @@ const ListRenderer = ({
 
 const ListItemRenderer = ({
   children,
-}: ReactMarkdownProps): React.JSX.Element => (
+}: PropsWithChildren): React.JSX.Element => (
   <Typography component='li'>{children}</Typography>
 )
 
 const ImageRenderer = ({
   alt,
   src,
-}: ReactMarkdownProps & {
+}: PropsWithChildren & {
   alt?: string
   src?: string | Blob
 }): React.JSX.Element => (
   <ImageView src={typeof src === 'string' ? src : undefined} alt={alt} />
 )
-interface CodeRenderProps {
-  children: ReactNode
-  className?: string
-  inline?: boolean
+const CodeBlockRenderer = ({
+  children,
+}: PropsWithChildren): React.JSX.Element => {
+  if (
+    !React.isValidElement<{ children?: ReactNode; className?: string }>(
+      children,
+    )
+  ) {
+    return <pre>{children}</pre>
+  }
+  return (
+    <CodeView language={children.props.className?.replace(/^language-/, '')}>
+      {String(children.props.children ?? '')}
+    </CodeView>
+  )
 }
 
-const CodeRenderer = ({
+const InlineCodeRenderer = ({
   children,
-  inline = false,
-  className = '',
-}: CodeRenderProps): React.JSX.Element =>
-  inline ? (
-    <InlineCodeView>{String(children)}</InlineCodeView>
-  ) : (
-    <CodeView language={className}>{String(children)}</CodeView>
-  )
+}: PropsWithChildren): React.JSX.Element => (
+  <InlineCodeView>{String(children ?? '')}</InlineCodeView>
+)
 
 const BlockquoteRenderer = ({
   children,
-}: ReactMarkdownProps): React.JSX.Element => <QuoteView>{children}</QuoteView>
+}: PropsWithChildren): React.JSX.Element => <QuoteView>{children}</QuoteView>
 
 const LinkRenderer = ({
   children,
   href = '',
-}: ReactMarkdownProps & {
+}: PropsWithChildren & {
   href?: string
 }): React.JSX.Element => (
   <Link
@@ -123,15 +128,13 @@ const LinkRenderer = ({
 
 const EmphasisRenderer = ({
   children,
-}: ReactMarkdownProps): React.JSX.Element => (
+}: PropsWithChildren): React.JSX.Element => (
   <Typography component='em' color='secondary' className={styles.emphasis}>
     {children}
   </Typography>
 )
 
-const StrongRenderer = ({
-  children,
-}: ReactMarkdownProps): React.JSX.Element => (
+const StrongRenderer = ({ children }: PropsWithChildren): React.JSX.Element => (
   <Typography component='strong' color='secondary' className={styles.strong}>
     {children}
   </Typography>
@@ -151,13 +154,14 @@ const renderers: Components = {
   th: TableCellRenderer,
   td: TableCellRenderer,
   // 列表
-  ol: ListRenderer,
-  ul: ListRenderer,
+  ol: ({ children }) => <ListRenderer ordered>{children}</ListRenderer>,
+  ul: ({ children }) => <ListRenderer ordered={false}>{children}</ListRenderer>,
   li: ListItemRenderer,
   // 图片
   img: ImageRenderer,
   // 代码
-  code: CodeRenderer,
+  code: InlineCodeRenderer,
+  pre: CodeBlockRenderer,
   // 引用
   blockquote: BlockquoteRenderer,
   // 链接
@@ -192,7 +196,7 @@ const AnchorSymbol = ({
 
 interface HeadingType {
   level: number
-  children: ReactNode
+  children?: ReactNode
 }
 
 const createRenderer = (): Components => {
@@ -239,12 +243,24 @@ const createRenderer = (): Components => {
   }
   return {
     ...renderers,
-    h1: HeadingRenderer,
-    h2: HeadingRenderer,
-    h3: HeadingRenderer,
-    h4: HeadingRenderer,
-    h5: HeadingRenderer,
-    h6: HeadingRenderer,
+    h1: ({ children }) => (
+      <HeadingRenderer level={1}>{children}</HeadingRenderer>
+    ),
+    h2: ({ children }) => (
+      <HeadingRenderer level={2}>{children}</HeadingRenderer>
+    ),
+    h3: ({ children }) => (
+      <HeadingRenderer level={3}>{children}</HeadingRenderer>
+    ),
+    h4: ({ children }) => (
+      <HeadingRenderer level={4}>{children}</HeadingRenderer>
+    ),
+    h5: ({ children }) => (
+      <HeadingRenderer level={5}>{children}</HeadingRenderer>
+    ),
+    h6: ({ children }) => (
+      <HeadingRenderer level={6}>{children}</HeadingRenderer>
+    ),
   }
 }
 

@@ -14,6 +14,7 @@ import less from 'highlight.js/lib/languages/less'
 import markdown from 'highlight.js/lib/languages/markdown'
 import nginx from 'highlight.js/lib/languages/nginx'
 import php from 'highlight.js/lib/languages/php'
+import plain from 'highlight.js/lib/languages/plaintext'
 import properties from 'highlight.js/lib/languages/properties'
 import python from 'highlight.js/lib/languages/python'
 import scss from 'highlight.js/lib/languages/scss'
@@ -40,6 +41,7 @@ const languages = {
   markdown,
   nginx,
   php,
+  plain,
   properties,
   python,
   scss,

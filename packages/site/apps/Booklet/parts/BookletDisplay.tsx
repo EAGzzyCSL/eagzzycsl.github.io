@@ -1,7 +1,6 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode, PropsWithChildren } from 'react'
 
 import ReactMarkdown, { Components } from 'react-markdown'
-import { ReactMarkdownProps } from 'react-markdown/lib/ast-to-react'
 import rehypeRaw from 'rehype-raw'
 import rehypeSanitize from 'rehype-sanitize'
 import remarkGfm from 'remark-gfm'
@@ -12,14 +11,10 @@ import Logger from '@/utils/logger'
 
 import styles from './BookletDisplay.module.scss'
 
-interface InvalidRendererProps {
-  children: ReactNode
-}
-
 // 理论上不会出现的元素
 const InvalidRenderer = ({
   children,
-}: ReactMarkdownProps | InvalidRendererProps): React.JSX.Element => {
+}: PropsWithChildren): React.JSX.Element => {
   Logger.bookletFull.error('booklet渲染出错', '出现了不应该出现的元素')
   return <div className={styles.invalidElement}>{children}</div>
 }
@@ -33,21 +28,15 @@ const NullRenderer = (): React.JSX.Element => <></>
  */
 const AnnotationRenderer = ({
   children,
-  ordered,
-}: ReactMarkdownProps & {
-  ordered: boolean
-}): React.JSX.Element => (
-  <Typography
-    className={styles.annotationView}
-    component={ordered ? 'ol' : 'ul'}
-  >
+}: PropsWithChildren): React.JSX.Element => (
+  <Typography className={styles.annotationView} component='ul'>
     {children}
   </Typography>
 )
 
 const ListItemRenderer = ({
   children,
-}: ReactMarkdownProps): React.JSX.Element => (
+}: PropsWithChildren): React.JSX.Element => (
   <Typography component='li' color='text.secondary' variant='body2'>
     {children}
   </Typography>
@@ -56,26 +45,24 @@ const ListItemRenderer = ({
 /**
  * 用代码来渲染原文
  */
-interface OriginalRendererProps {
-  children: ReactNode
-  inline?: boolean
-}
-
 const OriginalRenderer = ({
   children,
-  inline = false,
-}: OriginalRendererProps): React.JSX.Element =>
-  inline ? (
-    <InvalidRenderer>{children}</InvalidRenderer>
-  ) : (
-    <Typography
-      component='section'
-      variant='body1'
-      className={styles.originalView}
-    >
-      {String(children)}
-    </Typography>
+}: PropsWithChildren): React.JSX.Element => {
+  if (!React.isValidElement<{ children?: ReactNode }>(children)) {
+    return <InvalidRenderer>{children}</InvalidRenderer>
+  }
+  return (
+    <pre>
+      <Typography
+        component='section'
+        variant='body1'
+        className={styles.originalView}
+      >
+        {String(children.props.children ?? '')}
+      </Typography>
+    </pre>
   )
+}
 
 /**
  * 用引用来渲染评注
@@ -83,7 +70,7 @@ const OriginalRenderer = ({
 const CommentRenderer = ({
   children,
 }: {
-  children: ReactNode
+  children?: ReactNode
 }): React.JSX.Element => (
   <Typography
     component='section'
@@ -97,12 +84,12 @@ const CommentRenderer = ({
 
 const ParagraphRenderer = ({
   children,
-}: ReactMarkdownProps): React.JSX.Element => <p>{children}</p>
+}: PropsWithChildren): React.JSX.Element => <p>{children}</p>
 
 const LinkRenderer = ({
   children,
   href = '',
-}: ReactMarkdownProps & {
+}: PropsWithChildren & {
   href?: string
 }): React.JSX.Element => (
   <Link
@@ -120,7 +107,7 @@ const LinkRenderer = ({
 
 interface HeadingType {
   level: number
-  children: ReactNode
+  children?: ReactNode
 }
 
 const AnchorSymbol = ({ id }: { id: string }): React.JSX.Element => (
@@ -181,7 +168,8 @@ const createRenderer = (originalOnly: boolean): Components => ({
   // 图片
   img: InvalidRenderer,
   // 代码
-  code: OriginalRenderer,
+  code: InvalidRenderer,
+  pre: OriginalRenderer,
   // 引用
   blockquote: originalOnly ? NullRenderer : CommentRenderer,
   // 链接
@@ -190,12 +178,12 @@ const createRenderer = (originalOnly: boolean): Components => ({
   em: InvalidRenderer,
   strong: InvalidRenderer,
   // 标题
-  h1: HeadingRenderer,
-  h2: HeadingRenderer,
-  h3: HeadingRenderer,
-  h4: HeadingRenderer,
-  h5: HeadingRenderer,
-  h6: HeadingRenderer,
+  h1: ({ children }) => <HeadingRenderer level={1}>{children}</HeadingRenderer>,
+  h2: ({ children }) => <HeadingRenderer level={2}>{children}</HeadingRenderer>,
+  h3: ({ children }) => <HeadingRenderer level={3}>{children}</HeadingRenderer>,
+  h4: ({ children }) => <HeadingRenderer level={4}>{children}</HeadingRenderer>,
+  h5: ({ children }) => <HeadingRenderer level={5}>{children}</HeadingRenderer>,
+  h6: ({ children }) => <HeadingRenderer level={6}>{children}</HeadingRenderer>,
 })
 
 interface BookletDisplayProps {
