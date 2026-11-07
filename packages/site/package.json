@@ -80,7 +80,7 @@
     "remark-gfm": "^3.0.1",
     "sass": "^1.108.1",
     "storybook": "^10.6.1",
-    "swiper": "^14.3.0",
+    "swiper": "^14.4.0",
     "three": "^0.187.0",
     "three-stdlib": "^2.36.1",
     "tslib": "^2.9.1",
