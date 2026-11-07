@@ -78,7 +78,7 @@
     "rehype-raw": "^6.1.0",
     "rehype-sanitize": "^5.0.0",
     "remark-gfm": "^3.0.1",
-    "sass": "^1.105.1",
+    "sass": "^1.108.1",
     "storybook": "^10.6.1",
     "swiper": "^14.3.0",
     "three": "^0.187.0",
