@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "rootDir": ".",
     "module": "ESNext",
     "moduleResolution": "Bundler",
+    "types": ["node"],
     "strict": true
   },
   "exclude": ["node_modules"]

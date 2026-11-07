@@ -1,12 +1,11 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "baseUrl": ".",
     "rootDir": ".",
     "paths": {
       "@/*": ["./*"]
     },
-    "target": "es5",
+    "target": "es2025",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -18,8 +17,6 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "downlevelIteration": true,
     "importHelpers": true,
     "incremental": true
   },
