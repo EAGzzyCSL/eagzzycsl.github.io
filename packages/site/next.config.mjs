@@ -3,6 +3,7 @@
  * https://github.com/vercel/next.js/issues/3728
  */
 import { execSync } from 'child_process'
+import { relative, resolve } from 'path'
 
 import NextBundleAnalyzer from '@next/bundle-analyzer'
 import dayjs from 'dayjs'
@@ -78,7 +79,10 @@ const nextConfig = {
       loader: 'file-loader',
       options: {
         name: '[path][name].[md5:hash:hex:8].[ext]',
-        outputPath: '../public/static',
+        outputPath: relative(
+          config.output.path,
+          resolve(config.context, 'public/static'),
+        ),
         publicPath: `${baseUrl}/static`,
       },
     })
