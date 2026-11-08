@@ -1,0 +1,154 @@
+.not-found {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+  padding: 24px 24px 144px;
+  color: #535353;
+  background: #f7f7f7;
+}
+
+.content {
+  width: 100%;
+  max-width: 840px;
+}
+
+.game {
+  display: block;
+  width: 100%;
+  overflow: visible;
+  fill: currentcolor;
+}
+
+.score {
+  font-family: monospace;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.brick-face {
+  fill: #969696;
+}
+
+.brick-texture {
+  fill: #c6c6c6;
+}
+
+.brick-shade {
+  fill: #757575;
+}
+
+.paddle-face,
+.ball-face {
+  fill: #858585;
+}
+
+.paddle-shade,
+.ball-shade {
+  fill: #535353;
+}
+
+.ball-highlight {
+  fill: #dedede;
+}
+
+.walls {
+  fill: none;
+  stroke: currentcolor;
+  stroke-width: 2;
+}
+
+.status {
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.status-detail {
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+.description {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  left: 24px;
+  text-align: center;
+}
+
+.title {
+  margin: 0 0 8px;
+  font-size: clamp(24px, 4vw, 30px);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.instructions {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #707070;
+}
+
+.home {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  font-size: 16px;
+  color: inherit;
+  text-underline-offset: 5px;
+
+  &:hover {
+    color: #222;
+  }
+
+  &:focus-visible {
+    outline: 2px dashed currentcolor;
+    outline-offset: 6px;
+  }
+}
+
+@media (width <= 767px), (pointer: coarse) {
+  .not-found {
+    flex-direction: column;
+    gap: 32px;
+    padding: 24px 16px calc(152px + env(safe-area-inset-bottom));
+  }
+
+  .content {
+    max-width: 640px;
+  }
+
+  .description {
+    position: static;
+  }
+
+  .instructions {
+    display: none;
+  }
+
+  .title {
+    margin: 0;
+    font-size: 24px;
+  }
+
+  .home {
+    position: fixed;
+    bottom: calc(16px + env(safe-area-inset-bottom));
+    left: max(16px, env(safe-area-inset-left));
+  }
+}
+
+@media (orientation: landscape) and (height <= 500px) and (pointer: coarse) {
+  .not-found {
+    flex-direction: row;
+    gap: 24px;
+    padding-top: 16px;
+  }
+
+  .content {
+    max-width: calc(142svh - 240px);
+  }
+}

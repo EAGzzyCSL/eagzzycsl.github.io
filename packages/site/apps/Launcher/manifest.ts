@@ -10,7 +10,7 @@ export default Manifest.create({
   title: 'launcher',
   router: {
     '/': 'Launcher.tsx',
-    '/404': 'NotFound.tsx',
+    '/404': 'NotFound',
   },
   tableIndex: 0,
   acknowledgements: [

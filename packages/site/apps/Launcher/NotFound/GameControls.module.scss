@@ -1,0 +1,53 @@
+.controls {
+  display: none;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 16px;
+}
+
+.control-button,
+.direction-button {
+  min-height: 56px;
+  padding: 12px;
+  font: inherit;
+  color: inherit;
+  touch-action: none;
+  cursor: pointer;
+  user-select: none;
+  background: #eee;
+  border: 2px solid #858585;
+  border-radius: 0;
+  box-shadow: 0 3px 0 #b8b8b8;
+  -webkit-touch-callout: none;
+
+  &:active {
+    background: #d8d8d8;
+    box-shadow: none;
+    transform: translateY(2px);
+  }
+
+  &:focus-visible {
+    outline: 2px dashed currentcolor;
+    outline-offset: 4px;
+  }
+}
+
+.direction-button {
+  font-size: 24px;
+}
+
+@media (width <= 767px), (pointer: coarse) {
+  .controls {
+    position: fixed;
+    right: max(16px, env(safe-area-inset-right));
+    bottom: calc(64px + env(safe-area-inset-bottom));
+    left: max(16px, env(safe-area-inset-left));
+    z-index: 1;
+    display: grid;
+  }
+}
+
+@media (orientation: landscape) and (height <= 500px) and (pointer: coarse) {
+  .controls {
+    gap: 8px;
+  }
+}
