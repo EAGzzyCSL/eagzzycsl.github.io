@@ -7,15 +7,18 @@ import SimpleError from '@/share/SimpleError'
 import SimpleLoading from '@/share/SimpleLoading'
 import { TextField, Button, Typography } from '@/ui/material'
 
-import border from '../assets/rubik/border.svg'
-import cat from '../assets/rubik/gua.jpg'
-import ImageFrame from '../parts/ImageFrame'
-import PanelContainer from '../parts/PanelContainer'
-import Saver from '../parts/Saver'
-import { mergeImages } from '../utils/merge'
+import cat from '../../assets/rubik/gua.jpg'
+import ImageFrame from '../../parts/ImageFrame'
+import PanelContainer from '../../parts/PanelContainer'
+import Saver from '../../parts/Saver'
+import { mergeImages } from '../../utils/merge'
 
+import RotationPad from './RotationPad'
 import styles from './RubikCubePhoto.module.scss'
+import { DEFAULT_BODY_COLOR } from './rubikModel'
 import { RubikCube } from './RubiksCube'
+import { DEFAULT_VIEW } from './rubikView'
+import type { RubikView } from './rubikView'
 
 const RubikCubePhoto = (): React.JSX.Element => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -26,6 +29,8 @@ const RubikCubePhoto = (): React.JSX.Element => {
   const [imgUrl, setImgUrl] = useState(avatar)
   const [textureUrl, setTextureUrl] = useState(avatar)
   const [error, setError] = useState('')
+  const [view, setView] = useState(DEFAULT_VIEW)
+  const [bodyColor, setBodyColor] = useState(DEFAULT_BODY_COLOR)
 
   useEffect(() => {
     if (!canvasRef.current) return undefined
@@ -46,7 +51,7 @@ const RubikCubePhoto = (): React.JSX.Element => {
       setMergeLoading(true)
       setError('')
       try {
-        const merged = await mergeImages([textureUrl, border], {
+        const merged = await mergeImages([textureUrl], {
           width: 200,
           height: 200,
         })
@@ -56,15 +61,7 @@ const RubikCubePhoto = (): React.JSX.Element => {
           texture.dispose()
           return
         }
-        const material = new THREE.MeshBasicMaterial({ map: texture })
-        cube.updateMaterials([
-          material,
-          material,
-          material,
-          material,
-          material,
-          material,
-        ])
+        cube.updateTexture(texture)
       } catch (cause) {
         if (!isCancelled())
           setError(cause instanceof Error ? cause.message : '图片加载失败')
@@ -79,6 +76,15 @@ const RubikCubePhoto = (): React.JSX.Element => {
       cancelled = true
     }
   }, [textureUrl])
+
+  useEffect(() => {
+    rubikCubeRef.current?.setBodyColor(bodyColor)
+  }, [bodyColor])
+
+  const updateView = (next: RubikView): void => {
+    setView(next)
+    rubikCubeRef.current?.setView(next)
+  }
 
   return (
     <section className={styles.rubikCubePhoto}>
@@ -96,7 +102,7 @@ const RubikCubePhoto = (): React.JSX.Element => {
           <Saver
             saveAction='saveOnly'
             fileName={fileName}
-            imgUrlGetter={() => canvasRef.current?.toDataURL() ?? ''}
+            imgUrlGetter={() => rubikCubeRef.current?.toDataURL() ?? ''}
           >
             <div className={styles.card}>
               {mergeLoading && <SimpleLoading title='图片拼合中' />}
@@ -153,6 +159,35 @@ const RubikCubePhoto = (): React.JSX.Element => {
                 }}
               >
                 示例2：猫猫
+              </Button>
+            </div>
+            <label className={styles.colorControl}>
+              <Typography component='span' variant='body2'>
+                底座颜色
+              </Typography>
+              <input
+                className={styles.colorInput}
+                type='color'
+                value={bodyColor}
+                onChange={event => {
+                  setBodyColor(event.target.value)
+                }}
+              />
+            </label>
+            <div
+              className={styles.rotationControls}
+              role='group'
+              aria-label='魔方旋转'
+            >
+              <RotationPad value={view} onChange={updateView} />
+              <Button
+                size='small'
+                variant='outlined'
+                onClick={() => {
+                  updateView(DEFAULT_VIEW)
+                }}
+              >
+                复位
               </Button>
             </div>
           </div>

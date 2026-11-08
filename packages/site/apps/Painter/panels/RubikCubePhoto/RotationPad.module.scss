@@ -1,0 +1,50 @@
+.control {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+
+  .pad {
+    position: relative;
+    width: 180px;
+    height: 150px;
+    padding: 0;
+    color: inherit;
+    touch-action: none;
+    cursor: grab;
+    user-select: none;
+    background:
+      linear-gradient(#8883, #8883) center / 1px
+        calc(100% - 2 * var(--pad-inset)) no-repeat,
+      linear-gradient(#8883, #8883) center / calc(100% - 2 * var(--pad-inset))
+        1px no-repeat,
+      #8881;
+    border: 1px solid #8886;
+    border-radius: 8px;
+
+    &:focus-visible {
+      outline: 2px solid currentcolor;
+      outline-offset: 3px;
+    }
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  .handle {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    pointer-events: none;
+    background: currentcolor;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .hint {
+    font-size: 12px;
+    opacity: 0.7;
+  }
+}

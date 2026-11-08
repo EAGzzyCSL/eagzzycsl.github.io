@@ -15,7 +15,7 @@ import PanelCampNineSquare from './panels/CampNineSquare'
 import CrossedGrid from './panels/CrossedGrid'
 import PanelDictionary from './panels/Dictionary'
 import PanelImpossibleTrinity from './panels/ImpossibleTrinity'
-import RubikCubePhoto from './panels/RubikCubePhoto'
+import RubikCubePhoto from './panels/RubikCubePhoto/RubikCubePhoto'
 import PanelWordInWord from './panels/WordInWord'
 import theme from './theme'
 
