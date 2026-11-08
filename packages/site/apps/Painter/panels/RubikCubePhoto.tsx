@@ -3,6 +3,7 @@ import React, { useRef, useEffect, useState } from 'react'
 import * as THREE from 'three'
 
 import avatar from '@/assets/avatar.png'
+import SimpleError from '@/share/SimpleError'
 import SimpleLoading from '@/share/SimpleLoading'
 import { TextField, Button, Typography } from '@/ui/material'
 
@@ -23,51 +24,72 @@ const RubikCubePhoto = (): React.JSX.Element => {
   const [mergeLoading, setMergeLoading] = useState(false)
   const [fileName, setFileName] = useState('照片魔方')
   const [imgUrl, setImgUrl] = useState(avatar)
+  const [textureUrl, setTextureUrl] = useState(avatar)
+  const [error, setError] = useState('')
 
   useEffect(() => {
-    if (typeof window === 'undefined') {
-      // eslint-disable-next-line @typescript-eslint/no-empty-function
-      return () => {}
+    if (!canvasRef.current) return undefined
+    const cube = new RubikCube(canvasRef.current)
+    rubikCubeRef.current = cube
+    return () => {
+      rubikCubeRef.current = undefined
+      cube.dispose()
     }
-    if (!canvasRef.current) {
-      throw new Error('canvasRef.current 不存在')
+  }, [])
+
+  useEffect(() => {
+    const cube = rubikCubeRef.current
+    if (!cube) return undefined
+    let cancelled = false
+    const isCancelled = (): boolean => cancelled
+    const updateImage = async (): Promise<void> => {
+      setMergeLoading(true)
+      setError('')
+      try {
+        const merged = await mergeImages([textureUrl, border], {
+          width: 200,
+          height: 200,
+        })
+        if (isCancelled()) return
+        const texture = await new THREE.TextureLoader().loadAsync(merged)
+        if (isCancelled()) {
+          texture.dispose()
+          return
+        }
+        const material = new THREE.MeshBasicMaterial({ map: texture })
+        cube.updateMaterials([
+          material,
+          material,
+          material,
+          material,
+          material,
+          material,
+        ])
+      } catch (cause) {
+        if (!isCancelled())
+          setError(cause instanceof Error ? cause.message : '图片加载失败')
+      } finally {
+        if (!isCancelled()) setMergeLoading(false)
+      }
     }
-    if (!rubikCubeRef.current) {
-      rubikCubeRef.current = new RubikCube(canvasRef.current)
+    // Errors are handled inside updateImage, including stale requests after unmount.
+    // eslint-disable-next-line no-void
+    void updateImage()
+    return () => {
+      cancelled = true
     }
-
-    const init = async () => {
-      await handleImageChanged(imgUrl)
-    }
-
-    init().catch(e => {
-      throw e
-    })
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
-    return () => {}
-  }, [imgUrl])
-
-  const handleImageChanged = async (imgUrl: string) => {
-    const size = 200
-
-    setMergeLoading(true)
-
-    const merged = await mergeImages([imgUrl, border], {
-      width: size,
-      height: size,
-    })
-
-    setMergeLoading(false)
-
-    const mesh = new THREE.MeshBasicMaterial({
-      map: new THREE.TextureLoader().load(merged),
-    })
-
-    rubikCubeRef.current?.updateMaterials([mesh, mesh, mesh, mesh, mesh, mesh])
-  }
+  }, [textureUrl])
 
   return (
     <section className={styles.rubikCubePhoto}>
+      {error && (
+        <SimpleError
+          message={error}
+          onConfirm={() => {
+            setError('')
+          }}
+        />
+      )}
       <PanelContainer
         size='large'
         board={
@@ -93,10 +115,7 @@ const RubikCubePhoto = (): React.JSX.Element => {
                   fullSize
                   imgUrl={imgUrl}
                   aspect={1}
-                  onImageChanged={imgUrl => {
-                    // eslint-disable-next-line no-void
-                    void handleImageChanged(imgUrl)
-                  }}
+                  onImageChanged={setTextureUrl}
                 />
               </div>
             </div>
@@ -118,6 +137,7 @@ const RubikCubePhoto = (): React.JSX.Element => {
                 onClick={() => {
                   setFileName('头像')
                   setImgUrl(avatar)
+                  setTextureUrl(avatar)
                 }}
               >
                 示例1：头像
@@ -129,6 +149,7 @@ const RubikCubePhoto = (): React.JSX.Element => {
                 onClick={() => {
                   setFileName('猫猫')
                   setImgUrl(cat)
+                  setTextureUrl(cat)
                 }}
               >
                 示例2：猫猫

@@ -49,6 +49,10 @@ export class RubikCube {
 
   private scene: THREE.Scene
 
+  private resizeObserver: ResizeObserver
+
+  private materials: THREE.MeshBasicMaterial[] = []
+
   constructor(canvas: HTMLCanvasElement) {
     this.camera = new THREE.PerspectiveCamera()
     this.camera.position.set(35, 35, 35)
@@ -62,33 +66,48 @@ export class RubikCube {
       preserveDrawingBuffer: true,
     })
     this.scene = new THREE.Scene()
-  }
-
-  public updateMaterials(materials: THREE.MeshBasicMaterial[]) {
-    this.resize()
-
-    this.scene.clear()
-    this.scene.add(...generateCubeCluster(materials))
-
-    // 直接 render 的话是黑的，有个 Timeout 就能好
-    setTimeout(() => {
+    this.resizeObserver = new ResizeObserver(() => {
       this.render()
-    }, 100)
+    })
+    this.resizeObserver.observe(canvas)
   }
 
-  private resize() {
-    const canvas = this.renderer.domElement
-    const width = canvas.clientWidth * window.devicePixelRatio
-    const height = canvas.clientHeight * window.devicePixelRatio
+  public updateMaterials(materials: THREE.MeshBasicMaterial[]): void {
+    this.clearScene()
+    this.materials = materials
+    this.scene.add(...generateCubeCluster(materials))
+    this.render()
+  }
 
+  public dispose(): void {
+    this.resizeObserver.disconnect()
+    this.clearScene()
+    this.renderer.dispose()
+  }
+
+  private clearScene(): void {
+    this.scene.traverse(object => {
+      if (object instanceof CubeMesh) object.geometry.dispose()
+    })
+    new Set(this.materials).forEach(material => {
+      material.map?.dispose()
+      material.dispose()
+    })
+    this.materials = []
+    this.scene.clear()
+  }
+
+  private render(): void {
+    const canvas = this.renderer.domElement
+    // Hidden panels have no layout size. Wait for ResizeObserver to report visibility.
+    if (!canvas.clientWidth || !canvas.clientHeight) return
+    const width = Math.floor(canvas.clientWidth * window.devicePixelRatio)
+    const height = Math.floor(canvas.clientHeight * window.devicePixelRatio)
+    this.camera.aspect = canvas.clientWidth / canvas.clientHeight
+    this.camera.updateProjectionMatrix()
     if (canvas.width !== width || canvas.height !== height) {
-      this.camera.aspect = canvas.clientWidth / canvas.clientHeight
-      this.camera.updateProjectionMatrix()
       this.renderer.setSize(width, height, false)
     }
-  }
-
-  private render() {
     this.renderer.render(this.scene, this.camera)
   }
 }

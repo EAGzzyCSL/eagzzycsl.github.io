@@ -5,12 +5,15 @@ export const mergeImages = async (
   const list = await Promise.all<HTMLImageElement>(
     images.map(
       url =>
-        new Promise(resolve => {
+        new Promise((resolve, reject) => {
           const img = document.createElement('img')
-          img.src = url
           img.onload = () => {
             resolve(img)
           }
+          img.onerror = () => {
+            reject(new Error('图片加载失败'))
+          }
+          img.src = url
         }),
     ),
   )
