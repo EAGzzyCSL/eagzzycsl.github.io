@@ -1,14 +1,5 @@
 import { Manifest } from '@/utils/app'
 
-import dumplingImage11 from './assets/camp/dumpling/11.jpeg'
-import dumplingImage12 from './assets/camp/dumpling/12.jpeg'
-import dumplingImage13 from './assets/camp/dumpling/13.jpeg'
-import dumplingImage21 from './assets/camp/dumpling/21.jpeg'
-import dumplingImage22 from './assets/camp/dumpling/22.jpeg'
-import dumplingImage23 from './assets/camp/dumpling/23.jpeg'
-import dumplingImage31 from './assets/camp/dumpling/31.jpeg'
-import dumplingImage32 from './assets/camp/dumpling/32.jpeg'
-import dumplingImage33 from './assets/camp/dumpling/33.jpeg'
 import imageButter from './assets/crossed/butter.jpeg'
 import imageButterfly from './assets/crossed/butterfly.png'
 import imageKongQin from './assets/crossed/kong_qin.jpeg'
@@ -49,57 +40,6 @@ export default Manifest.create({
       title: 'React Image Crop',
       brief: 'A responsive image cropping tool for React',
     },
-    ...Manifest.acknowledgeBatch(
-      [
-        [
-          '饺子',
-          dumplingImage11,
-          'https://zh.wikipedia.org/zh-hans/%E9%A5%BA%E5%AD%90',
-        ],
-        ['粽子', dumplingImage12, 'https://zh.wikipedia.org/wiki/%E7%B2%BD'],
-        [
-          '丸子',
-          dumplingImage13,
-          'https://zh.wikipedia.org/wiki/%E4%B8%B8%E5%AD%90',
-        ],
-        [
-          '煎饼果子',
-          dumplingImage21,
-          'https://zh.wikipedia.org/wiki/%E7%85%8E%E9%A5%BC%E9%A6%83%E5%AD%90',
-        ],
-        [
-          '鸡蛋',
-          dumplingImage22,
-          'https://zh.wikipedia.org/wiki/%E9%9B%9E%E8%9B%8B',
-        ],
-        [
-          '汉堡',
-          dumplingImage23,
-          'https://zh.wikipedia.org/wiki/%E6%BC%A2%E5%A0%A1%E5%8C%85',
-        ],
-        [
-          '馒头',
-          dumplingImage31,
-          'https://zh.wikipedia.org/wiki/%E9%A6%92%E5%A4%B4',
-        ],
-        [
-          '瑞士卷',
-          dumplingImage32,
-          'https://zh.wikipedia.org/wiki/%E5%8D%B7%E8%9B%8B%E7%B3%95',
-        ],
-        [
-          '冰棍',
-          dumplingImage33,
-          'https://zh.wikipedia.org/wiki/%E5%86%B0%E6%A3%92',
-        ],
-      ],
-      {
-        type: 'image',
-        titleFn: title => `阵营图${title}照片`,
-        urlFn: () => '',
-        briefFn: title => `阵营图${title}照片来自 wikipedia.org`,
-      },
-    ),
     ...Manifest.acknowledgeBatch(
       [
         [
